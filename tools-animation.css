@@ -1,0 +1,219 @@
+/* Animación: pedernal encendiendo fogata en el bosque — Cumbre y Camping */
+.tools-scene {
+  position: relative;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #050a0f;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(249, 115, 22, 0.08);
+}
+
+.tools-scene--hero {
+  max-width: none;
+  margin-inline: 0;
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 100%;
+}
+
+.tools-scene svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.tools-scene__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(36px);
+}
+
+.tools-scene__glow--center {
+  width: 14rem;
+  height: 10rem;
+  left: 50%;
+  top: 58%;
+  transform: translateX(-50%);
+  background: rgba(251, 146, 60, 0.35);
+  animation: campfireGlow 3s ease-in-out infinite;
+}
+
+.campfire-trees-back {
+  animation: campfireTreeSway 8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.campfire-trees-front {
+  animation: campfireTreeSway 7s ease-in-out infinite reverse;
+  transform-origin: center bottom;
+}
+
+.campfire-flint {
+  transform-origin: 168px 228px;
+  animation: campfireFlintStrike 4s ease-in-out infinite;
+}
+
+.campfire-strike-spark {
+  opacity: 0;
+  animation: campfireStrikeSpark 4s ease-in-out infinite;
+}
+
+.campfire-strike-spark--2 {
+  animation-delay: 0.05s;
+}
+
+.campfire-strike-spark--3 {
+  animation-delay: 0.1s;
+}
+
+.campfire-kindling-glow {
+  opacity: 0;
+  animation: campfireKindleGlow 4s ease-in-out infinite;
+}
+
+.campfire-flame {
+  transform-origin: 248px 210px;
+  animation: campfireFlameCycle 4s ease-in-out infinite;
+}
+
+.campfire-flame--2 {
+  animation-delay: 0.15s;
+}
+
+.campfire-flame--3 {
+  animation-delay: 0.3s;
+}
+
+.campfire-ember {
+  animation: campfireEmberRise 2.5s ease-out infinite;
+}
+
+.campfire-ember--2 {
+  animation-delay: 0.8s;
+}
+
+.campfire-ember--3 {
+  animation-delay: 1.6s;
+}
+
+@keyframes campfireGlow {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translateX(-50%) scale(1.12);
+  }
+}
+
+@keyframes campfireTreeSway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0.5deg);
+  }
+}
+
+@keyframes campfireFlintStrike {
+  0%,
+  55%,
+  100% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  62% {
+    transform: rotate(-12deg) translate(2px, 2px);
+  }
+  68% {
+    transform: rotate(4deg) translate(-1px, 0);
+  }
+  74% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+}
+
+@keyframes campfireStrikeSpark {
+  0%,
+  58%,
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  64% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+  72% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes campfireKindleGlow {
+  0%,
+  65%,
+  100% {
+    opacity: 0;
+  }
+  72% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes campfireFlameCycle {
+  0%,
+  62% {
+    opacity: 0;
+    transform: scaleY(0.15) scaleX(0.7);
+  }
+  70% {
+    opacity: 0.75;
+    transform: scaleY(0.65) scaleX(0.92);
+  }
+  78%,
+  92% {
+    opacity: 1;
+    transform: scaleY(1.05) scaleX(0.96);
+  }
+  85% {
+    opacity: 0.92;
+    transform: scaleY(0.94) scaleX(1.04);
+  }
+  100% {
+    opacity: 0.88;
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes campfireEmberRise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  15% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-45px) scale(0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tools-scene *,
+  .tools-scene__glow {
+    animation: none !important;
+  }
+  .campfire-flame,
+  .campfire-kindling-glow {
+    opacity: 1 !important;
+  }
+}

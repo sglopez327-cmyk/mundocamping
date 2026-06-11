@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guías de cocina y menaje para camping."
+    />
+    <title>Mundo Camping | Cocina de camping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'],
+            },
+            colors: {
+              premium: { accent: '#deff9a', night: '#020403' },
+            },
+            boxShadow: {
+              glass: '0 12px 40px rgba(0, 0, 0, 0.35)',
+              'glass-lg': '0 20px 50px rgba(0, 0, 0, 0.45)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./mundo-camping.css" />
+    <style>
+      .breathing-animation {
+        animation: breathe 6s ease-in-out infinite;
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          transform: scale(1);
+          filter: brightness(1);
+        }
+        50% {
+          transform: scale(1.02);
+          filter: brightness(1.05);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./site-header.css" />
+    <link rel="stylesheet" href="./footer-premium.css" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .container-premium {
+        width: 100%;
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      @media (min-width: 640px) {
+        .container-premium {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container-premium {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .grid-guias {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      @media (max-width: 1279px) {
+        .grid-guias-scroll {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .grid-guias {
+          min-width: 62rem;
+        }
+      }
+      @keyframes heroFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes mountainFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-7px);
+        }
+      }
+      .hero-animation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        opacity: 0;
+        animation: heroFadeUp 1.5s ease-out forwards;
+      }
+      .hero-mountain-icon {
+        width: 2.25rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        color: #6ee7b7;
+        filter: drop-shadow(0 0 10px rgba(52, 211, 153, 0.45));
+        animation: mountainFloat 3s ease-in-out infinite;
+      }
+      .hero-animation h2 {
+        margin: 0;
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #ffffff;
+        text-align: center;
+      }
+      @media (min-width: 640px) {
+        .hero-animation {
+          align-items: flex-start;
+        }
+        .hero-animation h2 {
+          font-size: 0.9375rem;
+          text-align: left;
+        }
+      }
+      .nav-menu-links {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .nav-menu-links::-webkit-scrollbar {
+        display: none;
+      }
+      .nav-menu-links a {
+        flex-shrink: 0;
+      }
+      nav .menu-categorias {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      nav .menu-categorias::-webkit-scrollbar {
+        display: none;
+      }
+      nav .menu-categorias li,
+      nav .menu-categorias a {
+        overflow: visible;
+      }
+      .hero-lottie {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        border-radius: 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: transparent;
+      }
+      .hero-lottie dotlottie-player {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        display: block;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-[#020403] font-sans text-white antialiased">
+        <header id="site-header"></header>
+    <script src="./js/site-header.js"></script>
+    <main>
+      <section class="relative overflow-hidden bg-[#020403] text-white">
+        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_28%,rgba(34,197,94,0.28),transparent_21rem),radial-gradient(circle_at_74%_52%,rgba(249,115,22,0.16),transparent_24rem),linear-gradient(180deg,#050805_0%,#020403_64%,#050807_100%)]"></div>
+        <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/70 to-transparent"></div>
+        <div class="container-premium relative -mt-2 pt-2 pb-12 sm:pt-3 lg:-mt-6 lg:pt-4 lg:pb-20">
+          <div class="flex w-full flex-col gap-y-8">
+            <div
+              class="page-hero-media -mt-2 w-full h-64 min-h-[16rem] rounded-3xl border border-white/10 bg-gradient-to-br from-emerald-950/70 via-[#0a1410] to-zinc-950 md:-mt-4 md:h-96 md:min-h-[24rem]"
+              aria-hidden="true"
+            ></div>
+            <div>
+              <p class="text-sm font-black uppercase tracking-[0.25em] text-emerald-300">Cocinar al aire libre</p>
+              <h1 class="mt-3 font-display text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Cocina de camping
+              </h1>
+              <p class="mt-4 max-w-2xl text-base leading-7 text-white/75">
+                Hornillos, menaje y utensilios para preparar comida en acampada o ruta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+        <footer id="site-footer"></footer>
+    <script src="./js/site-footer.js"></script></body>
+</html>

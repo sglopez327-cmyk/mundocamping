@@ -1,0 +1,58 @@
+/* Sacos — Expansión de Confort (solo sacos de dormir) */
+/* cubic-bezier(0.34, 1.56, 0.64, 1): overshoot elástico al “hinchar” el saco */
+
+.sc3-comfort-expand {
+  --sc3-expand-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --sc3-expand-dur: 0.52s;
+
+  transform-origin: center center;
+  transform-box: fill-box;
+  will-change: transform;
+  opacity: 0;
+  transform: scale(0.7);
+  animation: sc3ComfortExpand var(--sc3-expand-dur) var(--sc3-expand-ease) forwards;
+}
+
+.sc3-comfort-expand--dad {
+  animation-delay: 0.36s;
+}
+
+.sc3-comfort-expand--mom {
+  animation-delay: 0.46s;
+}
+
+.sc3-comfort-expand--son {
+  animation-delay: 0.56s;
+}
+
+.sc3-comfort-expand--daughter {
+  animation-delay: 0.66s;
+}
+
+@keyframes sc3ComfortExpand {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  58% {
+    opacity: 1;
+    transform: scale(1.09);
+  }
+  82% {
+    opacity: 1;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sc3-comfort-expand {
+    animation: none;
+    will-change: auto;
+    opacity: 1;
+    transform: scale(1);
+  }
+}

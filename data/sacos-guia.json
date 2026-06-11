@@ -1,0 +1,160 @@
+{
+  "guide": {
+    "title": "Los 5 mejores sacos de dormir para camping (2026)",
+    "metaDescription": "Comparativa de los 5 mejores sacos de dormir para camping: temperatura, peso, relleno y precio. Análisis editorial con datos del catálogo Mundo Camping.",
+    "kicker": "Comparativa · Top 5",
+    "breadcrumbCurrent": "Comparativa",
+    "categoryLabel": "Sacos",
+    "categoryUrl": "../sacos.html",
+    "readTime": "12 min",
+    "updated": "2026",
+    "compareCaption": "Comparativa de sacos · 2026",
+    "introHtml": "<p>Selección editorial de sacos de dormir para acampar y senderismo, contrastada con nuestro <a href=\"../sacos.html\">catálogo de sacos</a>. Cada modelo incluye análisis <strong>Lo mejor / Lo peor</strong> y enlace de compra afiliado a Amazon.</p><p>Los datos de ficha se sincronizan con <code class=\"rounded bg-white/10 px-1.5 py-0.5 text-sm text-emerald-200\">data/sacos-productos.json</code>; el ranking editorial está en <code class=\"rounded bg-white/10 px-1.5 py-0.5 text-sm text-emerald-200\">data/sacos-guia.json</code>.</p>",
+    "veredictoHtml": "<p>Para la mayoría de campistas que buscan equilibrio entre calidez, peso y precio, el ganador de esta comparativa es la mejor apuesta. Si priorizas el menor precio, revisa la fila del Coolzon; si buscas plumón ultraligero, el QEZER destaca en la tabla.</p><p><a href=\"index.html\">Más guías de compra</a> · <a href=\"../sacos.html\">Catálogo de sacos</a></p>"
+  },
+  "compareCriteria": [
+    { "key": "temp", "label": "Temp. confort" },
+    { "key": "peso", "label": "Peso" },
+    { "key": "relleno", "label": "Relleno" },
+    { "key": "forma", "label": "Forma" },
+    { "key": "precio", "label": "Precio orientativo" }
+  ],
+  "products": [
+    {
+      "asin": "B0BPSKF656",
+      "shortName": "BISINNA 4 estaciones",
+      "badge": "Mejor general",
+      "winner": true,
+      "winnerSummary": "Muy buena relación calidez-peso, almohada incluida y miles de valoraciones: el saco más equilibrado para camping de 3-4 estaciones.",
+      "sectionTitle": "Mejor opción general",
+      "sectionIntro": "El BISINNA combina relleno de algodón hueco, tejido impermeable y bolsa de compresión en un paquete muy completo para quien no quiere complicarse.",
+      "embedNote": "Ideal si buscas un saco versátil con buenas reseñas y extras incluidos.",
+      "pros": [
+        "Confort declarado 10 °C con límite 5 °C",
+        "Incluye almohada y bolsa de compresión",
+        "Cremalleras combinables para saco doble",
+        "Exterior 210T impermeable y lavable a máquina"
+      ],
+      "cons": [
+        "No es el más ligero del ranking",
+        "Relleno sintético: más voluminoso que un plumón premium",
+        "Para invierno severo necesitas capas extra"
+      ],
+      "compare": {
+        "temp": { "text": "10 °C", "winner": true },
+        "peso": { "text": "~1,8 kg", "winner": false },
+        "relleno": { "text": "Algodón hueco", "winner": false },
+        "forma": { "text": "Rectangular", "winner": true },
+        "precio": { "text": "€€", "winner": true }
+      }
+    },
+    {
+      "asin": "B082R6KJJ7",
+      "shortName": "Coolzon ultraligero",
+      "badge": "Más vendido",
+      "winner": false,
+      "sectionTitle": "Mejor relación calidad-precio",
+      "sectionIntro": "El Coolzon negro acumula miles de opiniones positivas: opción económica y compacta para acampada y senderismo en 3-4 estaciones.",
+      "embedNote": "Referencia de precio bajo con empaquetado rápido en bolsa de compresión.",
+      "pros": [
+        "Miles de valoraciones y precio muy competitivo",
+        "Empaqueta en segundos con bolsa de compresión",
+        "Equilibrio impermeabilidad / transpirabilidad",
+        "Cómodo para adultos y adolescentes"
+      ],
+      "cons": [
+        "Relleno básico frente a modelos técnicos",
+        "No publica temperaturas ISO detalladas",
+        "Durabilidad de cremallera inferior a gamas altas"
+      ],
+      "compare": {
+        "temp": { "text": "5–15 °C*", "winner": false },
+        "peso": { "text": "~1,2 kg", "winner": true },
+        "relleno": { "text": "Algodón hueco", "winner": false },
+        "forma": { "text": "Rectangular", "winner": false },
+        "precio": { "text": "€", "winner": true }
+      }
+    },
+    {
+      "asin": "B096SBXHR7",
+      "shortName": "KingCamp Oasis",
+      "badge": "Conectable",
+      "winner": false,
+      "sectionTitle": "Mejor para unir dos sacos",
+      "sectionIntro": "KingCamp Oasis apuesta por cremalleras izquierda/derecha para saco doble, tejido impermeable y temperaturas declaradas para 3 estaciones.",
+      "embedNote": "Buena elección en pareja si queréis combinar dos unidades.",
+      "pros": [
+        "Cremalleras L/R para saco doble",
+        "Confort 12 °C · límite 7 °C · extremo -3 °C",
+        "Exterior 190T impermeable",
+        "Cremallera en base para ventilar pies"
+      ],
+      "cons": [
+        "No lavable a máquina",
+        "1,4 kg: medio-alto para mochila ligera",
+        "Capucha menos técnica que momias de montaña"
+      ],
+      "compare": {
+        "temp": { "text": "12 °C", "winner": false },
+        "peso": { "text": "1,4 kg", "winner": false },
+        "relleno": { "text": "Loft sintético", "winner": false },
+        "forma": { "text": "Rectangular", "winner": false },
+        "precio": { "text": "€€", "winner": false }
+      }
+    },
+    {
+      "asin": "B0CXPPNL5C",
+      "shortName": "QEZER plumón",
+      "badge": "Ultraligero",
+      "winner": false,
+      "sectionTitle": "Mejor saco de plumón compacto",
+      "sectionIntro": "Para trekking y montaña en 3-4 estaciones, el QEZER apuesta por plumón 650+ FP y menos de 900 g en versión talla pequeña.",
+      "embedNote": "Momia técnica para quien prioriza peso y compresión.",
+      "pros": [
+        "Plumón 650+ FP certificado RDS",
+        "~860 g con bolsa de compresión",
+        "Nailon 400T resistente al agua y viento",
+        "Cremalleras combinables en pareja"
+      ],
+      "cons": [
+        "Precio superior a sintéticos",
+        "Talla pequeña: revisar medidas si eres alto",
+        "Plumón requiere cuidado si se moja"
+      ],
+      "compare": {
+        "temp": { "text": "8–2 °C", "winner": true },
+        "peso": { "text": "0,86 kg", "winner": true },
+        "relleno": { "text": "Plumón", "winner": true },
+        "forma": { "text": "Momia", "winner": true },
+        "precio": { "text": "€€€", "winner": false }
+      }
+    },
+    {
+      "asin": "B09PV7HC72",
+      "shortName": "Clostnature ligero",
+      "badge": "Equilibrado",
+      "winner": false,
+      "sectionTitle": "Mejor saco rectangular ligero",
+      "sectionIntro": "Clostnature ofrece 1,3 kg, forma rectangular y cremalleras combinables: buen punto medio entre comodidad y peso para 3 estaciones.",
+      "embedNote": "Versátil como saco o manta abierta según la noche.",
+      "pros": [
+        "1,3 kg con bolsa de compresión",
+        "Usable como manta o saco doble",
+        "Capucha tipo momia ajustable",
+        "Cubierta impermeable y transpirable"
+      ],
+      "cons": [
+        "Confort 10–15 °C: poco abrigo en invierno",
+        "No es plumón de alta gama",
+        "Garantía de un año frente a «lifetime» de otros"
+      ],
+      "compare": {
+        "temp": { "text": "10–15 °C", "winner": false },
+        "peso": { "text": "1,3 kg", "winner": false },
+        "relleno": { "text": "Fibra hueca", "winner": false },
+        "forma": { "text": "Rectangular", "winner": false },
+        "precio": { "text": "€€", "winner": false }
+      }
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+<svg viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g class="il3-enter il3-enter--sky">
+    <rect width="1200" height="320" fill="url(#il3Sky)"/>
+    <rect width="1200" height="320" fill="url(#il3Vignette)" opacity="0.45"/>
+    <circle class="il3-moon" cx="1020" cy="46" r="34" fill="url(#il3Moon)"/>
+    <circle class="il3-star" cx="90" cy="38" r="2" fill="#ecfdf5"/>
+    <circle class="il3-star il3-star--2" cx="220" cy="26" r="1.6" fill="#93c5fd"/>
+    <circle class="il3-star il3-star--3" cx="420" cy="52" r="2.2" fill="#fff"/>
+    <circle class="il3-star il3-star--4" cx="640" cy="30" r="1.8" fill="#fde68a"/>
+    <circle class="il3-star il3-star--5" cx="860" cy="58" r="2" fill="#ecfdf5"/>
+    <circle class="il3-star il3-star--6" cx="1100" cy="40" r="1.5" fill="#a7f3d0"/>
+  </g>
+
+  <g class="il3-enter il3-enter--forest">
+    <path d="M0 175 L140 118 L280 148 L420 95 L560 128 L700 102 L860 122 L1020 92 L1200 108 L1200 320 L0 320 Z" fill="#0a1410" opacity="0.8"/>
+    <path d="M0 252 Q350 238 700 246 T1200 254 L1200 320 L0 320 Z" fill="url(#il3Ground)"/>
+    <ellipse cx="600" cy="292" rx="560" ry="18" fill="#07120e" opacity="0.6"/>
+    <g class="il3-tree" opacity="0.9">
+      <path d="M32 252 L48 185 L64 252 Z" fill="#0f2419"/>
+      <rect x="44" y="252" width="8" height="16" rx="1" fill="#1a1208"/>
+    </g>
+    <g class="il3-tree il3-tree--2" opacity="0.85">
+      <path d="M195 252 L214 168 L233 252 Z" fill="#0f2419"/>
+      <path d="M218 252 L232 198 L246 252 Z" fill="#0d1f16" opacity="0.9"/>
+      <rect x="224" y="252" width="10" height="18" rx="1" fill="#1a1208"/>
+    </g>
+    <g class="il3-tree il3-tree--3" opacity="0.78">
+      <path d="M1040 252 L1062 175 L1084 252 Z" fill="#0f2419"/>
+      <rect x="1056" y="252" width="10" height="18" rx="1" fill="#1a1208"/>
+    </g>
+  </g>
+
+  <g class="il3-enter il3-enter--tent">
+    <ellipse class="il3-tent-glow" cx="118" cy="210" rx="70" ry="40" fill="rgba(52,211,153,0.12)"/>
+    <g class="il3-tent" opacity="0.95">
+      <path d="M48 252 L118 118 L188 252 Z" fill="url(#il3Tent)" stroke="rgba(110,231,183,0.45)" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="48" y1="252" x2="28" y2="268" stroke="rgba(167,243,208,0.35)" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="188" y1="252" x2="208" y2="268" stroke="rgba(167,243,208,0.35)" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="118" y1="118" x2="118" y2="98" stroke="rgba(167,243,208,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M78 252 L118 145 L158 252 Z" fill="rgba(254,243,199,0.08)"/>
+    </g>
+  </g>
+
+  <g class="il3-enter il3-enter--cave">
+    <path d="M480 252 L520 88 L560 72 L620 58 L700 52 L780 58 L840 72 L880 88 L920 252 Z" fill="url(#il3Rock)" stroke="#1e293b" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M540 252 L580 128 L620 108 L680 98 L740 108 L780 128 L820 252 Z" fill="#020403" opacity="0.95"/>
+    <ellipse class="il3-cave-dark" cx="680" cy="178" rx="95" ry="72" fill="#010302"/>
+    <path d="M555 252 L600 135 L645 252 Z" fill="url(#il3CaveMouth)" opacity="0.5"/>
+  </g>
+
+  <g class="il3-bear">
+    <g class="il3-bear-paws">
+      <ellipse cx="-28" cy="4" rx="18" ry="10" fill="#3f2a1d" stroke="#1e293b" stroke-width="1.5"/>
+      <ellipse cx="28" cy="4" rx="18" ry="10" fill="#3f2a1d" stroke="#1e293b" stroke-width="1.5"/>
+      <ellipse cx="0" cy="-8" rx="42" ry="22" fill="#4a3728" stroke="#1e293b" stroke-width="2"/>
+    </g>
+    <g class="il3-bear-body">
+      <ellipse cx="0" cy="-55" rx="38" ry="48" fill="#5c4033" stroke="#1e293b" stroke-width="2.5"/>
+      <ellipse cx="0" cy="-88" rx="28" ry="26" fill="#5c4033" stroke="#1e293b" stroke-width="2.5"/>
+      <circle cx="0" cy="-95" r="22" fill="#6b4f3a" stroke="#1e293b" stroke-width="2"/>
+      <ellipse class="il3-bear-eyes" cx="-8" cy="-98" rx="3" ry="4" fill="#fef08a"/>
+      <ellipse class="il3-bear-eyes" cx="8" cy="-98" rx="3" ry="4" fill="#fef08a"/>
+      <ellipse cx="0" cy="-92" rx="10" ry="8" fill="#3f2a1d"/>
+      <path d="M-22 -42 L-18 -8 L-14 -42 Z" fill="#4a3728" stroke="#1e293b" stroke-width="1.5"/>
+      <path d="M22 -42 L18 -8 L14 -42 Z" fill="#4a3728" stroke="#1e293b" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <g class="il3-enter il3-enter--family">
+    <g class="il3-family">
+      <g class="il3-family-bob">
+        <g class="il3-beam" transform="translate(12, 205)">
+          <path d="M0 0 L8 -28 L200 42 L8 42 Z" fill="url(#il3Beam)" opacity="0.9"/>
+          <path class="il3-beam-core" d="M0 0 L4 -18 L140 38 L4 38 Z" fill="url(#il3BeamCore)" opacity="0.7"/>
+        </g>
+
+        <g class="il3-member il3-member--daughter" transform="translate(-118, 0)">
+          <ellipse cx="0" cy="252" rx="11" ry="4" fill="#0a1410" opacity="0.5"/>
+          <line class="il3-leg il3-leg--l" x1="-4" y1="252" x2="-6" y2="268" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/>
+          <line class="il3-leg il3-leg--r" x1="4" y1="252" x2="6" y2="268" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M-10 238 Q0 252 10 238 L10 258 Q0 268 -10 258 Z" fill="#be185d"/>
+          <path class="il3-hair il3-hair--long-l" d="M-9 226 L-11 252 Q-8 255 -6 248 L-7 228 Z" fill="#6b4423"/>
+          <path class="il3-hair il3-hair--long-r" d="M9 226 L11 252 Q8 255 6 248 L7 228 Z" fill="#6b4423"/>
+          <circle cx="0" cy="228" r="9" fill="#fcd9b8"/>
+          <path class="il3-hair il3-hair--long-top" d="M-9 222 Q0 214 9 222 Q7 226 0 223 Q-7 226 -9 222 Z" fill="#6b4423"/>
+          <g class="il3-face">
+            <ellipse cx="-3.5" cy="227" rx="2" ry="2.2" fill="#fff"/>
+            <ellipse cx="3.5" cy="227" rx="2" ry="2.2" fill="#fff"/>
+            <ellipse cx="-3.5" cy="227.5" rx="1.3" ry="1.6" fill="#1e293b"/>
+            <ellipse cx="3.5" cy="227.5" rx="1.3" ry="1.6" fill="#1e293b"/>
+            <circle cx="-2.5" cy="226.5" r="0.45" fill="#fff"/>
+            <circle cx="4.5" cy="226.5" r="0.45" fill="#fff"/>
+            <ellipse cx="0" cy="229.5" rx="1" ry="1.2" fill="#d4a574"/>
+            <path d="M-2.5 232 Q0 234.5 2.5 232" stroke="#b45309" stroke-width="1" stroke-linecap="round" fill="none"/>
+          </g>
+        </g>
+
+        <g class="il3-member il3-member--son" transform="translate(-82, 0)">
+          <ellipse cx="0" cy="252" rx="12" ry="4" fill="#0a1410" opacity="0.5"/>
+          <line class="il3-leg il3-leg--l" x1="-5" y1="252" x2="-7" y2="270" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+          <line class="il3-leg il3-leg--r" x1="5" y1="252" x2="7" y2="270" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M-12 236 Q0 252 12 236 L12 262 Q0 272 -12 262 Z" fill="#1d4ed8"/>
+          <circle cx="0" cy="224" r="10" fill="#fcd9b8"/>
+          <path class="il3-hair il3-hair--short" d="M-10 218 Q0 208 10 218 L9 222 Q0 219 -9 222 Z" fill="#3d2b1f"/>
+          <g class="il3-face">
+            <ellipse cx="-4" cy="223" rx="2.2" ry="2.4" fill="#fff"/>
+            <ellipse cx="4" cy="223" rx="2.2" ry="2.4" fill="#fff"/>
+            <ellipse cx="-4" cy="223.5" rx="1.4" ry="1.7" fill="#1e293b"/>
+            <ellipse cx="4" cy="223.5" rx="1.4" ry="1.7" fill="#1e293b"/>
+            <circle cx="-3" cy="222.5" r="0.5" fill="#fff"/>
+            <circle cx="5" cy="222.5" r="0.5" fill="#fff"/>
+            <ellipse cx="0" cy="225.5" rx="1.1" ry="1.3" fill="#d4a574"/>
+            <path d="M-3 228.5 Q0 231.5 3 228.5" stroke="#b45309" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+          </g>
+        </g>
+
+        <g class="il3-member il3-member--mother" transform="translate(-44, 0)">
+          <ellipse cx="0" cy="252" rx="13" ry="4" fill="#0a1410" opacity="0.5"/>
+          <line class="il3-leg il3-leg--l" x1="-5" y1="252" x2="-6" y2="268" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
+          <line class="il3-leg il3-leg--r" x1="5" y1="252" x2="6" y2="268" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
+          <path d="M-13 236 Q0 252 13 236 L13 262 Q0 272 -13 262 Z" fill="#7e22ce"/>
+          <path class="il3-hair il3-hair--long-l" d="M-10 224 L-13 258 Q-9 262 -6 254 L-7 226 Z" fill="#5c4033"/>
+          <path class="il3-hair il3-hair--long-r" d="M10 224 L13 258 Q9 262 6 254 L7 226 Z" fill="#5c4033"/>
+          <circle cx="0" cy="226" r="10" fill="#f5c9a8"/>
+          <path class="il3-hair il3-hair--long-top" d="M-10 220 Q0 210 10 220 Q8 225 0 222 Q-8 225 -10 220 Z" fill="#5c4033"/>
+          <g class="il3-face">
+            <ellipse cx="-4" cy="225" rx="2.2" ry="2.5" fill="#fff"/>
+            <ellipse cx="4" cy="225" rx="2.2" ry="2.5" fill="#fff"/>
+            <ellipse cx="-4" cy="225.5" rx="1.5" ry="1.8" fill="#1e293b"/>
+            <ellipse cx="4" cy="225.5" rx="1.5" ry="1.8" fill="#1e293b"/>
+            <circle cx="-3" cy="224.5" r="0.5" fill="#fff"/>
+            <circle cx="5" cy="224.5" r="0.5" fill="#fff"/>
+            <ellipse cx="0" cy="227.5" rx="1.1" ry="1.3" fill="#d4a574"/>
+            <path d="M-3 230.5 Q0 233.5 3 230.5" stroke="#b45309" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+          </g>
+        </g>
+
+        <g class="il3-member il3-member--father" transform="translate(0, 0)">
+          <ellipse cx="0" cy="252" rx="14" ry="5" fill="#0a1410" opacity="0.55"/>
+          <line class="il3-leg il3-leg--l" x1="-6" y1="252" x2="-8" y2="268" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+          <line class="il3-leg il3-leg--r" x1="6" y1="252" x2="8" y2="268" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+          <path d="M-14 234 Q0 252 14 234 L14 262 Q0 272 -14 262 Z" fill="url(#il3JacketDad)"/>
+          <circle cx="0" cy="224" r="11" fill="#fcd9b8"/>
+          <path class="il3-hair il3-hair--short" d="M-11 218 Q0 206 11 218 L10 223 Q0 220 -10 223 Z" fill="#3d2b1f"/>
+          <g class="il3-face">
+            <ellipse cx="-4.5" cy="223" rx="2.4" ry="2.6" fill="#fff"/>
+            <ellipse cx="4.5" cy="223" rx="2.4" ry="2.6" fill="#fff"/>
+            <ellipse cx="-4.5" cy="223.5" rx="1.6" ry="2" fill="#1e293b"/>
+            <ellipse cx="4.5" cy="223.5" rx="1.6" ry="2" fill="#1e293b"/>
+            <circle cx="-3.5" cy="222.5" r="0.55" fill="#fff"/>
+            <circle cx="5.5" cy="222.5" r="0.55" fill="#fff"/>
+            <ellipse cx="0" cy="226" rx="1.2" ry="1.4" fill="#d4a574"/>
+            <path d="M-3.5 229.5 Q0 232.5 3.5 229.5" stroke="#b45309" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+          </g>
+          <g class="il3-arm">
+            <path d="M10 -4 L38 -32" stroke="#fcd9b8" stroke-width="5" stroke-linecap="round"/>
+            <g class="il3-flash" transform="translate(38, -32)">
+              <rect x="-8" y="-6" width="16" height="20" rx="4" fill="#1f2937" stroke="rgba(251,191,36,0.6)" stroke-width="1.5"/>
+              <circle cx="0" cy="0" r="5" fill="url(#il3FlashBulb)"/>
+              <ellipse cx="0" cy="2" rx="3" ry="2" fill="#fef9c3"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <defs>
+    <linearGradient id="il3Sky" x1="600" y1="0" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f1c2e"/>
+      <stop offset="55%" stop-color="#0a1218"/>
+      <stop offset="100%" stop-color="#050a0f"/>
+    </linearGradient>
+    <radialGradient id="il3Vignette" cx="50%" cy="50%" r="58%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#020403"/>
+    </radialGradient>
+    <radialGradient id="il3Moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a" stop-opacity="0.4"/>
+    </radialGradient>
+    <linearGradient id="il3Ground" x1="600" y1="248" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#052e16"/>
+    </linearGradient>
+    <linearGradient id="il3Tent" x1="118" y1="118" x2="118" y2="252" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="il3Rock" x1="700" y1="52" x2="700" y2="252" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="il3CaveMouth" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020403"/>
+    </radialGradient>
+    <linearGradient id="il3Beam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(254,243,199,0.85)"/>
+      <stop offset="55%" stop-color="rgba(251,191,36,0.35)"/>
+      <stop offset="100%" stop-color="rgba(251,191,36,0)"/>
+    </linearGradient>
+    <linearGradient id="il3BeamCore" x1="0" y1="0" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.6)"/>
+      <stop offset="100%" stop-color="rgba(251,191,36,0)"/>
+    </linearGradient>
+    <radialGradient id="il3FlashBulb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </radialGradient>
+    <linearGradient id="il3JacketDad" x1="0" y1="234" x2="0" y2="272" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,146 @@
+<svg viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<!-- Fondo nocturno (vista desde dentro de la tienda) -->
+                <g class="est3-enter est3-enter--sky">
+                  <rect width="1200" height="320" fill="url(#est3Sky)" />
+                  <path d="M120 200 L280 130 L420 155 L560 115 L720 140 L880 118 L1040 145 L1200 125 L1200 320 L120 320 Z" fill="#1e3a5f" stroke="#0f172a" stroke-width="2"/>
+                  <path d="M200 228 Q400 218 600 224 T1000 232 L1000 248 L200 248 Z" fill="#1d4ed8" opacity="0.7" stroke="#1e293b" stroke-width="2"/>
+                  <ellipse class="est3-shimmer" cx="420" cy="236" rx="56" ry="6" fill="url(#est3LakeShimmer)" />
+                  <g fill="#134e4a" stroke="#052e16" stroke-width="2" stroke-linejoin="round">
+                    <path d="M240 248 L258 188 L276 248 Z"/>
+                    <path d="M320 248 L340 175 L360 248 Z"/>
+                    <path d="M880 248 L900 182 L920 248 Z"/>
+                    <path d="M960 248 L982 168 L1004 248 Z"/>
+                  </g>
+                  <circle class="est3-moon" cx="180" cy="56" r="28" fill="url(#est3Moon)" stroke="#1e293b" stroke-width="2.5"/>
+                  <circle class="est3-star" cx="320" cy="38" r="2" fill="#fff"/>
+                  <circle class="est3-star est3-star--2" cx="480" cy="28" r="1.6" fill="#fde68a"/>
+                  <circle class="est3-star est3-star--3" cx="640" cy="44" r="2" fill="#ecfdf5"/>
+                  <circle class="est3-star est3-star--4" cx="800" cy="32" r="1.5" fill="#fff"/>
+                </g>
+
+                <!-- Interior tienda -->
+                <g class="est3-enter est3-enter--tent">
+                  <path d="M0 248 L600 48 L1200 248 L1100 248 L600 72 L100 248 Z" fill="url(#est3TentInner)" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+                  <path d="M100 248 L600 72 L1100 248 L600 88 Z" fill="url(#est3TentPeak)" opacity="0.4"/>
+                  <path d="M0 248 L1200 248 L1200 320 L0 320 Z" fill="url(#est3Floor)"/>
+                  <ellipse cx="600" cy="298" rx="560" ry="18" fill="#052e16" opacity="0.5"/>
+                </g>
+
+                <g class="est3-enter est3-enter--lantern est3-lantern">
+                  <ellipse cx="600" cy="102" rx="42" ry="24" fill="url(#est3LanternGlow)"/>
+                  <rect x="586" y="92" width="28" height="32" rx="4" fill="#374151" stroke="#1e293b" stroke-width="2"/>
+                  <rect x="592" y="98" width="16" height="20" rx="2" fill="#fde68a" stroke="#1e293b" stroke-width="1.5"/>
+                  <path d="M520 248 L600 102 L680 248 Z" fill="url(#est3WarmLight)" opacity="0.22"/>
+                </g>
+
+                <!-- Esterilla -->
+                <g class="est3-mat-wrap est3-enter est3-enter--mat">
+                  <ellipse cx="380" cy="296" rx="200" ry="10" fill="#1a1208" opacity="0.45"/>
+                  <g class="est3-mat">
+                    <path d="M148 294 L612 294 L596 248 Q380 228 164 250 Z" fill="url(#est3MatSide)" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+                    <path d="M164 250 Q380 230 596 248 L612 294 L148 294 Z" fill="url(#est3MatTop)" stroke="#1e293b" stroke-width="2"/>
+                    <path d="M164 250 Q380 230 596 248" stroke="#99f6e4" stroke-width="2" fill="none" opacity="0.6"/>
+                    <g class="est3-mat-cells" fill="#0d9488" stroke="#115e59" stroke-width="1">
+                      <ellipse cx="220" cy="276" rx="18" ry="5"/><ellipse cx="280" cy="270" rx="18" ry="5"/><ellipse cx="340" cy="264" rx="18" ry="5"/>
+                      <ellipse cx="400" cy="258" rx="18" ry="5"/><ellipse cx="460" cy="254" rx="18" ry="5"/><ellipse cx="520" cy="250" rx="16" ry="5"/>
+                    </g>
+                    <circle cx="588" cy="268" r="6" fill="#475569" stroke="#1e293b" stroke-width="1.5"/>
+                  </g>
+                </g>
+
+                <!-- Manguera y aire -->
+                <path class="est3-hose" d="M548 282 Q620 288 700 276 Q740 268 758 258" stroke="#1e293b" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <g class="est3-air">
+                  <circle class="est3-air-dot" cx="536" cy="276" r="6" fill="#5eead4" opacity="0.7"/>
+                  <circle class="est3-air-dot est3-air-dot--2" cx="524" cy="268" r="4" fill="#2dd4bf" opacity="0.5"/>
+                  <circle class="est3-air-dot est3-air-dot--3" cx="512" cy="260" r="3" fill="#99f6e4" opacity="0.4"/>
+                </g>
+
+                <!-- Padre inflando -->
+                <g class="est3-father est3-enter est3-enter--father">
+                  <ellipse cx="820" cy="258" rx="42" ry="10" fill="#1a1208" opacity="0.4"/>
+                  <path d="M788 252 L804 272 L820 252 Z" fill="#14532d" stroke="#1e293b" stroke-width="2"/>
+                  <path d="M832 252 L848 272 L864 252 Z" fill="#14532d" stroke="#1e293b" stroke-width="2"/>
+                  <path d="M796 252 L856 252 L848 218 Q820 202 784 218 Z" fill="#2563eb" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+                  <path d="M784 218 L772 192" stroke="#1e3a8a" stroke-width="11" stroke-linecap="round"/>
+                  <path d="M856 218 L868 192" stroke="#1e3a8a" stroke-width="11" stroke-linecap="round"/>
+                  <g class="est3-father-pump">
+                    <rect x="768" y="208" width="26" height="52" rx="5" fill="#374151" stroke="#1e293b" stroke-width="2"/>
+                    <rect class="est3-pump-rod" x="774" y="188" width="14" height="28" rx="3" fill="#4b5563" stroke="#1e293b" stroke-width="1.5"/>
+                    <g class="est3-father-arms">
+                      <rect x="742" y="168" width="68" height="11" rx="5" fill="#1f2937" stroke="#1e293b" stroke-width="2"/>
+                      <ellipse cx="758" cy="174" rx="11" ry="8" fill="#fcd9b6" stroke="#1e293b" stroke-width="1.5"/>
+                      <ellipse cx="794" cy="174" rx="11" ry="8" fill="#fcd9b6" stroke="#1e293b" stroke-width="1.5"/>
+                      <path d="M758 182 L766 204" stroke="#1e40af" stroke-width="13" stroke-linecap="round"/>
+                      <path d="M794 182 L802 204" stroke="#1e40af" stroke-width="13" stroke-linecap="round"/>
+                    </g>
+                  </g>
+                  <circle cx="826" cy="186" r="22" fill="#fcd9b6" stroke="#1e293b" stroke-width="2.5"/>
+                  <path d="M806 172 Q820 158 836 158 Q852 158 862 172 Q850 184 836 180 Q822 184 806 172" fill="#3f2a1d" stroke="#1e293b" stroke-width="2"/>
+                  <ellipse cx="818" cy="182" rx="2.5" ry="2" fill="#1e293b"/><ellipse cx="834" cy="182" rx="2.5" ry="2" fill="#1e293b"/>
+                  <path d="M822 192 Q828 196 834 192" stroke="#5c4030" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                </g>
+
+                <!-- Hijo (verde) -->
+                <g class="est3-kid est3-kid--boy">
+                  <ellipse class="est3-kid-shadow" cx="0" cy="268" rx="22" ry="6" fill="#1a1208" opacity="0.35"/>
+                  <path d="M-18 262 L-6 278 L6 262 Z" fill="#166534" stroke="#1e293b" stroke-width="2"/>
+                  <path d="M6 262 L18 278 L30 262 Z" fill="#166534" stroke="#1e293b" stroke-width="2"/>
+                  <path d="M-8 262 L22 262 L18 238 Q4 228 -4 238 Z" fill="#4ade80" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+                  <circle cx="8" cy="224" r="16" fill="#fcd9b6" stroke="#1e293b" stroke-width="2.5"/>
+                  <path d="M-2 212 Q8 198 20 206 Q18 218 8 214 Q-2 218 -2 212" fill="#422006" stroke="#1e293b" stroke-width="1.5"/>
+                  <ellipse cx="4" cy="222" rx="2" ry="2.5" fill="#1e293b"/><ellipse cx="14" cy="222" rx="2" ry="2.5" fill="#1e293b"/>
+                  <path d="M6 230 Q10 234 14 230" stroke="#5c4030" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                </g>
+
+                <!-- Hija (rosa) -->
+                <g class="est3-kid est3-kid--girl">
+                  <ellipse class="est3-kid-shadow" cx="0" cy="268" rx="20" ry="6" fill="#1a1208" opacity="0.35"/>
+                  <path d="M-16 262 L-4 278 L8 262 Z" fill="#9d174d" stroke="#1e293b" stroke-width="2"/>
+                  <path d="M8 262 L20 278 L32 262 Z" fill="#9d174d" stroke="#1e293b" stroke-width="2"/>
+                  <path d="M-6 262 L24 262 L20 240 Q6 230 -2 240 Z" fill="#f472b6" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+                  <circle cx="10" cy="226" r="15" fill="#fcd9b6" stroke="#1e293b" stroke-width="2.5"/>
+                  <path d="M0 214 Q10 200 22 208 Q20 220 10 216 Q0 220 0 214" fill="#422006" stroke="#1e293b" stroke-width="1.5"/>
+                  <circle cx="22" cy="206" r="6" fill="#ec4899" stroke="#1e293b" stroke-width="1.5"/>
+                  <ellipse cx="6" cy="224" rx="2" ry="2.5" fill="#1e293b"/><ellipse cx="16" cy="224" rx="2" ry="2.5" fill="#1e293b"/>
+                  <path d="M8 232 Q12 236 16 232" stroke="#5c4030" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                </g>
+
+                <!-- Rebote esterilla al saltar -->
+                <g class="est3-mat-bounce" aria-hidden="true">
+                  <ellipse cx="380" cy="292" rx="180" ry="8" fill="none" stroke="#5eead4" stroke-width="2" opacity="0"/>
+                </g>
+
+                <defs>
+                  <linearGradient id="est3Sky" x1="600" y1="0" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#0f172a"/>
+                  </linearGradient>
+                  <radialGradient id="est3Moon" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#fffbeb"/><stop offset="100%" stop-color="#fde047"/>
+                  </radialGradient>
+                  <linearGradient id="est3Floor" x1="600" y1="248" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#166534"/><stop offset="100%" stop-color="#14532d"/>
+                  </linearGradient>
+                  <linearGradient id="est3TentInner" x1="600" y1="48" x2="600" y2="248" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#22c55e"/><stop offset="100%" stop-color="#15803d"/>
+                  </linearGradient>
+                  <linearGradient id="est3TentPeak" x1="600" y1="72" x2="600" y2="248" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#4ade80" stop-opacity="0.5"/><stop offset="100%" stop-color="#166534" stop-opacity="0.2"/>
+                  </linearGradient>
+                  <linearGradient id="est3WarmLight" x1="600" y1="102" x2="600" y2="248" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="rgba(254,243,199,0.55)"/><stop offset="100%" stop-color="rgba(251,191,36,0.05)"/>
+                  </linearGradient>
+                  <radialGradient id="est3LanternGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="rgba(254,243,199,0.6)"/><stop offset="100%" stop-color="rgba(251,191,36,0)"/>
+                  </radialGradient>
+                  <linearGradient id="est3MatSide" x1="148" y1="272" x2="612" y2="272" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#0f766e"/><stop offset="50%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#0d9488"/>
+                  </linearGradient>
+                  <linearGradient id="est3MatTop" x1="380" y1="228" x2="380" y2="294" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#5eead4"/><stop offset="100%" stop-color="#2dd4bf"/>
+                  </linearGradient>
+                  <linearGradient id="est3LakeShimmer" x1="364" y1="236" x2="476" y2="236" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="rgba(255,255,255,0)"/><stop offset="50%" stop-color="rgba(255,255,255,0.5)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+                  </linearGradient>
+                </defs>
+</svg>

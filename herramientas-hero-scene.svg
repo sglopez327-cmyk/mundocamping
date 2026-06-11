@@ -1,0 +1,116 @@
+<svg class="herr-scene__svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g class="hr3-enter hr3-enter--sky">
+    <rect width="1200" height="320" fill="url(#hr3Sky)"/>
+    <circle class="hr3-star" cx="180" cy="42" r="1.8" fill="#ecfdf5"/>
+    <circle class="hr3-star hr3-star--2" cx="320" cy="28" r="1.4" fill="#fde68a"/>
+    <circle class="hr3-star hr3-star--3" cx="900" cy="36" r="1.6" fill="#fff"/>
+    <circle class="hr3-moon" cx="1000" cy="48" r="22" fill="url(#hr3Moon)" stroke="#1e293b" stroke-width="2"/>
+  </g>
+
+  <g class="hr3-enter hr3-enter--forest">
+    <path d="M0 200 L150 120 L300 150 L450 100 L600 130 L750 105 L900 125 L1050 95 L1200 115 L1200 320 L0 320 Z" fill="#0a1812" opacity="0.85"/>
+    <path d="M0 252 Q400 238 800 246 T1200 254 L1200 320 L0 320 Z" fill="url(#hr3Ground)"/>
+    <ellipse cx="600" cy="298" rx="560" ry="16" fill="#052e16" opacity="0.5"/>
+    <g class="hr3-pine hr3-pine--bg1" fill="#134e4a" stroke="#052e16" stroke-width="2" stroke-linejoin="round">
+      <path d="M60 250 L78 155 L96 250 Z"/><path d="M120 250 L142 125 L164 250 Z"/>
+      <rect x="72" y="250" width="8" height="20" rx="1" fill="#1a1208"/><rect x="138" y="250" width="8" height="20" rx="1" fill="#1a1208"/>
+    </g>
+    <g class="hr3-pine hr3-pine--bg2" fill="#166534" stroke="#052e16" stroke-width="2" stroke-linejoin="round">
+      <path d="M1020 250 L1040 140 L1060 250 Z"/><path d="M1080 250 L1105 118 L1130 250 Z"/>
+      <rect x="1032" y="250" width="8" height="20" rx="1" fill="#1a1208"/>
+    </g>
+  </g>
+
+  <g class="hr3-pine-cut">
+    <g class="hr3-pine-stump">
+      <rect x="268" y="198" width="22" height="54" rx="3" fill="#78350f" stroke="#1e293b" stroke-width="2"/>
+      <path d="M268 198 L279 165 L290 198 Z" fill="#92400e" stroke="#1e293b" stroke-width="2"/>
+    </g>
+    <g class="hr3-pine-top">
+      <path d="M255 198 L279 118 L303 198 Z" fill="#15803d" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M262 175 L279 135 L296 175 Z" fill="#22c55e" stroke="#1e293b" stroke-width="1.5"/>
+    </g>
+    <ellipse class="hr3-chop-dust" cx="279" cy="210" rx="20" ry="6" fill="#a8a29e" opacity="0"/>
+  </g>
+
+  <g class="hr3-enter hr3-enter--fire">
+    <g class="hr3-fire">
+      <ellipse class="hr3-fire-base" cx="0" cy="0" rx="42" ry="12" fill="#292524" opacity="0.6"/>
+      <ellipse class="hr3-fire-glow" cx="0" cy="-8" rx="55" ry="28" fill="url(#hr3FireGlow)" opacity="0.5"/>
+      <ellipse class="hr3-fire-outer" cx="0" cy="-18" rx="38" ry="32" fill="url(#hr3FireOuter)"/>
+      <ellipse class="hr3-fire-mid" cx="0" cy="-22" rx="26" ry="24" fill="url(#hr3FireMid)"/>
+      <ellipse class="hr3-fire-core" cx="0" cy="-26" rx="14" ry="18" fill="url(#hr3FireCore)"/>
+      <g class="hr3-sparks">
+        <circle class="hr3-spark" cx="-20" cy="-40" r="2" fill="#fde68a"/>
+        <circle class="hr3-spark hr3-spark--2" cx="12" cy="-48" r="1.5" fill="#fbbf24"/>
+        <circle class="hr3-spark hr3-spark--3" cx="-8" cy="-52" r="1.8" fill="#fef3c7"/>
+      </g>
+    </g>
+    <ellipse cx="980" cy="278" rx="48" ry="8" fill="#1a1208" opacity="0.4"/>
+  </g>
+
+  <g class="hr3-cart" transform="translate(468, 240)">
+    <ellipse cx="0" cy="12" rx="38" ry="8" fill="#1a1208" opacity="0.35"/>
+    <rect x="-42" y="-8" width="72" height="22" rx="4" fill="#92400e" stroke="#1e293b" stroke-width="2"/>
+    <rect x="-38" y="-18" width="64" height="12" rx="2" fill="#a16207" stroke="#1e293b" stroke-width="1.5"/>
+    <circle cx="-28" cy="14" r="9" fill="#374151" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="28" cy="14" r="9" fill="#374151" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="-28" cy="14" r="4" fill="#6b7280"/>
+    <circle cx="28" cy="14" r="4" fill="#6b7280"/>
+    <g class="hr3-cart-logs">
+      <rect class="hr3-cart-log hr3-cart-log--1" x="-32" y="-28" width="48" height="10" rx="3" fill="#78350f" stroke="#1e293b" stroke-width="1.5" opacity="0"/>
+      <rect class="hr3-cart-log hr3-cart-log--2" x="-30" y="-38" width="44" height="9" rx="3" fill="#92400e" stroke="#1e293b" stroke-width="1.5" opacity="0"/>
+      <rect class="hr3-cart-log hr3-cart-log--3" x="-28" y="-48" width="40" height="9" rx="3" fill="#78350f" stroke="#1e293b" stroke-width="1.5" opacity="0"/>
+    </g>
+  </g>
+
+  <g class="hr3-log-fly" transform="translate(279, 232)">
+    <rect x="-22" y="-5" width="44" height="10" rx="3" fill="#92400e" stroke="#1e293b" stroke-width="2" opacity="0"/>
+  </g>
+
+  <g class="hr3-actor" transform="translate(279, 232)">
+    <ellipse cx="0" cy="18" rx="28" ry="7" fill="#1a1208" opacity="0.4"/>
+    <path d="M-18 14 L-8 28 L8 28 L18 14" fill="#422006" stroke="#1e293b" stroke-width="2"/>
+    <path d="M-14 -8 L14 -8 L12 14 Q0 20 -12 14 Z" fill="#ca8a04" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="0" cy="-22" r="16" fill="#fcd9b6" stroke="#1e293b" stroke-width="2.5"/>
+    <path d="M-14 -28 Q0 -38 14 -28" fill="#3f2a1d" stroke="#1e293b" stroke-width="2"/>
+    <ellipse cx="-5" cy="-24" rx="2.5" ry="3" fill="#1e293b"/><ellipse cx="5" cy="-24" rx="2.5" ry="3" fill="#1e293b"/>
+    <g class="hr3-arm">
+      <path d="M10 -6 L28 -28" stroke="#fcd9b6" stroke-width="5" stroke-linecap="round"/>
+      <g class="hr3-axe" transform="translate(28, -28)">
+        <rect x="-4" y="-2" width="8" height="14" rx="2" fill="#57534e" stroke="#1e293b" stroke-width="1.5"/>
+        <path d="M4 0 L28 -8 L32 4 L8 10 Z" fill="url(#hr3Axe)" stroke="#1e293b" stroke-width="1.5" stroke-linejoin="round"/>
+      </g>
+    </g>
+    <path d="M-12 14 L-18 28" stroke="#854d0e" stroke-width="4" stroke-linecap="round"/>
+    <path d="M12 14 L18 28" stroke="#854d0e" stroke-width="4" stroke-linecap="round"/>
+    <rect class="hr3-log-hand" x="-20" y="2" width="36" height="10" rx="3" fill="#78350f" stroke="#1e293b" stroke-width="2" opacity="0"/>
+  </g>
+
+  <defs>
+    <linearGradient id="hr3Sky" x1="600" y1="0" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="hr3Moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef9c3"/><stop offset="100%" stop-color="#fde047"/>
+    </radialGradient>
+    <linearGradient id="hr3Ground" x1="600" y1="252" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#166534"/><stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <radialGradient id="hr3FireGlow" cx="50%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="rgba(251,146,60,0.55)"/><stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="hr3FireOuter" cx="50%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#f97316"/><stop offset="100%" stop-color="#c2410c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hr3FireMid" cx="50%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#ea580c" stop-opacity="0.3"/>
+    </radialGradient>
+    <radialGradient id="hr3FireCore" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#fbbf24"/>
+    </radialGradient>
+    <linearGradient id="hr3Axe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e5e7eb"/><stop offset="100%" stop-color="#9ca3af"/>
+    </linearGradient>
+  </defs>
+</svg>

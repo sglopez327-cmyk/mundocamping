@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vista previa — Hero Guías Destacadas | Mundo Camping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./home-hero-animation.css" />
+    <link rel="stylesheet" href="./mundo-camping.css" />
+    <style>
+      body {
+        margin: 0;
+        background: #020403;
+        color: #fff;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .preview-banner {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        padding: 0.85rem 1.25rem;
+        border-bottom: 1px solid rgba(110, 231, 183, 0.25);
+        background: rgba(2, 4, 3, 0.94);
+        backdrop-filter: blur(12px);
+        text-align: center;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .preview-banner strong {
+        color: #deff9a;
+      }
+
+      .preview-wrap {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .preview-wrap .guides-featured__bg,
+      .preview-wrap .guides-featured__top-line {
+        position: absolute;
+      }
+
+      .preview-hero-scene {
+        width: 100%;
+        margin-bottom: 1.25rem;
+      }
+
+      @media (min-width: 1024px) {
+        .preview-hero-scene {
+          margin-bottom: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="preview-banner">
+      <strong>Vista previa v2</strong> — Amanecer en el lago · Escena nueva para la home. Aún no está en index.html.
+    </p>
+
+    <div class="preview-wrap">
+      <section class="guides-featured" aria-labelledby="guides-featured-title">
+        <div class="guides-featured__bg" aria-hidden="true"></div>
+        <div class="guides-featured__top-line" aria-hidden="true"></div>
+        <div class="container-premium guides-featured__inner">
+          <header class="guides-featured__header">
+            <div class="guides-featured__header-grid">
+              <div class="guides-featured__header-center">
+                <div
+                  class="gh3-scene gh3-scene--hero preview-hero-scene h-64 min-h-[16rem] w-full md:h-96 md:min-h-[24rem]"
+                  role="img"
+                  aria-label="Amanecer dorado en un lago de montaña con tienda de campaña reflejada en el agua y pequeña hoguera en la orilla"
+                >
+                  <span class="gh3-scene__glow gh3-scene__glow--sun" aria-hidden="true"></span>
+                  <span class="gh3-scene__glow gh3-scene__glow--water" aria-hidden="true"></span>
+                  <svg
+                    class="gh3-scene__svg"
+                    viewBox="0 0 1200 320"
+                    preserveAspectRatio="xMidYMid slice"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <g class="gh3-enter gh3-enter--sky">
+                      <rect width="1200" height="320" fill="url(#gh3DawnSky)" />
+                      <rect width="1200" height="180" fill="url(#gh3HorizonGlow)" opacity="0.85" />
+                      <circle class="gh3-star" cx="140" cy="42" r="1.5" fill="#fff" opacity="0.5" />
+                      <circle class="gh3-star gh3-star--2" cx="260" cy="28" r="1.2" fill="#fde68a" opacity="0.4" />
+                      <circle class="gh3-star gh3-star--3" cx="420" cy="36" r="1.4" fill="#fff" opacity="0.35" />
+                      <circle class="gh3-sun" cx="900" cy="92" r="36" fill="url(#gh3Sun)" stroke="#fbbf24" stroke-width="2" opacity="0.95" />
+                      <ellipse cx="900" cy="92" rx="72" ry="28" fill="url(#gh3SunHalo)" opacity="0.55" />
+                    </g>
+
+                    <g class="gh3-enter gh3-enter--mountains">
+                      <path
+                        d="M0 195 L180 118 L340 148 L500 98 L660 128 L820 88 L980 118 L1140 92 L1200 102 L1200 320 L0 320 Z"
+                        fill="#1e293b"
+                        opacity="0.75"
+                      />
+                      <path
+                        d="M0 218 L220 168 L440 188 L620 152 L800 178 L980 158 L1200 172 L1200 320 L0 320 Z"
+                        fill="#334155"
+                        opacity="0.55"
+                      />
+                      <path
+                        d="M720 158 L780 118 L840 158 L810 158 Z"
+                        fill="#f8fafc"
+                        opacity="0.55"
+                      />
+                      <path
+                        d="M960 138 L1010 108 L1060 138 L1030 138 Z"
+                        fill="#f1f5f9"
+                        opacity="0.45"
+                      />
+                    </g>
+
+                    <g class="gh3-enter gh3-enter--lake">
+                      <path
+                        d="M0 248 Q300 232 600 238 T1200 244 L1200 320 L0 320 Z"
+                        fill="url(#gh3Lake)"
+                      />
+                      <ellipse class="gh3-mist" cx="520" cy="248" rx="180" ry="14" fill="url(#gh3Mist)" opacity="0.45" />
+                      <ellipse class="gh3-mist gh3-mist--2" cx="780" cy="252" rx="140" ry="10" fill="url(#gh3Mist)" opacity="0.35" />
+                      <ellipse class="gh3-shimmer" cx="640" cy="268" rx="120" ry="6" fill="url(#gh3Shimmer)" />
+                      <ellipse class="gh3-shimmer-reflect" cx="360" cy="286" rx="70" ry="4" fill="url(#gh3Shimmer)" opacity="0.6" />
+                    </g>
+
+                    <g class="gh3-enter gh3-enter--shore">
+                      <path
+                        d="M0 258 Q400 248 800 254 T1200 258 L1200 320 L0 320 Z"
+                        fill="url(#gh3Shore)"
+                      />
+                      <g class="gh3-pine gh3-pine--1" fill="#14532d" stroke="#052e16" stroke-width="2" stroke-linejoin="round">
+                        <path d="M48 258 L72 158 L96 258 Z" />
+                        <path d="M118 258 L148 118 L178 258 Z" />
+                        <rect x="64" y="258" width="8" height="20" rx="1" fill="#1a1208" />
+                        <rect x="134" y="258" width="8" height="20" rx="1" fill="#1a1208" />
+                      </g>
+                      <g class="gh3-pine gh3-pine--2" fill="#166534" stroke="#052e16" stroke-width="2">
+                        <path d="M1060 258 L1088 148 L1116 258 Z" />
+                        <path d="M1120 258 L1152 108 L1184 258 Z" />
+                        <rect x="1078" y="258" width="8" height="20" rx="1" fill="#1a1208" />
+                      </g>
+                      <ellipse cx="360" cy="262" rx="8" ry="3" fill="#44403c" opacity="0.6" />
+                      <ellipse cx="380" cy="261" rx="6" ry="2.5" fill="#57534e" opacity="0.5" />
+                    </g>
+
+                    <g class="gh3-enter gh3-enter--camp">
+                      <ellipse cx="360" cy="262" rx="52" ry="7" fill="#1a1208" opacity="0.35" />
+                      <path
+                        d="M312 258 L360 198 L408 258 Z"
+                        fill="url(#gh3TentRoof)"
+                        stroke="#1e293b"
+                        stroke-width="2.5"
+                        stroke-linejoin="round"
+                      />
+                      <path d="M322 258 L360 212 L398 258 Z" fill="url(#gh3TentInner)" opacity="0.6" />
+                      <path
+                        d="M312 258 L408 258 L400 258 L360 228 L320 258 Z"
+                        fill="#c2410c"
+                        stroke="#1e293b"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                      <path d="M350 258 L360 244 L370 258 Z" fill="#292524" stroke="#1e293b" stroke-width="1.5" />
+                      <g class="gh3-tent-reflect" opacity="0.35">
+                        <path d="M312 286 L360 318 L408 286 Z" fill="url(#gh3TentReflect)" />
+                        <path d="M322 286 L360 308 L398 286 Z" fill="url(#gh3TentReflectInner)" />
+                      </g>
+                      <ellipse class="gh3-fire-glow" cx="468" cy="272" rx="36" ry="16" fill="url(#gh3FireGlow)" />
+                      <ellipse cx="468" cy="278" rx="26" ry="6" fill="#1a1208" opacity="0.45" />
+                      <rect x="452" y="276" width="32" height="6" rx="2" fill="#3d2818" transform="rotate(-10 468 279)" />
+                      <rect x="452" y="276" width="32" height="6" rx="2" fill="#4a3220" transform="rotate(8 468 279)" />
+                      <g class="gh3-flame-single">
+                        <path
+                          d="M462 278 C464 254 466 242 468 234 C470 242 472 254 474 278 C470 266 468 260 462 278 Z"
+                          fill="url(#gh3FlameMain)"
+                          opacity="0.9"
+                        />
+                        <path
+                          d="M466 278 C467 258 468 248 470 278 C469 268 467 262 466 278 Z"
+                          fill="url(#gh3FlameCore)"
+                          opacity="0.85"
+                        />
+                      </g>
+                      <path
+                        d="M388 258 L392 238 L396 258"
+                        stroke="#78716c"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M404 258 L408 232 L412 258"
+                        stroke="#78716c"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                      />
+                      <ellipse cx="430" cy="257" rx="14" ry="5" fill="#44403c" stroke="#1e293b" stroke-width="1.5" />
+                    </g>
+
+                    <defs>
+                      <linearGradient id="gh3DawnSky" x1="600" y1="0" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#0f172a" />
+                        <stop offset="45%" stop-color="#312e81" />
+                        <stop offset="72%" stop-color="#7c2d12" />
+                        <stop offset="100%" stop-color="#fdba74" />
+                      </linearGradient>
+                      <linearGradient id="gh3HorizonGlow" x1="600" y1="80" x2="600" y2="220" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="rgba(251,191,36,0)" />
+                        <stop offset="55%" stop-color="rgba(251,146,60,0.35)" />
+                        <stop offset="100%" stop-color="rgba(253,186,116,0.15)" />
+                      </linearGradient>
+                      <radialGradient id="gh3Sun" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#fff7ed" />
+                        <stop offset="55%" stop-color="#fdba74" />
+                        <stop offset="100%" stop-color="#f97316" />
+                      </radialGradient>
+                      <radialGradient id="gh3SunHalo" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="rgba(253,186,116,0.55)" />
+                        <stop offset="100%" stop-color="rgba(253,186,116,0)" />
+                      </radialGradient>
+                      <linearGradient id="gh3Lake" x1="600" y1="238" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#1e3a8a" />
+                        <stop offset="40%" stop-color="#1d4ed8" />
+                        <stop offset="100%" stop-color="#0f172a" />
+                      </linearGradient>
+                      <radialGradient id="gh3Mist" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="rgba(226,232,240,0.35)" />
+                        <stop offset="100%" stop-color="rgba(226,232,240,0)" />
+                      </radialGradient>
+                      <linearGradient id="gh3Shimmer" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+                        <stop offset="50%" stop-color="rgba(255,255,255,0.65)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                      </linearGradient>
+                      <linearGradient id="gh3Shore" x1="600" y1="258" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#365314" />
+                        <stop offset="100%" stop-color="#14532d" />
+                      </linearGradient>
+                      <linearGradient id="gh3TentRoof" x1="360" y1="198" x2="360" y2="258" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#fb923c" />
+                        <stop offset="100%" stop-color="#c2410c" />
+                      </linearGradient>
+                      <linearGradient id="gh3TentInner" x1="360" y1="212" x2="360" y2="258" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#fde68a" stop-opacity="0.5" />
+                        <stop offset="100%" stop-color="#9a3412" stop-opacity="0.2" />
+                      </linearGradient>
+                      <linearGradient id="gh3TentReflect" x1="360" y1="286" x2="360" y2="318" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="rgba(251,146,60,0.35)" />
+                        <stop offset="100%" stop-color="rgba(251,146,60,0)" />
+                      </linearGradient>
+                      <linearGradient id="gh3TentReflectInner" x1="360" y1="286" x2="360" y2="310" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="rgba(253,224,71,0.2)" />
+                        <stop offset="100%" stop-color="rgba(253,224,71,0)" />
+                      </linearGradient>
+                      <radialGradient id="gh3FireGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="rgba(251,146,60,0.45)" />
+                        <stop offset="100%" stop-color="rgba(251,146,60,0)" />
+                      </radialGradient>
+                      <linearGradient id="gh3FlameMain" x1="468" y1="234" x2="468" y2="278" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#fde68a" />
+                        <stop offset="100%" stop-color="#ea580c" />
+                      </linearGradient>
+                      <linearGradient id="gh3FlameCore" x1="468" y1="248" x2="468" y2="278" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#fffbeb" />
+                        <stop offset="100%" stop-color="#fb923c" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+
+                <p class="guides-featured__kicker">Editorial · Comparativas</p>
+                <h1 id="guides-featured-title" class="guides-featured__title">Guías Destacadas</h1>
+                <p class="guides-featured__lead">
+                  Selección de comparativas y guías de compra para elegir mejor tu equipo de camping.
+                </p>
+              </div>
+            </div>
+          </header>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

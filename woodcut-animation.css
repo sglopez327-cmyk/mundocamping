@@ -1,0 +1,295 @@
+/* Animación: persona cortando leña con hacha en el bosque — Cumbre y Camping */
+.woodcut-scene {
+  position: relative;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(ellipse at 35% 70%, rgba(52, 211, 153, 0.14), transparent 55%),
+    radial-gradient(ellipse at 80% 25%, rgba(254, 243, 199, 0.08), transparent 40%),
+    linear-gradient(180deg, #0c1a2e 0%, #0a1418 42%, #050a0f 100%);
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.1);
+}
+
+.woodcut-scene--hero {
+  max-width: none;
+  margin-inline: 0;
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 100%;
+}
+
+.woodcut-scene svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.woodcut-scene__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(32px);
+  animation: woodcutGlowPulse 2.8s ease-in-out infinite;
+}
+
+.woodcut-scene__glow--forest {
+  width: 12rem;
+  height: 8rem;
+  left: 18%;
+  top: 55%;
+  background: rgba(52, 211, 153, 0.22);
+}
+
+.woodcut-sun {
+  animation: woodcutSunHaze 6s ease-in-out infinite;
+}
+
+.woodcut-trees-back {
+  animation: woodcutTreeSway 9s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.woodcut-trees-mid {
+  animation: woodcutTreeSway 7.5s ease-in-out infinite reverse;
+  transform-origin: center bottom;
+}
+
+.woodcut-trees-front {
+  animation: woodcutTreeSway 6.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.woodcut-mist {
+  animation: woodcutMistDrift 12s ease-in-out infinite;
+}
+
+.woodcut-person {
+  animation: woodcutPersonBreathe 2.8s ease-in-out infinite;
+  transform-origin: 248px 210px;
+  transform-box: fill-box;
+}
+
+.woodcut-arm {
+  transform-origin: 268px 178px;
+  transform-box: fill-box;
+  animation: woodcutAxeSwing 2.8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.woodcut-axe-blade {
+  animation: woodcutBladeGlint 2.8s ease-in-out infinite;
+}
+
+.woodcut-log {
+  animation: woodcutLogShake 2.8s ease-in-out infinite;
+  transform-origin: 338px 228px;
+  transform-box: fill-box;
+}
+
+.woodcut-stump {
+  animation: woodcutStumpThump 2.8s ease-in-out infinite;
+  transform-origin: 338px 248px;
+  transform-box: fill-box;
+}
+
+.woodcut-crack {
+  animation: woodcutCrackFlash 2.8s ease-in-out infinite;
+}
+
+.woodcut-chip {
+  animation: woodcutChipFly 2.8s ease-out infinite;
+}
+
+.woodcut-chip--2 {
+  animation-delay: 0.04s;
+}
+
+.woodcut-chip--3 {
+  animation-delay: 0.08s;
+}
+
+.woodcut-chip--4 {
+  animation-delay: 0.02s;
+}
+
+.woodcut-dust {
+  animation: woodcutDustPuff 2.8s ease-out infinite;
+}
+
+@keyframes woodcutGlowPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  42% {
+    opacity: 0.75;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes woodcutSunHaze {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes woodcutTreeSway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0.6deg);
+  }
+}
+
+@keyframes woodcutMistDrift {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.28;
+    transform: translateX(12px);
+  }
+}
+
+@keyframes woodcutPersonBreathe {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  48% {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes woodcutAxeSwing {
+  0%,
+  8% {
+    transform: rotate(-58deg);
+  }
+  22% {
+    transform: rotate(32deg);
+  }
+  28%,
+  100% {
+    transform: rotate(-58deg);
+  }
+}
+
+@keyframes woodcutBladeGlint {
+  0%,
+  18%,
+  100% {
+    opacity: 0.85;
+  }
+  24% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(254, 243, 199, 0.6));
+  }
+}
+
+@keyframes woodcutLogShake {
+  0%,
+  20%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  24% {
+    transform: translate(-2px, 1px) rotate(-2deg);
+  }
+  28% {
+    transform: translate(1px, 0) rotate(1deg);
+  }
+  32% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes woodcutStumpThump {
+  0%,
+  22%,
+  100% {
+    transform: scaleY(1);
+  }
+  26% {
+    transform: scaleY(0.97);
+  }
+  30% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes woodcutCrackFlash {
+  0%,
+  21%,
+  100% {
+    opacity: 0;
+  }
+  25%,
+  35% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes woodcutChipFly {
+  0%,
+  22%,
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  24% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  45% {
+    opacity: 0.7;
+    transform: translate(18px, -14px) rotate(35deg);
+  }
+  65% {
+    opacity: 0;
+    transform: translate(28px, 6px) rotate(60deg);
+  }
+}
+
+@keyframes woodcutDustPuff {
+  0%,
+  22%,
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  26% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .woodcut-scene *,
+  .woodcut-scene__glow {
+    animation: none !important;
+  }
+
+  .woodcut-arm {
+    transform: rotate(5deg);
+  }
+
+  .woodcut-chip,
+  .woodcut-dust {
+    opacity: 0.4;
+  }
+}

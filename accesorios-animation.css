@@ -1,0 +1,362 @@
+/* Panorama de accesorios de acampada a ancho completo — Mundo Camping */
+.accesorios-scene {
+  position: relative;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #050a0f;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.12);
+}
+
+.accesorios-scene--hero {
+  max-width: none;
+  margin-inline: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.accesorios-scene svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 16rem;
+}
+
+.accesorios-scene__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.accesorios-scene__glow--left {
+  width: 28%;
+  height: 70%;
+  left: 0;
+  top: 30%;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.2), transparent 70%);
+  animation: acc2GlowLeft 5s ease-in-out infinite;
+}
+
+.accesorios-scene__glow--center {
+  width: 32%;
+  height: 75%;
+  left: 34%;
+  top: 25%;
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.28), transparent 70%);
+  animation: acc2GlowCenter 3.5s ease-in-out infinite;
+}
+
+.accesorios-scene__glow--right {
+  width: 28%;
+  height: 70%;
+  right: 0;
+  top: 28%;
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.22), transparent 70%);
+  animation: acc2GlowRight 4.2s ease-in-out infinite;
+}
+
+.acc2-sky-band {
+  animation: acc2SkyShift 18s ease-in-out infinite;
+}
+
+.acc2-hill-far {
+  animation: acc2HillDrift 14s ease-in-out infinite;
+}
+
+.acc2-hill-near {
+  animation: acc2HillDrift 11s ease-in-out infinite reverse;
+}
+
+.acc2-firefly {
+  animation: acc2Firefly 4s ease-in-out infinite;
+}
+
+.acc2-firefly--2 {
+  animation-delay: 1.1s;
+}
+
+.acc2-firefly--3 {
+  animation-delay: 2.3s;
+}
+
+.acc2-firefly--4 {
+  animation-delay: 0.6s;
+}
+
+.acc2-firefly--5 {
+  animation-delay: 1.8s;
+}
+
+.acc2-campfire-flame {
+  transform-origin: 600px 218px;
+  animation: acc2Flame 0.7s ease-in-out infinite;
+}
+
+.acc2-campfire-flame--2 {
+  animation-delay: 0.2s;
+}
+
+.acc2-campfire-flame--3 {
+  animation-delay: 0.35s;
+}
+
+.acc2-headlamp-beam {
+  transform-origin: 195px 175px;
+  animation: acc2BeamSweep 6s ease-in-out infinite;
+}
+
+.acc2-lantern {
+  animation: acc2LanternBob 4.5s ease-in-out infinite;
+  transform-origin: 1020px 165px;
+}
+
+.acc2-lantern-core {
+  animation: acc2LanternFlicker 2.2s ease-in-out infinite;
+}
+
+.acc2-saw-blade {
+  transform-origin: 115px 210px;
+  animation: acc2SawStroke 3.2s ease-in-out infinite;
+}
+
+.acc2-multitool {
+  animation: acc2ToolFloat 5s ease-in-out infinite;
+  transform-origin: 55px 200px;
+}
+
+.acc2-pot-steam {
+  animation: acc2Steam 2.4s ease-out infinite;
+  opacity: 0;
+}
+
+.acc2-pot-steam--2 {
+  animation-delay: 0.8s;
+}
+
+.acc2-chair {
+  animation: acc2ChairRock 6s ease-in-out infinite;
+  transform-origin: 880px 230px;
+}
+
+.acc2-cooler {
+  animation: acc2CoolerPulse 4s ease-in-out infinite;
+  transform-origin: 1045px 220px;
+}
+
+.acc2-rope {
+  animation: acc2RopeSway 7s ease-in-out infinite;
+  transform-origin: 1120px 200px;
+}
+
+.acc2-water-drop {
+  animation: acc2DropFall 2.8s ease-in infinite;
+  opacity: 0;
+}
+
+.acc2-water-drop--2 {
+  animation-delay: 1.2s;
+}
+
+@keyframes acc2GlowLeft {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes acc2GlowCenter {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes acc2GlowRight {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.88;
+  }
+}
+
+@keyframes acc2SkyShift {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.92;
+  }
+}
+
+@keyframes acc2HillDrift {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes acc2Firefly {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: translate(0, 0);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translate(4px, -6px);
+  }
+}
+
+@keyframes acc2Flame {
+  0%,
+  100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 0.9;
+  }
+  40% {
+    transform: scaleY(1.15) scaleX(0.92);
+    opacity: 1;
+  }
+  70% {
+    transform: scaleY(0.88) scaleX(1.05);
+    opacity: 0.82;
+  }
+}
+
+@keyframes acc2BeamSweep {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+    opacity: 0.35;
+  }
+  50% {
+    transform: rotate(12deg);
+    opacity: 0.65;
+  }
+}
+
+@keyframes acc2LanternBob {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(1.5deg) translateY(-3px);
+  }
+}
+
+@keyframes acc2LanternFlicker {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes acc2SawStroke {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+}
+
+@keyframes acc2ToolFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes acc2Steam {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+}
+
+@keyframes acc2ChairRock {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes acc2CoolerPulse {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes acc2RopeSway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes acc2DropFall {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accesorios-scene *,
+  .accesorios-scene__glow {
+    animation: none !important;
+  }
+  .acc2-campfire-flame,
+  .acc2-lantern-core,
+  .acc2-headlamp-beam {
+    opacity: 0.9 !important;
+  }
+}

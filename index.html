@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es" data-site-root=".">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guías destacadas, comparativas y selección de equipo de camping y montaña con criterio editorial."
+    />
+    <title>Mundo Camping | Guías destacadas de camping y montaña</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'],
+            },
+            colors: {
+              premium: { accent: '#deff9a', night: '#020403' },
+            },
+            boxShadow: {
+              glass: '0 12px 40px rgba(0, 0, 0, 0.35)',
+              'glass-lg': '0 20px 50px rgba(0, 0, 0, 0.45)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./mundo-camping.css" />
+    <link rel="stylesheet" href="./footer-premium.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./home-hero-animation.css" />
+    <link rel="stylesheet" href="./site-header.css" />
+  </head>
+  <body class="bg-[#020403] text-white antialiased">
+    <header id="site-header"></header>
+    <script src="./js/site-header.js"></script>
+
+    <main>
+      <section class="guides-featured" aria-labelledby="guides-featured-title">
+        <div class="guides-featured__bg" aria-hidden="true"></div>
+        <div class="guides-featured__top-line" aria-hidden="true"></div>
+        <div class="container-premium guides-featured__inner">
+          <header class="guides-featured__header">
+            <div class="guides-featured__header-grid">
+              <div class="guides-featured__header-center">
+                <div
+                  class="gh3-scene gh3-scene--hero guides-featured__hero h-64 min-h-[16rem] w-full md:h-96 md:min-h-[24rem]"
+                >
+                  <span class="gh3-scene__glow gh3-scene__glow--sun" aria-hidden="true"></span>
+                  <span class="gh3-scene__glow gh3-scene__glow--water" aria-hidden="true"></span>
+                  <svg
+                    class="gh3-scene__svg"
+                    viewBox="0 0 1200 320"
+                    preserveAspectRatio="xMidYMid slice"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <g class="gh3-enter gh3-enter--sky">
+                      <rect width="1200" height="320" fill="url(#gh3DawnSky)" />
+                      <rect width="1200" height="180" fill="url(#gh3HorizonGlow)" opacity="0.85" />
+                      <circle class="gh3-star" cx="140" cy="42" r="1.5" fill="#fff" opacity="0.5" />
+                      <circle class="gh3-star gh3-star--2" cx="260" cy="28" r="1.2" fill="#fde68a" opacity="0.4" />
+                      <circle class="gh3-star gh3-star--3" cx="420" cy="36" r="1.4" fill="#fff" opacity="0.35" />
+                      <circle class="gh3-sun" cx="900" cy="92" r="36" fill="url(#gh3Sun)" stroke="#fbbf24" stroke-width="2" opacity="0.95" />
+                      <ellipse cx="900" cy="92" rx="72" ry="28" fill="url(#gh3SunHalo)" opacity="0.55" />
+                    </g>
+
+                    <g class="gh3-enter gh3-enter--mountains">
+                      <path
+                        d="M0 195 L180 118 L340 148 L500 98 L660 128 L820 88 L980 118 L1140 92 L1200 102 L1200 320 L0 320 Z"
+                        fill="#1e293b"
+                        opacity="0.75"
+                      />
+                      <path
+                        d="M0 218 L220 168 L440 188 L620 152 L800 178 L980 158 L1200 172 L1200 320 L0 320 Z"
+                        fill="#334155"
+                        opacity="0.55"
+                      />
+                      <path d="M720 158 L780 118 L840 158 L810 158 Z" fill="#f8fafc" opacity="0.55" />
+                      <path d="M960 138 L1010 108 L1060 138 L1030 138 Z" fill="#f1f5f9" opacity="0.45" />
+                    </g>
+
+                    <g class="gh3-enter gh3-enter--lake">
+                      <path d="M0 248 Q300 232 600 238 T1200 244 L1200 320 L0 320 Z" fill="url(#gh3Lake)" />
+                      <ellipse class="gh3-mist" cx="520" cy="248" rx="180" ry="14" fill="url(#gh3Mist)" opacity="0.45" />
+                      <ellipse class="gh3-mist gh3-mist--2" cx="780" cy="252" rx="140" ry="10" fill="url(#gh3Mist)" opacity="0.35" />
+                      <ellipse class="gh3-shimmer" cx="640" cy="268" rx="120" ry="6" fill="url(#gh3Shimmer)" />
+                      <ellipse class="gh3-shimmer-reflect" cx="360" cy="286" rx="70" ry="4" fill="url(#gh3Shimmer)" opacity="0.6" />
+                    </g>
+
+                    <g class="gh3-enter gh3-enter--shore">
+                      <path d="M0 258 Q400 248 800 254 T1200 258 L1200 320 L0 320 Z" fill="url(#gh3Shore)" />
+                      <g class="gh3-pine gh3-pine--1" fill="#14532d" stroke="#052e16" stroke-width="2" stroke-linejoin="round">
+                        <path d="M48 258 L72 158 L96 258 Z" />
+                        <path d="M118 258 L148 118 L178 258 Z" />
+                        <rect x="64" y="258" width="8" height="20" rx="1" fill="#1a1208" />
+                        <rect x="134" y="258" width="8" height="20" rx="1" fill="#1a1208" />
+                      </g>
+                      <g class="gh3-pine gh3-pine--2" fill="#166534" stroke="#052e16" stroke-width="2">
+                        <path d="M1060 258 L1088 148 L1116 258 Z" />
+                        <path d="M1120 258 L1152 108 L1184 258 Z" />
+                        <rect x="1078" y="258" width="8" height="20" rx="1" fill="#1a1208" />
+                      </g>
+                      <ellipse cx="360" cy="262" rx="8" ry="3" fill="#44403c" opacity="0.6" />
+                      <ellipse cx="380" cy="261" rx="6" ry="2.5" fill="#57534e" opacity="0.5" />
+                    </g>
+
+                    <g class="gh3-enter gh3-enter--camp">
+                      <ellipse cx="360" cy="262" rx="52" ry="7" fill="#1a1208" opacity="0.35" />
+                      <path
+                        d="M312 258 L360 198 L408 258 Z"
+                        fill="url(#gh3TentRoof)"
+                        stroke="#1e293b"
+                        stroke-width="2.5"
+                        stroke-linejoin="round"
+                      />
+                      <path d="M322 258 L360 212 L398 258 Z" fill="url(#gh3TentInner)" opacity="0.6" />
+                      <path
+                        d="M312 258 L408 258 L400 258 L360 228 L320 258 Z"
+                        fill="#c2410c"
+                        stroke="#1e293b"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                      <path d="M350 258 L360 244 L370 258 Z" fill="#292524" stroke="#1e293b" stroke-width="1.5" />
+                      <g class="gh3-tent-reflect" opacity="0.35">
+                        <path d="M312 286 L360 318 L408 286 Z" fill="url(#gh3TentReflect)" />
+                        <path d="M322 286 L360 308 L398 286 Z" fill="url(#gh3TentReflectInner)" />
+                      </g>
+                      <ellipse class="gh3-fire-glow" cx="468" cy="272" rx="36" ry="16" fill="url(#gh3FireGlow)" />
+                      <ellipse cx="468" cy="278" rx="26" ry="6" fill="#1a1208" opacity="0.45" />
+                      <rect x="452" y="276" width="32" height="6" rx="2" fill="#3d2818" transform="rotate(-10 468 279)" />
+                      <rect x="452" y="276" width="32" height="6" rx="2" fill="#4a3220" transform="rotate(8 468 279)" />
+                      <g class="gh3-flame-single">
+                        <path
+                          d="M462 278 C464 254 466 242 468 234 C470 242 472 254 474 278 C470 266 468 260 462 278 Z"
+                          fill="url(#gh3FlameMain)"
+                          opacity="0.9"
+                        />
+                        <path
+                          d="M466 278 C467 258 468 248 470 278 C469 268 467 262 466 278 Z"
+                          fill="url(#gh3FlameCore)"
+                          opacity="0.85"
+                        />
+                      </g>
+                      <path d="M388 258 L392 238 L396 258" stroke="#78716c" stroke-width="3" stroke-linecap="round" />
+                      <path d="M404 258 L408 232 L412 258" stroke="#78716c" stroke-width="3" stroke-linecap="round" />
+                      <ellipse cx="430" cy="257" rx="14" ry="5" fill="#44403c" stroke="#1e293b" stroke-width="1.5" />
+                    </g>
+
+                    <defs>
+                      <linearGradient id="gh3DawnSky" x1="600" y1="0" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#0f172a" />
+                        <stop offset="45%" stop-color="#312e81" />
+                        <stop offset="72%" stop-color="#7c2d12" />
+                        <stop offset="100%" stop-color="#fdba74" />
+                      </linearGradient>
+                      <linearGradient id="gh3HorizonGlow" x1="600" y1="80" x2="600" y2="220" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="rgba(251,191,36,0)" />
+                        <stop offset="55%" stop-color="rgba(251,146,60,0.35)" />
+                        <stop offset="100%" stop-color="rgba(253,186,116,0.15)" />
+                      </linearGradient>
+                      <radialGradient id="gh3Sun" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#fff7ed" />
+                        <stop offset="55%" stop-color="#fdba74" />
+                        <stop offset="100%" stop-color="#f97316" />
+                      </radialGradient>
+                      <radialGradient id="gh3SunHalo" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="rgba(253,186,116,0.55)" />
+                        <stop offset="100%" stop-color="rgba(253,186,116,0)" />
+                      </radialGradient>
+                      <linearGradient id="gh3Lake" x1="600" y1="238" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#1e3a8a" />
+                        <stop offset="40%" stop-color="#1d4ed8" />
+                        <stop offset="100%" stop-color="#0f172a" />
+                      </linearGradient>
+                      <radialGradient id="gh3Mist" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="rgba(226,232,240,0.35)" />
+                        <stop offset="100%" stop-color="rgba(226,232,240,0)" />
+                      </radialGradient>
+                      <linearGradient id="gh3Shimmer" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+                        <stop offset="50%" stop-color="rgba(255,255,255,0.65)" />
+                        <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                      </linearGradient>
+                      <linearGradient id="gh3Shore" x1="600" y1="258" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#365314" />
+                        <stop offset="100%" stop-color="#14532d" />
+                      </linearGradient>
+                      <linearGradient id="gh3TentRoof" x1="360" y1="198" x2="360" y2="258" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#fb923c" />
+                        <stop offset="100%" stop-color="#c2410c" />
+                      </linearGradient>
+                      <linearGradient id="gh3TentInner" x1="360" y1="212" x2="360" y2="258" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#fde68a" stop-opacity="0.5" />
+                        <stop offset="100%" stop-color="#9a3412" stop-opacity="0.2" />
+                      </linearGradient>
+                      <linearGradient id="gh3TentReflect" x1="360" y1="286" x2="360" y2="318" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="rgba(251,146,60,0.35)" />
+                        <stop offset="100%" stop-color="rgba(251,146,60,0)" />
+                      </linearGradient>
+                      <linearGradient id="gh3TentReflectInner" x1="360" y1="286" x2="360" y2="310" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="rgba(253,224,71,0.2)" />
+                        <stop offset="100%" stop-color="rgba(253,224,71,0)" />
+                      </linearGradient>
+                      <radialGradient id="gh3FireGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="rgba(251,146,60,0.45)" />
+                        <stop offset="100%" stop-color="rgba(251,146,60,0)" />
+                      </radialGradient>
+                      <linearGradient id="gh3FlameMain" x1="468" y1="234" x2="468" y2="278" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#fde68a" />
+                        <stop offset="100%" stop-color="#ea580c" />
+                      </linearGradient>
+                      <linearGradient id="gh3FlameCore" x1="468" y1="248" x2="468" y2="278" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#fffbeb" />
+                        <stop offset="100%" stop-color="#fb923c" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+
+                  <div class="guides-featured__hero-overlay" aria-hidden="true"></div>
+
+                  <div class="guides-featured__hero-copy">
+                    <p class="guides-featured__kicker">Editorial · Comparativas</p>
+                    <h1 id="guides-featured-title" class="guides-featured__title">Guías Destacadas</h1>
+                    <p class="guides-featured__lead">
+                      Selección de comparativas y guías de compra para elegir mejor tu equipo de camping.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <div class="guides-home-layout">
+            <div class="guides-home-layout__main">
+              <div
+                id="guides-featured-stack"
+                class="guides-featured__stack"
+                aria-live="polite"
+                aria-label="Listado de guías destacadas"
+              ></div>
+            </div>
+
+            <aside class="guides-home-sidebar" aria-label="Categorías del sitio y recomendaciones">
+              <div class="guides-home-sidebar__sticky">
+              <nav class="guides-sidebar-panel" aria-labelledby="sidebar-categories-title">
+                <h2 id="sidebar-categories-title" class="guides-sidebar-panel__title">Categorías</h2>
+                <ul class="guides-sidebar-categories">
+                  <li>
+                    <a href="index.html" class="guides-sidebar-categories__link guides-sidebar-categories__link--highlight">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 7v14" />
+                          <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Guías Destacadas</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tiendas.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3.5 21 12 3l8.5 18" />
+                          <path d="M7.5 15h9" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Tiendas de Campaña</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="sacos.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+                          <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+                          <path d="M12 4v6" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Sacos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="esterillas.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <rect width="7" height="7" x="3" y="3" rx="1" />
+                          <rect width="7" height="7" x="14" y="3" rx="1" />
+                          <rect width="7" height="7" x="14" y="14" rx="1" />
+                          <rect width="7" height="7" x="3" y="14" rx="1" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Esterillas</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="baterias.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <rect width="16" height="10" x="2" y="7" rx="2" ry="2" />
+                          <line x1="22" x2="22" y1="11" y2="13" />
+                          <path d="M11 11v4" />
+                          <path d="m9 13 2-2 2 2" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Baterías y Energía</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="iluminacion/" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M10 2h4" />
+                          <path d="M12 14v8" />
+                          <path d="M8 22h8" />
+                          <path d="M18 6c0 4-2 6-6 8-4-2-6-4-6-8 0-2 2-4 6-4s6 2 6 4z" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Iluminación</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="herramientas.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Herramientas</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="accesorios.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                          <path d="M9 6V5a3 3 0 0 1 6 0v1" />
+                          <path d="M8 21v-5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Accesorios</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="guides-sidebar-panel guides-sidebar-panel--picks">
+                <div class="guides-sidebar-picks guides-sidebar-picks--sticky">
+                  <h2 class="guides-sidebar-panel__title">Lo más leído</h2>
+                  <p class="guides-sidebar-picks__lead">Comparativas y picks editoriales con mejor conversión esta temporada.</p>
+                  <ol class="guides-sidebar-picks__list">
+                    <li>
+                      <a href="top-5-tiendas-parejas.html" class="guides-sidebar-picks__item">
+                        <span class="guides-sidebar-picks__rank">01</span>
+                        <span class="guides-sidebar-picks__label">Mejores tiendas para parejas</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="top-5-sacos-dormir.html" class="guides-sidebar-picks__item">
+                        <span class="guides-sidebar-picks__rank">02</span>
+                        <span class="guides-sidebar-picks__label">Top 5 sacos de dormir 2026</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="tiendas.html" class="guides-sidebar-picks__item">
+                        <span class="guides-sidebar-picks__rank">03</span>
+                        <span class="guides-sidebar-picks__label">Catálogo de tiendas de campaña</span>
+                      </a>
+                    </li>
+                  </ol>
+                  <div class="guides-sidebar-picks__amazon">
+                    <p class="guides-sidebar-picks__amazon-label">Top Pick · Afiliado Amazon</p>
+                    <p class="guides-sidebar-picks__amazon-product">Naturehike Mongar 2P — mejor equilibrio pareja / peso</p>
+                    <a
+                      href="https://www.amazon.es/dp/B0D6DWCMM2"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      class="product-cta-amazon product-cta-amazon--compact guides-sidebar-picks__cta"
+                    >
+                      Ver en Amazon
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guides-sidebar-panel guides-sidebar-checklist">
+                <h2 class="guides-sidebar-panel__title">Imprescindibles de acampada</h2>
+                <ul class="guides-sidebar-checklist__list">
+                  <li class="guides-sidebar-checklist__item">
+                    <span class="guides-sidebar-checklist__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span class="guides-sidebar-checklist__label">Linterna frontal</span>
+                  </li>
+                  <li class="guides-sidebar-checklist__item">
+                    <span class="guides-sidebar-checklist__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span class="guides-sidebar-checklist__label">Saco de dormir</span>
+                  </li>
+                  <li class="guides-sidebar-checklist__item">
+                    <span class="guides-sidebar-checklist__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span class="guides-sidebar-checklist__label">Kit de primeros auxilios</span>
+                  </li>
+                  <li class="guides-sidebar-checklist__item">
+                    <span class="guides-sidebar-checklist__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span class="guides-sidebar-checklist__label">Navaja multiusos</span>
+                  </li>
+                </ul>
+                <a href="tiendas.html" class="guides-sidebar-checklist__cta">Ver catálogo de tiendas</a>
+              </div>
+
+              <div class="guides-sidebar-panel guides-sidebar-authority">
+                <p class="guides-sidebar-panel__title">Nuestro Compromiso</p>
+                <div class="guides-sidebar-authority__head">
+                  <span class="guides-sidebar-authority__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                      />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                  </span>
+                  <h3 class="guides-sidebar-authority__title">¿Por qué confiar en nosotros?</h3>
+                </div>
+                <p class="guides-sidebar-authority__text">
+                  Probamos el equipo en condiciones reales de montaña. Solo recomendamos productos que hemos testado o
+                  investigado a fondo para que no falles en tu aventura.
+                </p>
+              </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+        <footer id="site-footer"></footer>
+    <script src="./js/site-footer.js"></script><script src="./js/guides-featured.js"></script>
+
+  </body>
+</html>

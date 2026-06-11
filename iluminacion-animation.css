@@ -1,0 +1,698 @@
+/* Iluminación — bosque nocturno, cueva, linterna y oso | Motion CSS optimizado */
+/* --il3-smooth: cubic-bezier(0.22, 1, 0.36, 1) — desaceleración orgánica (caminar, luna, huida) */
+/* --il3-bounce: cubic-bezier(0.34, 1.56, 0.64, 1) — rebote controlado (oso, susto, pasos) */
+/* --il3-snap: cubic-bezier(0.16, 1, 0.3, 1) — arranque rápido con frenado suave (huida hacia tienda) */
+
+.il3-scene {
+  --il3-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --il3-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --il3-snap: cubic-bezier(0.16, 1, 0.3, 1);
+  --il3-loop: 16s;
+
+  position: relative;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #030508;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(251, 191, 36, 0.1);
+}
+
+.il3-scene--hero {
+  max-width: none;
+  margin-inline: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.il3-scene__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 16rem;
+}
+
+/* —— GPU —— */
+.il3-enter,
+.il3-family,
+.il3-family-bob,
+.il3-member,
+.il3-leg,
+.il3-arm,
+.il3-flash,
+.il3-bear,
+.il3-bear-body,
+.il3-tree,
+.il3-moon,
+.il3-tent {
+  will-change: transform;
+}
+
+.il3-star,
+.il3-beam,
+.il3-beam-core,
+.il3-cave-dark,
+.il3-bear-eyes,
+.il3-scene__glow {
+  will-change: transform, opacity;
+}
+
+/* —— Entrada stagger —— */
+.il3-enter {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  animation: il3EnterIn 0.9s var(--il3-smooth) forwards;
+}
+
+.il3-enter--sky { animation-delay: 0s; }
+.il3-enter--forest { animation-delay: 0.07s; }
+.il3-enter--cave { animation-delay: 0.14s; }
+.il3-enter--tent { animation-delay: 0.2s; }
+.il3-enter--family { animation-delay: 0.28s; }
+
+@keyframes il3EnterIn {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* —— Cielo —— */
+.il3-moon {
+  transform-origin: 1020px 46px;
+  transform-box: fill-box;
+  animation: il3MoonPulse 7s var(--il3-smooth) infinite;
+}
+
+.il3-star {
+  transform-origin: center;
+  animation: il3StarTwinkle 3.8s var(--il3-smooth) infinite;
+}
+
+.il3-star--2 { animation-delay: 0.45s; }
+.il3-star--3 { animation-delay: 0.9s; }
+.il3-star--4 { animation-delay: 1.35s; }
+.il3-star--5 { animation-delay: 1.8s; }
+.il3-star--6 { animation-delay: 2.2s; }
+
+@keyframes il3MoonPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.88;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes il3StarTwinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* —— Bosque —— */
+.il3-tree {
+  transform-origin: center bottom;
+  transform-box: fill-box;
+  animation: il3TreeSway 9s var(--il3-smooth) infinite;
+}
+
+.il3-tree--2 { animation-delay: 1.2s; animation-duration: 10s; }
+.il3-tree--3 { animation-delay: 2.4s; }
+
+@keyframes il3TreeSway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0.8deg);
+  }
+}
+
+/* —— Tienda (destino) —— */
+.il3-tent-glow {
+  transform-origin: 118px 210px;
+  transform-box: fill-box;
+  animation: il3TentGlow 16s var(--il3-smooth) infinite;
+}
+
+@keyframes il3TentGlow {
+  0%,
+  48%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.92);
+  }
+  72%,
+  88% {
+    opacity: 0.55;
+    transform: scale(1.08);
+  }
+}
+
+/* —— Oscuridad cueva —— */
+.il3-cave-dark {
+  transform-origin: 680px 200px;
+  transform-box: fill-box;
+  animation: il3CaveDark var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+@keyframes il3CaveDark {
+  0%,
+  28%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  34%,
+  52% {
+    opacity: 0.35;
+    transform: scale(1.02);
+  }
+  58%,
+  90% {
+    opacity: 0.92;
+    transform: scale(1);
+  }
+}
+
+/* —— Haz linterna —— */
+.il3-beam {
+  transform-origin: 0 0;
+  transform-box: fill-box;
+  opacity: 0;
+  animation: il3BeamReveal var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+.il3-beam-core {
+  opacity: 0;
+  animation: il3BeamFlicker var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+@keyframes il3BeamReveal {
+  0%,
+  30%,
+  52%,
+  100% {
+    opacity: 0;
+    transform: scale(0.15) rotate(-8deg);
+  }
+  34% {
+    opacity: 0.7;
+    transform: scale(0.55) rotate(-4deg);
+  }
+  38%,
+  48% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes il3BeamFlicker {
+  0%,
+  32%,
+  100% {
+    opacity: 0;
+  }
+  38%,
+  46% {
+    opacity: 0.85;
+  }
+  42%,
+  44% {
+    opacity: 1;
+  }
+}
+
+/* —— Oso (solo patas traseras al ponerse de pie) —— */
+.il3-bear {
+  transform: translate3d(648px, 248px, 0);
+  opacity: 0;
+  animation: il3BearReveal var(--il3-loop) var(--il3-bounce) infinite;
+}
+
+.il3-bear-body {
+  transform-origin: 0 0;
+  transform-box: fill-box;
+  animation: il3BearStand var(--il3-loop) var(--il3-bounce) infinite;
+}
+
+.il3-bear-paws {
+  transform-origin: 0 8px;
+  transform-box: fill-box;
+  animation: il3BearPawsHide var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+.il3-bear-eyes {
+  animation: il3BearEyes var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+@keyframes il3BearReveal {
+  0%,
+  38%,
+  100% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 0.6;
+  }
+  46%,
+  58% {
+    opacity: 1;
+  }
+  62%,
+  90% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes il3BearStand {
+  0%,
+  40%,
+  100% {
+    transform: translate3d(0, 42px, 0) scale(0.72, 0.55);
+  }
+  44% {
+    transform: translate3d(0, 28px, 0) scale(0.85, 0.75);
+  }
+  50%,
+  56% {
+    transform: translate3d(0, -8px, 0) scale(1, 1);
+  }
+}
+
+@keyframes il3BearPawsHide {
+  0%,
+  44%,
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50%,
+  90% {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0) scale(0.6);
+  }
+}
+
+@keyframes il3BearEyes {
+  0%,
+  44%,
+  100% {
+    opacity: 0;
+  }
+  48%,
+  58% {
+    opacity: 1;
+  }
+}
+
+/* —— Familia: recorrido —— */
+.il3-family {
+  transform: translate3d(160px, 0, 0);
+  animation: il3FamilyJourney var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+@keyframes il3FamilyJourney {
+  0%,
+  4% {
+    transform: translate3d(160px, 0, 0);
+  }
+  28% {
+    transform: translate3d(500px, 0, 0);
+  }
+  32%,
+  38% {
+    transform: translate3d(518px, 0, 0);
+  }
+  42% {
+    transform: translate3d(512px, 0, 0) scale(0.98);
+  }
+  48% {
+    transform: translate3d(505px, 0, 0) scale(0.96);
+  }
+  52% {
+    transform: translate3d(498px, 0, 0) scale(1);
+  }
+  58% {
+    transform: translate3d(420px, 0, 0) scale(1.02);
+  }
+  66% {
+    transform: translate3d(300px, 0, 0);
+  }
+  74% {
+    transform: translate3d(180px, 0, 0);
+  }
+  82%,
+  92% {
+    transform: translate3d(118px, 0, 0);
+  }
+  96%,
+  100% {
+    transform: translate3d(160px, 0, 0);
+  }
+}
+
+/* Override timing for run segment via animation on bob */
+.il3-family-bob {
+  transform-origin: center bottom;
+  transform-box: fill-box;
+  animation:
+    il3FamilyBob var(--il3-loop) var(--il3-smooth) infinite,
+    il3FamilyPanic var(--il3-loop) var(--il3-snap) infinite;
+}
+
+@keyframes il3FamilyPanic {
+  0%,
+  50%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  54% {
+    transform: translate3d(-4px, 0, 0) rotate(-2deg) scale(1.02);
+  }
+  58%,
+  80% {
+    transform: translate3d(-6px, 0, 0) rotate(-3deg) scale(1.04);
+  }
+  88% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes il3FamilyBob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  8% {
+    transform: translate3d(0, -2px, 0);
+  }
+  16% {
+    transform: translate3d(0, 0, 0);
+  }
+  24% {
+    transform: translate3d(0, -2px, 0);
+  }
+  32%,
+  48% {
+    transform: translate3d(0, 0, 0);
+  }
+  54% {
+    transform: translate3d(0, -4px, 0) rotate(-1deg);
+  }
+  58% {
+    transform: translate3d(0, 1px, 0) rotate(0.5deg);
+  }
+  62% {
+    transform: translate3d(0, -3px, 0);
+  }
+  66% {
+    transform: translate3d(0, 0, 0);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  74% {
+    transform: translate3d(0, 0, 0);
+  }
+  78% {
+    transform: translate3d(0, -3px, 0);
+  }
+  82% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* —— Piernas caminar / correr —— */
+.il3-leg--l {
+  transform-origin: top center;
+  transform-box: fill-box;
+  animation: il3LegL var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+.il3-leg--r {
+  transform-origin: top center;
+  transform-box: fill-box;
+  animation: il3LegR var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+@keyframes il3LegL {
+  0%,
+  32%,
+  48%,
+  100% {
+    transform: rotate(0deg);
+  }
+  6% {
+    transform: rotate(18deg);
+  }
+  12% {
+    transform: rotate(-14deg);
+  }
+  18% {
+    transform: rotate(16deg);
+  }
+  24% {
+    transform: rotate(-12deg);
+  }
+  54% {
+    transform: rotate(28deg);
+  }
+  58% {
+    transform: rotate(-22deg);
+  }
+  62% {
+    transform: rotate(26deg);
+  }
+  66% {
+    transform: rotate(-20deg);
+  }
+  70% {
+    transform: rotate(24deg);
+  }
+  74% {
+    transform: rotate(-18deg);
+  }
+  78% {
+    transform: rotate(20deg);
+  }
+  82% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes il3LegR {
+  0%,
+  32%,
+  48%,
+  100% {
+    transform: rotate(0deg);
+  }
+  6% {
+    transform: rotate(-16deg);
+  }
+  12% {
+    transform: rotate(14deg);
+  }
+  18% {
+    transform: rotate(-15deg);
+  }
+  24% {
+    transform: rotate(12deg);
+  }
+  54% {
+    transform: rotate(-26deg);
+  }
+  58% {
+    transform: rotate(22deg);
+  }
+  62% {
+    transform: rotate(-24deg);
+  }
+  66% {
+    transform: rotate(20deg);
+  }
+  70% {
+    transform: rotate(-22deg);
+  }
+  74% {
+    transform: rotate(18deg);
+  }
+  78% {
+    transform: rotate(-16deg);
+  }
+  82% {
+    transform: rotate(8deg);
+  }
+}
+
+/* —— Brazo padre + linterna —— */
+.il3-arm {
+  transform-origin: 4px -4px;
+  transform-box: fill-box;
+  animation: il3ArmFlash var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+.il3-flash {
+  transform-origin: center;
+  animation: il3FlashPulse var(--il3-loop) var(--il3-bounce) infinite;
+}
+
+@keyframes il3ArmFlash {
+  0%,
+  28%,
+  100% {
+    transform: rotate(-18deg);
+  }
+  34%,
+  48% {
+    transform: rotate(8deg);
+  }
+  52%,
+  90% {
+    transform: rotate(-28deg);
+  }
+}
+
+@keyframes il3FlashPulse {
+  0%,
+  32%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+  36%,
+  48% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+  54%,
+  90% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+}
+
+/* —— Glows HTML (solo transform + opacity) —— */
+.il3-scene__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+  will-change: transform, opacity;
+}
+
+.il3-scene__glow--moon {
+  width: 22%;
+  height: 55%;
+  right: 6%;
+  top: 0;
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.14), transparent 70%);
+  animation: il3GlowMoon 6s var(--il3-smooth) infinite;
+}
+
+.il3-scene__glow--beam {
+  width: 32%;
+  height: 45%;
+  left: 38%;
+  top: 28%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.32), transparent 72%);
+  opacity: 0;
+  animation: il3GlowBeam var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+.il3-scene__glow--tent {
+  width: 18%;
+  height: 50%;
+  left: 2%;
+  bottom: 8%;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.22), transparent 70%);
+  animation: il3GlowTent var(--il3-loop) var(--il3-smooth) infinite;
+}
+
+@keyframes il3GlowMoon {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes il3GlowBeam {
+  0%,
+  32%,
+  52%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  38%,
+  48% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes il3GlowTent {
+  0%,
+  48%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  72%,
+  88% {
+    opacity: 0.85;
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .il3-scene *,
+  .il3-scene__glow {
+    animation: none !important;
+    will-change: auto;
+  }
+
+  .il3-enter {
+    opacity: 1;
+    transform: none;
+  }
+
+  .il3-family {
+    transform: translate3d(500px, 0, 0);
+  }
+
+  .il3-beam,
+  .il3-beam-core {
+    opacity: 1;
+  }
+
+  .il3-bear {
+    opacity: 1;
+    transform: translate3d(648px, 248px, 0);
+  }
+
+  .il3-bear-body {
+    transform: translate3d(0, -8px, 0) scale(1);
+  }
+
+  .il3-bear-paws {
+    opacity: 0;
+  }
+}

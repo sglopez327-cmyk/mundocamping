@@ -1,0 +1,224 @@
+/* Escena fotorrealista nocturna — Tiendas de Campaña — Mundo Camping */
+.tent-scene {
+  position: relative;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #030a10;
+  overflow: hidden;
+  box-shadow:
+    0 0 48px rgba(147, 197, 253, 0.12),
+    0 0 72px rgba(16, 185, 129, 0.08);
+}
+
+.tent-scene--hero {
+  max-width: none;
+  margin-inline: 0;
+}
+
+.tent-scene--realistic {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 1;
+  isolation: isolate;
+}
+
+.tr7-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.tr7-photo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  transform-origin: center bottom;
+  animation: tr7PhotoDrift 32s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.tr7-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 88% 6%, rgba(191, 219, 254, 0.14), transparent 22%),
+    linear-gradient(180deg, rgba(3, 10, 16, 0.2) 0%, transparent 22%);
+}
+
+.tr7-glows {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tr7-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(14px);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  animation: tr7GlowPulse 4.5s ease-in-out infinite;
+}
+
+.tr7-glow--bell {
+  left: 12%;
+  top: 58%;
+  width: 10%;
+  height: 20%;
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.75), rgba(251, 191, 36, 0.15) 70%, transparent 80%);
+  animation-delay: 0.2s;
+}
+
+.tr7-glow--geo {
+  left: 28%;
+  top: 56%;
+  width: 11%;
+  height: 22%;
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.7), rgba(251, 191, 36, 0.14) 70%, transparent 80%);
+  animation-delay: 0.7s;
+}
+
+.tr7-glow--hero {
+  left: 48%;
+  top: 52%;
+  width: 15%;
+  height: 26%;
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.85), rgba(251, 191, 36, 0.22) 70%, transparent 80%);
+  animation: tr7GlowHero 4s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.tr7-glow--tunnel {
+  left: 72%;
+  top: 57%;
+  width: 13%;
+  height: 22%;
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.68), rgba(251, 191, 36, 0.13) 70%, transparent 80%);
+  animation-delay: 1s;
+}
+
+.tr7-glow--compact {
+  left: 90%;
+  top: 58%;
+  width: 8%;
+  height: 18%;
+  background: radial-gradient(circle, rgba(167, 243, 208, 0.5), rgba(52, 211, 153, 0.12) 70%, transparent 80%);
+  animation-delay: 1.4s;
+}
+
+.tr7-moon-halo {
+  position: absolute;
+  top: 6%;
+  right: 9%;
+  width: 11%;
+  z-index: 2;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(224, 242, 254, 0.35), rgba(191, 219, 254, 0.08) 55%, transparent 72%);
+  filter: blur(8px);
+  animation: tr7MoonHalo 7s ease-in-out infinite;
+}
+
+.tr7-sky {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.tr7-star {
+  animation: tr7StarTwinkle 3.8s ease-in-out infinite;
+}
+
+.tr7-star--2 { animation-delay: 0.5s; }
+.tr7-star--3 { animation-delay: 1s; }
+.tr7-star--4 { animation-delay: 1.5s; }
+.tr7-star--5 { animation-delay: 2s; }
+.tr7-star--6 { animation-delay: 2.5s; }
+.tr7-star--7 { animation-delay: 3s; }
+.tr7-star--8 { animation-delay: 3.5s; }
+
+.tr7-shoot {
+  opacity: 0;
+  animation: tr7ShootingStar 8s ease-in-out infinite;
+}
+
+.tr7-shoot--1 { animation-delay: 0.9s; }
+.tr7-shoot--2 { animation-delay: 3.1s; }
+.tr7-shoot--3 { animation-delay: 5.3s; }
+.tr7-shoot--4 { animation-delay: 7s; }
+
+@keyframes tr7PhotoDrift {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.025);
+  }
+}
+
+@keyframes tr7GlowPulse {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.95); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+}
+
+@keyframes tr7GlowHero {
+  0%, 100% { opacity: 0.55; transform: translate(-50%, -50%) scale(0.97); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+@keyframes tr7MoonHalo {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.88; transform: scale(1.06); }
+}
+
+@keyframes tr7StarTwinkle {
+  0%, 100% { opacity: 0.1; transform: scale(0.85); }
+  50% { opacity: 0.95; transform: scale(1.12); }
+}
+
+@keyframes tr7ShootingStar {
+  0%, 80%, 100% {
+    opacity: 0;
+    transform: translate(-30px, -15px);
+  }
+  84% { opacity: 0; transform: translate(-30px, -15px); }
+  88% { opacity: 1; transform: translate(0, 0); }
+  94% { opacity: 0.88; transform: translate(30px, 15px); }
+  98% { opacity: 0; transform: translate(44px, 22px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tent-scene *,
+  .tr7-photo,
+  .tr7-moon-halo {
+    animation: none !important;
+  }
+
+  .tr7-shoot {
+    opacity: 0 !important;
+  }
+
+  .tr7-star {
+    opacity: 0.7 !important;
+    transform: none !important;
+  }
+
+  .tr7-glow {
+    opacity: 0.7 !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}

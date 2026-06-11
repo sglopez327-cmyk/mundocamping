@@ -1,0 +1,562 @@
+/* Esterillas — padre inflando + hijos saltando | Motion CSS optimizado */
+/* Curvas: --est-smooth = desaceleración natural (masas grandes) */
+/*         --est-bounce = rebote elástico (bomba, saltos) */
+
+.est-scene {
+  --est-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --est-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --est-snap: cubic-bezier(0.16, 1, 0.3, 1);
+  --est-loop: 10s;
+
+  position: relative;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #050a0f;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.12);
+}
+
+.est-scene--hero {
+  max-width: none;
+  margin-inline: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.est-scene__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 16rem;
+}
+
+/* —— Aceleración GPU —— */
+.est3-mat-wrap,
+.est3-father-arms,
+.est3-pump-rod,
+.est3-father-pump,
+.est3-kid,
+.est3-kid--boy,
+.est3-kid--girl,
+.est3-air-dot,
+.est3-lantern,
+.est3-mat-cells,
+.est3-enter {
+  will-change: transform;
+}
+
+.est3-star,
+.est3-shimmer,
+.est3-air-dot {
+  will-change: transform, opacity;
+}
+
+/* —— Entrada escalonada (stagger) —— */
+.est3-enter {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  animation: est3EnterIn 0.9s var(--est-smooth) forwards;
+}
+
+.est3-enter--sky { animation-delay: 0s; }
+.est3-enter--tent { animation-delay: 0.08s; }
+.est3-enter--lantern { animation-delay: 0.14s; }
+.est3-enter--mat { animation-delay: 0.2s; }
+.est3-enter--father { animation-delay: 0.28s; }
+
+@keyframes est3EnterIn {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* —— Esterilla: inflado + compresión al aterrizar —— */
+.est3-mat-wrap {
+  transform-origin: 380px 294px;
+  transform-box: fill-box;
+  animation: est3MatInflate var(--est-loop) var(--est-smooth) infinite;
+}
+
+.est3-mat-cells {
+  transform-origin: 380px 270px;
+  transform-box: fill-box;
+  animation: est3MatCells var(--est-loop) var(--est-smooth) infinite;
+}
+
+@keyframes est3MatInflate {
+  0% {
+    transform: scale3d(1, 0.18, 1);
+  }
+  32% {
+    transform: scale3d(1, 0.62, 1);
+  }
+  40%,
+  46% {
+    transform: scale3d(1, 1, 1);
+  }
+  49% {
+    transform: scale3d(1.02, 0.94, 1);
+  }
+  51% {
+    transform: scale3d(0.99, 1.03, 1);
+  }
+  53% {
+    transform: scale3d(1.01, 0.96, 1);
+  }
+  55% {
+    transform: scale3d(0.99, 1.02, 1);
+  }
+  57% {
+    transform: scale3d(1, 1, 1);
+  }
+  60% {
+    transform: scale3d(1.02, 0.95, 1);
+  }
+  62% {
+    transform: scale3d(1, 1, 1);
+  }
+  68%,
+  78% {
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    transform: scale3d(1, 0.18, 1);
+  }
+}
+
+@keyframes est3MatCells {
+  0%,
+  35% {
+    opacity: 0.15;
+  }
+  45%,
+  75% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+/* —— Padre: bomba con rebote —— */
+.est3-father-arms {
+  transform-origin: 776px 204px;
+  transform-box: fill-box;
+  animation: est3FatherPump var(--est-loop) var(--est-bounce) infinite;
+}
+
+.est3-pump-rod {
+  transform-origin: 781px 216px;
+  transform-box: fill-box;
+  animation: est3PumpRod var(--est-loop) var(--est-bounce) infinite;
+}
+
+.est3-father-pump {
+  transform-origin: 781px 260px;
+  transform-box: fill-box;
+}
+
+@keyframes est3FatherPump {
+  0%,
+  42%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  3% {
+    transform: translate3d(0, 14px, 0);
+  }
+  6% {
+    transform: translate3d(0, 0, 0);
+  }
+  9% {
+    transform: translate3d(0, 14px, 0);
+  }
+  12% {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(0, 14px, 0);
+  }
+  18% {
+    transform: translate3d(0, 0, 0);
+  }
+  21% {
+    transform: translate3d(0, 14px, 0);
+  }
+  24% {
+    transform: translate3d(0, 0, 0);
+  }
+  27% {
+    transform: translate3d(0, 14px, 0);
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+  }
+  33% {
+    transform: translate3d(0, 12px, 0);
+  }
+  36% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes est3PumpRod {
+  0%,
+  42%,
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+  3%,
+  9%,
+  15%,
+  21%,
+  27%,
+  33% {
+    transform: scale3d(1, 0.68, 1);
+  }
+  6%,
+  12%,
+  18%,
+  24%,
+  30%,
+  36% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* —— Aire (solo opacity + translate) —— */
+.est3-air-dot {
+  transform-origin: center;
+  animation: est3AirPuff 2.5s var(--est-smooth) infinite;
+}
+
+.est3-air-dot--2 {
+  animation-delay: 0.12s;
+}
+
+.est3-air-dot--3 {
+  animation-delay: 0.24s;
+}
+
+@keyframes est3AirPuff {
+  0%,
+  35%,
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.4);
+  }
+  42% {
+    opacity: 0.75;
+    transform: translate3d(-8px, -6px, 0) scale(1);
+  }
+  55% {
+    opacity: 0;
+    transform: translate3d(-22px, -18px, 0) scale(1.35);
+  }
+}
+
+.est3-hose {
+  opacity: 0.9;
+  animation: est3HosePulse 2.5s var(--est-smooth) infinite;
+}
+
+@keyframes est3HosePulse {
+  0%,
+  100% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* —— Hijo: corre → salta ×2 sobre esterilla —— */
+.est3-kid--boy {
+  transform-origin: 8px 268px;
+  transform-box: fill-box;
+  opacity: 0;
+  animation: est3KidBoy var(--est-loop) var(--est-bounce) infinite;
+}
+
+.est3-kid--girl {
+  transform-origin: 10px 268px;
+  transform-box: fill-box;
+  opacity: 0;
+  animation: est3KidGirl var(--est-loop) var(--est-bounce) infinite;
+  animation-delay: 0.18s;
+}
+
+@keyframes est3KidBoy {
+  0%,
+  40%,
+  72%,
+  100% {
+    opacity: 0;
+    transform: translate3d(-240px, 8px, 0) scale(0.86);
+  }
+  41% {
+    opacity: 1;
+    transform: translate3d(-80px, 8px, 0) scale(1);
+  }
+  45% {
+    transform: translate3d(120px, 8px, 0) scale(1);
+  }
+  47% {
+    transform: translate3d(240px, 8px, 0) scale(1);
+  }
+  49% {
+    transform: translate3d(300px, -34px, 0) scale(1.1, 0.88);
+  }
+  51% {
+    transform: translate3d(318px, 6px, 0) scale(0.9, 1.08);
+  }
+  53% {
+    transform: translate3d(328px, -28px, 0) scale(1.06, 0.92);
+  }
+  55% {
+    transform: translate3d(342px, 6px, 0) scale(0.94, 1.05);
+  }
+  57% {
+    transform: translate3d(352px, -18px, 0) scale(1.04, 0.96);
+  }
+  59% {
+    transform: translate3d(360px, 6px, 0) scale(1);
+  }
+  62% {
+    opacity: 1;
+    transform: translate3d(380px, 6px, 0) scale(1);
+  }
+  68% {
+    opacity: 0;
+    transform: translate3d(520px, 8px, 0) scale(0.9);
+  }
+}
+
+@keyframes est3KidGirl {
+  0%,
+  42%,
+  74%,
+  100% {
+    opacity: 0;
+    transform: translate3d(-280px, 10px, 0) scale(0.84);
+  }
+  43% {
+    opacity: 1;
+    transform: translate3d(-120px, 10px, 0) scale(1);
+  }
+  47% {
+    transform: translate3d(80px, 10px, 0) scale(1);
+  }
+  49% {
+    transform: translate3d(200px, 10px, 0) scale(1);
+  }
+  51% {
+    transform: translate3d(280px, -30px, 0) scale(1.08, 0.9);
+  }
+  53% {
+    transform: translate3d(298px, 8px, 0) scale(0.92, 1.06);
+  }
+  55% {
+    transform: translate3d(318px, -26px, 0) scale(1.05, 0.93);
+  }
+  57% {
+    transform: translate3d(332px, 8px, 0) scale(0.95, 1.04);
+  }
+  59% {
+    transform: translate3d(348px, -16px, 0) scale(1.03, 0.97);
+  }
+  61% {
+    transform: translate3d(358px, 8px, 0) scale(1);
+  }
+  64% {
+    opacity: 1;
+    transform: translate3d(400px, 8px, 0) scale(1);
+  }
+  70% {
+    opacity: 0;
+    transform: translate3d(540px, 10px, 0) scale(0.88);
+  }
+}
+
+/* —— Ambiente (solo transform / opacity) —— */
+.est-scene__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+  will-change: transform, opacity;
+}
+
+.est-scene__glow--left {
+  width: 28%;
+  height: 62%;
+  left: 2%;
+  top: 14%;
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.22), transparent 70%);
+  animation: est3MoonGlow 7s var(--est-smooth) infinite;
+}
+
+.est-scene__glow--center {
+  width: 36%;
+  height: 68%;
+  left: 30%;
+  top: 14%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.34), transparent 70%);
+  animation: est3LanternGlow 3.2s var(--est-smooth) infinite;
+}
+
+.est-scene__glow--right {
+  width: 24%;
+  height: 52%;
+  right: 6%;
+  top: 24%;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.12), transparent 70%);
+  animation: est3GlowRight 5s var(--est-smooth) infinite;
+}
+
+.est3-lantern {
+  transform-origin: 600px 110px;
+  transform-box: fill-box;
+  animation: est3LanternFlicker 2.6s var(--est-smooth) infinite;
+}
+
+.est3-star {
+  transform-origin: center;
+  animation: est3StarTwinkle 3.6s var(--est-smooth) infinite;
+}
+
+.est3-star--2 { animation-delay: 0.55s; }
+.est3-star--3 { animation-delay: 1.1s; }
+.est3-star--4 { animation-delay: 1.65s; }
+
+.est3-moon {
+  transform-origin: 180px 56px;
+  transform-box: fill-box;
+  animation: est3MoonPulse 6s var(--est-smooth) infinite;
+}
+
+.est3-shimmer {
+  transform-origin: 420px 236px;
+  animation: est3Shimmer 7s var(--est-smooth) infinite;
+}
+
+@keyframes est3MoonGlow {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes est3LanternGlow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes est3GlowRight {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes est3LanternFlicker {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  70% {
+    opacity: 0.9;
+    transform: scale(0.97);
+  }
+}
+
+@keyframes est3StarTwinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes est3MoonPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes est3Shimmer {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate3d(-16px, 0, 0);
+  }
+  50% {
+    opacity: 0.35;
+    transform: translate3d(16px, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .est-scene *,
+  .est-scene__glow {
+    animation: none !important;
+    will-change: auto;
+  }
+
+  .est3-enter {
+    opacity: 1;
+    transform: none;
+  }
+
+  .est3-mat-wrap {
+    transform: scale3d(1, 0.88, 1);
+  }
+
+  .est3-kid--boy,
+  .est3-kid--girl {
+    opacity: 1;
+    transform: translate3d(320px, 6px, 0);
+  }
+
+  .est3-kid--girl {
+    transform: translate3d(400px, 8px, 0);
+  }
+
+  .est3-father-arms {
+    transform: translate3d(0, 8px, 0);
+  }
+}

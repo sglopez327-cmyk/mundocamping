@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guías y comparativas de tiendas de campaña."
+    />
+    <title>Mundo Camping | Tiendas de Campaña</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'],
+            },
+            colors: {
+              premium: { accent: '#deff9a', night: '#020403' },
+            },
+            boxShadow: {
+              glass: '0 12px 40px rgba(0, 0, 0, 0.35)',
+              'glass-lg': '0 20px 50px rgba(0, 0, 0, 0.45)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./mundo-camping.css" />
+    <style>
+      .breathing-animation {
+        animation: breathe 6s ease-in-out infinite;
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          transform: scale(1);
+          filter: brightness(1);
+        }
+        50% {
+          transform: scale(1.02);
+          filter: brightness(1.05);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./site-header.css" />
+    <link rel="stylesheet" href="./footer-premium.css" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .container-premium {
+        width: 100%;
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      @media (min-width: 640px) {
+        .container-premium {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container-premium {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .product-modal-thumb.is-active {
+        border-color: rgba(110, 231, 183, 0.6);
+        box-shadow: 0 0 0 2px #18181b, 0 0 0 4px #deff9a;
+      }
+      .product-modal-description p:last-child,
+      .product-modal-description ul:last-child {
+        margin-bottom: 0;
+      }
+
+      .product-modal-thumb.is-active {
+        border-color: rgba(110, 231, 183, 0.6);
+        box-shadow: 0 0 0 2px #18181b, 0 0 0 4px #deff9a;
+      }
+      .product-modal-description p:last-child,
+      .product-modal-description ul:last-child {
+        margin-bottom: 0;
+      }
+      .grid-guias {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      @media (max-width: 1279px) {
+        .grid-guias-scroll {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .grid-guias {
+          min-width: 62rem;
+        }
+      }
+      @keyframes heroFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes mountainFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-7px);
+        }
+      }
+      .hero-animation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        opacity: 0;
+        animation: heroFadeUp 1.5s ease-out forwards;
+      }
+      .hero-mountain-icon {
+        width: 2.25rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        color: #6ee7b7;
+        filter: drop-shadow(0 0 10px rgba(52, 211, 153, 0.45));
+        animation: mountainFloat 3s ease-in-out infinite;
+      }
+      .hero-animation h2 {
+        margin: 0;
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #ffffff;
+        text-align: center;
+      }
+      @media (min-width: 640px) {
+        .hero-animation {
+          align-items: flex-start;
+        }
+        .hero-animation h2 {
+          font-size: 0.9375rem;
+          text-align: left;
+        }
+      }
+      .nav-menu-links {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .nav-menu-links::-webkit-scrollbar {
+        display: none;
+      }
+      .nav-menu-links a {
+        flex-shrink: 0;
+      }
+      nav .menu-categorias {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      nav .menu-categorias::-webkit-scrollbar {
+        display: none;
+      }
+      nav .menu-categorias li,
+      nav .menu-categorias a {
+        overflow: visible;
+      }
+      .hero-lottie {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        border-radius: 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: transparent;
+      }
+      .hero-lottie dotlottie-player {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        display: block;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="./tiendas-animation.css" />
+  </head>
+
+  <body class="min-h-screen bg-[#020403] font-sans text-white antialiased">
+        <header id="site-header"></header>
+    <script src="./js/site-header.js"></script>
+    <main>
+      <section class="relative overflow-hidden bg-[#020403] text-white">
+        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_88%_12%,rgba(191,219,254,0.18),transparent_22rem),radial-gradient(circle_at_18%_72%,rgba(16,185,129,0.14),transparent_20rem),linear-gradient(180deg,#030712_0%,#020403_64%,#050807_100%)]"></div>
+        <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/70 to-transparent"></div>
+        <div class="container-premium relative -mt-2 pt-2 pb-12 sm:pt-3 lg:-mt-6 lg:pt-4 lg:pb-20">
+          <div class="flex w-full flex-col gap-y-8">
+            <div
+              class="tn3-scene tn3-scene--hero -mt-2 h-64 min-h-[16rem] w-full md:-mt-4 md:h-96 md:min-h-[24rem]"
+              role="img"
+              aria-label="Varias tiendas de campaña de distintos colores en un bosque junto a un río, con el monstruo del lago asomando y una hoguera de noche"
+            >
+              <span class="tn3-scene__glow tn3-scene__glow--moon" aria-hidden="true"></span>
+              <span class="tn3-scene__glow tn3-scene__glow--fire" aria-hidden="true"></span>
+              <svg
+                class="tn3-scene__svg"
+                viewBox="0 0 1200 320"
+                preserveAspectRatio="xMidYMid slice"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <g class="tn3-enter tn3-enter--sky">
+                  <rect width="1200" height="320" fill="url(#tn3Sky)" />
+                  <rect width="1200" height="320" fill="url(#tn3Vignette)" opacity="0.42" />
+                  <circle class="tn3-moon" cx="920" cy="52" r="28" fill="url(#tn3Moon)" stroke="#1e293b" stroke-width="2.5" />
+                  <circle class="tn3-star" cx="120" cy="38" r="2" fill="#ecfdf5" />
+                  <circle class="tn3-star tn3-star--2" cx="300" cy="26" r="1.5" fill="#fde68a" />
+                  <circle class="tn3-star tn3-star--3" cx="520" cy="44" r="2" fill="#fff" />
+                  <circle class="tn3-star tn3-star--4" cx="680" cy="30" r="1.6" fill="#a7f3d0" />
+                  <circle class="tn3-star tn3-star--5" cx="840" cy="40" r="1.8" fill="#fff" />
+                  <circle class="tn3-star tn3-star--6" cx="1040" cy="28" r="1.4" fill="#fde68a" />
+                </g>
+
+                <g class="tn3-enter tn3-enter--forest">
+                  <path
+                    d="M0 188 L160 128 L320 148 L480 108 L640 132 L800 112 L960 138 L1120 108 L1200 118 L1200 320 L0 320 Z"
+                    fill="#0f2744"
+                    opacity="0.88"
+                  />
+                  <path d="M0 248 Q600 232 1200 248 L1200 320 L0 320 Z" fill="url(#tn3Ground)" />
+                  <g class="tn3-pine tn3-pine--1" fill="#134e4a" stroke="#052e16" stroke-width="2" stroke-linejoin="round">
+                    <path d="M48 252 L68 148 L88 252 Z" />
+                    <path d="M108 252 L132 118 L156 252 Z" />
+                    <rect x="62" y="252" width="8" height="18" rx="1" fill="#1a1208" />
+                    <rect x="124" y="252" width="8" height="18" rx="1" fill="#1a1208" />
+                  </g>
+                  <g class="tn3-pine tn3-pine--2" fill="#166534" stroke="#052e16" stroke-width="2" stroke-linejoin="round">
+                    <path d="M188 252 L210 168 L232 252 Z" />
+                    <rect x="202" y="252" width="8" height="18" rx="1" fill="#1a1208" />
+                  </g>
+                  <g class="tn3-pine tn3-pine--3" fill="#134e4a" stroke="#052e16" stroke-width="2" stroke-linejoin="round">
+                    <path d="M1010 252 L1034 142 L1058 252 Z" />
+                    <path d="M1080 252 L1108 108 L1136 252 Z" />
+                    <rect x="1024" y="252" width="8" height="18" rx="1" fill="#1a1208" />
+                    <rect x="1098" y="252" width="8" height="18" rx="1" fill="#1a1208" />
+                  </g>
+                  <g class="tn3-pine tn3-pine--4" fill="#166534" stroke="#052e16" stroke-width="2">
+                    <path d="M1148 252 L1170 178 L1192 252 Z" />
+                    <rect x="1160" y="252" width="8" height="18" rx="1" fill="#1a1208" />
+                  </g>
+                </g>
+
+                <g class="tn3-enter tn3-enter--river">
+                  <path
+                    d="M0 268 Q280 252 520 258 T920 262 Q1080 264 1200 256 L1200 278 Q1040 286 860 282 T480 278 Q240 274 0 286 Z"
+                    fill="url(#tn3River)"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                  />
+                  <ellipse class="tn3-shimmer" cx="680" cy="270" rx="72" ry="5" fill="url(#tn3Shimmer)" />
+                  <ellipse class="tn3-ripple" cx="420" cy="272" rx="48" ry="3" fill="rgba(255,255,255,0.12)" />
+                  <ellipse class="tn3-ripple tn3-ripple--2" cx="880" cy="274" rx="56" ry="3" fill="rgba(255,255,255,0.1)" />
+                </g>
+
+                <g class="tn3-enter tn3-enter--tent">
+                  <g class="tn3-tent tn3-tent--green" transform="translate(480 0)">
+                    <ellipse cx="0" cy="268" rx="58" ry="8" fill="#1a1208" opacity="0.45" />
+                    <path d="M-60 258 L0 198 L60 258 Z" fill="url(#tn3TentRoofGreen)" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round" />
+                    <path d="M-48 258 L0 210 L48 258 Z" fill="url(#tn3TentInnerGreen)" opacity="0.55" />
+                    <path d="M-60 258 L60 258 L52 258 L0 228 L-52 258 Z" fill="#15803d" stroke="#1e293b" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M-12 258 L0 242 L12 258 Z" fill="#052e16" stroke="#1e293b" stroke-width="1.5" />
+                    <rect x="-8" y="242" width="16" height="16" rx="2" fill="#fde68a" opacity="0.75" stroke="#1e293b" stroke-width="1.2" />
+                  </g>
+                  <g class="tn3-tent tn3-tent--blue tn3-enter--tent-extra tn3-enter--tent-1" transform="translate(250 10) scale(0.78)">
+                    <ellipse cx="0" cy="268" rx="58" ry="8" fill="#1a1208" opacity="0.45" />
+                    <path d="M-60 258 L0 198 L60 258 Z" fill="url(#tn3TentRoofBlue)" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round" />
+                    <path d="M-48 258 L0 210 L48 258 Z" fill="url(#tn3TentInnerBlue)" opacity="0.55" />
+                    <path d="M-60 258 L60 258 L52 258 L0 228 L-52 258 Z" fill="#1e40af" stroke="#1e293b" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M-12 258 L0 242 L12 258 Z" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+                    <rect x="-8" y="242" width="16" height="16" rx="2" fill="#bfdbfe" opacity="0.8" stroke="#1e293b" stroke-width="1.2" />
+                  </g>
+                  <g class="tn3-tent tn3-tent--orange tn3-enter--tent-extra tn3-enter--tent-2" transform="translate(360 14) scale(0.72)">
+                    <ellipse cx="0" cy="268" rx="58" ry="8" fill="#1a1208" opacity="0.45" />
+                    <path d="M-60 258 L0 198 L60 258 Z" fill="url(#tn3TentRoofOrange)" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round" />
+                    <path d="M-48 258 L0 210 L48 258 Z" fill="url(#tn3TentInnerOrange)" opacity="0.55" />
+                    <path d="M-60 258 L60 258 L52 258 L0 228 L-52 258 Z" fill="#c2410c" stroke="#1e293b" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M-12 258 L0 242 L12 258 Z" fill="#431407" stroke="#1e293b" stroke-width="1.5" />
+                    <rect x="-8" y="242" width="16" height="16" rx="2" fill="#fed7aa" opacity="0.8" stroke="#1e293b" stroke-width="1.2" />
+                  </g>
+                  <g class="tn3-tent tn3-tent--red tn3-enter--tent-extra tn3-enter--tent-3" transform="translate(820 8) scale(0.82)">
+                    <ellipse cx="0" cy="268" rx="58" ry="8" fill="#1a1208" opacity="0.45" />
+                    <path d="M-60 258 L0 198 L60 258 Z" fill="url(#tn3TentRoofRed)" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round" />
+                    <path d="M-48 258 L0 210 L48 258 Z" fill="url(#tn3TentInnerRed)" opacity="0.55" />
+                    <path d="M-60 258 L60 258 L52 258 L0 228 L-52 258 Z" fill="#b91c1c" stroke="#1e293b" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M-12 258 L0 242 L12 258 Z" fill="#450a0a" stroke="#1e293b" stroke-width="1.5" />
+                    <rect x="-8" y="242" width="16" height="16" rx="2" fill="#fecaca" opacity="0.8" stroke="#1e293b" stroke-width="1.2" />
+                  </g>
+                  <g class="tn3-tent tn3-tent--purple tn3-enter--tent-extra tn3-enter--tent-4" transform="translate(980 12) scale(0.74)">
+                    <ellipse cx="0" cy="268" rx="58" ry="8" fill="#1a1208" opacity="0.45" />
+                    <path d="M-60 258 L0 198 L60 258 Z" fill="url(#tn3TentRoofPurple)" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round" />
+                    <path d="M-48 258 L0 210 L48 258 Z" fill="url(#tn3TentInnerPurple)" opacity="0.55" />
+                    <path d="M-60 258 L60 258 L52 258 L0 228 L-52 258 Z" fill="#6d28d9" stroke="#1e293b" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M-12 258 L0 242 L12 258 Z" fill="#2e1065" stroke="#1e293b" stroke-width="1.5" />
+                    <rect x="-8" y="242" width="16" height="16" rx="2" fill="#ddd6fe" opacity="0.8" stroke="#1e293b" stroke-width="1.2" />
+                  </g>
+                  <ellipse class="tn3-warm" cx="520" cy="248" rx="90" ry="40" fill="url(#tn3Warm)" />
+                </g>
+
+                <g class="tn3-enter tn3-enter--fire">
+                  <ellipse class="tn3-fire-glow" cx="620" cy="270" rx="40" ry="20" fill="url(#tn3FireGlowOuter)" />
+                  <ellipse cx="620" cy="278" rx="30" ry="7" fill="#1a1208" opacity="0.55" />
+                  <rect x="600" y="274" width="40" height="7" rx="2" fill="#3d2818" stroke="#1e293b" stroke-width="1.2" transform="rotate(-12 620 277)" />
+                  <rect x="600" y="274" width="40" height="7" rx="2" fill="#4a3220" stroke="#1e293b" stroke-width="1.2" transform="rotate(10 620 277)" />
+                  <g class="tn3-flame-single">
+                    <path
+                      d="M612 276 C614 248 618 228 620 218 C622 228 626 248 628 276 C624 262 620 254 612 276 Z"
+                      fill="url(#tn3FlameMain)"
+                      stroke="#9a3412"
+                      stroke-width="1"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M617 276 C618 252 620 238 623 276 C621 264 619 258 617 276 Z"
+                      fill="url(#tn3FlameCore)"
+                      opacity="0.92"
+                    />
+                  </g>
+                </g>
+
+                <g class="tn3-nessie tn3-enter tn3-enter--nessie">
+                  <ellipse cx="728" cy="280" rx="28" ry="8" fill="#0e7490" stroke="#1e293b" stroke-width="2" />
+                  <ellipse cx="758" cy="282" rx="20" ry="6" fill="#0891b2" stroke="#1e293b" stroke-width="1.5" opacity="0.9" />
+                  <path
+                    d="M718 272 C712 252 706 228 700 204 C698 194 702 182 710 176 C716 172 724 170 732 174"
+                    fill="none"
+                    stroke="#0f766e"
+                    stroke-width="18"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M718 272 C712 252 706 228 700 204 C698 194 702 182 710 176 C716 172 724 170 732 174"
+                    fill="none"
+                    stroke="#2dd4bf"
+                    stroke-width="12"
+                    stroke-linecap="round"
+                  />
+                  <ellipse cx="722" cy="168" rx="22" ry="16" fill="#14b8a6" stroke="#1e293b" stroke-width="2.5" />
+                  <path
+                    d="M738 168 L768 162 Q774 170 766 176 L738 178 Z"
+                    fill="#0d9488"
+                    stroke="#1e293b"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <circle cx="752" cy="166" r="2.8" fill="#1e293b" />
+                  <g class="tn3-nessie-eye">
+                    <ellipse cx="714" cy="164" rx="5" ry="5.5" fill="#fef9c3" stroke="#1e293b" stroke-width="1.5" />
+                    <circle cx="715" cy="163" r="2" fill="#1e293b" />
+                    <circle cx="716" cy="162" r="0.8" fill="#fff" />
+                  </g>
+                  <ellipse
+                    class="tn3-nessie-ring"
+                    cx="718"
+                    cy="270"
+                    rx="30"
+                    ry="6"
+                    fill="none"
+                    stroke="rgba(186,230,253,0.65)"
+                    stroke-width="2"
+                  />
+                  <ellipse
+                    class="tn3-nessie-ring tn3-nessie-ring--2"
+                    cx="718"
+                    cy="270"
+                    rx="42"
+                    ry="8"
+                    fill="none"
+                    stroke="rgba(186,230,253,0.35)"
+                    stroke-width="1.5"
+                  />
+                </g>
+
+                <defs>
+                  <linearGradient id="tn3Sky" x1="600" y1="0" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#1e3a8a" />
+                    <stop offset="100%" stop-color="#0f172a" />
+                  </linearGradient>
+                  <radialGradient id="tn3Vignette" cx="50%" cy="50%" r="65%">
+                    <stop offset="55%" stop-color="rgba(0,0,0,0)" />
+                    <stop offset="100%" stop-color="rgba(0,0,0,0.55)" />
+                  </radialGradient>
+                  <radialGradient id="tn3Moon" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#fffbeb" />
+                    <stop offset="100%" stop-color="#fde047" />
+                  </radialGradient>
+                  <linearGradient id="tn3Ground" x1="600" y1="248" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#166534" />
+                    <stop offset="100%" stop-color="#14532d" />
+                  </linearGradient>
+                  <linearGradient id="tn3River" x1="600" y1="252" x2="600" y2="286" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#1d4ed8" />
+                    <stop offset="100%" stop-color="#1e3a8a" />
+                  </linearGradient>
+                  <linearGradient id="tn3RiverSurface" x1="818" y1="266" x2="818" y2="288" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#2563eb" />
+                    <stop offset="100%" stop-color="#1e3a8a" />
+                  </linearGradient>
+                  <linearGradient id="tn3Shimmer" x1="608" y1="270" x2="752" y2="270" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+                    <stop offset="50%" stop-color="rgba(255,255,255,0.55)" />
+                    <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentRoofGreen" x1="0" y1="198" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#4ade80" />
+                    <stop offset="100%" stop-color="#15803d" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentInnerGreen" x1="0" y1="210" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fde68a" stop-opacity="0.45" />
+                    <stop offset="100%" stop-color="#166534" stop-opacity="0.2" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentRoofBlue" x1="0" y1="198" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#60a5fa" />
+                    <stop offset="100%" stop-color="#1d4ed8" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentInnerBlue" x1="0" y1="210" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.5" />
+                    <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.2" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentRoofOrange" x1="0" y1="198" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fdba74" />
+                    <stop offset="100%" stop-color="#c2410c" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentInnerOrange" x1="0" y1="210" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fed7aa" stop-opacity="0.5" />
+                    <stop offset="100%" stop-color="#7c2d12" stop-opacity="0.2" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentRoofRed" x1="0" y1="198" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#f87171" />
+                    <stop offset="100%" stop-color="#b91c1c" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentInnerRed" x1="0" y1="210" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fecaca" stop-opacity="0.5" />
+                    <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0.2" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentRoofPurple" x1="0" y1="198" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#c4b5fd" />
+                    <stop offset="100%" stop-color="#6d28d9" />
+                  </linearGradient>
+                  <linearGradient id="tn3TentInnerPurple" x1="0" y1="210" x2="0" y2="258" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#ddd6fe" stop-opacity="0.5" />
+                    <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.2" />
+                  </linearGradient>
+                  <radialGradient id="tn3Warm" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="rgba(251,146,60,0.45)" />
+                    <stop offset="100%" stop-color="rgba(251,146,60,0)" />
+                  </radialGradient>
+                  <radialGradient id="tn3FireGlowOuter" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="rgba(251,146,60,0.55)" />
+                    <stop offset="55%" stop-color="rgba(234,88,12,0.22)" />
+                    <stop offset="100%" stop-color="rgba(234,88,12,0)" />
+                  </radialGradient>
+                  <radialGradient id="tn3FireGlowInner" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="rgba(254,243,199,0.75)" />
+                    <stop offset="45%" stop-color="rgba(251,191,36,0.45)" />
+                    <stop offset="100%" stop-color="rgba(251,146,60,0)" />
+                  </radialGradient>
+                  <linearGradient id="tn3FlameBlue" x1="620" y1="274" x2="620" y2="278" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#38bdf8" />
+                    <stop offset="100%" stop-color="#1d4ed8" />
+                  </linearGradient>
+                  <linearGradient id="tn3FlameOuter" x1="620" y1="236" x2="620" y2="276" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fb923c" />
+                    <stop offset="55%" stop-color="#ea580c" />
+                    <stop offset="100%" stop-color="#7c2d12" />
+                  </linearGradient>
+                  <linearGradient id="tn3FlameMid" x1="620" y1="232" x2="620" y2="276" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fcd34d" />
+                    <stop offset="40%" stop-color="#fb923c" />
+                    <stop offset="100%" stop-color="#c2410c" />
+                  </linearGradient>
+                  <linearGradient id="tn3FlameMain" x1="620" y1="218" x2="620" y2="276" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fef08a" />
+                    <stop offset="35%" stop-color="#fb923c" />
+                    <stop offset="75%" stop-color="#ea580c" />
+                    <stop offset="100%" stop-color="#9a3412" />
+                  </linearGradient>
+                  <linearGradient id="tn3FlameCore" x1="620" y1="242" x2="620" y2="276" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#fffbeb" />
+                    <stop offset="40%" stop-color="#fde68a" />
+                    <stop offset="100%" stop-color="#fb923c" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <div>
+              <p class="text-sm font-black uppercase tracking-[0.25em] text-emerald-300">Refugio en la cima</p>
+              <h1 class="mt-3 font-display text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Tiendas de Campaña
+              </h1>
+              <p class="mt-4 max-w-2xl text-base leading-7 text-white/75">
+                Refugios familiares y técnicos para dormir cómodo en montaña, ruta o acampada.
+              </p>
+            </div>
+
+            <div class="w-full">
+              <h2 class="font-display text-2xl font-black tracking-tight text-white sm:text-3xl">
+                Productos recomendados
+              </h2>
+              <div
+                id="productos-tiendas"
+                class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:max-w-6xl"
+                aria-live="polite"
+              ></div>
+              <p id="productos-tiendas-error" class="mt-6 hidden rounded-2xl border border-red-400/30 bg-red-950/40 px-4 py-3 text-sm text-red-100"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="product-modal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="product-modal-title"
+      aria-hidden="true"
+    >
+      <div
+        id="product-modal-backdrop"
+        class="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        aria-hidden="true"
+      ></div>
+      <div
+        id="product-modal-panel"
+        class="glass-panel relative z-10 flex w-full min-h-0 max-h-[90vh] max-w-lg flex-col overflow-hidden rounded-2xl shadow-glass-lg sm:max-w-2xl"
+      >
+        <button
+          id="product-modal-close"
+          type="button"
+          class="absolute right-3 top-3 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/50 text-lg font-bold text-white transition hover:border-emerald-300/50 hover:bg-emerald-500/20 hover:text-[#deff9a]"
+          aria-label="Cerrar"
+        >
+          &times;
+        </button>
+
+        <div
+          id="product-modal-scroll"
+          class="min-h-0 flex-1 overflow-y-auto overscroll-contain"
+        >
+          <section
+            id="product-modal-gallery"
+            class="shrink-0 flex-none border-b border-white/10 bg-zinc-900"
+          >
+            <div
+              id="product-modal-image-wrap"
+              class="flex w-full items-center justify-center px-4 py-4 sm:px-5 sm:py-5"
+            >
+              <img
+                id="product-modal-image"
+                src=""
+                alt=""
+                class="mx-auto h-auto w-full max-h-[min(24vh,10rem)] object-contain sm:max-h-[min(28vh,12rem)]"
+              />
+            </div>
+            <div
+              id="product-modal-thumbnails"
+              class="hidden gap-2 overflow-x-auto px-4 pb-3 sm:px-5 sm:pb-4"
+              role="list"
+              aria-label="Galería de imágenes del producto"
+            ></div>
+          </section>
+
+          <div id="product-modal-body" class="px-6 py-6 pb-4 sm:px-8 sm:py-8">
+            <h2
+              id="product-modal-title"
+              class="mb-3 pr-10 font-display text-lg font-black leading-snug text-white sm:mb-4 sm:text-2xl"
+            ></h2>
+            <div id="product-modal-rating" class="hidden"></div>
+            <div
+              id="product-modal-description"
+              class="product-modal-description hidden px-1 pb-2 text-sm leading-7 text-gray-300 sm:text-base sm:leading-8"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          id="product-modal-footer"
+          class="shrink-0 border-t border-white/10 bg-zinc-950/95 px-6 pt-4 pb-5 backdrop-blur-sm sm:px-8 sm:pb-6"
+        >
+            <a
+              id="product-modal-buy"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="product-cta-amazon inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-bold transition-transform duration-200 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#deff9a] sm:text-base"
+            >
+              <span>Ver precios y detalles en Amazon</span>
+              <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M5 12h13M14 8l4 4-4 4M9 20H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </a>
+            <p
+              id="product-modal-buy-unavailable"
+              class="hidden text-center text-sm text-white/50"
+            >
+              Enlace de compra no disponible
+            </p>
+        </div>
+      </div>
+    </div>
+        <footer id="site-footer"></footer>
+    <script src="./js/site-footer.js"></script><script>
+      (function () {
+        const grid = document.getElementById('productos-tiendas');
+        const errorBox = document.getElementById('productos-tiendas-error');
+        const modal = document.getElementById('product-modal');
+        const modalBackdrop = document.getElementById('product-modal-backdrop');
+        const modalCloseBtn = document.getElementById('product-modal-close');
+        const modalGallery = document.getElementById('product-modal-gallery');
+        const modalImageWrap = document.getElementById('product-modal-image-wrap');
+        const modalImage = document.getElementById('product-modal-image');
+        const modalThumbnails = document.getElementById('product-modal-thumbnails');
+        const modalTitle = document.getElementById('product-modal-title');
+        const modalDescription = document.getElementById('product-modal-description');
+        const modalBuy = document.getElementById('product-modal-buy');
+        const modalBuyUnavailable = document.getElementById('product-modal-buy-unavailable');
+
+        const FIELD_TITLE = ['Título', 'titulo', 'title', 'nombre', 'name'];
+        const FIELD_IMAGE = ['Image Url', 'image', 'imagen', 'image_url', 'imageUrl', 'img'];
+        const FIELD_IMAGES = ['Imágenes', 'imagenes', 'images', 'Images'];
+        const FIELD_URL = ['amazonLink', 'URL de compra', 'url_compra', 'link', 'product_url', 'amazon_url', 'url', 'href'];
+        const AMAZON_CTA_LABEL = 'Ver precios y detalles en Amazon';
+        const FIELD_DESCRIPTION = ['Descripción', 'descripcion', 'description', 'desc'];
+        const FIELD_RATING = ['rating', 'Rating', 'valoracion', 'Valoración', 'estrellas'];
+        const FIELD_RATING_COUNT = ['ratingCount', 'rating_count', 'num_reviews', 'opiniones', 'reviewCount'];
+
+        const THUMB_BASE =
+          'product-modal-thumb shrink-0 overflow-hidden rounded-xl border border-white/15 bg-zinc-800 transition hover:border-emerald-300/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#deff9a]';
+
+        let productsCatalog = [];
+        let activeGalleryIndex = 0;
+
+        function pickField(item, keys) {
+          for (const key of keys) {
+            if (item[key] != null && String(item[key]).trim() !== '') {
+              return String(item[key]).trim();
+            }
+          }
+          return '';
+        }
+
+        function collectImages(merged, extras) {
+          const urls = [];
+          const add = (value) => {
+            const url = typeof value === 'string' ? value.trim() : pickField(value, FIELD_IMAGE);
+            if (url && !urls.includes(url)) {
+              urls.push(url);
+            }
+          };
+
+          for (const key of FIELD_IMAGES) {
+            const list = merged[key];
+            if (Array.isArray(list)) {
+              list.forEach(add);
+            }
+          }
+
+          add(pickField(merged, FIELD_IMAGE));
+          (extras || []).forEach(add);
+
+          return urls;
+        }
+
+        function parseRatingValue(item) {
+          for (const key of FIELD_RATING) {
+            if (item[key] != null && item[key] !== '') {
+              const value = parseFloat(String(item[key]).replace(',', '.'));
+              if (Number.isFinite(value)) {
+                return Math.min(5, Math.max(0, Math.round(value * 10) / 10));
+              }
+            }
+          }
+          return null;
+        }
+
+        function parseRatingCountValue(item) {
+          for (const key of FIELD_RATING_COUNT) {
+            if (item[key] != null && item[key] !== '') {
+              const value = String(item[key]).trim();
+              if (value) {
+                return value;
+              }
+            }
+          }
+          return null;
+        }
+
+        function renderProductRating(rating, ratingCount) {
+          const modalRating = document.getElementById('product-modal-rating');
+          if (!modalRating) {
+            return;
+          }
+
+          if (rating == null) {
+            modalRating.innerHTML = '';
+            modalRating.classList.add('hidden');
+            return;
+          }
+
+          const stars = [];
+          for (let i = 1; i <= 5; i += 1) {
+            let starClass = 'product-rating-star';
+            if (rating >= i - 0.25) {
+              starClass += ' is-full';
+            } else if (rating >= i - 0.75) {
+              starClass += ' is-half';
+            }
+            stars.push(`<span class="${starClass}" aria-hidden="true">★</span>`);
+          }
+
+          const valueText = rating.toFixed(1).replace('.', ',');
+          const countHtml = ratingCount
+            ? `<span class="product-rating-count">(${escapeHtml(ratingCount)} opiniones)</span>`
+            : '';
+
+          modalRating.innerHTML = `
+            <div class="product-rating" role="img" aria-label="Valoración ${valueText} de 5 estrellas">
+              <span class="product-rating-stars">${stars.join('')}</span>
+              <span class="product-rating-value">${escapeHtml(valueText)}</span>
+              <span class="product-rating-label">de 5</span>
+              ${countHtml}
+            </div>`;
+          modalRating.classList.remove('hidden');
+        }
+
+        function mapItemToProduct(item, meta) {
+          const merged = meta ? { ...meta, ...item } : item;
+          const extras = meta && Array.isArray(meta.productos) ? meta.productos : [];
+          const title = pickField(merged, FIELD_TITLE);
+          const buyUrl = pickField(merged, FIELD_URL);
+          const description = pickField(merged, FIELD_DESCRIPTION);
+          const images = collectImages(merged, extras);
+          const image = images[0] || '';
+
+          if (!title && !image) {
+            return null;
+          }
+
+          return {
+            title: title || 'Producto recomendado',
+            image,
+            images,
+            buyUrl,
+            description,
+            rating: parseRatingValue(merged),
+            ratingCount: parseRatingCountValue(merged),
+          };
+        }
+
+        function formatDescription(text) {
+          if (!text) {
+            return '';
+          }
+
+          const blocks = String(text)
+            .trim()
+            .split(/\n{2,}/)
+            .map((block) => block.trim())
+            .filter(Boolean);
+
+          return blocks
+            .map((block) => {
+              const lines = block.split('\n').map((line) => line.trim()).filter(Boolean);
+              const isList = lines.length > 0 && lines.every((line) => /^[-*•]\s+/.test(line));
+
+              if (isList) {
+                const items = lines
+                  .map((line) => `<li>${escapeHtml(line.replace(/^[-*•]\s+/, ''))}</li>`)
+                  .join('');
+                return `<ul class="mb-3 list-disc space-y-1.5 pl-5 marker:text-emerald-300">${items}</ul>`;
+              }
+
+              const paragraph = lines.map((line) => escapeHtml(line)).join('<br />');
+              return `<p class="mb-3 last:mb-0">${paragraph}</p>`;
+            })
+            .join('');
+        }
+
+        function setActiveThumbnail(index) {
+          activeGalleryIndex = index;
+          modalThumbnails.querySelectorAll('.product-modal-thumb').forEach((thumb, i) => {
+            thumb.classList.toggle('is-active', i === index);
+            thumb.setAttribute('aria-current', i === index ? 'true' : 'false');
+          });
+        }
+
+        function setMainImage(src, index) {
+          if (!src) {
+            modalImage.removeAttribute('src');
+            modalImage.alt = '';
+            modalImage.classList.add('hidden');
+            modalImageWrap.classList.add('hidden');
+            modalGallery.classList.add('hidden');
+            return;
+          }
+
+          modalImage.src = src;
+          modalImage.alt = modalTitle.textContent || 'Imagen del producto';
+          modalImage.classList.remove('hidden');
+          modalImageWrap.classList.remove('hidden');
+          modalGallery.classList.remove('hidden');
+          setActiveThumbnail(index);
+        }
+
+        function updateGallery(images) {
+          modalThumbnails.innerHTML = '';
+          modalThumbnails.classList.remove('flex');
+          modalThumbnails.classList.add('hidden');
+
+          if (!images.length) {
+            setMainImage('', 0);
+            return;
+          }
+
+          setMainImage(images[0], 0);
+
+          if (images.length <= 1) {
+            return;
+          }
+
+          const fragment = document.createDocumentFragment();
+
+          images.forEach((src, index) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = `${THUMB_BASE}${index === 0 ? ' is-active' : ''}`;
+            button.dataset.thumbIndex = String(index);
+            button.dataset.thumbSrc = src;
+            button.setAttribute('role', 'listitem');
+            button.setAttribute('aria-label', `Ver imagen ${index + 1}`);
+            button.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = '';
+            img.loading = 'lazy';
+            img.className = 'h-14 w-14 object-cover sm:h-16 sm:w-16';
+            button.appendChild(img);
+            fragment.appendChild(button);
+          });
+
+          modalThumbnails.appendChild(fragment);
+          modalThumbnails.classList.remove('hidden');
+          modalThumbnails.classList.add('flex');
+        }
+
+        function normalizeCatalog(payload) {
+          if (!payload || typeof payload !== 'object') {
+            return [];
+          }
+
+          if (Array.isArray(payload)) {
+            return payload.map((item) => mapItemToProduct(item)).filter(Boolean);
+          }
+
+          if (payload.meta || payload.productos) {
+            const meta = payload.meta || {};
+            const list = Array.isArray(payload.productos) ? payload.productos : [];
+            if (list.length) {
+              return list.map((item) => mapItemToProduct(item, meta)).filter(Boolean);
+            }
+            const single = mapItemToProduct(meta);
+            return single ? [single] : [];
+          }
+
+          const single = mapItemToProduct(payload);
+          return single ? [single] : [];
+        }
+
+        function escapeHtml(value) {
+          return String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+        }
+
+        function renderAmazonCta(buyUrl, variant) {
+          const baseClass =
+            'product-cta-amazon inline-flex items-center justify-center gap-2 rounded-full font-bold text-white transition-transform duration-200 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#deff9a] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950';
+          const sizeClass =
+            variant === 'compact'
+              ? 'product-cta-amazon--compact w-full px-4 py-2.5 text-xs sm:text-sm'
+              : 'mt-5 w-full px-5 py-3.5 text-sm sm:text-base';
+
+          if (!buyUrl) {
+            return `<p class="${variant === 'compact' ? 'mt-3' : 'mt-5'} text-center text-xs text-white/45">Enlace de Amazon no disponible</p>`;
+          }
+
+          return `<a
+            href="${escapeHtml(buyUrl)}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="${baseClass} ${sizeClass}"
+            data-amazon-cta="true"
+          >
+            <span>${AMAZON_CTA_LABEL}</span>
+            <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M5 12h13M14 8l4 4-4 4M9 20H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>`;
+        }
+
+        function renderCard(product, index) {
+          const title = escapeHtml(product.title);
+          const image = escapeHtml(product.image);
+          const ctaHtml = renderAmazonCta(product.buyUrl, 'compact');
+
+          return `
+            <article
+              class="product-card glass-card flex h-full flex-col cursor-pointer rounded-2xl transition"
+              data-product-index="${index}"
+              role="button"
+              tabindex="0"
+              aria-label="Ver detalles de ${title}"
+            >
+              <div class="product-card-image relative flex aspect-[4/3] shrink-0 items-center justify-center bg-zinc-900 p-1.5">
+                ${
+                  product.image
+                    ? `<img src="${image}" alt="${title}" class="max-h-full max-w-full object-contain transition duration-500 hover:scale-[1.03]" loading="lazy" />`
+                    : `<div class="flex h-full w-full items-center justify-center text-xs text-white/40">Sin imagen</div>`
+                }
+              </div>
+              <div class="product-card-actions flex min-h-0 flex-1 flex-col px-3 pb-3 pt-2 sm:px-4 sm:pb-4">
+                <div class="product-card-title-box mt-auto w-full rounded-lg bg-zinc-800 p-2">
+                  <h3 class="product-card-title line-clamp-2 text-sm font-semibold leading-snug text-white sm:text-base">${title}</h3>
+                </div>
+                <div class="product-card-cta-wrap mt-2 w-full shrink-0">${ctaHtml}</div>
+              </div>
+            </article>
+          `;
+        }
+
+        function closeProductModal() {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          modal.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('overflow-hidden');
+        }
+
+        function openProduct(productIndex) {
+          const product = productsCatalog[productIndex];
+          if (!product) {
+            return;
+          }
+
+          modalTitle.textContent = product.title;
+          renderProductRating(product.rating, product.ratingCount);
+
+          const descriptionHtml = formatDescription(product.description);
+          if (descriptionHtml) {
+            modalDescription.innerHTML = descriptionHtml;
+            modalDescription.classList.remove('hidden');
+          } else {
+            modalDescription.innerHTML = '';
+            modalDescription.classList.add('hidden');
+          }
+
+          const images = product.images?.length ? product.images : product.image ? [product.image] : [];
+          updateGallery(images);
+          modalImage.alt = product.title;
+
+          if (product.buyUrl) {
+            modalBuy.href = product.buyUrl;
+            modalBuy.classList.remove('hidden');
+            modalBuyUnavailable.classList.add('hidden');
+          } else {
+            modalBuy.href = '#';
+            modalBuy.classList.add('hidden');
+            modalBuyUnavailable.classList.remove('hidden');
+          }
+
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('overflow-hidden');
+          modalCloseBtn.focus();
+        }
+
+        window.openProduct = openProduct;
+        window.closeProductModal = closeProductModal;
+
+        function bindCardEvents() {
+          grid.querySelectorAll('.product-card').forEach((card) => {
+            const index = Number(card.dataset.productIndex);
+
+            card.addEventListener('click', (event) => {
+              if (event.target.closest('[data-amazon-cta]')) {
+                return;
+              }
+              openProduct(index);
+            });
+            card.addEventListener('keydown', (event) => {
+              if (event.target.closest('[data-amazon-cta]')) {
+                return;
+              }
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openProduct(index);
+              }
+            });
+          });
+        }
+
+        modalThumbnails.addEventListener('click', (event) => {
+          const thumb = event.target.closest('.product-modal-thumb');
+          if (!thumb) {
+            return;
+          }
+          const index = Number(thumb.dataset.thumbIndex);
+          const src = thumb.dataset.thumbSrc;
+          if (!src) {
+            return;
+          }
+          modalImage.src = src;
+          setActiveThumbnail(index);
+        });
+
+        modalThumbnails.addEventListener('click', (event) => {
+          const thumb = event.target.closest('.product-modal-thumb');
+          if (!thumb) {
+            return;
+          }
+          const index = Number(thumb.dataset.thumbIndex);
+          const src = thumb.dataset.thumbSrc;
+          if (!src) {
+            return;
+          }
+          modalImage.src = src;
+          setActiveThumbnail(index);
+        });
+
+        modalCloseBtn.addEventListener('click', closeProductModal);
+        modalBackdrop.addEventListener('click', closeProductModal);
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeProductModal();
+          }
+        });
+
+        async function loadProducts() {
+          try {
+            const response = await fetch('./data/tiendas-productos.json');
+            if (!response.ok) {
+              throw new Error('No se pudo cargar el catálogo JSON.');
+            }
+
+            const payload = await response.json();
+            productsCatalog = normalizeCatalog(payload);
+
+            if (!productsCatalog.length) {
+              throw new Error('El JSON no contiene un producto válido.');
+            }
+
+            grid.innerHTML = productsCatalog.map(renderCard).join('');
+            bindCardEvents();
+          } catch (error) {
+            errorBox.textContent = error instanceof Error ? error.message : 'Error al cargar productos.';
+            errorBox.classList.remove('hidden');
+          }
+        }
+
+        loadProducts();
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guías de iluminación para camping y montaña."
+    />
+    <title>Mundo Camping | Iluminación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'],
+            },
+            colors: {
+              premium: { accent: '#deff9a', night: '#020403' },
+            },
+            boxShadow: {
+              glass: '0 12px 40px rgba(0, 0, 0, 0.35)',
+              'glass-lg': '0 20px 50px rgba(0, 0, 0, 0.45)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../mundo-camping.css" />
+    <style>
+      .breathing-animation {
+        animation: breathe 6s ease-in-out infinite;
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          transform: scale(1);
+          filter: brightness(1);
+        }
+        50% {
+          transform: scale(1.02);
+          filter: brightness(1.05);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="../site-header.css" />
+    <link rel="stylesheet" href="../footer-premium.css" />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .container-premium {
+        width: 100%;
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      @media (min-width: 640px) {
+        .container-premium {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container-premium {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .product-modal-thumb.is-active {
+        border-color: rgba(110, 231, 183, 0.6);
+        box-shadow: 0 0 0 2px #18181b, 0 0 0 4px #deff9a;
+      }
+      .product-modal-description p:last-child,
+      .product-modal-description ul:last-child {
+        margin-bottom: 0;
+      }
+      .grid-guias {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      @media (max-width: 1279px) {
+        .grid-guias-scroll {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .grid-guias {
+          min-width: 62rem;
+        }
+      }
+      @keyframes heroFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes mountainFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-7px);
+        }
+      }
+      .hero-animation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        opacity: 0;
+        animation: heroFadeUp 1.5s ease-out forwards;
+      }
+      .hero-mountain-icon {
+        width: 2.25rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        color: #6ee7b7;
+        filter: drop-shadow(0 0 10px rgba(52, 211, 153, 0.45));
+        animation: mountainFloat 3s ease-in-out infinite;
+      }
+      .hero-animation h2 {
+        margin: 0;
+        font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #ffffff;
+        text-align: center;
+      }
+      @media (min-width: 640px) {
+        .hero-animation {
+          align-items: flex-start;
+        }
+        .hero-animation h2 {
+          font-size: 0.9375rem;
+          text-align: left;
+        }
+      }
+      .nav-menu-links {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .nav-menu-links::-webkit-scrollbar {
+        display: none;
+      }
+      .nav-menu-links a {
+        flex-shrink: 0;
+      }
+      nav .menu-categorias {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      nav .menu-categorias::-webkit-scrollbar {
+        display: none;
+      }
+      nav .menu-categorias li,
+      nav .menu-categorias a {
+        overflow: visible;
+      }
+      .hero-lottie {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        border-radius: 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: transparent;
+      }
+      .hero-lottie dotlottie-player {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        display: block;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="../iluminacion-animation.css" />
+  </head>
+
+  <body class="min-h-screen bg-[#020403] font-sans text-white antialiased">
+        <header id="site-header"></header>
+    <script src="../js/site-header.js"></script>
+    <main>
+      <section class="relative overflow-hidden bg-[#020403] text-white">
+        <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_28%,rgba(34,197,94,0.28),transparent_21rem),radial-gradient(circle_at_74%_52%,rgba(249,115,22,0.16),transparent_24rem),linear-gradient(180deg,#050805_0%,#020403_64%,#050807_100%)]"></div>
+        <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/70 to-transparent"></div>
+        <div class="container-premium relative -mt-2 pt-2 pb-12 sm:pt-3 lg:-mt-6 lg:pt-4 lg:pb-20">
+          <div class="flex w-full flex-col gap-y-8">
+            <div
+              class="il3-scene il3-scene--hero -mt-2 h-64 min-h-[16rem] w-full md:-mt-4 md:h-96 md:min-h-[24rem]"
+              role="img"
+              aria-label="Familia caminando de noche hacia una cueva; el padre enciende la linterna, un oso se alza y todos corren hacia la tienda"
+            >
+              <span class="il3-scene__glow il3-scene__glow--moon" aria-hidden="true"></span>
+              <span class="il3-scene__glow il3-scene__glow--beam" aria-hidden="true"></span>
+              <span class="il3-scene__glow il3-scene__glow--tent" aria-hidden="true"></span>
+              <svg class="il3-scene__svg" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g class="il3-enter il3-enter--sky">
+    <rect width="1200" height="320" fill="url(#il3Sky)"/>
+    <rect width="1200" height="320" fill="url(#il3Vignette)" opacity="0.45"/>
+    <circle class="il3-moon" cx="1020" cy="46" r="34" fill="url(#il3Moon)"/>
+    <circle class="il3-star" cx="90" cy="38" r="2" fill="#ecfdf5"/>
+    <circle class="il3-star il3-star--2" cx="220" cy="26" r="1.6" fill="#93c5fd"/>
+    <circle class="il3-star il3-star--3" cx="420" cy="52" r="2.2" fill="#fff"/>
+    <circle class="il3-star il3-star--4" cx="640" cy="30" r="1.8" fill="#fde68a"/>
+    <circle class="il3-star il3-star--5" cx="860" cy="58" r="2" fill="#ecfdf5"/>
+    <circle class="il3-star il3-star--6" cx="1100" cy="40" r="1.5" fill="#a7f3d0"/>
+  </g>
+
+  <g class="il3-enter il3-enter--forest">
+    <path d="M0 175 L140 118 L280 148 L420 95 L560 128 L700 102 L860 122 L1020 92 L1200 108 L1200 320 L0 320 Z" fill="#0a1410" opacity="0.8"/>
+    <path d="M0 252 Q350 238 700 246 T1200 254 L1200 320 L0 320 Z" fill="url(#il3Ground)"/>
+    <ellipse cx="600" cy="292" rx="560" ry="18" fill="#07120e" opacity="0.6"/>
+    <g class="il3-tree" opacity="0.9">
+      <path d="M32 252 L48 185 L64 252 Z" fill="#0f2419"/>
+      <rect x="44" y="252" width="8" height="16" rx="1" fill="#1a1208"/>
+    </g>
+    <g class="il3-tree il3-tree--2" opacity="0.85">
+      <path d="M195 252 L214 168 L233 252 Z" fill="#0f2419"/>
+      <path d="M218 252 L232 198 L246 252 Z" fill="#0d1f16" opacity="0.9"/>
+      <rect x="224" y="252" width="10" height="18" rx="1" fill="#1a1208"/>
+    </g>
+    <g class="il3-tree il3-tree--3" opacity="0.78">
+      <path d="M1040 252 L1062 175 L1084 252 Z" fill="#0f2419"/>
+      <rect x="1056" y="252" width="10" height="18" rx="1" fill="#1a1208"/>
+    </g>
+  </g>
+
+  <g class="il3-enter il3-enter--tent">
+    <ellipse class="il3-tent-glow" cx="118" cy="210" rx="70" ry="40" fill="rgba(52,211,153,0.12)"/>
+    <g class="il3-tent" opacity="0.95">
+      <path d="M48 252 L118 118 L188 252 Z" fill="url(#il3Tent)" stroke="rgba(110,231,183,0.45)" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="48" y1="252" x2="28" y2="268" stroke="rgba(167,243,208,0.35)" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="188" y1="252" x2="208" y2="268" stroke="rgba(167,243,208,0.35)" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="118" y1="118" x2="118" y2="98" stroke="rgba(167,243,208,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M78 252 L118 145 L158 252 Z" fill="rgba(254,243,199,0.08)"/>
+    </g>
+  </g>
+
+  <g class="il3-enter il3-enter--cave">
+    <path d="M480 252 L520 88 L560 72 L620 58 L700 52 L780 58 L840 72 L880 88 L920 252 Z" fill="url(#il3Rock)" stroke="#1e293b" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M540 252 L580 128 L620 108 L680 98 L740 108 L780 128 L820 252 Z" fill="#020403" opacity="0.95"/>
+    <ellipse class="il3-cave-dark" cx="680" cy="178" rx="95" ry="72" fill="#010302"/>
+    <path d="M555 252 L600 135 L645 252 Z" fill="url(#il3CaveMouth)" opacity="0.5"/>
+  </g>
+
+  <g class="il3-bear">
+    <g class="il3-bear-paws">
+      <ellipse cx="-28" cy="4" rx="18" ry="10" fill="#3f2a1d" stroke="#1e293b" stroke-width="1.5"/>
+      <ellipse cx="28" cy="4" rx="18" ry="10" fill="#3f2a1d" stroke="#1e293b" stroke-width="1.5"/>
+      <ellipse cx="0" cy="-8" rx="42" ry="22" fill="#4a3728" stroke="#1e293b" stroke-width="2"/>
+    </g>
+    <g class="il3-bear-body">
+      <ellipse cx="0" cy="-55" rx="38" ry="48" fill="#5c4033" stroke="#1e293b" stroke-width="2.5"/>
+      <ellipse cx="0" cy="-88" rx="28" ry="26" fill="#5c4033" stroke="#1e293b" stroke-width="2.5"/>
+      <circle cx="0" cy="-95" r="22" fill="#6b4f3a" stroke="#1e293b" stroke-width="2"/>
+      <ellipse class="il3-bear-eyes" cx="-8" cy="-98" rx="3" ry="4" fill="#fef08a"/>
+      <ellipse class="il3-bear-eyes" cx="8" cy="-98" rx="3" ry="4" fill="#fef08a"/>
+      <ellipse cx="0" cy="-92" rx="10" ry="8" fill="#3f2a1d"/>
+      <path d="M-22 -42 L-18 -8 L-14 -42 Z" fill="#4a3728" stroke="#1e293b" stroke-width="1.5"/>
+      <path d="M22 -42 L18 -8 L14 -42 Z" fill="#4a3728" stroke="#1e293b" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <g class="il3-enter il3-enter--family">
+    <g class="il3-family">
+      <g class="il3-family-bob">
+        <g class="il3-beam" transform="translate(12, 205)">
+          <path d="M0 0 L8 -28 L200 42 L8 42 Z" fill="url(#il3Beam)" opacity="0.9"/>
+          <path class="il3-beam-core" d="M0 0 L4 -18 L140 38 L4 38 Z" fill="url(#il3BeamCore)" opacity="0.7"/>
+        </g>
+
+        <g class="il3-member il3-member--daughter" transform="translate(-118, 0)">
+          <ellipse cx="0" cy="252" rx="11" ry="4" fill="#0a1410" opacity="0.5"/>
+          <line class="il3-leg il3-leg--l" x1="-4" y1="252" x2="-6" y2="268" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/>
+          <line class="il3-leg il3-leg--r" x1="4" y1="252" x2="6" y2="268" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M-10 238 Q0 252 10 238 L10 258 Q0 268 -10 258 Z" fill="#be185d"/>
+          <path class="il3-hair il3-hair--long-l" d="M-9 226 L-11 252 Q-8 255 -6 248 L-7 228 Z" fill="#6b4423"/>
+          <path class="il3-hair il3-hair--long-r" d="M9 226 L11 252 Q8 255 6 248 L7 228 Z" fill="#6b4423"/>
+          <circle cx="0" cy="228" r="9" fill="#fcd9b8"/>
+          <path class="il3-hair il3-hair--long-top" d="M-9 222 Q0 214 9 222 Q7 226 0 223 Q-7 226 -9 222 Z" fill="#6b4423"/>
+          <g class="il3-face">
+            <ellipse cx="-3.5" cy="227" rx="2" ry="2.2" fill="#fff"/>
+            <ellipse cx="3.5" cy="227" rx="2" ry="2.2" fill="#fff"/>
+            <ellipse cx="-3.5" cy="227.5" rx="1.3" ry="1.6" fill="#1e293b"/>
+            <ellipse cx="3.5" cy="227.5" rx="1.3" ry="1.6" fill="#1e293b"/>
+            <circle cx="-2.5" cy="226.5" r="0.45" fill="#fff"/>
+            <circle cx="4.5" cy="226.5" r="0.45" fill="#fff"/>
+            <ellipse cx="0" cy="229.5" rx="1" ry="1.2" fill="#d4a574"/>
+            <path d="M-2.5 232 Q0 234.5 2.5 232" stroke="#b45309" stroke-width="1" stroke-linecap="round" fill="none"/>
+          </g>
+        </g>
+
+        <g class="il3-member il3-member--son" transform="translate(-82, 0)">
+          <ellipse cx="0" cy="252" rx="12" ry="4" fill="#0a1410" opacity="0.5"/>
+          <line class="il3-leg il3-leg--l" x1="-5" y1="252" x2="-7" y2="270" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+          <line class="il3-leg il3-leg--r" x1="5" y1="252" x2="7" y2="270" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M-12 236 Q0 252 12 236 L12 262 Q0 272 -12 262 Z" fill="#1d4ed8"/>
+          <circle cx="0" cy="224" r="10" fill="#fcd9b8"/>
+          <path class="il3-hair il3-hair--short" d="M-10 218 Q0 208 10 218 L9 222 Q0 219 -9 222 Z" fill="#3d2b1f"/>
+          <g class="il3-face">
+            <ellipse cx="-4" cy="223" rx="2.2" ry="2.4" fill="#fff"/>
+            <ellipse cx="4" cy="223" rx="2.2" ry="2.4" fill="#fff"/>
+            <ellipse cx="-4" cy="223.5" rx="1.4" ry="1.7" fill="#1e293b"/>
+            <ellipse cx="4" cy="223.5" rx="1.4" ry="1.7" fill="#1e293b"/>
+            <circle cx="-3" cy="222.5" r="0.5" fill="#fff"/>
+            <circle cx="5" cy="222.5" r="0.5" fill="#fff"/>
+            <ellipse cx="0" cy="225.5" rx="1.1" ry="1.3" fill="#d4a574"/>
+            <path d="M-3 228.5 Q0 231.5 3 228.5" stroke="#b45309" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+          </g>
+        </g>
+
+        <g class="il3-member il3-member--mother" transform="translate(-44, 0)">
+          <ellipse cx="0" cy="252" rx="13" ry="4" fill="#0a1410" opacity="0.5"/>
+          <line class="il3-leg il3-leg--l" x1="-5" y1="252" x2="-6" y2="268" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
+          <line class="il3-leg il3-leg--r" x1="5" y1="252" x2="6" y2="268" stroke="#a855f7" stroke-width="3" stroke-linecap="round"/>
+          <path d="M-13 236 Q0 252 13 236 L13 262 Q0 272 -13 262 Z" fill="#7e22ce"/>
+          <path class="il3-hair il3-hair--long-l" d="M-10 224 L-13 258 Q-9 262 -6 254 L-7 226 Z" fill="#5c4033"/>
+          <path class="il3-hair il3-hair--long-r" d="M10 224 L13 258 Q9 262 6 254 L7 226 Z" fill="#5c4033"/>
+          <circle cx="0" cy="226" r="10" fill="#f5c9a8"/>
+          <path class="il3-hair il3-hair--long-top" d="M-10 220 Q0 210 10 220 Q8 225 0 222 Q-8 225 -10 220 Z" fill="#5c4033"/>
+          <g class="il3-face">
+            <ellipse cx="-4" cy="225" rx="2.2" ry="2.5" fill="#fff"/>
+            <ellipse cx="4" cy="225" rx="2.2" ry="2.5" fill="#fff"/>
+            <ellipse cx="-4" cy="225.5" rx="1.5" ry="1.8" fill="#1e293b"/>
+            <ellipse cx="4" cy="225.5" rx="1.5" ry="1.8" fill="#1e293b"/>
+            <circle cx="-3" cy="224.5" r="0.5" fill="#fff"/>
+            <circle cx="5" cy="224.5" r="0.5" fill="#fff"/>
+            <ellipse cx="0" cy="227.5" rx="1.1" ry="1.3" fill="#d4a574"/>
+            <path d="M-3 230.5 Q0 233.5 3 230.5" stroke="#b45309" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+          </g>
+        </g>
+
+        <g class="il3-member il3-member--father" transform="translate(0, 0)">
+          <ellipse cx="0" cy="252" rx="14" ry="5" fill="#0a1410" opacity="0.55"/>
+          <line class="il3-leg il3-leg--l" x1="-6" y1="252" x2="-8" y2="268" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+          <line class="il3-leg il3-leg--r" x1="6" y1="252" x2="8" y2="268" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+          <path d="M-14 234 Q0 252 14 234 L14 262 Q0 272 -14 262 Z" fill="url(#il3JacketDad)"/>
+          <circle cx="0" cy="224" r="11" fill="#fcd9b8"/>
+          <path class="il3-hair il3-hair--short" d="M-11 218 Q0 206 11 218 L10 223 Q0 220 -10 223 Z" fill="#3d2b1f"/>
+          <g class="il3-face">
+            <ellipse cx="-4.5" cy="223" rx="2.4" ry="2.6" fill="#fff"/>
+            <ellipse cx="4.5" cy="223" rx="2.4" ry="2.6" fill="#fff"/>
+            <ellipse cx="-4.5" cy="223.5" rx="1.6" ry="2" fill="#1e293b"/>
+            <ellipse cx="4.5" cy="223.5" rx="1.6" ry="2" fill="#1e293b"/>
+            <circle cx="-3.5" cy="222.5" r="0.55" fill="#fff"/>
+            <circle cx="5.5" cy="222.5" r="0.55" fill="#fff"/>
+            <ellipse cx="0" cy="226" rx="1.2" ry="1.4" fill="#d4a574"/>
+            <path d="M-3.5 229.5 Q0 232.5 3.5 229.5" stroke="#b45309" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+          </g>
+          <g class="il3-arm">
+            <path d="M10 -4 L38 -32" stroke="#fcd9b8" stroke-width="5" stroke-linecap="round"/>
+            <g class="il3-flash" transform="translate(38, -32)">
+              <rect x="-8" y="-6" width="16" height="20" rx="4" fill="#1f2937" stroke="rgba(251,191,36,0.6)" stroke-width="1.5"/>
+              <circle cx="0" cy="0" r="5" fill="url(#il3FlashBulb)"/>
+              <ellipse cx="0" cy="2" rx="3" ry="2" fill="#fef9c3"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <defs>
+    <linearGradient id="il3Sky" x1="600" y1="0" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f1c2e"/>
+      <stop offset="55%" stop-color="#0a1218"/>
+      <stop offset="100%" stop-color="#050a0f"/>
+    </linearGradient>
+    <radialGradient id="il3Vignette" cx="50%" cy="50%" r="58%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#020403"/>
+    </radialGradient>
+    <radialGradient id="il3Moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a" stop-opacity="0.4"/>
+    </radialGradient>
+    <linearGradient id="il3Ground" x1="600" y1="248" x2="600" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#052e16"/>
+    </linearGradient>
+    <linearGradient id="il3Tent" x1="118" y1="118" x2="118" y2="252" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="il3Rock" x1="700" y1="52" x2="700" y2="252" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="il3CaveMouth" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020403"/>
+    </radialGradient>
+    <linearGradient id="il3Beam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(254,243,199,0.85)"/>
+      <stop offset="55%" stop-color="rgba(251,191,36,0.35)"/>
+      <stop offset="100%" stop-color="rgba(251,191,36,0)"/>
+    </linearGradient>
+    <linearGradient id="il3BeamCore" x1="0" y1="0" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.6)"/>
+      <stop offset="100%" stop-color="rgba(251,191,36,0)"/>
+    </linearGradient>
+    <radialGradient id="il3FlashBulb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </radialGradient>
+    <linearGradient id="il3JacketDad" x1="0" y1="234" x2="0" y2="272" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+  </defs>
+</svg>
+            </div>
+            <div>
+              <p class="text-sm font-black uppercase tracking-[0.25em] text-emerald-300">Luz en acampada</p>
+              <h1 class="mt-3 font-display text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Iluminación
+              </h1>
+              <p class="mt-4 max-w-xl text-base leading-7 text-white/75">
+                Linternas, frontales y sistemas de luz para acampada y rutas nocturnas.
+              </p>
+            </div>
+
+            <div class="w-full">
+              <h2 class="font-display text-2xl font-black tracking-tight text-white sm:text-3xl">
+                Productos recomendados
+              </h2>
+              <div
+                id="productos-iluminacion"
+                class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:max-w-6xl"
+                aria-live="polite"
+              ></div>
+              <p id="productos-iluminacion-error" class="mt-6 hidden rounded-2xl border border-red-400/30 bg-red-950/40 px-4 py-3 text-sm text-red-100"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="product-modal"
+      class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="product-modal-title"
+      aria-hidden="true"
+    >
+      <div
+        id="product-modal-backdrop"
+        class="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        aria-hidden="true"
+      ></div>
+      <div
+        id="product-modal-panel"
+        class="glass-panel relative z-10 flex w-full min-h-0 max-h-[90vh] max-w-lg flex-col overflow-hidden rounded-2xl shadow-glass-lg sm:max-w-2xl"
+      >
+        <button
+          id="product-modal-close"
+          type="button"
+          class="absolute right-3 top-3 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/50 text-lg font-bold text-white transition hover:border-emerald-300/50 hover:bg-emerald-500/20 hover:text-[#deff9a]"
+          aria-label="Cerrar"
+        >
+          &times;
+        </button>
+
+        <div
+          id="product-modal-scroll"
+          class="min-h-0 flex-1 overflow-y-auto overscroll-contain"
+        >
+          <section
+            id="product-modal-gallery"
+            class="shrink-0 flex-none border-b border-white/10 bg-zinc-900"
+          >
+            <div
+              id="product-modal-image-wrap"
+              class="flex w-full items-center justify-center px-4 py-4 sm:px-5 sm:py-5"
+            >
+              <img
+                id="product-modal-image"
+                src=""
+                alt=""
+                class="mx-auto h-auto w-full max-h-[min(24vh,10rem)] object-contain sm:max-h-[min(28vh,12rem)]"
+              />
+            </div>
+            <div
+              id="product-modal-thumbnails"
+              class="hidden gap-2 overflow-x-auto px-4 pb-3 sm:px-5 sm:pb-4"
+              role="list"
+              aria-label="Galería de imágenes del producto"
+            ></div>
+          </section>
+
+          <div id="product-modal-body" class="px-6 py-6 pb-4 sm:px-8 sm:py-8">
+            <h2
+              id="product-modal-title"
+              class="mb-3 pr-10 font-display text-lg font-black leading-snug text-white sm:mb-4 sm:text-2xl"
+            ></h2>
+            <div id="product-modal-rating" class="hidden"></div>
+            <div
+              id="product-modal-description"
+              class="product-modal-description hidden px-1 pb-2 text-sm leading-7 text-gray-300 sm:text-base sm:leading-8"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          id="product-modal-footer"
+          class="shrink-0 border-t border-white/10 bg-zinc-950/95 px-6 pt-4 pb-5 backdrop-blur-sm sm:px-8 sm:pb-6"
+        >
+          <a
+            id="product-modal-buy"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="product-cta-amazon inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-bold transition-transform duration-200 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#deff9a] sm:text-base"
+          >
+            <span>Ver precios y detalles en Amazon</span>
+            <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M5 12h13M14 8l4 4-4 4M9 20H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>
+          <p id="product-modal-buy-unavailable" class="hidden text-center text-sm text-white/50">
+            Enlace de compra no disponible
+          </p>
+        </div>
+      </div>
+    </div>
+        <footer id="site-footer"></footer>
+    <script src="../js/site-footer.js"></script><script>
+      (function () {
+        const grid = document.getElementById('productos-iluminacion');
+        const errorBox = document.getElementById('productos-iluminacion-error');
+        const modal = document.getElementById('product-modal');
+        const modalBackdrop = document.getElementById('product-modal-backdrop');
+        const modalCloseBtn = document.getElementById('product-modal-close');
+        const modalGallery = document.getElementById('product-modal-gallery');
+        const modalImageWrap = document.getElementById('product-modal-image-wrap');
+        const modalImage = document.getElementById('product-modal-image');
+        const modalThumbnails = document.getElementById('product-modal-thumbnails');
+        const modalTitle = document.getElementById('product-modal-title');
+        const modalDescription = document.getElementById('product-modal-description');
+        const modalBuy = document.getElementById('product-modal-buy');
+        const modalBuyUnavailable = document.getElementById('product-modal-buy-unavailable');
+
+        const FIELD_TITLE = ['Título', 'titulo', 'title', 'nombre', 'name'];
+        const FIELD_IMAGE = ['Image Url', 'image', 'imagen', 'image_url', 'imageUrl', 'img'];
+        const FIELD_IMAGES = ['Imágenes', 'imagenes', 'images', 'Images'];
+        const FIELD_URL = ['amazonLink', 'URL de compra', 'url_compra', 'link', 'product_url', 'amazon_url', 'url', 'href'];
+        const AMAZON_CTA_LABEL = 'Ver precios y detalles en Amazon';
+        const FIELD_DESCRIPTION = ['Descripción', 'descripcion', 'description', 'desc'];
+        const FIELD_RATING = ['rating', 'Rating', 'valoracion', 'Valoración', 'estrellas'];
+        const FIELD_RATING_COUNT = ['ratingCount', 'rating_count', 'num_reviews', 'opiniones', 'reviewCount'];
+
+        const THUMB_BASE =
+          'product-modal-thumb shrink-0 overflow-hidden rounded-xl border border-white/15 bg-zinc-800 transition hover:border-emerald-300/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#deff9a]';
+
+        let productsCatalog = [];
+        let activeGalleryIndex = 0;
+
+        function pickField(item, keys) {
+          for (const key of keys) {
+            if (item[key] != null && String(item[key]).trim() !== '') {
+              return String(item[key]).trim();
+            }
+          }
+          return '';
+        }
+
+        function collectImages(merged, extras) {
+          const urls = [];
+          const add = (value) => {
+            const url = typeof value === 'string' ? value.trim() : pickField(value, FIELD_IMAGE);
+            if (url && !urls.includes(url)) {
+              urls.push(url);
+            }
+          };
+
+          for (const key of FIELD_IMAGES) {
+            const list = merged[key];
+            if (Array.isArray(list)) {
+              list.forEach(add);
+            }
+          }
+
+          add(pickField(merged, FIELD_IMAGE));
+          (extras || []).forEach(add);
+
+          return urls;
+        }
+
+        function mapItemToProduct(item, meta) {
+          const merged = meta ? { ...meta, ...item } : item;
+          const title = pickField(merged, FIELD_TITLE);
+          const buyUrl = pickField(merged, FIELD_URL);
+          const description = pickField(merged, FIELD_DESCRIPTION);
+          const images = collectImages(merged, []);
+          const image = images[0] || '';
+
+          if (!title && !image) {
+            return null;
+          }
+
+          return {
+            title: title || 'Producto recomendado',
+            image,
+            images,
+            buyUrl,
+            description,
+          };
+        }
+
+        function formatDescription(text) {
+          if (!text) {
+            return '';
+          }
+
+          const blocks = String(text)
+            .trim()
+            .split(/\n{2,}/)
+            .map((block) => block.trim())
+            .filter(Boolean);
+
+          return blocks
+            .map((block) => {
+              const lines = block.split('\n').map((line) => line.trim()).filter(Boolean);
+              const isList = lines.length > 0 && lines.every((line) => /^[-*•]\s+/.test(line));
+
+              if (isList) {
+                const items = lines
+                  .map((line) => `<li>${escapeHtml(line.replace(/^[-*•]\s+/, ''))}</li>`)
+                  .join('');
+                return `<ul class="mb-3 list-disc space-y-1.5 pl-5 marker:text-emerald-300">${items}</ul>`;
+              }
+
+              const paragraph = lines.map((line) => escapeHtml(line)).join('<br />');
+              return `<p class="mb-3 last:mb-0">${paragraph}</p>`;
+            })
+            .join('');
+        }
+
+        function escapeHtml(value) {
+          return String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+        }
+
+        function renderAmazonCta(buyUrl, variant) {
+          const baseClass =
+            'product-cta-amazon inline-flex items-center justify-center gap-2 rounded-full font-bold text-white transition-transform duration-200 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#deff9a] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950';
+          const sizeClass =
+            variant === 'compact'
+              ? 'product-cta-amazon--compact w-full px-4 py-2.5 text-xs sm:text-sm'
+              : 'mt-5 w-full px-5 py-3.5 text-sm sm:text-base';
+
+          if (!buyUrl) {
+            return `<p class="${variant === 'compact' ? 'mt-3' : 'mt-5'} text-center text-xs text-white/45">Enlace de Amazon no disponible</p>`;
+          }
+
+          return `<a
+            href="${escapeHtml(buyUrl)}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="${baseClass} ${sizeClass}"
+            data-amazon-cta="true"
+          >
+            <span>${AMAZON_CTA_LABEL}</span>
+            <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M5 12h13M14 8l4 4-4 4M9 20H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>`;
+        }
+
+        function setActiveThumbnail(index) {
+          activeGalleryIndex = index;
+          modalThumbnails.querySelectorAll('.product-modal-thumb').forEach((thumb, i) => {
+            thumb.classList.toggle('is-active', i === index);
+            thumb.setAttribute('aria-current', i === index ? 'true' : 'false');
+          });
+        }
+
+        function setMainImage(src, index) {
+          if (!src) {
+            modalImage.removeAttribute('src');
+            modalImage.alt = '';
+            modalImage.classList.add('hidden');
+            modalImageWrap.classList.add('hidden');
+            modalGallery.classList.add('hidden');
+            return;
+          }
+
+          modalImage.src = src;
+          modalImage.alt = modalTitle.textContent || 'Imagen del producto';
+          modalImage.classList.remove('hidden');
+          modalImageWrap.classList.remove('hidden');
+          modalGallery.classList.remove('hidden');
+          setActiveThumbnail(index);
+        }
+
+        function updateGallery(images) {
+          modalThumbnails.innerHTML = '';
+          modalThumbnails.classList.remove('flex');
+          modalThumbnails.classList.add('hidden');
+
+          if (!images.length) {
+            setMainImage('', 0);
+            return;
+          }
+
+          setMainImage(images[0], 0);
+
+          if (images.length <= 1) {
+            return;
+          }
+
+          const fragment = document.createDocumentFragment();
+
+          images.forEach((src, index) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = `${THUMB_BASE}${index === 0 ? ' is-active' : ''}`;
+            button.dataset.thumbIndex = String(index);
+            button.dataset.thumbSrc = src;
+            button.setAttribute('role', 'listitem');
+            button.setAttribute('aria-label', `Ver imagen ${index + 1}`);
+            button.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = '';
+            img.loading = 'lazy';
+            img.className = 'h-14 w-14 object-cover sm:h-16 sm:w-16';
+            button.appendChild(img);
+            fragment.appendChild(button);
+          });
+
+          modalThumbnails.appendChild(fragment);
+          modalThumbnails.classList.remove('hidden');
+          modalThumbnails.classList.add('flex');
+        }
+
+        function normalizeCatalog(payload) {
+          if (!payload || typeof payload !== 'object') {
+            return [];
+          }
+
+          if (Array.isArray(payload)) {
+            return payload.map((item) => mapItemToProduct(item)).filter(Boolean);
+          }
+
+          if (payload.meta || payload.productos) {
+            const meta = payload.meta || {};
+            const list = Array.isArray(payload.productos) ? payload.productos : [];
+            if (list.length) {
+              return list.map((item) => mapItemToProduct(item, meta)).filter(Boolean);
+            }
+            const single = mapItemToProduct(meta);
+            return single ? [single] : [];
+          }
+
+          const single = mapItemToProduct(payload);
+          return single ? [single] : [];
+        }
+
+        function renderCard(product, index) {
+          const title = escapeHtml(product.title);
+          const image = escapeHtml(product.image);
+          const ctaHtml = renderAmazonCta(product.buyUrl, 'compact');
+
+          return `
+            <article
+              class="product-card glass-card flex h-full flex-col cursor-pointer rounded-2xl transition"
+              data-product-index="${index}"
+              role="button"
+              tabindex="0"
+              aria-label="Ver detalles de ${title}"
+            >
+              <div class="product-card-image relative flex aspect-[4/3] shrink-0 items-center justify-center bg-zinc-900 p-1.5">
+                ${
+                  product.image
+                    ? `<img src="${image}" alt="${title}" class="max-h-full max-w-full object-contain transition duration-500 hover:scale-[1.03]" loading="lazy" />`
+                    : `<div class="flex h-full w-full items-center justify-center text-xs text-white/40">Sin imagen</div>`
+                }
+              </div>
+              <div class="product-card-actions flex min-h-0 flex-1 flex-col px-3 pb-3 pt-2 sm:px-4 sm:pb-4">
+                <div class="product-card-title-box mt-auto w-full rounded-lg bg-zinc-800 p-2">
+                  <h3 class="product-card-title line-clamp-2 text-sm font-semibold leading-snug text-white sm:text-base">${title}</h3>
+                </div>
+                <div class="product-card-cta-wrap mt-2 w-full shrink-0">${ctaHtml}</div>
+              </div>
+            </article>
+          `;
+        }
+
+        function closeProductModal() {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          modal.setAttribute('aria-hidden', 'true');
+          document.body.classList.remove('overflow-hidden');
+        }
+
+        function openProduct(productIndex) {
+          const product = productsCatalog[productIndex];
+          if (!product) {
+            return;
+          }
+
+          modalTitle.textContent = product.title;
+          renderProductRating(product.rating, product.ratingCount);
+
+          const descriptionHtml = formatDescription(product.description);
+          if (descriptionHtml) {
+            modalDescription.innerHTML = descriptionHtml;
+            modalDescription.classList.remove('hidden');
+          } else {
+            modalDescription.innerHTML = '';
+            modalDescription.classList.add('hidden');
+          }
+
+          const images = product.images?.length ? product.images : product.image ? [product.image] : [];
+          updateGallery(images);
+          modalImage.alt = product.title;
+
+          if (product.buyUrl) {
+            modalBuy.href = product.buyUrl;
+            modalBuy.classList.remove('hidden');
+            modalBuyUnavailable.classList.add('hidden');
+          } else {
+            modalBuy.href = '#';
+            modalBuy.classList.add('hidden');
+            modalBuyUnavailable.classList.remove('hidden');
+          }
+
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('overflow-hidden');
+          modalCloseBtn.focus();
+        }
+
+        window.openProduct = openProduct;
+        window.closeProductModal = closeProductModal;
+
+        function bindCardEvents() {
+          grid.querySelectorAll('.product-card').forEach((card) => {
+            const index = Number(card.dataset.productIndex);
+
+            card.addEventListener('click', (event) => {
+              if (event.target.closest('[data-amazon-cta]')) {
+                return;
+              }
+              openProduct(index);
+            });
+            card.addEventListener('keydown', (event) => {
+              if (event.target.closest('[data-amazon-cta]')) {
+                return;
+              }
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openProduct(index);
+              }
+            });
+          });
+        }
+
+        modalThumbnails.addEventListener('click', (event) => {
+          const thumb = event.target.closest('.product-modal-thumb');
+          if (!thumb) {
+            return;
+          }
+          const index = Number(thumb.dataset.thumbIndex);
+          const src = thumb.dataset.thumbSrc;
+          if (!src) {
+            return;
+          }
+          modalImage.src = src;
+          setActiveThumbnail(index);
+        });
+
+        modalCloseBtn.addEventListener('click', closeProductModal);
+        modalBackdrop.addEventListener('click', closeProductModal);
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeProductModal();
+          }
+        });
+
+        async function loadProducts() {
+          try {
+            const response = await fetch('../data/iluminacion-productos.json');
+            if (!response.ok) {
+              throw new Error('No se pudo cargar el catálogo JSON.');
+            }
+
+            const payload = await response.json();
+            productsCatalog = normalizeCatalog(payload);
+
+            if (!productsCatalog.length) {
+              throw new Error('El JSON no contiene productos válidos.');
+            }
+
+            grid.innerHTML = productsCatalog.map(renderCard).join('');
+            bindCardEvents();
+          } catch (error) {
+            errorBox.textContent = error instanceof Error ? error.message : 'Error al cargar productos.';
+            errorBox.classList.remove('hidden');
+          }
+        }
+
+        loadProducts();
+      })();
+    </script>
+  </body>
+</html>
