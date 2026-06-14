@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.mundocamping.net/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/tiendas</loc>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/sacos</loc>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/top-5-tiendas-familia</loc>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/top-5-tiendas-parejas</loc>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/top-5-sacos-dormir</loc>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/top-5-esterillas</loc>
+  </url>
+</urlset>
