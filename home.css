@@ -66,39 +66,42 @@
   text-align: center;
 }
 
-/* Hero — texto superpuesto sobre la ilustración */
+/* Hero — imagen de fondo + texto superpuesto */
 .guides-featured__hero {
   position: relative;
   isolation: isolate;
   display: block;
-  box-sizing: border-box;
   width: 100%;
-  max-width: 100%;
-  margin-inline: auto;
   margin-bottom: 0;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
-  min-height: clamp(13.5rem, 42vw, 16rem);
-  max-height: 24rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #050a0f;
+  background-image: url("./Fondo.jpg");
+  background-size: cover;
+  background-position: center 42%;
+  background-repeat: no-repeat;
+  aspect-ratio: 21 / 9;
+  min-height: clamp(13.5rem, 36vw, 16rem);
+  max-height: 28rem;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .guides-featured__hero {
-    aspect-ratio: 21 / 9;
-    min-height: clamp(16rem, 28vw, 24rem);
+    min-height: clamp(16rem, 32vw, 22rem);
+    max-height: 32rem;
   }
 }
 
-.guides-featured__hero .gh3-scene__svg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  object-fit: cover;
-  object-position: center center;
+@media (min-width: 1024px) {
+  .guides-featured__hero {
+    aspect-ratio: 2.75 / 1;
+    min-height: clamp(18rem, 28vw, 26rem);
+    background-position: center 40%;
+  }
 }
 
 .guides-featured__hero-overlay {
@@ -109,100 +112,102 @@
   border-radius: inherit;
   background:
     linear-gradient(
+      90deg,
+      rgba(2, 4, 3, 0.72) 0%,
+      rgba(2, 4, 3, 0.28) 42%,
+      rgba(2, 4, 3, 0.12) 68%,
+      rgba(2, 4, 3, 0.35) 100%
+    ),
+    linear-gradient(
       180deg,
-      rgba(2, 4, 3, 0.88) 0%,
-      rgba(2, 4, 3, 0.62) 18%,
-      rgba(2, 4, 3, 0.28) 36%,
-      rgba(2, 4, 3, 0) 52%
+      rgba(2, 4, 3, 0.5) 0%,
+      rgba(2, 4, 3, 0.08) 38%,
+      rgba(2, 4, 3, 0.22) 100%
     );
 }
 
 .guides-featured__hero-copy {
   position: absolute;
   z-index: 2;
-  inset-inline: 0;
-  top: 0;
-  bottom: auto;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 1.35rem 1.25rem 1.1rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem) clamp(1rem, 3vw, 2rem);
   text-align: center;
 }
 
 .guides-featured__hero .guides-featured__kicker {
   margin: 0;
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.75);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(110, 231, 183, 0.35);
+  background: rgba(2, 4, 3, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-shadow: none;
 }
 
 .guides-featured__hero .guides-featured__title {
-  margin: 0.45rem 0 0;
+  margin: 0.85rem 0 0;
+  max-width: 18ch;
+  font-size: clamp(1.75rem, 5.5vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   text-shadow:
-    0 2px 28px rgba(0, 0, 0, 0.85),
-    0 1px 4px rgba(0, 0, 0, 0.95);
+    0 2px 32px rgba(0, 0, 0, 0.9),
+    0 1px 6px rgba(0, 0, 0, 0.95);
 }
 
 .guides-featured__hero .guides-featured__lead {
-  margin: 0.55rem 0 0;
-  max-width: 34rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(0.875rem, 2.4vw, 1.0625rem);
+  margin: 0.75rem 0 0;
+  max-width: 36rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(0.875rem, 2.2vw, 1.0625rem);
   line-height: 1.65;
-  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.85);
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.88);
 }
 
-@media (max-width: 767px) {
-  .guides-featured__header-center {
-    width: 100%;
-    max-width: 100%;
-    margin-inline: auto;
+@media (max-width: 639px) {
+  .guides-featured__hero {
+    aspect-ratio: 16 / 10;
+    background-position: center 38%;
   }
 
   .guides-featured__hero-overlay {
     background:
       linear-gradient(
         180deg,
-        rgba(2, 4, 3, 0.92) 0%,
-        rgba(2, 4, 3, 0.58) 22%,
-        rgba(2, 4, 3, 0.18) 42%,
-        rgba(2, 4, 3, 0) 58%
+        rgba(2, 4, 3, 0.78) 0%,
+        rgba(2, 4, 3, 0.35) 35%,
+        rgba(2, 4, 3, 0.15) 62%,
+        rgba(2, 4, 3, 0.4) 100%
       );
   }
 
-  .guides-featured__hero-copy {
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1rem 1rem 0.85rem;
-    text-align: center;
-  }
-
   .guides-featured__hero .guides-featured__title {
-    font-size: clamp(1.45rem, 6.5vw, 1.85rem);
-    line-height: 1.08;
+    max-width: none;
+    font-size: clamp(1.6rem, 7vw, 2rem);
   }
 
   .guides-featured__hero .guides-featured__lead {
-    max-width: none;
     font-size: 0.8125rem;
     line-height: 1.55;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .guides-featured__hero-copy {
-    padding: 1.85rem 2rem 1.5rem;
+    padding: 2.5rem 2.5rem;
   }
 
   .guides-featured__hero .guides-featured__title {
-    font-size: clamp(2rem, 3.8vw, 2.75rem);
-  }
-}
-
-@media (min-width: 1024px) {
-  .guides-featured__hero-copy {
-    padding: 2.1rem 2.25rem 1.75rem;
+    max-width: none;
   }
 }
 
