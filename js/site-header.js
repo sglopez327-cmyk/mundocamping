@@ -47,7 +47,6 @@
 
     header.innerHTML =
       '<nav class="site-header__nav container-premium" aria-label="Navegación principal">' +
-      '<div class="site-header__brand">' +
       '<a href="' +
       HOME_HREF +
       '" class="site-header__logo-link" aria-label="Mundo Camping inicio">' +
@@ -56,8 +55,7 @@
       '</span>' +
       '<span class="site-header__logo-text text-readable-soft">Mundo Camping</span>' +
       '</a>' +
-      '<p class="site-header__tagline text-readable-soft">Catálogo premium de montaña y acampada</p>' +
-      '</div>' +
+      '<p class="site-header__mobile-title" aria-hidden="true">Mundo Camping</p>' +
       '<ul class="menu-categorias" aria-label="Categorías principales">' +
       NAV_ITEMS.map(renderNavLink).join('') +
       '</ul>' +

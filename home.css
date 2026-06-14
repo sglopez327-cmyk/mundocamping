@@ -173,6 +173,16 @@
   text-shadow: 0 1px 16px rgba(0, 0, 0, 0.88);
 }
 
+@media (max-width: 1023px) {
+  .guides-featured__hero .guides-featured__kicker {
+    display: none;
+  }
+
+  .guides-featured__hero .guides-featured__title {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 639px) {
   .guides-featured__hero {
     aspect-ratio: 16 / 10;
