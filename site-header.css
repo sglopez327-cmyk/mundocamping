@@ -37,10 +37,10 @@
 #site-header .site-header__nav {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1.125rem;
+  gap: 0.875rem 1rem;
   min-height: 6.35rem;
   width: 100%;
   padding-top: 1.15rem;
@@ -48,23 +48,47 @@
   overflow: visible;
 }
 
+/* Desktop: marca arriba, categorías abajo a ancho completo */
 @media (min-width: 1024px) {
   #site-header .site-header__nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: stretch;
+    gap: 0.875rem;
     padding-top: 0.86rem;
     padding-bottom: 0.86rem;
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
-    column-gap: 1.125rem;
     overflow: visible;
   }
 
   #site-header .site-header__brand {
-    grid-column: 1;
+    grid-row: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.875rem;
+    max-width: none;
+  }
+
+  #site-header .site-header__logo-text {
+    display: inline;
+  }
+
+  #site-header .site-header__tagline {
+    display: block;
+    margin: 0;
+    padding-left: 0;
+    max-width: none;
+    font-size: 0.9375rem;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.58);
   }
 
   #site-header .menu-categorias {
-    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -133,16 +157,10 @@
   white-space: nowrap;
 }
 
-/* Solo icono en desktop estrecho: el menú necesita todo el ancho disponible */
-@media (min-width: 1024px) and (max-width: 1599px) {
+/* Solo icono en móvil/tablet estrecho */
+@media (max-width: 1023px) {
   #site-header .site-header__logo-text {
     display: none;
-  }
-}
-
-@media (min-width: 1600px) {
-  #site-header .site-header__logo-text {
-    display: inline;
   }
 }
 
@@ -157,41 +175,27 @@
   color: rgba(255, 255, 255, 0.62);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 640px) and (max-width: 1023px) {
   #site-header .site-header__tagline {
     padding-left: 4.31rem;
   }
 }
 
-@media (min-width: 1536px) {
-  #site-header .site-header__tagline {
-    display: block;
-  }
-}
-
 #site-header .menu-categorias {
-  flex: 1 1 auto;
+  flex: 1 1 100%;
   min-width: 0;
   display: none;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  gap: 0.625rem;
+  justify-content: center;
+  gap: 0.5rem 0.5625rem;
   margin: 0;
   padding: 0;
   list-style: none;
-  overflow-x: auto;
-  overflow-y: visible;
+  overflow: visible;
   position: relative;
   z-index: 2;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-#site-header .menu-categorias::-webkit-scrollbar {
-  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -207,16 +211,19 @@
 
 /* Píldoras nav — premium glass */
 #site-header .menu-categorias a.btn-premium {
-  padding: 0.625rem 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5625rem 0.8125rem;
   border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%),
     rgba(8, 14, 12, 0.94);
-  font-size: 0.8125rem;
+  font-size: 0.78125rem;
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: 0.015em;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(10px);
@@ -271,19 +278,27 @@
 
 @media (min-width: 1280px) {
   #site-header .menu-categorias {
-    gap: 0.75rem;
+    gap: 0.5625rem 0.6875rem;
   }
 
   #site-header .menu-categorias a.btn-premium {
-    padding: 0.6875rem 1rem;
-    font-size: 0.84375rem;
+    padding: 0.625rem 0.9375rem;
+    font-size: 0.8125rem;
   }
 }
 
 @media (min-width: 1536px) {
+  #site-header .site-header__tagline {
+    font-size: 1rem;
+  }
+
+  #site-header .menu-categorias {
+    gap: 0.625rem 0.75rem;
+  }
+
   #site-header .menu-categorias a.btn-premium {
-    padding: 0.75rem 1.125rem;
-    font-size: 0.875rem;
+    padding: 0.6875rem 1.0625rem;
+    font-size: 0.84375rem;
   }
 }
 
