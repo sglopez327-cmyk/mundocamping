@@ -55,6 +55,7 @@
 .reading-column--article {
   width: min(100%, 750px);
   margin-inline: auto;
+  display: flow-root;
 }
 
 @media (min-width: 1024px) {
@@ -67,11 +68,17 @@
 /* Tipografía editorial — equivalente prose-lg / prose-xl + legibilidad en oscuro */
 .article-prose {
   max-width: none;
+  display: flow-root;
   font-size: 1.125rem;
   line-height: 1.8;
   color: #b4bfb8;
   font-feature-settings: "kern" 1, "liga" 1;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Secciones editoriales: sin márgenes propios (evita colapso doble con prose) */
+.article-prose > section {
+  margin-block: 0;
 }
 
 /* Variables para @tailwindcss/typography (prose-invert) */
@@ -208,6 +215,7 @@
 
 /* Tabla comparativa reutilizable — scroll horizontal en móvil */
 .compare-table-block {
+  display: flow-root;
   margin: 2rem 0 1.5rem;
   width: 100%;
   max-width: 100%;
@@ -803,8 +811,8 @@
 .winner-callout__grid {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  gap: 1.25rem;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -882,8 +890,8 @@
 .article-product-embed__inner {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 0.85rem;
 }
 
 @media (min-width: 768px) {
@@ -940,9 +948,45 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: flex-start;
+  align-self: stretch;
+  width: 100%;
   min-width: 0;
+}
+
+/* Anula márgenes prose dentro de fichas producto (h3/p heredaban 2.5rem / 1.5rem) */
+.article-prose .article-product-embed h3,
+.article-prose.prose .article-product-embed h3,
+.article-prose .article-product-embed__title,
+.article-prose.prose .article-product-embed__title {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+.article-prose .article-product-embed p,
+.article-prose.prose .article-product-embed p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.article-prose .article-product-embed__rank,
+.article-prose.prose .article-product-embed__rank {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.article-prose .winner-callout h3,
+.article-prose.prose .winner-callout h3,
+.article-prose .winner-callout__title,
+.article-prose.prose .winner-callout__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.article-prose .analisis-producto h3,
+.article-prose.prose .analisis-producto h3 {
+  margin-top: 0;
 }
 
 .article-product-embed__title {
@@ -974,22 +1018,19 @@
 }
 
 .top-pick {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0;
-  margin-top: 2rem;
+  display: flow-root;
+  margin-top: 1.75rem;
   padding-top: 0;
 }
 
 .top-pick + .top-pick {
-  margin-top: 2.25rem;
-  padding-top: 1.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .compare-table-block + .top-pick {
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
 }
 
 .top-pick__label + h2,
@@ -1034,8 +1075,8 @@
 
 @media (max-width: 639px) {
   .top-pick + .top-pick {
-    margin-top: 2rem;
-    padding-top: 1.25rem;
+    margin-top: 1rem;
+    padding-top: 0.85rem;
   }
 
   .top-pick .article-product-embed {
@@ -1043,7 +1084,7 @@
   }
 
   .article-product-embed__inner {
-    gap: 0.85rem;
+    gap: 0.75rem;
   }
 }
 
