@@ -45,7 +45,7 @@
         "peso": { "text": "~1,8 kg", "winner": false },
         "relleno": { "text": "Algodón hueco", "winner": false },
         "forma": { "text": "Rectangular", "winner": true },
-        "precio": { "text": "€€", "winner": true }
+        "precio": { "text": "Gama media", "tier": "media", "winner": true }
       }
     },
     {
@@ -72,7 +72,7 @@
         "peso": { "text": "~1,2 kg", "winner": true },
         "relleno": { "text": "Algodón hueco", "winner": false },
         "forma": { "text": "Rectangular", "winner": false },
-        "precio": { "text": "€", "winner": true }
+        "precio": { "text": "Económico", "tier": "economico", "winner": true }
       }
     },
     {
@@ -99,7 +99,7 @@
         "peso": { "text": "1,4 kg", "winner": false },
         "relleno": { "text": "Loft sintético", "winner": false },
         "forma": { "text": "Rectangular", "winner": false },
-        "precio": { "text": "€€", "winner": false }
+        "precio": { "text": "Gama media", "tier": "media", "winner": false }
       }
     },
     {
@@ -126,7 +126,7 @@
         "peso": { "text": "0,86 kg", "winner": true },
         "relleno": { "text": "Plumón", "winner": true },
         "forma": { "text": "Momia", "winner": true },
-        "precio": { "text": "€€€", "winner": false }
+        "precio": { "text": "Premium", "tier": "premium", "winner": false }
       }
     },
     {
@@ -153,7 +153,7 @@
         "peso": { "text": "1,3 kg", "winner": false },
         "relleno": { "text": "Fibra hueca", "winner": false },
         "forma": { "text": "Rectangular", "winner": false },
-        "precio": { "text": "€€", "winner": false }
+        "precio": { "text": "Gama media", "tier": "media", "winner": false }
       }
     }
   ]

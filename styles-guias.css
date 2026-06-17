@@ -485,6 +485,55 @@
   color: #fcd34d;
 }
 
+/* Etiquetas de nivel de precio (sustituyen € / €€ / €€€) */
+.compare-table__th-criterion--price {
+  min-width: 6.25rem;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.compare-table__value-cell--price {
+  white-space: normal;
+  min-width: 6.25rem;
+}
+
+.price-tier-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.34rem 0.72rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.price-tier-badge--economico {
+  border: 1px solid rgba(52, 211, 153, 0.42);
+  background: rgba(16, 185, 129, 0.16);
+  color: #6ee7b7;
+}
+
+.price-tier-badge--media {
+  border: 1px solid rgba(56, 189, 248, 0.42);
+  background: rgba(14, 165, 233, 0.14);
+  color: #7dd3fc;
+}
+
+.price-tier-badge--premium {
+  border: 1px solid rgba(251, 191, 36, 0.48);
+  background: rgba(251, 191, 36, 0.16);
+  color: #fcd34d;
+}
+
+.compare-table__cell--winner .price-tier-badge--economico,
+.compare-table__cell--winner .price-tier-badge--media,
+.compare-table__cell--winner .price-tier-badge--premium {
+  box-shadow: 0 0 0 1px rgba(253, 230, 138, 0.12);
+}
+
 @media (max-width: 639px) {
   .compare-table--premium {
     min-width: 28rem;
@@ -530,6 +579,19 @@
   .compare-table--by-product .compare-table__value-cell {
     padding: 1rem 0.85rem;
     font-size: 0.78rem;
+  }
+
+  .compare-table__th-criterion--price,
+  .compare-table__value-cell--price {
+    min-width: 5.25rem;
+  }
+
+  .price-tier-badge {
+    padding: 0.28rem 0.55rem;
+    font-size: 0.6rem;
+    white-space: normal;
+    text-align: center;
+    max-width: 5.5rem;
   }
 }
 
