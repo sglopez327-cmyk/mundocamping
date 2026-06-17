@@ -253,6 +253,65 @@ html {
   background: rgba(16, 185, 129, 0.5);
 }
 
+/* CTA destacado — alto contraste sobre fondos oscuros (WCAG AA+) */
+.cta-button-highlight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.125rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(167, 243, 208, 0.55);
+  background: linear-gradient(180deg, #34d399 0%, #10b981 52%, #059669 100%);
+  box-shadow:
+    0 0 0 1px rgba(2, 4, 3, 0.35) inset,
+    0 4px 14px rgba(16, 185, 129, 0.28);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  color: #022c22;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  transition:
+    background 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s ease,
+    color 0.22s ease;
+}
+
+.cta-button-highlight svg {
+  flex-shrink: 0;
+  transition: transform 0.22s ease;
+}
+
+.cta-button-highlight:hover,
+.cta-button-highlight:focus-visible {
+  border-color: rgba(220, 252, 231, 0.85);
+  background: linear-gradient(180deg, #6ee7b7 0%, #34d399 48%, #10b981 100%);
+  color: #011a12;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.14) inset,
+    0 0 22px rgba(52, 211, 153, 0.42),
+    0 6px 18px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+.cta-button-highlight:hover svg,
+.cta-button-highlight:focus-visible svg {
+  transform: translateX(3px);
+}
+
+@media (min-width: 640px) {
+  .cta-button-highlight {
+    min-height: 2.625rem;
+    padding: 0.5625rem 1rem;
+    font-size: 0.8125rem;
+  }
+}
+
 /* Secciones con más aire */
 .section-breathe {
   padding-top: 4rem;

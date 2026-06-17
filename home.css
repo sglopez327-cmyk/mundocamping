@@ -407,38 +407,25 @@
 }
 
 .guide-featured-card__cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
   width: auto;
   margin-top: 0.55rem;
-  padding: 0.42rem 0.7rem;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(110, 231, 183, 0.38);
-  background: rgba(16, 185, 129, 0.14);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #deff9a;
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
 }
 
-.guide-featured-card:hover .guide-featured-card__cta,
-.guide-featured-card:focus-visible .guide-featured-card__cta {
-  background: rgba(16, 185, 129, 0.28);
-  border-color: rgba(167, 243, 208, 0.55);
-  color: #fff;
+.guide-featured-card:hover .guide-featured-card__cta.cta-button-highlight,
+.guide-featured-card:focus-visible .guide-featured-card__cta.cta-button-highlight {
+  border-color: rgba(220, 252, 231, 0.85);
+  background: linear-gradient(180deg, #6ee7b7 0%, #34d399 48%, #10b981 100%);
+  color: #011a12;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.14) inset,
+    0 0 22px rgba(52, 211, 153, 0.42),
+    0 6px 18px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
 }
 
 .guide-featured-card__cta svg {
-  flex-shrink: 0;
-  width: 14px;
-  height: 14px;
-  transition: transform 0.2s ease;
+  width: 16px;
+  height: 16px;
 }
 
 .guide-featured-card:hover .guide-featured-card__cta svg,
