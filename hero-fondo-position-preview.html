@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vista previa — Encuadre hero Fondo.jpg | Mundo Camping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./mundo-camping.css" />
+    <style>
+      body {
+        margin: 0;
+        background: #020403;
+        color: #fff;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .preview-banner {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        padding: 0.85rem 1.25rem;
+        border-bottom: 1px solid rgba(110, 231, 183, 0.25);
+        background: rgba(2, 4, 3, 0.96);
+        backdrop-filter: blur(12px);
+        text-align: center;
+        font-size: 0.875rem;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .preview-banner strong {
+        color: #deff9a;
+      }
+
+      .preview-page {
+        padding: 1.5rem 1rem 2.5rem;
+        max-width: 72rem;
+        margin: 0 auto;
+      }
+
+      .preview-grid {
+        display: grid;
+        gap: 1.75rem;
+      }
+
+      @media (min-width: 900px) {
+        .preview-grid {
+          grid-template-columns: 1fr 1fr;
+          align-items: start;
+        }
+      }
+
+      .preview-block__label {
+        margin: 0 0 0.65rem;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #6ee7b7;
+      }
+
+      .preview-block__label--new {
+        color: #fcd34d;
+      }
+
+      .preview-block__code {
+        margin: 0 0 0.85rem;
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.45);
+        font-family: ui-monospace, monospace;
+      }
+
+      /* Actual (home.css sin cambios) */
+      .preview-hero--actual.guides-featured__hero {
+        background-position: center 42%;
+      }
+
+      @media (min-width: 1024px) {
+        .preview-hero--actual.guides-featured__hero {
+          background-position: center 40%;
+        }
+      }
+
+      /* Propuesto — equivalente a object-position: 50% 80% */
+      .preview-hero--propuesto.guides-featured__hero {
+        background-position: 50% 80%;
+      }
+
+      @media (min-width: 1024px) {
+        .preview-hero--propuesto.guides-featured__hero {
+          background-position: 50% 78%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="preview-banner">
+      <strong>Solo vista previa</strong> — No se ha modificado <code>index.html</code> ni <code>home.css</code>.
+      Abre este archivo en el navegador, compara encuadres y dime cuál prefieres.
+    </p>
+
+    <div class="preview-page">
+      <div class="preview-grid">
+        <section class="preview-block">
+          <p class="preview-block__label">Actual (producción)</p>
+          <p class="preview-block__code">background-position: center 42% · desktop center 40%</p>
+          <div
+            class="guides-featured__hero preview-hero--actual w-full"
+            role="img"
+            aria-label="Encuadre actual del hero"
+          >
+            <div class="guides-featured__hero-overlay" aria-hidden="true"></div>
+            <div class="guides-featured__hero-copy">
+              <p class="guides-featured__kicker">Mundo Camping</p>
+              <h1 class="guides-featured__title">Elige tu aventura</h1>
+              <p class="guides-featured__lead">
+                Comparativas y guías de compra para elegir el mejor equipo de camping y montaña.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="preview-block">
+          <p class="preview-block__label preview-block__label--new">Propuesto (más suelo / tienda)</p>
+          <p class="preview-block__code">background-position: 50% 80% · desktop 50% 78%</p>
+          <div
+            class="guides-featured__hero preview-hero--propuesto w-full"
+            role="img"
+            aria-label="Encuadre propuesto del hero"
+          >
+            <div class="guides-featured__hero-overlay" aria-hidden="true"></div>
+            <div class="guides-featured__hero-copy">
+              <p class="guides-featured__kicker">Mundo Camping</p>
+              <h1 class="guides-featured__title">Elige tu aventura</h1>
+              <p class="guides-featured__lead">
+                Comparativas y guías de compra para elegir el mejor equipo de camping y montaña.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

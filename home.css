@@ -79,7 +79,7 @@
   background-color: #050a0f;
   background-image: url("./Fondo.jpg");
   background-size: cover;
-  background-position: center 42%;
+  background-position: 50% 80%;
   background-repeat: no-repeat;
   aspect-ratio: 21 / 9;
   min-height: clamp(13.5rem, 36vw, 16rem);
@@ -100,7 +100,7 @@
   .guides-featured__hero {
     aspect-ratio: 2.75 / 1;
     min-height: clamp(18rem, 28vw, 26rem);
-    background-position: center 40%;
+    background-position: 50% 78%;
   }
 }
 
