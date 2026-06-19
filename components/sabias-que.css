@@ -1,0 +1,193 @@
+/* ¿Sabías que...? — consejo diario de camping */
+
+.sabias-que {
+  --sabias-accent: #6ee7b7;
+  --sabias-accent-soft: rgba(110, 231, 183, 0.14);
+  --sabias-surface: rgba(12, 20, 17, 0.92);
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.15rem;
+  border: 1px solid rgba(110, 231, 183, 0.22);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.12), transparent 55%),
+    linear-gradient(165deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%),
+    var(--sabias-surface);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.sabias-que::before {
+  content: "";
+  position: absolute;
+  inset-inline: 1.25rem;
+  top: 0;
+  height: 2px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, transparent, var(--sabias-accent), transparent);
+  opacity: 0.85;
+}
+
+.sabias-que__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.35rem 1.25rem 1.25rem;
+}
+
+.sabias-que__header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.75rem;
+  row-gap: 0.35rem;
+  align-items: center;
+}
+
+.sabias-que__icon {
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(110, 231, 183, 0.35);
+  background: var(--sabias-accent-soft);
+  color: var(--sabias-accent);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.15);
+}
+
+.sabias-que__icon svg {
+  display: block;
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.sabias-que__title {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #ecfdf5;
+}
+
+.sabias-que__meta {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.sabias-que__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.sabias-que__fact,
+.sabias-que__tip {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.sabias-que__fact {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+}
+
+.sabias-que__tip {
+  padding: 0.75rem 0.85rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(110, 231, 183, 0.18);
+  background: rgba(16, 185, 129, 0.08);
+  color: rgba(236, 253, 245, 0.88);
+}
+
+.sabias-que__tip-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sabias-accent);
+}
+
+.sabias-que__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.15rem;
+}
+
+.sabias-que__cta {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.sabias-que__cta:hover {
+  transform: translateY(-1px) scale(1.02);
+  color: #fff;
+}
+
+.sabias-que__cta:focus-visible {
+  outline: 2px solid #deff9a;
+  outline-offset: 3px;
+}
+
+.sabias-que__cta svg {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+.sabias-que__disclosure {
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+@media (min-width: 640px) {
+  .sabias-que__inner {
+    padding: 1.5rem 1.35rem 1.35rem;
+  }
+
+  .sabias-que__title {
+    font-size: 1.22rem;
+  }
+
+  .sabias-que__fact,
+  .sabias-que__tip {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sabias-que__cta {
+    font-size: 0.84rem;
+  }
+}

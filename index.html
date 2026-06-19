@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="./footer-premium.css" />
     <link rel="stylesheet" href="./home.css" />
     <link rel="stylesheet" href="./site-header.css" />
+    <link rel="stylesheet" href="./components/sabias-que.css" />
   </head>
   <body class="bg-[#020403] text-white antialiased">
     <header id="site-header"></header>
@@ -187,6 +188,47 @@
                 </ul>
               </nav>
 
+              <section
+                class="sabias-que"
+                id="sabias-que"
+                aria-labelledby="sabias-que-title"
+                aria-live="polite"
+              >
+                <div class="sabias-que__inner">
+                  <header class="sabias-que__header">
+                    <span class="sabias-que__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3.5 21 12 3l8.5 18" />
+                        <path d="M7.5 15h9" />
+                        <path d="M12 3v4" />
+                      </svg>
+                    </span>
+                    <h2 id="sabias-que-title" class="sabias-que__title">¿Sabías que...?</h2>
+                    <p class="sabias-que__meta">Consejo del día</p>
+                  </header>
+
+                  <div class="sabias-que__body">
+                    <p class="sabias-que__fact"></p>
+                    <p class="sabias-que__tip">
+                      <span class="sabias-que__tip-label">Consejo práctico</span>
+                      <span class="sabias-que__tip-text"></span>
+                    </p>
+                  </div>
+
+                  <footer class="sabias-que__footer">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="sponsored noopener noreferrer"
+                      class="sabias-que__cta product-cta-amazon"
+                    >
+                      Ver en Amazon
+                    </a>
+                    <p class="sabias-que__disclosure">Enlace de afiliado a Amazon. Sin coste adicional para ti.</p>
+                  </footer>
+                </div>
+              </section>
+
               <div class="guides-sidebar-panel guides-sidebar-panel--picks">
                 <div class="guides-sidebar-picks guides-sidebar-picks--sticky">
                   <h2 class="guides-sidebar-panel__title">Lo más leído</h2>
@@ -295,7 +337,9 @@
     </main>
 
         <footer id="site-footer"></footer>
-    <script src="./js/site-footer.js"></script><script src="./js/guides-featured.js"></script>
+    <script src="./js/site-footer.js"></script>
+    <script src="./js/guides-featured.js"></script>
+    <script src="./js/sabias-que.js"></script>
 
   </body>
 </html>
