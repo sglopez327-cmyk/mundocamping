@@ -183,15 +183,24 @@
   color: #deff9a;
 }
 
-.video-top-picks__thumb {
+.video-top-picks__thumb-wrap {
   flex-shrink: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
   border-radius: 0.55rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.video-top-picks__thumb {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 0.45rem;
 }
 
 .video-top-picks__body {
