@@ -1,5 +1,22 @@
 /* ¿Sabías que...? — consejo diario de camping */
 
+@keyframes sabias-icon-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 4px 14px rgba(16, 185, 129, 0.18),
+      0 0 0 0 rgba(110, 231, 183, 0.35);
+  }
+
+  50% {
+    transform: scale(1.07);
+    box-shadow:
+      0 8px 22px rgba(16, 185, 129, 0.32),
+      0 0 0 6px rgba(110, 231, 183, 0.08);
+  }
+}
+
 .sabias-que {
   --sabias-accent: #6ee7b7;
   --sabias-accent-soft: rgba(110, 231, 183, 0.14);
@@ -7,16 +24,21 @@
   position: relative;
   overflow: hidden;
   border-radius: 1.15rem;
-  border: 1px solid rgba(110, 231, 183, 0.22);
+  border: 1px solid rgba(110, 231, 183, 0.28);
   background:
-    radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.12), transparent 55%),
-    linear-gradient(165deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%),
+    radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.16), transparent 55%),
+    linear-gradient(165deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%),
     var(--sabias-surface);
   box-shadow:
     0 16px 40px rgba(0, 0, 0, 0.32),
+    0 0 32px rgba(16, 185, 129, 0.14),
     0 0 0 1px rgba(255, 255, 255, 0.04) inset;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
 }
 
 .sabias-que::before {
@@ -27,10 +49,50 @@
   height: 2px;
   border-radius: 0 0 4px 4px;
   background: linear-gradient(90deg, transparent, var(--sabias-accent), transparent);
-  opacity: 0.85;
+  opacity: 0.9;
+}
+
+.sabias-que::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    145deg,
+    rgba(110, 231, 183, 0.55) 0%,
+    rgba(16, 185, 129, 0.08) 42%,
+    rgba(222, 255, 154, 0.35) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.75;
+  transition: opacity 0.28s ease;
+}
+
+.sabias-que:hover {
+  transform: translateY(-5px);
+  border-color: rgba(110, 231, 183, 0.42);
+  box-shadow:
+    0 24px 52px rgba(0, 0, 0, 0.42),
+    0 0 48px rgba(16, 185, 129, 0.24),
+    0 0 0 1px rgba(110, 231, 183, 0.12) inset;
+}
+
+.sabias-que:hover::after {
+  opacity: 1;
 }
 
 .sabias-que__inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -51,29 +113,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2.85rem;
+  height: 2.85rem;
   border-radius: 0.85rem;
-  border: 1px solid rgba(110, 231, 183, 0.35);
+  border: 1px solid rgba(110, 231, 183, 0.4);
   background: var(--sabias-accent-soft);
   color: var(--sabias-accent);
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.15);
+  box-shadow:
+    0 4px 14px rgba(16, 185, 129, 0.18),
+    0 0 0 0 rgba(110, 231, 183, 0.35);
+  animation: sabias-icon-pulse 2.8s ease-in-out infinite;
 }
 
 .sabias-que__icon svg {
   display: block;
-  width: 1.45rem;
-  height: 1.45rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .sabias-que__title {
   margin: 0;
   font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
-  font-size: 1.15rem;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: #ecfdf5;
+  font-size: 1.28rem;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: #f0fdf4;
+  text-shadow: 0 1px 18px rgba(16, 185, 129, 0.2);
 }
 
 .sabias-que__meta {
@@ -177,7 +243,7 @@
   }
 
   .sabias-que__title {
-    font-size: 1.22rem;
+    font-size: 1.38rem;
   }
 
   .sabias-que__fact,
@@ -189,5 +255,19 @@
 @media (min-width: 1024px) {
   .sabias-que__cta {
     font-size: 0.84rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sabias-que {
+    transition: box-shadow 0.28s ease, border-color 0.28s ease;
+  }
+
+  .sabias-que:hover {
+    transform: none;
+  }
+
+  .sabias-que__icon {
+    animation: none;
   }
 }
