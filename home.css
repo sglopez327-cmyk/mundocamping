@@ -75,18 +75,28 @@
   margin-bottom: 0;
   overflow: hidden;
   border-radius: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #050a0f;
-  background-image: url("./Fondo.jpg");
-  background-size: cover;
-  background-position: 50% 80%;
-  background-repeat: no-repeat;
+  border: none;
+  background-color: #020403;
   aspect-ratio: 21 / 9;
   min-height: clamp(13.5rem, 36vw, 16rem);
   max-height: 28rem;
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.38),
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.guides-featured__hero::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: 0;
+  border-radius: inherit;
+  background-color: #020403;
+  background-image: url("./Fondo.jpg");
+  background-size: cover;
+  background-position: 50% 80%;
+  background-repeat: no-repeat;
+  transform: translateZ(0);
 }
 
 @media (min-width: 640px) {
@@ -100,6 +110,9 @@
   .guides-featured__hero {
     aspect-ratio: 2.75 / 1;
     min-height: clamp(18rem, 28vw, 26rem);
+  }
+
+  .guides-featured__hero::before {
     background-position: 50% 78%;
   }
 }
@@ -186,6 +199,9 @@
 @media (max-width: 639px) {
   .guides-featured__hero {
     aspect-ratio: 16 / 10;
+  }
+
+  .guides-featured__hero::before {
     background-position: center 38%;
   }
 
