@@ -36,26 +36,42 @@
     <link rel="stylesheet" href="./footer-premium.css" />
     <link rel="stylesheet" href="./components/sobre-mi.css" />
     <style>
-      /* Cabecera Sobre mí — imagen a la derecha del título (prioridad sobre Tailwind) */
+      /* Cabecera Sobre mí — rejilla intro + imagen a altura completa */
       @media (min-width: 640px) {
-        .about-page .about-hero-layout {
-          display: flex;
-          flex-direction: row;
-          align-items: flex-start;
-          justify-content: space-between;
+        .about-page .about-intro-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
+          grid-template-rows: auto auto;
+          gap: 1.25rem 2.5rem;
+          align-items: stretch;
+        }
+
+        .about-page .about-intro__copy {
+          grid-column: 1;
+          grid-row: 1;
+        }
+
+        .about-page .about-intro__passion {
+          grid-column: 1;
+          grid-row: 2;
         }
 
         .about-page .about-hero-figure {
-          order: 0;
-          flex: 0 0 min(42%, 20rem);
-          max-width: 340px;
-          margin-left: auto;
+          grid-column: 2;
+          grid-row: 1 / -1;
+          display: flex;
+          min-height: 0;
+          height: 100%;
+          max-width: none;
+          width: 100%;
         }
 
         .about-page .about-hero__img {
           width: 100%;
-          max-width: 100%;
-          height: auto;
+          height: 100%;
+          min-height: 100%;
+          max-width: none;
+          object-fit: cover;
           border-radius: 12px;
         }
       }
@@ -103,8 +119,8 @@
               <span aria-hidden="true">/</span>
               <span>Sobre mí</span>
             </nav>
-            <div class="about-hero-layout">
-              <div class="about-hero-copy">
+            <div class="about-intro-grid">
+              <div class="about-intro__copy">
                 <p class="about-page__kicker">Mundo Camping</p>
                 <h1 class="about-page__title" itemprop="name">Sobre mí</h1>
                 <p class="about-page__lead about-page__subtitle" itemprop="description">
@@ -123,14 +139,7 @@
                   decoding="async"
                 />
               </figure>
-            </div>
-          </div>
-        </header>
-
-        <div class="container-premium about-page__body">
-          <div class="about-page__grid">
-            <div class="about-page__main">
-              <section class="about-card" aria-labelledby="about-passion-title">
+              <section class="about-card about-intro__passion" aria-labelledby="about-passion-title">
                 <h2 id="about-passion-title" class="about-card__title">Mi pasión por el aire libre</h2>
                 <p>
                   Llevo años acampando, recorriendo senderos y buscando ese equilibrio entre
@@ -144,7 +153,13 @@
                   me llevó a crear este proyecto.
                 </p>
               </section>
+            </div>
+          </div>
+        </header>
 
+        <div class="container-premium about-page__body">
+          <div class="about-page__grid">
+            <div class="about-page__main">
               <section class="about-card" aria-labelledby="about-mission-title">
                 <h2 id="about-mission-title" class="about-card__title">Por qué existe Mundo Camping</h2>
                 <p>
