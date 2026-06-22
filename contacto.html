@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contacta con Mundo Camping: sugerencias, colaboraciones o dudas sobre equipo de camping y montaña. Respondo lo antes posible."
+    />
+    <title>Mundo Camping | Contacto</title>
+    <link rel="canonical" href="https://www.mundocamping.net/contacto" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'],
+            },
+            colors: {
+              premium: { accent: '#deff9a', night: '#020403' },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./mundo-camping.css" />
+    <link rel="stylesheet" href="./site-header.css" />
+    <link rel="stylesheet" href="./footer-premium.css" />
+    <link rel="stylesheet" href="./components/sobre-mi.css" />
+    <link rel="stylesheet" href="./components/contacto.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646085735328403"
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contacto — Mundo Camping",
+        "description": "Formulario de contacto de Mundo Camping para sugerencias, colaboraciones y consultas sobre equipo de camping.",
+        "url": "https://www.mundocamping.net/contacto",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Mundo Camping",
+          "url": "https://www.mundocamping.net/",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "availableLanguage": ["Spanish"],
+            "url": "https://www.mundocamping.net/contacto"
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-[#020403] font-sans text-white antialiased">
+    <header id="site-header"></header>
+    <script src="./js/site-header.js"></script>
+
+    <main>
+      <article class="about-page contact-page">
+        <header class="about-page__hero">
+          <div class="about-page__hero-bg" aria-hidden="true"></div>
+          <div class="container-premium about-page__hero-inner">
+            <nav class="about-page__breadcrumb" aria-label="Migas de pan">
+              <a href="index.html">Guías Destacadas</a>
+              <span aria-hidden="true">/</span>
+              <span>Contacto</span>
+            </nav>
+            <p class="about-page__kicker">Mundo Camping</p>
+            <h1 class="about-page__title">Contacto</h1>
+            <p class="about-page__lead">
+              ¿Tienes una sugerencia, una idea de colaboración o una duda sobre equipo de camping? Escríbeme: leo todos los
+              mensajes y respondo lo antes posible.
+            </p>
+          </div>
+        </header>
+
+        <div class="container-premium about-page__body">
+          <div class="about-page__grid contact-page__grid">
+            <div class="about-page__main">
+              <div
+                id="contact-success"
+                class="contact-alert contact-alert--success"
+                role="status"
+                hidden
+              >
+                <p class="contact-alert__title">Mensaje enviado</p>
+                <p class="contact-alert__text">
+                  Gracias por escribirme. He recibido tu mensaje y te responderé en cuanto pueda.
+                </p>
+              </div>
+
+              <!--
+                FORMSPREE — Configuración (solo una vez):
+                1. Crea una cuenta gratuita en https://formspree.io
+                2. Crea un formulario nuevo e indica tu correo de destino
+                3. Copia el ID que te dan (ej. xyzabcde) y sustituye TU_ID_DE_FORMULARIO abajo
+                4. En Formspree → Settings → Redirect, puedes usar:
+                   https://www.mundocamping.net/contacto.html?enviado=ok
+              -->
+              <form
+                id="contact-form"
+                class="contact-form"
+                action="https://formspree.io/f/TU_ID_DE_FORMULARIO"
+                method="POST"
+              >
+                <input type="hidden" name="_subject" value="Nuevo mensaje — Mundo Camping" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://www.mundocamping.net/contacto.html?enviado=ok"
+                />
+                <input type="text" name="_gotcha" class="contact-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-name">Nombre</label>
+                  <input
+                    class="contact-form__input"
+                    type="text"
+                    id="contact-name"
+                    name="nombre"
+                    autocomplete="name"
+                    required
+                    minlength="2"
+                    maxlength="120"
+                    placeholder="Tu nombre"
+                  />
+                </div>
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-email">Correo electrónico</label>
+                  <input
+                    class="contact-form__input"
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    inputmode="email"
+                    placeholder="tu@email.com"
+                  />
+                </div>
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-subject">Asunto</label>
+                  <input
+                    class="contact-form__input"
+                    type="text"
+                    id="contact-subject"
+                    name="asunto"
+                    required
+                    minlength="3"
+                    maxlength="160"
+                    placeholder="Ej. Sugerencia sobre tiendas de campaña"
+                  />
+                </div>
+
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-message">Mensaje</label>
+                  <textarea
+                    class="contact-form__textarea"
+                    id="contact-message"
+                    name="mensaje"
+                    required
+                    minlength="10"
+                    maxlength="4000"
+                    rows="6"
+                    placeholder="Cuéntame en qué puedo ayudarte…"
+                  ></textarea>
+                </div>
+
+                <p class="contact-form__privacy">
+                  Al enviar este formulario aceptas que use tus datos únicamente para responder a tu consulta. No
+                  comparto tu información con terceros.
+                </p>
+
+                <button type="submit" class="contact-form__submit">Enviar mensaje</button>
+              </form>
+            </div>
+
+            <aside class="about-page__aside contact-page__aside" aria-label="Información de contacto">
+              <div class="about-aside-card">
+                <p class="about-aside-card__label">¿Para qué escribirme?</p>
+                <ul class="contact-reasons">
+                  <li>Sugerencias para nuevas guías o comparativas</li>
+                  <li>Colaboraciones y propuestas editoriales</li>
+                  <li>Dudas sobre productos o equipamiento</li>
+                  <li>Correcciones o mejoras en una guía publicada</li>
+                </ul>
+              </div>
+
+              <div class="about-aside-card">
+                <p class="about-aside-card__label">Más sobre el proyecto</p>
+                <p class="contact-aside-text">
+                  Mundo Camping es un sitio independiente de guías y comparativas de camping. Si quieres conocer el
+                  enfoque editorial del proyecto, visita la página
+                  <a href="sobre-mi.html">Sobre mí</a>.
+                </p>
+              </div>
+
+              <div class="about-aside-card contact-aside-card--note">
+                <p class="about-aside-card__label">Tiempo de respuesta</p>
+                <p class="contact-aside-text">
+                  Suelo responder en un plazo de <strong>2–4 días laborables</strong>. Gracias por tu paciencia.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="./js/site-footer.js"></script>
+    <script src="./js/contacto.js"></script>
+  </body>
+</html>

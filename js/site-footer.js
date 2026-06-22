@@ -74,6 +74,7 @@
       '<div class="site-footer__bottom-meta">' +
       '<nav class="site-footer__info-links" aria-label="Enlaces informativos">' +
       '<a class="site-footer__info-link" href="/sobre-mi.html">Sobre mí</a>' +
+      '<a class="site-footer__info-link" href="/contacto.html">Contacto</a>' +
       '</nav>' +
       '<p class="site-footer__copy">© Mundo Camping</p>' +
       '</div>' +

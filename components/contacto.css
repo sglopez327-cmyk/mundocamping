@@ -1,0 +1,211 @@
+/* Página Contacto — Mundo Camping */
+
+.contact-page__grid {
+  align-items: start;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  padding: 1.35rem 1.25rem;
+  border-radius: 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%),
+    rgba(8, 14, 12, 0.72);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+@media (min-width: 640px) {
+  .contact-form {
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-form__label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(236, 253, 245, 0.9);
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  padding: 0.8rem 0.95rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(2, 4, 3, 0.55);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.contact-form__input:hover,
+.contact-form__textarea:hover {
+  border-color: rgba(110, 231, 183, 0.28);
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  outline: none;
+  border-color: rgba(110, 231, 183, 0.55);
+  background: rgba(2, 4, 3, 0.72);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 9rem;
+}
+
+.contact-form__input:invalid:not(:placeholder-shown),
+.contact-form__textarea:invalid:not(:placeholder-shown) {
+  border-color: rgba(248, 113, 113, 0.55);
+}
+
+.contact-form__privacy {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.contact-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.15rem;
+  padding: 0.9rem 1.25rem;
+  border: 1px solid rgba(110, 231, 183, 0.35);
+  border-radius: 9999px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.22) 0%, rgba(6, 78, 59, 0.55) 100%);
+  box-shadow: 0 6px 22px rgba(16, 185, 129, 0.18);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ecfdf5;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact-form__submit:hover {
+  transform: translateY(-1px);
+  border-color: rgba(222, 255, 154, 0.45);
+  color: #deff9a;
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.24);
+}
+
+.contact-form__submit:focus-visible {
+  outline: 2px solid #deff9a;
+  outline-offset: 3px;
+}
+
+.contact-form__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact-alert {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(110, 231, 183, 0.28);
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.contact-alert__title {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #deff9a;
+}
+
+.contact-alert__text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(236, 253, 245, 0.88);
+}
+
+.contact-reasons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.contact-reasons li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.contact-reasons li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: #6ee7b7;
+}
+
+.contact-aside-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.contact-aside-text a {
+  color: #6ee7b7;
+  text-decoration: underline;
+  text-decoration-color: rgba(110, 231, 183, 0.35);
+  text-underline-offset: 0.15em;
+}
+
+.contact-aside-text a:hover {
+  color: #deff9a;
+}
+
+.contact-aside-card--note {
+  border-color: rgba(110, 231, 183, 0.18);
+  background: rgba(16, 185, 129, 0.06);
+}
