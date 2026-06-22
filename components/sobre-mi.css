@@ -276,15 +276,124 @@
 }
 
 .legal-page__updated {
-  margin: 1rem 0 0;
+  margin: 0.85rem 0 0;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.45);
 }
 
+.legal-hero-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.legal-hero-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-top: 0.15rem;
+  border-radius: 0.95rem;
+  border: 1px solid rgba(110, 231, 183, 0.38);
+  background: rgba(110, 231, 183, 0.12);
+  color: #6ee7b7;
+  box-shadow:
+    0 4px 18px rgba(16, 185, 129, 0.2),
+    0 0 0 1px rgba(110, 231, 183, 0.08) inset;
+}
+
+.legal-hero-icon svg {
+  display: block;
+  width: 1.65rem;
+  height: 1.65rem;
+}
+
+.legal-hero-copy {
+  min-width: 0;
+}
+
+.legal-hero-copy .about-page__title {
+  margin-top: 0;
+  max-width: none;
+}
+
+.legal-hero-copy .about-page__lead {
+  margin-top: 0.65rem;
+}
+
+.legal-page .about-page__hero {
+  padding-bottom: 3.25rem;
+}
+
+.legal-page .about-page__body {
+  padding-top: 0.5rem;
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  .legal-page .about-page__hero {
+    padding-bottom: 3.75rem;
+  }
+
+  .legal-page .about-page__body {
+    padding-bottom: 5.5rem;
+  }
+}
+
 .legal-page__content {
   max-width: 48rem;
+}
+
+.legal-page .about-page__main {
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .legal-page .about-page__main {
+    gap: 1.65rem;
+  }
+}
+
+.legal-page .about-card a {
+  color: #6ee7b7;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(110, 231, 183, 0.4);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.legal-page .about-card a:hover {
+  color: #deff9a;
+  text-decoration-color: rgba(222, 255, 154, 0.75);
+}
+
+.legal-page .about-card a:focus-visible {
+  outline: 2px solid #deff9a;
+  outline-offset: 3px;
+  border-radius: 0.2rem;
+}
+
+.legal-page .about-page__breadcrumb a {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(110, 231, 183, 0.25);
+  text-underline-offset: 0.15em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.legal-page .about-page__breadcrumb a:hover {
+  color: #6ee7b7;
+  text-decoration-color: rgba(110, 231, 183, 0.55);
 }
 
 .legal-page .about-card a[target="_blank"]::after {
