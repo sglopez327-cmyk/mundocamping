@@ -71,7 +71,12 @@
       '<p id="aviso-afiliacion-amazon" class="site-footer__legal">' +
       AFFILIATE_NOTICE +
       '</p>' +
+      '<div class="site-footer__bottom-meta">' +
+      '<nav class="site-footer__info-links" aria-label="Enlaces informativos">' +
+      '<a class="site-footer__info-link" href="/sobre-mi.html">Sobre mí</a>' +
+      '</nav>' +
       '<p class="site-footer__copy">© Mundo Camping</p>' +
+      '</div>' +
       '</div>' +
       '</div>';
   }

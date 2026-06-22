@@ -54,4 +54,10 @@
   <url>
     <loc>https://www.mundocamping.net/accesorios-marcan-diferencia</loc>
   </url>
+  <url>
+    <loc>https://www.mundocamping.net/sobre-mi</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
