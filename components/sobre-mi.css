@@ -288,17 +288,21 @@
   align-items: flex-start;
   gap: 1rem;
   margin-top: 0.75rem;
+  max-width: 48rem;
 }
 
-.legal-hero-icon {
-  flex-shrink: 0;
+.legal-page .legal-hero-icon {
+  flex: 0 0 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.25rem;
-  height: 3.25rem;
+  width: 48px;
+  height: 48px;
+  max-width: 48px;
+  max-height: 48px;
   margin-top: 0.15rem;
-  border-radius: 0.95rem;
+  overflow: hidden;
+  border-radius: 0.85rem;
   border: 1px solid rgba(110, 231, 183, 0.38);
   background: rgba(110, 231, 183, 0.12);
   color: #6ee7b7;
@@ -307,10 +311,13 @@
     0 0 0 1px rgba(110, 231, 183, 0.08) inset;
 }
 
-.legal-hero-icon svg {
+.legal-page .legal-hero-icon svg {
   display: block;
-  width: 1.65rem;
-  height: 1.65rem;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
 }
 
 .legal-hero-copy {

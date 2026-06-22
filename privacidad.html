@@ -35,6 +35,23 @@
     <link rel="stylesheet" href="./site-header.css" />
     <link rel="stylesheet" href="./footer-premium.css" />
     <link rel="stylesheet" href="./components/sobre-mi.css" />
+    <style>
+      /* Escudo cabecera — tamaño fijo (evita conflicto con Tailwind CDN) */
+      .legal-page .legal-hero-icon {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+        max-width: 48px;
+        max-height: 48px;
+      }
+
+      .legal-page .legal-hero-icon svg {
+        width: 24px;
+        height: 24px;
+        max-width: 24px;
+        max-height: 24px;
+      }
+    </style>
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646085735328403"
@@ -58,7 +75,17 @@
             <p class="about-page__kicker">Mundo Camping</p>
             <div class="legal-hero-head">
               <span class="legal-hero-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  focusable="false"
+                >
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   <path d="m9 12 2 2 4-4" />
                 </svg>
