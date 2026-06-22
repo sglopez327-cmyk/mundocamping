@@ -74,6 +74,15 @@
   color: rgba(255, 255, 255, 0.78);
 }
 
+.about-page__subtitle {
+  margin-top: 0.875rem;
+  max-width: 37.5rem;
+  font-size: clamp(1.0625rem, 1.85vw, 1.1875rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: #a3a3a3;
+}
+
 .about-hero-layout {
   display: flex;
   flex-direction: column;
@@ -97,8 +106,26 @@
   max-width: none;
 }
 
-.about-hero-copy .about-page__lead {
-  max-width: 36rem;
+.about-hero-copy .about-page__subtitle {
+  margin-bottom: 0;
+}
+
+.about-page__hero:has(.about-hero-layout) {
+  padding-bottom: 4rem;
+}
+
+.about-page__hero:has(.about-hero-layout) + .about-page__body {
+  padding-top: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .about-page__hero:has(.about-hero-layout) {
+    padding-bottom: 4.75rem;
+  }
+
+  .about-page__hero:has(.about-hero-layout) + .about-page__body {
+    padding-top: 1rem;
+  }
 }
 
 .about-hero__img {
