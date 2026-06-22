@@ -35,6 +35,31 @@
     <link rel="stylesheet" href="./site-header.css" />
     <link rel="stylesheet" href="./footer-premium.css" />
     <link rel="stylesheet" href="./components/sobre-mi.css" />
+    <style>
+      /* Cabecera Sobre mí — imagen a la derecha del título (prioridad sobre Tailwind) */
+      @media (min-width: 640px) {
+        .about-page .about-hero-layout {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+        }
+
+        .about-page .about-hero-figure {
+          order: 0;
+          flex: 0 0 min(42%, 20rem);
+          max-width: 340px;
+          margin-left: auto;
+        }
+
+        .about-page .about-hero__img {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          border-radius: 12px;
+        }
+      }
+    </style>
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646085735328403"

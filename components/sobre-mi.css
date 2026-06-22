@@ -75,18 +75,21 @@
 }
 
 .about-hero-layout {
-  display: grid;
-  gap: 1.5rem;
-  align-items: center;
-  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 0.25rem;
 }
 
 .about-hero-figure {
   margin: 0;
+  width: 100%;
+  max-width: 340px;
   order: -1;
 }
 
 .about-hero-copy {
+  flex: 1 1 auto;
   min-width: 0;
 }
 
@@ -94,10 +97,14 @@
   max-width: none;
 }
 
+.about-hero-copy .about-page__lead {
+  max-width: 36rem;
+}
+
 .about-hero__img {
   display: block;
   width: 100%;
-  max-width: 380px;
+  max-width: 340px;
   height: auto;
   margin: 0 auto;
   border-radius: 12px;
@@ -107,28 +114,38 @@
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .about-hero-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(16rem, 24rem);
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 2rem 2.5rem;
   }
 
   .about-hero-figure {
     order: 0;
-    justify-self: end;
-    width: 100%;
+    flex: 0 0 min(42%, 20rem);
+    width: min(42%, 20rem);
+    max-width: 340px;
+    margin: 0 0 0 auto;
+    align-self: flex-start;
   }
 
   .about-hero__img {
     margin: 0;
-    margin-left: auto;
     max-width: 100%;
   }
 }
 
 @media (min-width: 1024px) {
   .about-hero-layout {
-    gap: 2.5rem 3rem;
+    gap: 2.5rem 3.5rem;
+  }
+
+  .about-hero-figure {
+    flex: 0 0 min(40%, 22rem);
+    width: min(40%, 22rem);
+    max-width: 380px;
   }
 }
 
