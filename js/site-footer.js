@@ -60,6 +60,13 @@
       '<a class="site-footer__link" href="/accesorios.html">Accesorios</a>' +
       '</nav>' +
       '</div>' +
+      '<div>' +
+      '<p class="site-footer__nav-title">Información</p>' +
+      '<nav class="site-footer__links" aria-label="Información del sitio">' +
+      '<a class="site-footer__link" href="/sobre-mi.html">Sobre mí</a>' +
+      '<a class="site-footer__link" href="/contacto.html">Contacto</a>' +
+      '</nav>' +
+      '</div>' +
       '</div>' +
       '<div class="site-footer__scene-wrap">' +
       '<img class="footer-scene" src="/assets/tienda-2-personas-interior-lujo-vip-compacta-v2.png" ' +
@@ -71,13 +78,7 @@
       '<p id="aviso-afiliacion-amazon" class="site-footer__legal">' +
       AFFILIATE_NOTICE +
       '</p>' +
-      '<div class="site-footer__bottom-meta">' +
-      '<nav class="site-footer__info-links" aria-label="Enlaces informativos">' +
-      '<a class="site-footer__info-link" href="/sobre-mi.html">Sobre mí</a>' +
-      '<a class="site-footer__info-link" href="/contacto.html">Contacto</a>' +
-      '</nav>' +
       '<p class="site-footer__copy">© Mundo Camping</p>' +
-      '</div>' +
       '</div>' +
       '</div>';
   }
