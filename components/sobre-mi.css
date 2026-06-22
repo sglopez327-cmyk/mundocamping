@@ -126,6 +126,32 @@
     rgba(255, 255, 255, 0.03);
 }
 
+.about-card--with-media::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.about-card__img {
+  float: right;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 0 20px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  object-fit: cover;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 639px) {
+  .about-card__img {
+    float: none;
+    margin: 0 auto 20px;
+  }
+}
+
 .about-card__title {
   margin: 0 0 0.85rem;
   font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
