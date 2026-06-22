@@ -65,6 +65,7 @@
       '<nav class="site-footer__links" aria-label="Información del sitio">' +
       '<a class="site-footer__link" href="/sobre-mi.html">Sobre mí</a>' +
       '<a class="site-footer__link" href="/contacto.html">Contacto</a>' +
+      '<a class="site-footer__link" href="/privacidad.html">Política de Privacidad</a>' +
       '</nav>' +
       '</div>' +
       '</div>' +

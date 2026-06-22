@@ -275,6 +275,24 @@
   box-shadow: 0 10px 28px rgba(16, 185, 129, 0.24);
 }
 
+.legal-page__updated {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.legal-page__content {
+  max-width: 48rem;
+}
+
+.legal-page .about-card a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 0.75em;
+  opacity: 0.65;
+}
+
 .about-cta:focus-visible {
   outline: 2px solid #deff9a;
   outline-offset: 3px;
