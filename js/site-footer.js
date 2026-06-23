@@ -2,6 +2,9 @@
  * Footer global Mundo Camping — aviso de afiliación Amazon obligatorio.
  * Uso: <footer id="site-footer"></footer> + <script src="RUTA/js/site-footer.js">
  * Estilos: footer-premium.css
+ *
+ * Schema.org Organization: añadir JSON-LD en index.html (dentro de <head>).
+ * Ver plantilla en footer-premium.html (comentario al inicio del archivo).
  */
 (function () {
   'use strict';
@@ -36,6 +39,9 @@
       '<p class="site-footer__tagline">' +
       'Guías, comparativas y selección de equipo para acampar, hacer senderismo y aventuras al aire libre.' +
       '</p>' +
+      '<p class="site-footer__credential">' +
+      'Sitio independiente de guías de acampada con reseñas basadas en experiencia real.' +
+      '</p>' +
       '<div class="site-footer__trust">' +
       '<span class="site-footer__pill"><span class="site-footer__pill-dot"></span> Guías prácticas</span>' +
       '<span class="site-footer__pill"><span class="site-footer__pill-dot"></span> Equipo contrastado</span>' +
@@ -64,8 +70,14 @@
       '<p class="site-footer__nav-title">Información</p>' +
       '<nav class="site-footer__links" aria-label="Información del sitio">' +
       '<a class="site-footer__link" href="/sobre-mi.html">Sobre mí</a>' +
-      '<a class="site-footer__link" href="/contacto.html">Contacto</a>' +
+      '</nav>' +
+      '</div>' +
+      '<div class="site-footer__nav-col">' +
+      '<p class="site-footer__nav-title">Legal</p>' +
+      '<nav class="site-footer__links" aria-label="Enlaces legales">' +
       '<a class="site-footer__link" href="/privacidad.html">Política de Privacidad</a>' +
+      '<a class="site-footer__link" href="/aviso-legal.html">Aviso Legal</a>' +
+      '<a class="site-footer__link" href="/contacto.html">Contacto</a>' +
       '</nav>' +
       '</div>' +
       '</div>' +
