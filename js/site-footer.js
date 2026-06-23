@@ -70,14 +70,15 @@
       '<p class="site-footer__nav-title">Información</p>' +
       '<nav class="site-footer__links" aria-label="Información del sitio">' +
       '<a class="site-footer__link" href="/sobre-mi.html">Sobre mí</a>' +
+      '<a class="site-footer__link" href="/privacidad.html">Política de Privacidad</a>' +
+      '<a class="site-footer__link" href="/aviso-legal.html">Aviso Legal</a>' +
       '</nav>' +
       '</div>' +
       '<div class="site-footer__nav-col">' +
       '<p class="site-footer__nav-title">Legal</p>' +
       '<nav class="site-footer__links" aria-label="Enlaces legales">' +
-      '<a class="site-footer__link" href="/privacidad.html">Política de Privacidad</a>' +
-      '<a class="site-footer__link" href="/aviso-legal.html">Aviso Legal</a>' +
       '<a class="site-footer__link" href="/contacto.html">Contacto</a>' +
+      '<a class="site-footer__link" href="mailto:contacto@mundocamping.net">contacto@mundocamping.net</a>' +
       '</nav>' +
       '</div>' +
       '</div>' +
