@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vista previa — Icono cabecera Privacidad | Mundo Camping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        background: #020403;
+        color: #fff;
+        font-family: Inter, ui-sans-serif, sans-serif;
+      }
+
+      .preview-banner {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        padding: 0.9rem 1.25rem;
+        border-bottom: 1px solid rgba(110, 231, 183, 0.25);
+        background: rgba(2, 4, 3, 0.96);
+        text-align: center;
+        font-size: 0.875rem;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .preview-banner strong {
+        color: #deff9a;
+      }
+
+      .preview-wrap {
+        max-width: 52rem;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 3rem;
+      }
+
+      .preview-intro {
+        margin: 0 0 2rem;
+        font-size: 0.95rem;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .preview-grid {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .preview-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .preview-option {
+        border-radius: 1.15rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+        overflow: hidden;
+      }
+
+      .preview-option--recommended {
+        border-color: rgba(110, 231, 183, 0.35);
+        box-shadow: 0 0 0 1px rgba(110, 231, 183, 0.12);
+      }
+
+      .preview-option__label {
+        margin: 0;
+        padding: 0.65rem 1rem;
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #6ee7b7;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(16, 185, 129, 0.06);
+      }
+
+      .preview-option__label--rec::after {
+        content: " · Recomendado";
+        color: #deff9a;
+      }
+
+      .about-page__kicker {
+        margin: 0;
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: #6ee7b7;
+      }
+
+      .about-page__title {
+        margin: 0;
+        font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
+        font-size: clamp(1.65rem, 4vw, 2.25rem);
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+        color: #fff;
+      }
+
+      .about-page__lead {
+        margin: 0;
+        font-size: 0.92rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .legal-hero-head {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .legal-hero-icon {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.25rem;
+        height: 3.25rem;
+        margin-top: 0.15rem;
+        border-radius: 0.95rem;
+        border: 1px solid rgba(110, 231, 183, 0.38);
+        background: rgba(110, 231, 183, 0.12);
+        color: #6ee7b7;
+        box-shadow:
+          0 4px 18px rgba(16, 185, 129, 0.2),
+          0 0 0 1px rgba(110, 231, 183, 0.08) inset;
+      }
+
+      .legal-hero-icon svg {
+        display: block;
+        width: 1.65rem;
+        height: 1.65rem;
+      }
+
+      .legal-hero-copy {
+        min-width: 0;
+      }
+
+      .preview-mini-hero {
+        padding: 1.35rem 1.25rem 1.5rem;
+        background:
+          radial-gradient(circle at 18% 22%, rgba(34, 197, 94, 0.14), transparent 18rem),
+          linear-gradient(180deg, #030605 0%, #020403 100%);
+      }
+
+      .preview-mini-hero .legal-hero-head {
+        margin-top: 0.5rem;
+      }
+
+      .preview-mini-hero .about-page__lead {
+        margin-top: 0.65rem;
+      }
+
+      .preview-solo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1.5rem 1rem;
+      }
+
+      .preview-solo__name {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.55);
+      }
+
+      .preview-note {
+        margin-top: 2rem;
+        padding: 1rem 1.15rem;
+        border-radius: 0.85rem;
+        border: 1px solid rgba(110, 231, 183, 0.2);
+        background: rgba(16, 185, 129, 0.08);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: rgba(236, 253, 245, 0.88);
+      }
+    </style>
+  </head>
+  <body>
+    <p class="preview-banner">
+      <strong>Solo vista previa</strong> — Elige escudo (A) o candado (B) y dímelo en el chat.
+    </p>
+
+    <div class="preview-wrap">
+      <p class="preview-intro">
+        Iconos para la cabecera de «Política de Privacidad», con el verde de marca
+        <code>#6ee7b7</code>.
+      </p>
+
+      <div class="preview-grid">
+        <section class="preview-option preview-option--recommended" aria-label="Opción escudo">
+          <p class="preview-option__label preview-option__label--rec">Opción A — Escudo</p>
+          <div class="preview-mini-hero">
+            <p class="about-page__kicker">Mundo Camping</p>
+            <div class="legal-hero-head">
+              <span class="legal-hero-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </span>
+              <div class="legal-hero-copy">
+                <h1 class="about-page__title">Política de Privacidad</h1>
+                <p class="about-page__lead">
+                  Información sobre datos personales, cookies y afiliación en mundocamping.net.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="preview-solo">
+            <span class="legal-hero-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </span>
+            <p class="preview-solo__name">Escudo con check — protección y confianza</p>
+          </div>
+        </section>
+
+        <section class="preview-option" aria-label="Opción candado">
+          <p class="preview-option__label">Opción B — Candado</p>
+          <div class="preview-mini-hero">
+            <p class="about-page__kicker">Mundo Camping</p>
+            <div class="legal-hero-head">
+              <span class="legal-hero-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  <circle cx="12" cy="16" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <div class="legal-hero-copy">
+                <h1 class="about-page__title">Política de Privacidad</h1>
+                <p class="about-page__lead">
+                  Información sobre datos personales, cookies y afiliación en mundocamping.net.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="preview-solo">
+            <span class="legal-hero-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                <circle cx="12" cy="16" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
+            <p class="preview-solo__name">Candado cerrado — privacidad y seguridad</p>
+          </div>
+        </section>
+      </div>
+
+      <p class="preview-note">
+        Dime <strong>A (escudo)</strong> o <strong>B (candado)</strong> y lo aplico en tu web.
+      </p>
+    </div>
+  </body>
+</html>
