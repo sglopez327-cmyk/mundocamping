@@ -1,0 +1,39 @@
+/* Adsterra — banner 300×250 (Mundo Camping) */
+
+.site-ad-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1rem 1rem 1.1rem;
+}
+
+.site-ad-banner__label {
+  margin: 0;
+  width: 100%;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.site-ad-banner__slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  min-height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.site-ad-banner__slot iframe {
+  display: block;
+  max-width: 100%;
+}
