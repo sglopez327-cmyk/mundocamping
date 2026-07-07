@@ -2,79 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mundocamping.net/</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.mundocamping.net/tiendas</loc>
-  </url>
-  <url>
-    <loc>https://www.mundocamping.net/sacos</loc>
-  </url>
-  <url>
-    <loc>https://www.mundocamping.net/esterillas</loc>
-  </url>
-  <url>
-    <loc>https://www.mundocamping.net/baterias</loc>
-  </url>
-  <url>
-    <loc>https://www.mundocamping.net/iluminacion/</loc>
-  </url>
-  <url>
-    <loc>https://www.mundocamping.net/herramientas</loc>
-  </url>
-  <url>
-    <loc>https://www.mundocamping.net/accesorios</loc>
-  </url>
-  <url>
-    <loc>https://www.mundocamping.net/cocina</loc>
-  </url>
-  <url>
-    <loc>https://www.mundocamping.net/top-5-sacos-dormir</loc>
-  </url>
-  <url>
-    <loc>https://www.mundocamping.net/top-5-esterillas</loc>
+    <loc>https://www.mundocamping.net/top-5-tiendas-parejas</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.mundocamping.net/top-5-tiendas-familia</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mundocamping.net/top-5-tiendas-parejas</loc>
+    <loc>https://www.mundocamping.net/top-5-sacos-dormir</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mundocamping.net/multiherramientas</loc>
+    <loc>https://www.mundocamping.net/top-5-esterillas</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.mundocamping.net/linternas-cual-comprar</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.mundocamping.net/estaciones-energia</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/multiherramientas</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.mundocamping.net/accesorios-marcan-diferencia</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/tiendas</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/sacos</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/esterillas</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/baterias</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/iluminacion/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/herramientas</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/accesorios</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/cocina</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mundocamping.net/sobre-mi</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.mundocamping.net/contacto</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.mundocamping.net/privacidad</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.mundocamping.net/aviso-legal</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

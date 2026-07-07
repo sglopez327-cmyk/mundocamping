@@ -13,6 +13,18 @@
 
   var GUIDES = [
     {
+      id: 'sacos',
+      title: 'Top 5 sacos de dormir para camping',
+      href: 'top-5-sacos-dormir.html',
+      image: './assets/sacos-dormir-colores-bosque-pinos.png',
+    },
+    {
+      id: 'esterillas',
+      title: 'Top 5 mejores esterillas',
+      href: 'top-5-esterillas.html',
+      image: './assets/esterillas-colchoneta-tienda-camping-realista.png',
+    },
+    {
       id: 'tiendas-familia',
       title: 'Top 5 tiendas para familia',
       href: 'top-5-tiendas-familia.html',

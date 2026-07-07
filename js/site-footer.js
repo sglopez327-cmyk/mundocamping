@@ -91,9 +91,30 @@
       '</div>';
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderSiteFooter);
-  } else {
+  function loadSiteScripts() {
+    var queue = ['/js/site-config.js', '/js/site-analytics.js', '/js/structured-data.js'];
+    function next(index) {
+      if (index >= queue.length) {
+        return;
+      }
+      var script = document.createElement('script');
+      script.src = queue[index];
+      script.onload = function () {
+        next(index + 1);
+      };
+      document.body.appendChild(script);
+    }
+    next(0);
+  }
+
+  function bootSiteFooter() {
     renderSiteFooter();
+    loadSiteScripts();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootSiteFooter);
+  } else {
+    bootSiteFooter();
   }
 })();

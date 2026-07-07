@@ -122,7 +122,11 @@
     if (!stack || !GUIDES_DATA.length) {
       return;
     }
+    var noscript = stack.querySelector('noscript');
     stack.innerHTML = GUIDES_DATA.map(renderGuideCard).join('');
+    if (noscript) {
+      stack.appendChild(noscript);
+    }
   }
 
   if (document.readyState === 'loading') {
