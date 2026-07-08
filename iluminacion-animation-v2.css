@@ -1,0 +1,691 @@
+/* Iluminación v2 — linterna, monstruo y huida a la tienda | il4-* */
+.il4-scene {
+  --il4-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --il4-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --il4-snap: cubic-bezier(0.16, 1, 0.3, 1);
+  --il4-loop: 20s;
+
+  position: relative;
+  width: 100%;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #030508;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(251, 191, 36, 0.12);
+}
+
+.il4-scene--hero {
+  max-width: none;
+  margin-inline: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+.il4-scene__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 16rem;
+}
+
+.il4-enter {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  animation: il4EnterIn 1s var(--il4-smooth) forwards;
+}
+
+.il4-enter--sky { animation-delay: 0s; }
+.il4-enter--forest { animation-delay: 0.08s; }
+.il4-enter--tent { animation-delay: 0.14s; }
+.il4-enter--cave { animation-delay: 0.18s; }
+.il4-enter--family { animation-delay: 0.26s; }
+
+@keyframes il4EnterIn {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.il4-moon {
+  transform-origin: 1010px 44px;
+  transform-box: fill-box;
+  animation: il4MoonPulse 7s var(--il4-smooth) infinite;
+}
+
+.il4-star {
+  transform-origin: center;
+  animation: il4StarTwinkle 4s var(--il4-smooth) infinite;
+}
+
+.il4-star--2 { animation-delay: 0.6s; }
+.il4-star--3 { animation-delay: 1.2s; }
+.il4-star--4 { animation-delay: 1.8s; }
+.il4-star--5 { animation-delay: 2.4s; }
+
+@keyframes il4MoonPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes il4StarTwinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.il4-tree {
+  transform-origin: center bottom;
+  transform-box: fill-box;
+  animation: il4TreeSway 10s var(--il4-smooth) infinite;
+}
+
+.il4-tree--2 { animation-delay: 1.5s; }
+
+@keyframes il4TreeSway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0.6deg);
+  }
+}
+
+/* —— Tienda: resplandor al refugiarse —— */
+.il4-tent-glow {
+  transform-origin: 118px 208px;
+  transform-box: fill-box;
+  animation: il4TentGlow var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-tent-silhouettes {
+  animation: il4TentSilhouettes var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+@keyframes il4TentGlow {
+  0%,
+  68%,
+  100% {
+    opacity: 0.14;
+    transform: scale(0.88);
+  }
+  76%,
+  94% {
+    opacity: 0.75;
+    transform: scale(1.14);
+  }
+}
+
+@keyframes il4TentSilhouettes {
+  0%,
+  74%,
+  100% {
+    opacity: 0;
+  }
+  78%,
+  94% {
+    opacity: 1;
+  }
+}
+
+/* —— Cueva: oscura → iluminada —— */
+.il4-cave-dark {
+  transform-origin: 678px 176px;
+  transform-box: fill-box;
+  animation: il4CaveDark var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-cave-lit {
+  transform-origin: 678px 168px;
+  transform-box: fill-box;
+  animation: il4CaveLit var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+@keyframes il4CaveDark {
+  0%,
+  24%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  28%,
+  48% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes il4CaveLit {
+  0%,
+  24%,
+  50%,
+  100% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  28%,
+  48% {
+    opacity: 0.92;
+    transform: scale(1);
+  }
+}
+
+/* —— Monstruo en la cueva —— */
+.il4-monster {
+  transform: translate3d(678px, 252px, 0);
+  opacity: 0;
+  animation: il4MonsterReveal var(--il4-loop) var(--il4-bounce) infinite;
+}
+
+.il4-monster-body {
+  transform-origin: 0 10px;
+  transform-box: fill-box;
+  animation: il4MonsterRise var(--il4-loop) var(--il4-bounce) infinite;
+}
+
+.il4-monster-eye {
+  animation: il4MonsterEyes var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-monster-mouth {
+  animation: il4MonsterMouth var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+@keyframes il4MonsterReveal {
+  0%,
+  36%,
+  52%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  44%,
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes il4MonsterRise {
+  0%,
+  36%,
+  52%,
+  100% {
+    transform: translate3d(0, 48px, 0) scale(0.55, 0.4);
+  }
+  40% {
+    transform: translate3d(0, 20px, 0) scale(0.75, 0.65);
+  }
+  46%,
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1, 1);
+  }
+}
+
+@keyframes il4MonsterEyes {
+  0%,
+  40%,
+  100% {
+    opacity: 0;
+  }
+  44%,
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes il4MonsterMouth {
+  0%,
+  44%,
+  100% {
+    opacity: 0;
+  }
+  48%,
+  50% {
+    opacity: 1;
+  }
+}
+
+/* —— Susto —— */
+.il4-shock {
+  animation: il4ShockPop var(--il4-loop) var(--il4-bounce) infinite;
+}
+
+@keyframes il4ShockPop {
+  0%,
+  47%,
+  54%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  49%,
+  52% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* —— Familia: caminar → explorar → correr → tienda —— */
+.il4-family {
+  transform: translate3d(120px, 0, 0);
+  animation:
+    il4FamilyJourney var(--il4-loop) var(--il4-smooth) infinite,
+    il4FamilyHide var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-family-bob {
+  transform-origin: center bottom;
+  transform-box: fill-box;
+  animation: il4FamilyBob var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+@keyframes il4FamilyJourney {
+  /* Salen de la tienda y caminan hacia la cueva */
+  0%,
+  2% {
+    transform: translate3d(120px, 0, 0);
+  }
+  18% {
+    transform: translate3d(458px, 0, 0);
+  }
+  /* Se detienen frente a la cueva */
+  18%,
+  48% {
+    transform: translate3d(462px, 0, 0);
+  }
+  /* Susto y arrancan a correr */
+  52% {
+    transform: translate3d(450px, 0, 0) scale(1.02);
+  }
+  58% {
+    transform: translate3d(360px, 0, 0);
+  }
+  64% {
+    transform: translate3d(260px, 0, 0);
+  }
+  70% {
+    transform: translate3d(160px, 0, 0);
+  }
+  /* Llegan a la tienda */
+  76%,
+  94% {
+    transform: translate3d(108px, 0, 0) scale(0.82);
+  }
+  100% {
+    transform: translate3d(120px, 0, 0) scale(1);
+  }
+}
+
+@keyframes il4FamilyHide {
+  0%,
+  74%,
+  100% {
+    opacity: 1;
+  }
+  78%,
+  94% {
+    opacity: 0;
+  }
+}
+
+@keyframes il4FamilyBob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  4% {
+    transform: translate3d(0, -2px, 0);
+  }
+  8% {
+    transform: translate3d(0, 0, 0);
+  }
+  12% {
+    transform: translate3d(0, -2px, 0);
+  }
+  16% {
+    transform: translate3d(0, 0, 0);
+  }
+  18%,
+  48% {
+    transform: translate3d(0, 0, 0);
+  }
+  54% {
+    transform: translate3d(0, -6px, 0) rotate(-2deg);
+  }
+  58% {
+    transform: translate3d(0, 2px, 0) rotate(1deg);
+  }
+  62% {
+    transform: translate3d(0, -5px, 0);
+  }
+  66% {
+    transform: translate3d(0, 1px, 0);
+  }
+  70% {
+    transform: translate3d(0, -5px, 0);
+  }
+  74% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* —— Piernas —— */
+.il4-leg--l {
+  transform-origin: top center;
+  transform-box: fill-box;
+  animation: il4LegL var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-leg--r {
+  transform-origin: top center;
+  transform-box: fill-box;
+  animation: il4LegR var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+@keyframes il4LegL {
+  0%,
+  18%,
+  48%,
+  100% {
+    transform: rotate(0deg);
+  }
+  4% { transform: rotate(20deg); }
+  8% { transform: rotate(-16deg); }
+  12% { transform: rotate(18deg); }
+  16% { transform: rotate(-14deg); }
+  54% { transform: rotate(32deg); }
+  58% { transform: rotate(-28deg); }
+  62% { transform: rotate(30deg); }
+  66% { transform: rotate(-26deg); }
+  70% { transform: rotate(28deg); }
+  74% { transform: rotate(-12deg); }
+}
+
+@keyframes il4LegR {
+  0%,
+  18%,
+  48%,
+  100% {
+    transform: rotate(0deg);
+  }
+  4% { transform: rotate(-18deg); }
+  8% { transform: rotate(15deg); }
+  12% { transform: rotate(-17deg); }
+  16% { transform: rotate(13deg); }
+  54% { transform: rotate(-30deg); }
+  58% { transform: rotate(26deg); }
+  62% { transform: rotate(-28deg); }
+  66% { transform: rotate(24deg); }
+  70% { transform: rotate(-26deg); }
+  74% { transform: rotate(10deg); }
+}
+
+/* —— Brazos al caminar / correr —— */
+.il4-arm-swing--l {
+  transform-origin: 0 0;
+  transform-box: fill-box;
+  animation: il4ArmSwingL var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-arm-swing--r {
+  transform-origin: 0 0;
+  transform-box: fill-box;
+  animation: il4ArmSwingR var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+@keyframes il4ArmSwingL {
+  0%,
+  18%,
+  48%,
+  100% {
+    transform: rotate(8deg);
+  }
+  4% { transform: rotate(22deg); }
+  8% { transform: rotate(-6deg); }
+  12% { transform: rotate(20deg); }
+  16% { transform: rotate(-4deg); }
+  54% { transform: rotate(-28deg); }
+  58% { transform: rotate(24deg); }
+  62% { transform: rotate(-26deg); }
+  66% { transform: rotate(22deg); }
+  70% { transform: rotate(-24deg); }
+  74% { transform: rotate(14deg); }
+}
+
+@keyframes il4ArmSwingR {
+  0%,
+  18%,
+  48%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  4% { transform: rotate(-20deg); }
+  8% { transform: rotate(8deg); }
+  12% { transform: rotate(-18deg); }
+  16% { transform: rotate(6deg); }
+  54% { transform: rotate(26deg); }
+  58% { transform: rotate(-22deg); }
+  62% { transform: rotate(24deg); }
+  66% { transform: rotate(-20deg); }
+  70% { transform: rotate(22deg); }
+  74% { transform: rotate(-12deg); }
+}
+
+/* —— Padre: brazo con linterna hacia la cueva —— */
+.il4-arm--lantern {
+  transform-origin: 0 0;
+  transform-box: fill-box;
+  animation: il4ArmLantern var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-member--father .il4-arm-swing--l {
+  animation: il4FatherArmL var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+@keyframes il4FatherArmL {
+  0%,
+  18%,
+  48%,
+  52%,
+  100% {
+    transform: rotate(6deg);
+  }
+  54%,
+  74% {
+    transform: rotate(-18deg);
+  }
+}
+
+.il4-beam,
+.il4-beam-core {
+  transform-origin: 7px -6px;
+  transform-box: fill-box;
+  opacity: 0;
+  animation: il4BeamOn var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-lantern-bulb {
+  animation: il4LanternGlow var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+@keyframes il4ArmLantern {
+  0%,
+  18%,
+  52%,
+  100% {
+    transform: rotate(8deg);
+  }
+  24% {
+    transform: rotate(-28deg);
+  }
+  28%,
+  48% {
+    transform: rotate(-82deg);
+  }
+}
+
+@keyframes il4BeamOn {
+  0%,
+  24%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+  28%,
+  48% {
+    opacity: 1;
+  }
+}
+
+@keyframes il4LanternGlow {
+  0%,
+  24%,
+  50%,
+  100% {
+    opacity: 0.35;
+  }
+  28%,
+  48% {
+    opacity: 1;
+  }
+}
+
+/* —— Glows HTML —— */
+.il4-scene__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+  will-change: transform, opacity;
+}
+
+.il4-scene__glow--moon {
+  width: 22%;
+  height: 55%;
+  right: 6%;
+  top: 0;
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.16), transparent 70%);
+  animation: il4GlowMoon 6s var(--il4-smooth) infinite;
+}
+
+.il4-scene__glow--beam {
+  width: 36%;
+  height: 50%;
+  left: 42%;
+  top: 22%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.4), transparent 72%);
+  opacity: 0;
+  animation: il4GlowBeam var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-scene__glow--tent {
+  width: 20%;
+  height: 52%;
+  left: 1%;
+  bottom: 6%;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.28), transparent 70%);
+  animation: il4GlowTent var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+@keyframes il4GlowMoon {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes il4GlowBeam {
+  0%,
+  24%,
+  50%,
+  100% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  28%,
+  48% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes il4GlowTent {
+  0%,
+  68%,
+  100% {
+    opacity: 0.22;
+    transform: scale(1);
+  }
+  76%,
+  94% {
+    opacity: 0.95;
+    transform: scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .il4-scene *,
+  .il4-scene__glow {
+    animation: none !important;
+    will-change: auto;
+  }
+
+  .il4-enter {
+    opacity: 1;
+    transform: none;
+  }
+
+  .il4-family {
+    transform: translate3d(462px, 0, 0);
+    opacity: 1;
+  }
+
+  .il4-beam,
+  .il4-beam-core,
+  .il4-cave-lit {
+    opacity: 1;
+  }
+
+  .il4-cave-dark {
+    opacity: 0.2;
+  }
+
+  .il4-monster {
+    opacity: 1;
+    transform: translate3d(678px, 252px, 0);
+  }
+
+  .il4-monster-body {
+    transform: translate3d(0, -18px, 0) scale(1);
+  }
+
+  .il4-tent-silhouettes {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .il4-scene__glow {
+    filter: blur(28px);
+  }
+}
