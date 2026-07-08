@@ -21,45 +21,16 @@
     <meta name="twitter:description" content="Guías destacadas, comparativas y selección de equipo de camping y montaña con criterio editorial." />
     <meta name="twitter:image" content="https://www.mundocamping.net/Fondo.jpg" />
     <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              display: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'],
-            },
-            colors: {
-              premium: { accent: '#deff9a', night: '#020403' },
-            },
-            boxShadow: {
-              glass: '0 12px 40px rgba(0, 0, 0, 0.35)',
-              'glass-lg': '0 20px 50px rgba(0, 0, 0, 0.45)',
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="preload" as="image" href="./Fondo.jpg" />
+    <link rel="stylesheet" href="./css/tailwind-built.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+<link rel="preload" as="image" href="./Fondo.jpg" />
     <link rel="stylesheet" href="./mundo-camping.css" />
     <link rel="stylesheet" href="./footer-premium.css" />
     <link rel="stylesheet" href="./home.css" />
     <link rel="stylesheet" href="./site-header.css" />
     <link rel="stylesheet" href="./components/sabias-que.css" />
     <link rel="stylesheet" href="./components/home-faq.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646085735328403"
-      crossorigin="anonymous"
-    ></script>
-    <script type="application/ld+json">
+<script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -80,9 +51,7 @@
   </head>
   <body class="bg-[#020403] text-white antialiased">
     <header id="site-header"></header>
-    <script src="./js/site-header.js"></script>
-
-    <main>
+<main>
       <section class="guides-featured" aria-labelledby="guides-featured-title">
         <div class="guides-featured__bg" aria-hidden="true"></div>
         <div class="guides-featured__top-line" aria-hidden="true"></div>
@@ -117,6 +86,14 @@
                 aria-live="polite"
                 aria-label="Listado de guías destacadas"
               >
+                <a href="top-5-sacos-dormir.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/sacos-dormir-colores-bosque-pinos.png" alt="Top 5 sacos de dormir para camping 2026" width="400" height="300" loading="lazy" decoding="async" data-fallback="./assets/sacos-hero-scene.svg" onerror="if(this.dataset.fallback){this.onerror=null;this.src=this.dataset.fallback;}" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Top 5 sacos de dormir para camping 2026</h2><p class="guide-featured-card__desc">Análisis de sacos por temperatura de confort, tipo de relleno y relación calidad-precio para distintas estaciones.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="top-5-esterillas.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/esterillas-colchoneta-tienda-camping-realista.png" alt="Top 5 mejores esterillas" width="400" height="300" loading="lazy" decoding="async" data-fallback="https://m.media-amazon.com/images/I/81iuLQCeDGL._AC_SL1500_.jpg" onerror="if(this.dataset.fallback){this.onerror=null;this.src=this.dataset.fallback;}" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Top 5 mejores esterillas</h2><p class="guide-featured-card__desc">Análisis de esterillas según confort, aislamiento (R-Value), peso y facilidad de transporte.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="top-5-tiendas-familia.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/familia-tienda-campana-bosque-pinos-bullterrier.png" alt="Mejores tiendas de campaña para familia" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Mejores tiendas de campaña para familia</h2><p class="guide-featured-card__desc">Guía de compra con capacidad, resistencia al viento y montaje sencillo para salidas en grupo o con niños.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="multiherramientas.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/multiherramientas-tronco-pino-bosque.png" alt="Multiherramientas esenciales en ruta" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Multiherramientas esenciales en ruta</h2><p class="guide-featured-card__desc">Las funciones imprescindibles, materiales duraderos y modelos compactos para llevar en mochila sin pasarte de peso.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="linternas-cual-comprar.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/linternas-cual-comprar-indeciso.png" alt="Linternas: cual comprar" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Linternas: cual comprar</h2><p class="guide-featured-card__desc">Comparativa de autonomía, lúmenes reales, resistencia al agua y modos de luz para campamento y senderismo.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="estaciones-energia.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/estaciones-energia-portatiles-bosque-pinos.png" alt="Estaciones de energía portátiles para acampada" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Estaciones de energía portátiles para acampada</h2><p class="guide-featured-card__desc">Capacidad en Wh, salidas USB/AC, carga solar y peso: todo lo que debes revisar antes de comprar.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="top-5-tiendas-parejas.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/pareja-tienda-campana-bosque-amstaff.png" alt="Mejores tiendas para parejas" width="400" height="300" loading="lazy" decoding="async" data-fallback="https://m.media-amazon.com/images/I/51vIRqj6e9L._AC_SL1500_.jpg" onerror="if(this.dataset.fallback){this.onerror=null;this.src=this.dataset.fallback;}" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Mejores tiendas para parejas</h2><p class="guide-featured-card__desc">Análisis comparativo de las mejores opciones para acampar en pareja con espacio y comodidad.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="accesorios-marcan-diferencia.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/accesorios-mochila-gps-cerillas-bosque.png" alt="Accesorios que marcan la diferencia" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Accesorios que marcan la diferencia</h2><p class="guide-featured-card__desc">Desde mochilas hasta kit de cocina ligero: prioridades según tipo de salida y duración del viaje.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
                 <noscript>
                   <ul class="guides-featured-noscript">
                     <li><a href="top-5-sacos-dormir.html">Top 5 sacos de dormir para camping 2026</a></li>
@@ -452,9 +429,12 @@
     </main>
 
         <footer id="site-footer"></footer>
-    <script src="./js/site-footer.js"></script>
-    <script src="./js/guides-featured.js"></script>
-    <script src="./js/sabias-que.js"></script>
+    
+    <script defer src="./js/site-header.js"></script>
+    <script defer src="./js/load-adsense.js"></script>
+<script defer src="./js/site-footer.js"></script>
+    <script defer src="./js/guides-featured.js"></script>
+    <script defer src="./js/sabias-que.js"></script>
 
   </body>
 </html>

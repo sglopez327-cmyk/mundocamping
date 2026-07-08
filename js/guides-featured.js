@@ -122,6 +122,9 @@
     if (!stack || !GUIDES_DATA.length) {
       return;
     }
+    if (stack.querySelector('.guide-featured-card')) {
+      return;
+    }
     var noscript = stack.querySelector('noscript');
     stack.innerHTML = GUIDES_DATA.map(renderGuideCard).join('');
     if (noscript) {

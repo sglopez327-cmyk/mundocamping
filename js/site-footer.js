@@ -99,6 +99,7 @@
       }
       var script = document.createElement('script');
       script.src = queue[index];
+      script.defer = true;
       script.onload = function () {
         next(index + 1);
       };

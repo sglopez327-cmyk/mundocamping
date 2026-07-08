@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
+    
+    <link rel="stylesheet" href="./css/tailwind-built.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+<meta
       name="description"
       content="Guías y comparativas de tiendas de campaña."
     />
@@ -20,33 +23,7 @@
     <meta name="twitter:title" content="Mundo Camping | Tiendas de Campaña" />
     <meta name="twitter:description" content="Guías y comparativas de tiendas de campaña." />
     <meta name="twitter:image" content="https://www.mundocamping.net/Fondo.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              display: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'sans-serif'],
-            },
-            colors: {
-              premium: { accent: '#deff9a', night: '#020403' },
-            },
-            boxShadow: {
-              glass: '0 12px 40px rgba(0, 0, 0, 0.35)',
-              'glass-lg': '0 20px 50px rgba(0, 0, 0, 0.45)',
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="stylesheet" href="./mundo-camping.css" />
+<link rel="stylesheet" href="./mundo-camping.css" />
     <style>
       .breathing-animation {
         animation: breathe 6s ease-in-out infinite;
@@ -235,12 +212,7 @@
     </style>
     <link rel="stylesheet" href="./tiendas-animation.css" />
     <link rel="stylesheet" href="./components/video-embed.css" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3646085735328403"
-      crossorigin="anonymous"
-    ></script>
-    <script type="application/ld+json">
+<script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -262,8 +234,7 @@
 
   <body class="min-h-screen bg-[#020403] font-sans text-white antialiased">
         <header id="site-header"></header>
-    <script src="./js/site-header.js"></script>
-    <main>
+<main>
       <section class="relative overflow-hidden bg-[#020403] text-white">
         <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_88%_12%,rgba(191,219,254,0.18),transparent_22rem),radial-gradient(circle_at_18%_72%,rgba(16,185,129,0.14),transparent_20rem),linear-gradient(180deg,#030712_0%,#020403_64%,#050807_100%)]"></div>
         <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/70 to-transparent"></div>
@@ -816,7 +787,10 @@
       </div>
     </div>
         <footer id="site-footer"></footer>
-    <script src="./js/site-footer.js"></script><script>
+    
+    <script defer src="./js/site-header.js"></script>
+    <script defer src="./js/load-adsense.js"></script>
+<script defer src="./js/site-footer.js"></script><script>
       (function () {
         const grid = document.getElementById('productos-tiendas');
         const errorBox = document.getElementById('productos-tiendas-error');
