@@ -1,6 +1,6 @@
 /* Sección FAQ home — opcional: eliminar este archivo y el bloque en index.html para deshacer */
 .home-faq {
-  margin-top: 2.75rem;
+  margin-top: 1.15rem;
   padding: 1.75rem 1.25rem 1.5rem;
   border-radius: 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -55,7 +55,9 @@
   .home-faq {
     padding: 2rem 1.75rem 1.65rem;
   }
+}
 
+@media (min-width: 1280px) {
   .home-faq__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.85rem 1rem;
