@@ -486,11 +486,17 @@
   74% { transform: rotate(-12deg); }
 }
 
-/* —— Padre: brazo con linterna hacia la cueva —— */
+/* —— Padre: brazo con linterna (hombro fijo + antebrazo) —— */
 .il4-arm--lantern {
   transform-origin: 0 0;
   transform-box: fill-box;
-  animation: il4ArmLantern var(--il4-loop) var(--il4-smooth) infinite;
+  animation: il4ArmLanternUpper var(--il4-loop) var(--il4-smooth) infinite;
+}
+
+.il4-forearm {
+  transform-origin: 0 0;
+  transform-box: fill-box;
+  animation: il4ArmLanternFore var(--il4-loop) var(--il4-smooth) infinite;
 }
 
 .il4-member--father .il4-arm-swing--l {
@@ -523,19 +529,35 @@
   animation: il4LanternGlow var(--il4-loop) var(--il4-smooth) infinite;
 }
 
-@keyframes il4ArmLantern {
+@keyframes il4ArmLanternUpper {
   0%,
   18%,
   52%,
   100% {
+    transform: rotate(4deg);
+  }
+  22%,
+  48% {
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes il4ArmLanternFore {
+  0%,
+  18%,
+  52%,
+  100% {
+    transform: rotate(14deg);
+  }
+  20% {
     transform: rotate(8deg);
   }
   24% {
-    transform: rotate(-28deg);
+    transform: rotate(-22deg);
   }
   28%,
   48% {
-    transform: rotate(-82deg);
+    transform: rotate(-88deg);
   }
 }
 

@@ -85,12 +85,12 @@
           <path d="M-9 240 Q0 252 9 240 L9 258 Q0 266 -9 258 Z" fill="#be185d" stroke="#1e293b" stroke-width="1.2"/>
           <g transform="translate(-9, 240)">
             <g class="il4-arm-swing--l">
-              <path d="M1 0 L-5 13" stroke="#fcd9b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M0 0 L-5 13" stroke="#fcd9b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
           </g>
           <g transform="translate(9, 240)">
             <g class="il4-arm-swing--r">
-              <path d="M-1 0 L5 13" stroke="#fcd9b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M0 0 L5 13" stroke="#fcd9b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
           </g>
           <rect x="-3.5" y="236" width="7" height="6" rx="2" fill="#fcd9b8"/>
@@ -107,12 +107,12 @@
           <path d="M-11 238 Q0 252 11 238 L11 260 Q0 268 -11 260 Z" fill="#1d4ed8" stroke="#1e293b" stroke-width="1.2"/>
           <g transform="translate(-11, 238)">
             <g class="il4-arm-swing--l">
-              <path d="M1 0 L-5 14" stroke="#fcd9b8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M0 0 L-5 14" stroke="#fcd9b8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
           </g>
           <g transform="translate(11, 238)">
             <g class="il4-arm-swing--r">
-              <path d="M-1 0 L5 14" stroke="#fcd9b8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M0 0 L5 14" stroke="#fcd9b8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
           </g>
           <rect x="-3.5" y="232" width="7" height="6" rx="2" fill="#fcd9b8"/>
@@ -129,12 +129,12 @@
           <path d="M-12 238 Q0 252 12 238 L12 260 Q0 268 -12 260 Z" fill="#7e22ce" stroke="#1e293b" stroke-width="1.2"/>
           <g transform="translate(-12, 238)">
             <g class="il4-arm-swing--l">
-              <path d="M1 0 L-4 14" stroke="#f5c9a8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M0 0 L-4 14" stroke="#f5c9a8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
           </g>
           <g transform="translate(12, 238)">
             <g class="il4-arm-swing--r">
-              <path d="M-1 0 L4 14" stroke="#f5c9a8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M0 0 L4 14" stroke="#f5c9a8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
           </g>
           <rect x="-3.5" y="234" width="7" height="6" rx="2" fill="#f5c9a8"/>
@@ -149,26 +149,31 @@
           <line class="il4-leg il4-leg--l" x1="-5" y1="252" x2="-7" y2="268" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
           <line class="il4-leg il4-leg--r" x1="5" y1="252" x2="7" y2="268" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
           <path d="M-13 236 Q0 252 13 236 L13 260 Q0 268 -13 260 Z" fill="url(#il4JacketDad)" stroke="#1e293b" stroke-width="1.2"/>
-          <ellipse cx="-12" cy="237" rx="3.5" ry="2.5" fill="#047857" stroke="none"/>
-          <ellipse cx="12" cy="237" rx="3.5" ry="2.5" fill="#047857" stroke="none"/>
           <g transform="translate(-12, 236)">
             <g class="il4-arm-swing--l">
-              <path d="M1 0 L-5 15" stroke="#fcd9b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="0" cy="0" r="4.5" fill="#047857"/>
+              <path d="M0 0 L-5 15" stroke="#fcd9b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
           </g>
           <g transform="translate(12, 236)">
             <g class="il4-arm--lantern">
-              <path d="M-2 1 L4 15" stroke="#fcd9b8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <g transform="translate(4, 15)">
-                <g class="il4-lantern">
-                  <path d="M-3 6 L3 6 L2 10 L-2 10 Z" fill="#374151" stroke="#1e293b" stroke-width="1"/>
-                  <rect x="-7" y="-8" width="14" height="15" rx="3" fill="#1f2937" stroke="rgba(251,191,36,0.7)" stroke-width="1.5"/>
-                  <path d="M-5 -8 Q0 -12 5 -8" fill="none" stroke="#57534e" stroke-width="1.5" stroke-linecap="round"/>
-                  <circle class="il4-lantern-bulb" cx="0" cy="-1" r="4.5" fill="url(#il4FlashBulb)"/>
-                  <ellipse cx="0" cy="0" rx="2.8" ry="1.8" fill="#fef9c3"/>
-                  <g class="il4-beam">
-                    <path d="M7 -14 L210 -36 L210 22 L7 -2 Z" fill="url(#il4Beam)" opacity="0.9"/>
-                    <path class="il4-beam-core" d="M7 -12 L165 -24 L165 16 L7 -4 Z" fill="url(#il4BeamCore)" opacity="0.8"/>
+              <circle cx="0" cy="0" r="5" fill="#047857"/>
+              <path d="M0 0 L1 7" stroke="#fcd9b8" stroke-width="5" stroke-linecap="round"/>
+              <g transform="translate(1, 7)">
+                <g class="il4-forearm">
+                  <path d="M0 0 L4 11" stroke="#fcd9b8" stroke-width="4.5" stroke-linecap="round"/>
+                  <g transform="translate(4, 11)">
+                    <g class="il4-lantern">
+                    <path d="M-3 6 L3 6 L2 10 L-2 10 Z" fill="#374151" stroke="#1e293b" stroke-width="1"/>
+                    <rect x="-7" y="-8" width="14" height="15" rx="3" fill="#1f2937" stroke="rgba(251,191,36,0.7)" stroke-width="1.5"/>
+                    <path d="M-5 -8 Q0 -12 5 -8" fill="none" stroke="#57534e" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle class="il4-lantern-bulb" cx="0" cy="-1" r="4.5" fill="url(#il4FlashBulb)"/>
+                    <ellipse cx="0" cy="0" rx="2.8" ry="1.8" fill="#fef9c3"/>
+                    <g class="il4-beam">
+                      <path d="M7 -14 L210 -36 L210 22 L7 -2 Z" fill="url(#il4Beam)" opacity="0.9"/>
+                      <path class="il4-beam-core" d="M7 -12 L165 -24 L165 16 L7 -4 Z" fill="url(#il4BeamCore)" opacity="0.8"/>
+                    </g>
+                    </g>
                   </g>
                 </g>
               </g>
