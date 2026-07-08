@@ -1,4 +1,35 @@
-<svg class="herr-scene__svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vista previa v2 — Herramientas</title>
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./herramientas-animation.css" />
+    <link rel="stylesheet" href="./herramientas-animation-v2.css" />
+    <style>
+      body { margin: 0; background: #020403; }
+      .preview-scene-wrap { padding: 0.5rem; }
+      .herr-scene--hero { min-height: 16rem; height: 16rem; }
+      @media (min-width: 768px) {
+        .herr-scene--hero { min-height: 20rem; height: 20rem; }
+      }
+      @media (min-width: 1024px) {
+        .herr-scene--hero { min-height: 24rem; height: 24rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-scene-wrap">
+      <div
+        class="herr-scene herr-scene--hero herr-scene--v2"
+        role="img"
+        aria-label="Animación propuesta v2: leñador mejorado, ruedas, humo y hoguera persistente"
+      >
+        <span class="herr-scene__glow herr-scene__glow--left" aria-hidden="true"></span>
+        <span class="herr-scene__glow herr-scene__glow--center" aria-hidden="true"></span>
+        <span class="herr-scene__glow herr-scene__glow--right" aria-hidden="true"></span>
+        <svg class="herr-scene__svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <g class="hr4-enter hr4-enter--sky">
     <rect width="1200" height="320" fill="url(#hr4Sky)"/>
     <rect width="1200" height="320" fill="url(#hr4Vignette)" opacity="0.35"/>
@@ -154,3 +185,8 @@
     </linearGradient>
   </defs>
 </svg>
+
+      </div>
+    </div>
+  </body>
+</html>
