@@ -84,6 +84,24 @@
       href: 'checklist-primera-acampada.html',
       image: './assets/accesorios-mochila-gps-cerillas-bosque.png',
     },
+    {
+      id: 'montar-tienda',
+      title: 'Cómo montar una tienda',
+      href: 'como-montar-tienda-campana.html',
+      image: './assets/pareja-tienda-campana-bosque-amstaff.png',
+    },
+    {
+      id: 'mochila-checklist',
+      title: 'Checklist mochila principiantes',
+      href: 'mochila-camping-principiantes-checklist.html',
+      image: './assets/accesorios-mochila-gps-cerillas-bosque.png',
+    },
+    {
+      id: 'tendencias-2026',
+      title: 'Tendencias camping 2026',
+      href: 'tendencias-camping-2026.html',
+      image: './assets/estaciones-energia-portatiles-bosque-pinos.png',
+    },
   ];
 
   function escapeHtml(value) {

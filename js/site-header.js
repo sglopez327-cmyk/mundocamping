@@ -12,6 +12,7 @@
 
   var NAV_ITEMS = [
     { href: HOME_HREF, label: 'Guías Destacadas', guiasCta: true },
+    { href: '/blog.html', label: 'Blog' },
     { href: '/tiendas.html', label: 'Tiendas de Campaña' },
     { href: '/sacos.html', label: 'Sacos' },
     { href: '/esterillas.html', label: 'Esterillas' },

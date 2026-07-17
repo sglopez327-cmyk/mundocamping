@@ -19,6 +19,7 @@
 
   var CATEGORIES = [
     { label: 'Guías Destacadas', href: 'index.html', highlight: true },
+    { label: 'Blog', href: 'blog.html', highlight: true },
     { label: 'Tiendas de Campaña', href: 'tiendas.html' },
     { label: 'Sacos', href: 'sacos.html' },
     { label: 'Esterillas', href: 'esterillas.html' },

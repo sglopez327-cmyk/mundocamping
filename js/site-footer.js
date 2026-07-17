@@ -70,10 +70,10 @@
       '<div class="site-footer__nav-col">' +
       '<p class="site-footer__nav-title">Guías útiles</p>' +
       '<nav class="site-footer__links" aria-label="Guías prácticas">' +
-      '<a class="site-footer__link" href="/esterilla-r-value-que-necesitas.html">R-Value esterilla</a>' +
-      '<a class="site-footer__link" href="/saco-dormir-verano-vs-invierno.html">Saco verano vs invierno</a>' +
-      '<a class="site-footer__link" href="/farol-vs-frontal-camping.html">Farol vs frontal</a>' +
-      '<a class="site-footer__link" href="/checklist-primera-acampada.html">Checklist 1ª acampada</a>' +
+      '<a class="site-footer__link" href="/blog.html">Blog / Guías</a>' +
+      '<a class="site-footer__link" href="/tendencias-camping-2026.html">Tendencias 2026</a>' +
+      '<a class="site-footer__link" href="/como-montar-tienda-campana.html">Montar tienda</a>' +
+      '<a class="site-footer__link" href="/mochila-camping-principiantes-checklist.html">Checklist mochila</a>' +
       '</nav>' +
       '</div>' +
       '<div class="site-footer__nav-col">' +
