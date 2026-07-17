@@ -523,8 +523,8 @@ ${cards}
 `;
 }
 
-fs.writeFileSync(path.join(root, 'blog.html'), blogHtml(), 'utf8');
-console.log('Creada blog.html');
+// blog.html se mantiene a mano (layout Guías Destacadas / home.css). No regenerar.
+console.log('Omitida blog.html (rediseño alineado con index.html; editar a mano)');
 
 for (const a of ARTICLES) {
   fs.writeFileSync(path.join(root, a.file), articleHtml(a), 'utf8');
