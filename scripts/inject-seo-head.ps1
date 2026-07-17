@@ -21,6 +21,10 @@ $pageMap = @{
   'linternas-cual-comprar.html' = @{ canonical = "$site/linternas-cual-comprar"; image = "$site/assets/linternas-cual-comprar-indeciso.png" }
   'estaciones-energia.html' = @{ canonical = "$site/estaciones-energia"; image = "$site/assets/estaciones-energia-portatiles-bosque-pinos.png" }
   'accesorios-marcan-diferencia.html' = @{ canonical = "$site/accesorios-marcan-diferencia"; image = "$site/assets/accesorios-mochila-gps-cerillas-bosque.png" }
+  'esterilla-r-value-que-necesitas.html' = @{ canonical = "$site/esterilla-r-value-que-necesitas"; image = "$site/assets/esterillas-colchoneta-tienda-camping-realista.png" }
+  'saco-dormir-verano-vs-invierno.html' = @{ canonical = "$site/saco-dormir-verano-vs-invierno"; image = "$site/assets/sacos-dormir-colores-bosque-pinos.png" }
+  'farol-vs-frontal-camping.html' = @{ canonical = "$site/farol-vs-frontal-camping"; image = "$site/assets/linternas-cual-comprar-indeciso.png" }
+  'checklist-primera-acampada.html' = @{ canonical = "$site/checklist-primera-acampada"; image = "$site/assets/accesorios-mochila-gps-cerillas-bosque.png" }
   'sobre-mi.html' = @{ canonical = "$site/sobre-mi"; image = "$site/assets/sobre-mi-hero-noche.jpg" }
   'contacto.html' = @{ canonical = "$site/contacto" }
   'privacidad.html' = @{ canonical = "$site/privacidad" }

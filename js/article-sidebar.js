@@ -60,6 +60,30 @@
       href: 'accesorios-marcan-diferencia.html',
       image: './assets/accesorios-mochila-gps-cerillas-bosque.png',
     },
+    {
+      id: 'r-value',
+      title: 'Qué R-Value necesita tu esterilla',
+      href: 'esterilla-r-value-que-necesitas.html',
+      image: './assets/esterillas-colchoneta-tienda-camping-realista.png',
+    },
+    {
+      id: 'saco-temporada',
+      title: 'Saco verano vs invierno',
+      href: 'saco-dormir-verano-vs-invierno.html',
+      image: './assets/sacos-dormir-colores-bosque-pinos.png',
+    },
+    {
+      id: 'farol-frontal',
+      title: 'Farol o frontal para camping',
+      href: 'farol-vs-frontal-camping.html',
+      image: './assets/linternas-cual-comprar-indeciso.png',
+    },
+    {
+      id: 'checklist',
+      title: 'Checklist primera acampada',
+      href: 'checklist-primera-acampada.html',
+      image: './assets/accesorios-mochila-gps-cerillas-bosque.png',
+    },
   ];
 
   function escapeHtml(value) {

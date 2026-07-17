@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
 
+# Previews y temporales (no indexar si se suben por error)
+Disallow: /*-preview.html
+Disallow: /*-preview-*.html
+Disallow: /*-animation-preview*
+Disallow: /_tmp-
+Disallow: /energy-animation.html
+Disallow: /campfire-animation.html
+Disallow: /index-hero-preview.html
+Disallow: /hero-fondo-position-preview.html
+Disallow: /tiendas-animation-preview.html
+Disallow: /herramientas-animation-preview
+Disallow: /components/
+Disallow: /partials/
+Disallow: /resultados.html
+
 Sitemap: https://www.mundocamping.net/sitemap.xml

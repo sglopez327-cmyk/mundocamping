@@ -64,6 +64,16 @@
       '<a class="site-footer__link" href="/iluminacion/">Iluminación</a>' +
       '<a class="site-footer__link" href="/herramientas.html">Herramientas</a>' +
       '<a class="site-footer__link" href="/accesorios.html">Accesorios</a>' +
+      '<a class="site-footer__link" href="/cocina.html">Cocina</a>' +
+      '</nav>' +
+      '</div>' +
+      '<div class="site-footer__nav-col">' +
+      '<p class="site-footer__nav-title">Guías útiles</p>' +
+      '<nav class="site-footer__links" aria-label="Guías prácticas">' +
+      '<a class="site-footer__link" href="/esterilla-r-value-que-necesitas.html">R-Value esterilla</a>' +
+      '<a class="site-footer__link" href="/saco-dormir-verano-vs-invierno.html">Saco verano vs invierno</a>' +
+      '<a class="site-footer__link" href="/farol-vs-frontal-camping.html">Farol vs frontal</a>' +
+      '<a class="site-footer__link" href="/checklist-primera-acampada.html">Checklist 1ª acampada</a>' +
       '</nav>' +
       '</div>' +
       '<div class="site-footer__nav-col">' +

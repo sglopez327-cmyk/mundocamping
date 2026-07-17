@@ -19,6 +19,7 @@
     { href: '/iluminacion/', label: 'Iluminación' },
     { href: '/herramientas.html', label: 'Herramientas' },
     { href: '/accesorios.html', label: 'Accesorios' },
+    { href: '/cocina.html', label: 'Cocina' },
   ];
 
   var LOGO_SVG =

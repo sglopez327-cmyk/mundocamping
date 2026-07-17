@@ -26,6 +26,7 @@
     { label: 'Iluminación', href: 'iluminacion/' },
     { label: 'Herramientas', href: 'herramientas.html' },
     { label: 'Accesorios', href: 'accesorios.html' },
+    { label: 'Cocina', href: 'cocina.html' },
   ];
 
   var CONFIGS = {
