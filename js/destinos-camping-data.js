@@ -17,6 +17,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'el-chalten',
+    page: 'acampar-el-chalten.html',
     name: 'El Chaltén / Fitz Roy',
     country: 'Argentina',
     region: 'Patagonia',
@@ -76,6 +77,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'scottish-highlands',
+    page: 'acampar-scottish-highlands.html',
     name: 'Highlands',
     country: 'Escocia',
     region: 'Reino Unido',
@@ -87,6 +89,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'dolomites',
+    page: 'acampar-dolomites.html',
     name: 'Dolomitas',
     country: 'Italia',
     region: 'Alpes',
@@ -98,6 +101,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'swiss-alps',
+    page: 'acampar-swiss-alps.html',
     name: 'Alpes suizos',
     country: 'Suiza',
     region: 'Alpes',
@@ -121,6 +125,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'tasmania',
+    page: 'acampar-tasmania.html',
     name: 'Tasmania',
     country: 'Australia',
     region: 'Oceanía',
@@ -144,6 +149,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'serengeti',
+    page: 'acampar-serengeti.html',
     name: 'Serengeti',
     country: 'Tanzania',
     region: 'África Oriental',
@@ -155,6 +161,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'sossusvlei',
+    page: 'acampar-sossusvlei.html',
     name: 'Sossusvlei',
     country: 'Namibia',
     region: 'Desierto del Namib',
@@ -166,6 +173,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'japanese-alps',
+    page: 'acampar-japanese-alps.html',
     name: 'Alpes japoneses',
     country: 'Japón',
     region: 'Kamikochi / Chubu',
@@ -177,6 +185,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'costa-rica',
+    page: 'acampar-costa-rica.html',
     name: 'Península de Osa',
     country: 'Costa Rica',
     region: 'Pacífico Sur',
@@ -188,6 +197,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'denali',
+    page: 'acampar-denali.html',
     name: 'Denali',
     country: 'EE. UU.',
     region: 'Alaska',
@@ -223,6 +233,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'cappadocia',
+    page: 'acampar-cappadocia.html',
     name: 'Capadocia',
     country: 'Turquía',
     region: 'Anatolia',
@@ -234,6 +245,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'triglav',
+    page: 'acampar-triglav.html',
     name: 'Parque Triglav',
     country: 'Eslovenia',
     region: 'Alpes Julianos',
@@ -245,6 +257,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'lapland',
+    page: 'acampar-lapland.html',
     name: 'Laponia',
     country: 'Finlandia',
     region: 'Ártico',
@@ -256,6 +269,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'atacama',
+    page: 'acampar-atacama.html',
     name: 'Desierto de Atacama',
     country: 'Chile',
     region: 'Norte',
@@ -267,6 +281,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'valle-sagrado',
+    page: 'acampar-valle-sagrado.html',
     name: 'Valle Sagrado',
     country: 'Perú',
     region: 'Andes',

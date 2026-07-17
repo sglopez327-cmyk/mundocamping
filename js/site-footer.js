@@ -70,7 +70,8 @@
       '<div class="site-footer__nav-col">' +
       '<p class="site-footer__nav-title">Guías útiles</p>' +
       '<nav class="site-footer__links" aria-label="Guías prácticas">' +
-      '<a class="site-footer__link" href="/blog.html">Blog / Guías</a>' +
+      '<a class="site-footer__link" href="/guias.html">Índice de guías</a>' +
+      '<a class="site-footer__link" href="/blog.html">Blog</a>' +
       '<a class="site-footer__link" href="/mejores-sitios-acampar.html">Mejores sitios para acampar</a>' +
       '<a class="site-footer__link" href="/mejor-tienda-camping-2-personas.html">Mejor tienda 2 personas</a>' +
       '<a class="site-footer__link" href="/tendencias-camping-2026.html">Tendencias 2026</a>' +
@@ -107,6 +108,7 @@
     var queue = ['/js/site-config.js', '/js/site-analytics.js', '/js/structured-data.js'];
     function next(index) {
       if (index >= queue.length) {
+        loadRelatedPosts();
         return;
       }
       var script = document.createElement('script');
@@ -118,6 +120,24 @@
       document.body.appendChild(script);
     }
     next(0);
+  }
+
+  function loadRelatedPosts() {
+    if (!document.querySelector('main article')) return;
+    var path = (window.location.pathname || '').replace(/\/+$/, '');
+    if (path === '' || path === '/' || /\/(index|blog|guias|mejores-sitios-acampar)(\.html)?$/i.test(path)) {
+      return;
+    }
+    if (document.querySelector('link[data-related-posts]')) return;
+    var css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = '/css/related-posts.css?v=1';
+    css.setAttribute('data-related-posts', '1');
+    document.head.appendChild(css);
+    var script = document.createElement('script');
+    script.src = '/js/related-posts.js?v=1';
+    script.defer = true;
+    document.body.appendChild(script);
   }
 
   function bootSiteFooter() {
