@@ -13,10 +13,10 @@
   var NAV_ITEMS = [
     { href: HOME_HREF, label: 'Guías Destacadas', match: ['/', '/index.html', '/index'] },
     { href: '/blog.html', label: 'Blog', match: ['/blog', '/blog.html'] },
-    { href: '/tiendas.html', label: 'Tiendas de Campaña' },
+    { href: '/tiendas.html', label: 'Tiendas' },
     { href: '/sacos.html', label: 'Sacos' },
     { href: '/esterillas.html', label: 'Esterillas' },
-    { href: '/baterias.html', label: 'Baterías y Energía' },
+    { href: '/baterias.html', label: 'Baterías' },
     { href: '/iluminacion/', label: 'Iluminación' },
     { href: '/herramientas.html', label: 'Herramientas' },
     { href: '/accesorios.html', label: 'Accesorios' },
