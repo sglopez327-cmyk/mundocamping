@@ -21,15 +21,15 @@ $pageMap = @{
   'linternas-cual-comprar.html' = @{ canonical = "$site/linternas-cual-comprar"; image = "$site/assets/linternas-cual-comprar-indeciso.png" }
   'estaciones-energia.html' = @{ canonical = "$site/estaciones-energia"; image = "$site/assets/estaciones-energia-portatiles-bosque-pinos.png" }
   'accesorios-marcan-diferencia.html' = @{ canonical = "$site/accesorios-marcan-diferencia"; image = "$site/assets/accesorios-mochila-gps-cerillas-bosque.png" }
-  'esterilla-r-value-que-necesitas.html' = @{ canonical = "$site/esterilla-r-value-que-necesitas"; image = "$site/assets/esterillas-colchoneta-tienda-camping-realista.png" }
-  'saco-dormir-verano-vs-invierno.html' = @{ canonical = "$site/saco-dormir-verano-vs-invierno"; image = "$site/assets/sacos-dormir-colores-bosque-pinos.png" }
-  'farol-vs-frontal-camping.html' = @{ canonical = "$site/farol-vs-frontal-camping"; image = "$site/assets/linternas-cual-comprar-indeciso.png" }
-  'checklist-primera-acampada.html' = @{ canonical = "$site/checklist-primera-acampada"; image = "$site/assets/accesorios-mochila-gps-cerillas-bosque.png" }
+  'esterilla-r-value-que-necesitas.html' = @{ canonical = "$site/esterilla-r-value-que-necesitas"; image = "$site/assets/blog-esterilla-r-value.jpg" }
+  'saco-dormir-verano-vs-invierno.html' = @{ canonical = "$site/saco-dormir-verano-vs-invierno"; image = "$site/assets/blog-saco-verano-invierno.jpg" }
+  'farol-vs-frontal-camping.html' = @{ canonical = "$site/farol-vs-frontal-camping"; image = "$site/assets/blog-farol-vs-frontal.jpg" }
+  'checklist-primera-acampada.html' = @{ canonical = "$site/checklist-primera-acampada"; image = "$site/assets/blog-checklist-primera-acampada.jpg" }
   'blog.html' = @{ canonical = "$site/blog"; ogType = 'website' }
   'mejores-sitios-acampar.html' = @{ canonical = "$site/mejores-sitios-acampar"; ogType = 'website'; image = "$site/assets/destinos/world-map-premium.jpg" }
-  'como-montar-tienda-campana.html' = @{ canonical = "$site/como-montar-tienda-campana"; image = "$site/assets/pareja-tienda-campana-bosque-amstaff.png" }
-  'mochila-camping-principiantes-checklist.html' = @{ canonical = "$site/mochila-camping-principiantes-checklist"; image = "$site/assets/accesorios-mochila-gps-cerillas-bosque.png" }
-  'tendencias-camping-2026.html' = @{ canonical = "$site/tendencias-camping-2026"; image = "$site/assets/estaciones-energia-portatiles-bosque-pinos.png" }
+  'como-montar-tienda-campana.html' = @{ canonical = "$site/como-montar-tienda-campana"; image = "$site/assets/blog-montar-tienda-campana.jpg" }
+  'mochila-camping-principiantes-checklist.html' = @{ canonical = "$site/mochila-camping-principiantes-checklist"; image = "$site/assets/blog-mochila-checklist.jpg" }
+  'tendencias-camping-2026.html' = @{ canonical = "$site/tendencias-camping-2026"; image = "$site/assets/blog-tendencias-camping-2026.jpg" }
   'sobre-mi.html' = @{ canonical = "$site/sobre-mi"; image = "$site/assets/sobre-mi-hero-noche.jpg" }
   'contacto.html' = @{ canonical = "$site/contacto" }
   'privacidad.html' = @{ canonical = "$site/privacidad" }
