@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es" data-site-root=".">
   <head>
     <meta charset="UTF-8" />
@@ -26,10 +26,10 @@
     <link rel="preload" as="image" href="./Fondo.jpg" />
     <link rel="stylesheet" href="./mundo-camping.css" />
     <link rel="stylesheet" href="./footer-premium.css" />
-    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./home.css?v=blog3" />
     <link rel="stylesheet" href="./site-header.css" />
     <link rel="stylesheet" href="./components/home-faq.css" />
-    <script type="application/ld+json">
+<script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -37,13 +37,20 @@
         "url": "https://www.mundocamping.net/",
         "logo": "https://www.mundocamping.net/favicon-48.png",
         "description": "Sitio independiente de guías de acampada con reseñas basadas en experiencia real.",
-        "email": "contacto@mundocamping.net"
+        "email": "contacto@mundocamping.net",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "contacto@mundocamping.net",
+          "availableLanguage": ["es"],
+          "url": "https://www.mundocamping.net/contacto"
+        }
       }
     </script>
   </head>
   <body class="bg-[#020403] text-white antialiased">
     <header id="site-header"></header>
-    <main>
+<main>
       <section class="guides-featured" aria-labelledby="blog-featured-title">
         <div class="guides-featured__bg" aria-hidden="true"></div>
         <div class="guides-featured__top-line" aria-hidden="true"></div>
@@ -57,12 +64,12 @@
                   aria-label="Paisaje de montaña con tienda de campaña junto a un lago al atardecer"
                 >
                   <div class="guides-featured__hero-overlay" aria-hidden="true"></div>
+
                   <div class="guides-featured__hero-copy">
                     <p class="guides-featured__kicker">Blog · Guías informativas</p>
                     <h1 id="blog-featured-title" class="guides-featured__title">Guías y novedades</h1>
                     <p class="guides-featured__lead">
-                      Montaje, packing y tendencias 2026: contenido práctico con enlaces a nuestro catálogo cuando toque
-                      elegir equipo.
+                      Montaje, packing y tendencias 2026: contenido práctico con enlaces a nuestro catálogo cuando toque elegir equipo.
                     </p>
                   </div>
                 </div>
@@ -72,146 +79,21 @@
 
           <div class="guides-home-layout">
             <div class="guides-home-layout__main">
-              <div
+                            <div
                 id="blog-featured-stack"
                 class="guides-featured__stack"
                 aria-label="Artículos del blog"
               >
-                <a href="tendencias-camping-2026.html" class="guide-featured-card">
-                  <div class="guide-featured-card__media">
-                    <img
-                      src="./assets/estaciones-energia-portatiles-bosque-pinos.png"
-                      alt="Tendencias de camping 2026"
-                      width="400"
-                      height="300"
-                      loading="eager"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="guide-featured-card__body">
-                    <h2 class="guide-featured-card__title">Tendencias de camping 2026: lo nuevo en equipo y tecnología</h2>
-                    <p class="guide-featured-card__desc">
-                      Novedades para camping en energía, luz, tiendas y ultraligero — qué merece la pena y qué es humo.
-                    </p>
-                    <span class="guide-featured-card__cta cta-button-highlight"
-                      >Leer artículo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg
-                    ></span>
-                  </div>
-                </a>
-
-                <a href="como-montar-tienda-campana.html" class="guide-featured-card">
-                  <div class="guide-featured-card__media">
-                    <img
-                      src="./assets/pareja-tienda-campana-bosque-amstaff.png"
-                      alt="Cómo montar una tienda de campaña"
-                      width="400"
-                      height="300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="guide-featured-card__body">
-                    <h2 class="guide-featured-card__title">Cómo montar una tienda de campaña correctamente</h2>
-                    <p class="guide-featured-card__desc">
-                      Guía paso a paso: emplazamiento, varillas, flysheet, vientos y errores que dejan la tienda
-                      inestable.
-                    </p>
-                    <span class="guide-featured-card__cta cta-button-highlight"
-                      >Leer artículo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg
-                    ></span>
-                  </div>
-                </a>
-
-                <a href="mochila-camping-principiantes-checklist.html" class="guide-featured-card">
-                  <div class="guide-featured-card__media">
-                    <img
-                      src="./assets/accesorios-mochila-gps-cerillas-bosque.png"
-                      alt="Checklist mochila de camping para principiantes"
-                      width="400"
-                      height="300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="guide-featured-card__body">
-                    <h2 class="guide-featured-card__title">Checklist: qué llevar en tu mochila de camping</h2>
-                    <p class="guide-featured-card__desc">
-                      Lista definitiva para principiantes: dormir, cocina, luz y seguridad sin sobrecargar la mochila.
-                    </p>
-                    <span class="guide-featured-card__cta cta-button-highlight"
-                      >Leer artículo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg
-                    ></span>
-                  </div>
-                </a>
-
-                <a href="esterilla-r-value-que-necesitas.html" class="guide-featured-card">
-                  <div class="guide-featured-card__media">
-                    <img
-                      src="./assets/esterillas-colchoneta-tienda-camping-realista.png"
-                      alt="Qué R-Value necesita tu esterilla"
-                      width="400"
-                      height="300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="guide-featured-card__body">
-                    <h2 class="guide-featured-card__title">Qué R-Value necesita tu esterilla de camping</h2>
-                    <p class="guide-featured-card__desc">
-                      Tabla práctica por estación y errores al comprar aislamiento para el suelo.
-                    </p>
-                    <span class="guide-featured-card__cta cta-button-highlight"
-                      >Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg
-                    ></span>
-                  </div>
-                </a>
-
-                <a href="saco-dormir-verano-vs-invierno.html" class="guide-featured-card">
-                  <div class="guide-featured-card__media">
-                    <img
-                      src="./assets/sacos-dormir-colores-bosque-pinos.png"
-                      alt="Saco de dormir verano vs invierno"
-                      width="400"
-                      height="300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="guide-featured-card__body">
-                    <h2 class="guide-featured-card__title">Saco verano vs invierno: cómo elegir</h2>
-                    <p class="guide-featured-card__desc">
-                      Temperatura de confort, sintético vs pluma y cuándo conviene tener dos sacos.
-                    </p>
-                    <span class="guide-featured-card__cta cta-button-highlight"
-                      >Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg
-                    ></span>
-                  </div>
-                </a>
-
-                <a href="farol-vs-frontal-camping.html" class="guide-featured-card">
-                  <div class="guide-featured-card__media">
-                    <img
-                      src="./assets/linternas-cual-comprar-indeciso.png"
-                      alt="Farol o frontal para camping"
-                      width="400"
-                      height="300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="guide-featured-card__body">
-                    <h2 class="guide-featured-card__title">Farol o frontal para camping: qué elegir</h2>
-                    <p class="guide-featured-card__desc">
-                      Cuándo usar cada luz y el combo mínimo para no quedarte a oscuras en el campamento.
-                    </p>
-                    <span class="guide-featured-card__cta cta-button-highlight"
-                      >Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg
-                    ></span>
-                  </div>
-                </a>
+                <a href="tendencias-camping-2026.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/estaciones-energia-portatiles-bosque-pinos.png" alt="Tendencias de camping 2026" width="400" height="300" loading="eager" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Tendencias de camping 2026: lo nuevo en equipo y tecnología</h2><p class="guide-featured-card__desc">Novedades para camping en energía, luz, tiendas y ultraligero — qué merece la pena y qué es humo.</p><span class="guide-featured-card__cta cta-button-highlight">Leer artículo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="como-montar-tienda-campana.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/pareja-tienda-campana-bosque-amstaff.png" alt="Cómo montar una tienda de campaña" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Cómo montar una tienda de campaña correctamente</h2><p class="guide-featured-card__desc">Guía paso a paso: emplazamiento, varillas, flysheet, vientos y errores que dejan la tienda inestable.</p><span class="guide-featured-card__cta cta-button-highlight">Leer artículo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="mochila-camping-principiantes-checklist.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/accesorios-mochila-gps-cerillas-bosque.png" alt="Checklist mochila de camping" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Checklist: qué llevar en tu mochila de camping</h2><p class="guide-featured-card__desc">Lista definitiva para principiantes: dormir, cocina, luz y seguridad sin sobrecargar la mochila.</p><span class="guide-featured-card__cta cta-button-highlight">Leer artículo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="esterilla-r-value-que-necesitas.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/esterillas-colchoneta-tienda-camping-realista.png" alt="Qué R-Value necesita tu esterilla" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Qué R-Value necesita tu esterilla de camping</h2><p class="guide-featured-card__desc">Tabla práctica por estación y errores al comprar aislamiento para el suelo.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="saco-dormir-verano-vs-invierno.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/sacos-dormir-colores-bosque-pinos.png" alt="Saco verano vs invierno" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Saco verano vs invierno: cómo elegir</h2><p class="guide-featured-card__desc">Temperatura de confort, sintético vs pluma y cuándo conviene tener dos sacos.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="farol-vs-frontal-camping.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/linternas-cual-comprar-indeciso.png" alt="Farol o frontal para camping" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Farol o frontal para camping: qué elegir</h2><p class="guide-featured-card__desc">Cuándo usar cada luz y el combo mínimo para no quedarte a oscuras en el campamento.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
+                <a href="checklist-primera-acampada.html" class="guide-featured-card"><div class="guide-featured-card__media"><img src="./assets/familia-tienda-campana-bosque-pinos-bullterrier.png" alt="Checklist primera acampada" width="400" height="300" loading="lazy" decoding="async" /></div><div class="guide-featured-card__body"><h2 class="guide-featured-card__title">Checklist de la primera acampada</h2><p class="guide-featured-card__desc">Lo imprescindible para no olvidar nada crítico en tu primera noche en tienda.</p><span class="guide-featured-card__cta cta-button-highlight">Leer guía<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div></a>
               </div>
 
-              <section class="home-faq article-faq" id="blog-catalogo" aria-labelledby="blog-catalogo-title" style="margin-top: 1.5rem">
+              <section class="home-faq article-faq" id="blog-catalogo" aria-labelledby="blog-catalogo-title" style="margin-top:1.5rem">
                 <header class="home-faq__header">
                   <p class="home-faq__kicker">Catálogo afiliado</p>
                   <h2 id="blog-catalogo-title">¿Listo para elegir equipo?</h2>
@@ -232,7 +114,7 @@
                     <summary><a href="baterias.html">Baterías y energía</a></summary>
                     <p>Power banks y estaciones portátiles para acampada.</p>
                   </details>
-                  <details open>
+                  <details>
                     <summary><a href="iluminacion/">Iluminación</a></summary>
                     <p>Linternas, frontales y faroles para ruta y campamento.</p>
                   </details>
@@ -240,149 +122,235 @@
               </section>
             </div>
 
-            <aside class="guides-home-sidebar" aria-label="Categorías del sitio">
+            <aside class="guides-home-sidebar" aria-label="Categorías del sitio y recomendaciones">
               <div class="guides-home-sidebar__sticky">
-                <nav class="guides-sidebar-panel" aria-labelledby="blog-sidebar-categories-title">
-                  <h2 id="blog-sidebar-categories-title" class="guides-sidebar-panel__title">Categorías</h2>
-                  <ul class="guides-sidebar-categories">
-                    <li>
-                      <a href="index.html" class="guides-sidebar-categories__link">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 7v14" />
-                            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Guías Destacadas</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="blog.html" class="guides-sidebar-categories__link guides-sidebar-categories__link--highlight">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 20h9" />
-                            <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Blog</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tiendas.html" class="guides-sidebar-categories__link">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3.5 21 12 3l8.5 18" />
-                            <path d="M7.5 15h9" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Tiendas de Campaña</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="sacos.html" class="guides-sidebar-categories__link">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
-                            <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-                            <path d="M12 4v6" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Sacos</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="esterillas.html" class="guides-sidebar-categories__link">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="7" height="7" x="3" y="3" rx="1" />
-                            <rect width="7" height="7" x="14" y="3" rx="1" />
-                            <rect width="7" height="7" x="14" y="14" rx="1" />
-                            <rect width="7" height="7" x="3" y="14" rx="1" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Esterillas</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="baterias.html" class="guides-sidebar-categories__link">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="16" height="10" x="2" y="7" rx="2" ry="2" />
-                            <line x1="22" x2="22" y1="11" y2="13" />
-                            <path d="M11 11v4" />
-                            <path d="m9 13 2-2 2 2" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Baterías y Energía</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="iluminacion/" class="guides-sidebar-categories__link">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 2h4" />
-                            <path d="M12 14v8" />
-                            <path d="M8 22h8" />
-                            <path d="M18 6c0 4-2 6-6 8-4-2-6-4-6-8 0-2 2-4 6-4s6 2 6 4z" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Iluminación</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="herramientas.html" class="guides-sidebar-categories__link">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Herramientas</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="accesorios.html" class="guides-sidebar-categories__link">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
-                            <path d="M9 6V5a3 3 0 0 1 6 0v1" />
-                            <path d="M8 21v-5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Accesorios</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="cocina.html" class="guides-sidebar-categories__link">
-                        <span class="guides-sidebar-categories__icon" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 11h18v2a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z" />
-                            <path d="M7 11V4" />
-                            <path d="M17 11V7" />
-                            <path d="M12 11V3" />
-                          </svg>
-                        </span>
-                        <span class="guides-sidebar-categories__label">Cocina</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+              <nav class="guides-sidebar-panel" aria-labelledby="sidebar-categories-title">
+                <h2 id="sidebar-categories-title" class="guides-sidebar-panel__title">Categorías</h2>
+                <ul class="guides-sidebar-categories">
+                  <li>
+                    <a href="index.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 7v14" />
+                          <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Guías Destacadas</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="blog.html" class="guides-sidebar-categories__link guides-sidebar-categories__link--highlight">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 20h9" />
+                          <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Blog</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tiendas.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3.5 21 12 3l8.5 18" />
+                          <path d="M7.5 15h9" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Tiendas de Campaña</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="sacos.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8" />
+                          <path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
+                          <path d="M12 4v6" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Sacos</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="esterillas.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <rect width="7" height="7" x="3" y="3" rx="1" />
+                          <rect width="7" height="7" x="14" y="3" rx="1" />
+                          <rect width="7" height="7" x="14" y="14" rx="1" />
+                          <rect width="7" height="7" x="3" y="14" rx="1" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Esterillas</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="baterias.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <rect width="16" height="10" x="2" y="7" rx="2" ry="2" />
+                          <line x1="22" x2="22" y1="11" y2="13" />
+                          <path d="M11 11v4" />
+                          <path d="m9 13 2-2 2 2" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Baterías y Energía</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="iluminacion/" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M10 2h4" />
+                          <path d="M12 14v8" />
+                          <path d="M8 22h8" />
+                          <path d="M18 6c0 4-2 6-6 8-4-2-6-4-6-8 0-2 2-4 6-4s6 2 6 4z" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Iluminación</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="herramientas.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Herramientas</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="accesorios.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z" />
+                          <path d="M9 6V5a3 3 0 0 1 6 0v1" />
+                          <path d="M8 21v-5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Accesorios</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="cocina.html" class="guides-sidebar-categories__link">
+                      <span class="guides-sidebar-categories__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M3 11h18v2a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z" />
+                          <path d="M7 11V4" />
+                          <path d="M17 11V7" />
+                          <path d="M12 11V3" />
+                        </svg>
+                      </span>
+                      <span class="guides-sidebar-categories__label">Cocina</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
 
-                <div class="guides-sidebar-panel guides-sidebar-authority">
-                  <p class="guides-sidebar-panel__title">Nuestro Compromiso</p>
-                  <div class="guides-sidebar-authority__head">
-                    <span class="guides-sidebar-authority__icon" aria-hidden="true">
+              <div class="guides-sidebar-panel guides-sidebar-panel--picks">
+                <div class="guides-sidebar-picks guides-sidebar-picks--sticky">
+                  <h2 class="guides-sidebar-panel__title">Lo más leído</h2>
+                  <p class="guides-sidebar-picks__lead">Comparativas y picks editoriales con mejor conversión esta temporada.</p>
+                  <ol class="guides-sidebar-picks__list">
+                    <li>
+                      <a href="top-5-tiendas-parejas.html" class="guides-sidebar-picks__item">
+                        <span class="guides-sidebar-picks__rank">01</span>
+                        <span class="guides-sidebar-picks__label">Mejores tiendas para parejas</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="top-5-sacos-dormir.html" class="guides-sidebar-picks__item">
+                        <span class="guides-sidebar-picks__rank">02</span>
+                        <span class="guides-sidebar-picks__label">Top 5 sacos de dormir 2026</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="tiendas.html" class="guides-sidebar-picks__item">
+                        <span class="guides-sidebar-picks__rank">03</span>
+                        <span class="guides-sidebar-picks__label">Catálogo de tiendas de campaña</span>
+                      </a>
+                    </li>
+                  </ol>
+                  <div class="guides-sidebar-picks__amazon">
+                    <p class="guides-sidebar-picks__amazon-label">Top Pick · Afiliado Amazon</p>
+                    <p class="guides-sidebar-picks__amazon-product">Naturehike Mongar 2P — mejor equilibrio pareja / peso</p>
+                    <a
+                      href="https://www.amazon.es/dp/B0D6DWCMM2"
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      class="product-cta-amazon product-cta-amazon--compact guides-sidebar-picks__cta"
+                    >
+                      Ver en Amazon
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guides-sidebar-panel guides-sidebar-checklist">
+                <h2 class="guides-sidebar-panel__title">Imprescindibles de acampada</h2>
+                <ul class="guides-sidebar-checklist__list">
+                  <li class="guides-sidebar-checklist__item">
+                    <span class="guides-sidebar-checklist__icon" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                        <circle cx="12" cy="12" r="10" />
                         <path d="m9 12 2 2 4-4" />
                       </svg>
                     </span>
-                    <h3 class="guides-sidebar-authority__title">¿Por qué confiar en nosotros?</h3>
-                  </div>
-                  <p class="guides-sidebar-authority__text">
-                    Probamos el equipo en condiciones reales de montaña. Solo recomendamos productos que hemos testado o
-                    investigado a fondo para que no falles en tu aventura.
-                  </p>
+                    <span class="guides-sidebar-checklist__label">Linterna frontal</span>
+                  </li>
+                  <li class="guides-sidebar-checklist__item">
+                    <span class="guides-sidebar-checklist__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span class="guides-sidebar-checklist__label">Saco de dormir</span>
+                  </li>
+                  <li class="guides-sidebar-checklist__item">
+                    <span class="guides-sidebar-checklist__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span class="guides-sidebar-checklist__label">Kit de primeros auxilios</span>
+                  </li>
+                  <li class="guides-sidebar-checklist__item">
+                    <span class="guides-sidebar-checklist__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="m9 12 2 2 4-4" />
+                      </svg>
+                    </span>
+                    <span class="guides-sidebar-checklist__label">Navaja multiusos</span>
+                  </li>
+                </ul>
+                <a href="tiendas.html" class="guides-sidebar-checklist__cta">Ver catálogo de tiendas</a>
+              </div>
+
+              <div class="guides-sidebar-panel guides-sidebar-authority">
+                <p class="guides-sidebar-panel__title">Nuestro Compromiso</p>
+                <div class="guides-sidebar-authority__head">
+                  <span class="guides-sidebar-authority__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                      />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                  </span>
+                  <h3 class="guides-sidebar-authority__title">¿Por qué confiar en nosotros?</h3>
                 </div>
+                <p class="guides-sidebar-authority__text">
+                  Probamos el equipo en condiciones reales de montaña. Solo recomendamos productos que hemos testado o
+                  investigado a fondo para que no falles en tu aventura.
+                </p>
+              </div>
               </div>
             </aside>
           </div>
@@ -390,9 +358,11 @@
       </section>
     </main>
 
-    <footer id="site-footer"></footer>
+        <footer id="site-footer"></footer>
+    
     <script defer src="./js/site-header.js"></script>
     <script defer src="./js/load-adsense.js"></script>
     <script defer src="./js/site-footer.js"></script>
+
   </body>
 </html>
