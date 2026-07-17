@@ -108,10 +108,6 @@
   function showTooltip(d, pinBtn) {
     clearTimeout(hideTimer);
     activeId = d.id;
-    var rect = mapEl.getBoundingClientRect();
-    var pinRect = pinBtn.getBoundingClientRect();
-    var left = pinRect.left - rect.left + pinRect.width / 2;
-    var top = pinRect.top - rect.top;
 
     tooltipEl.innerHTML =
       '<div class="destinos-tooltip__card">' +
@@ -130,14 +126,78 @@
       '</p>' +
       '</div></div>';
 
-    tooltipEl.style.left = left + 'px';
-    tooltipEl.style.top = top + 'px';
+    positionTooltip(pinBtn);
     tooltipEl.classList.add('is-visible');
     tooltipEl.setAttribute('aria-hidden', 'false');
+
+    var tipImg = tooltipEl.querySelector('img');
+    if (tipImg && !tipImg.complete) {
+      tipImg.addEventListener(
+        'load',
+        function () {
+          if (activeId === d.id) positionTooltip(pinBtn);
+        },
+        { once: true }
+      );
+    }
 
     mapEl.querySelectorAll('.destinos-map__pin').forEach(function (p) {
       p.classList.toggle('is-active', p.dataset.id === d.id);
     });
+  }
+
+  /**
+   * Coloca el tooltip dentro del mapa:
+   * - arriba del pin si hay espacio
+   * - debajo si el pin está cerca del borde superior (o no cabe arriba)
+   * - left clamped para no salir por los lados
+   */
+  function positionTooltip(pinBtn) {
+    var pad = 10;
+    var gap = 12;
+    var mapW = mapEl.clientWidth;
+    var mapH = mapEl.clientHeight;
+    var mapRect = mapEl.getBoundingClientRect();
+    var pinRect = pinBtn.getBoundingClientRect();
+
+    // Medir sin flash: visible para layout, invisible a la vista
+    tooltipEl.classList.add('is-measuring');
+    tooltipEl.classList.add('is-visible');
+    tooltipEl.style.left = '0px';
+    tooltipEl.style.top = '0px';
+    tooltipEl.style.transform = 'none';
+
+    var tipW = tooltipEl.offsetWidth || Math.min(304, mapW - pad * 2);
+    var tipH = tooltipEl.offsetHeight || 220;
+
+    var pinCenterX = pinRect.left - mapRect.left + pinRect.width / 2;
+    var pinTop = pinRect.top - mapRect.top;
+    var pinBottom = pinRect.bottom - mapRect.top;
+
+    var spaceAbove = pinTop - pad;
+    var spaceBelow = mapH - pinBottom - pad;
+    var need = tipH + gap;
+
+    var placeBelow;
+    if (spaceAbove >= need) {
+      placeBelow = false;
+    } else if (spaceBelow >= need) {
+      placeBelow = true;
+    } else {
+      placeBelow = spaceBelow > spaceAbove;
+    }
+
+    var top = placeBelow ? pinBottom + gap : pinTop - tipH - gap;
+    var left = pinCenterX - tipW / 2;
+
+    left = Math.max(pad, Math.min(left, mapW - tipW - pad));
+    top = Math.max(pad, Math.min(top, mapH - tipH - pad));
+
+    tooltipEl.style.left = Math.round(left) + 'px';
+    tooltipEl.style.top = Math.round(top) + 'px';
+    tooltipEl.classList.toggle('is-below', placeBelow);
+    tooltipEl.classList.toggle('is-above', !placeBelow);
+    tooltipEl.classList.remove('is-measuring');
   }
 
   function scheduleHide() {

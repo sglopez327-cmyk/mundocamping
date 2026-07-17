@@ -159,23 +159,40 @@
   color: rgba(232, 240, 236, 0.8);
 }
 
-/* Tooltip flotante */
+/* Tooltip flotante — left/top los calcula JS (positionTooltip) */
 .destinos-tooltip {
   position: absolute;
   z-index: 20;
   width: min(19rem, calc(100% - 1.5rem));
+  max-width: calc(100% - 1.25rem);
+  box-sizing: border-box;
   pointer-events: none;
   opacity: 0;
-  transform: translate(-50%, calc(-100% - 14px)) scale(0.96);
+  transform: translateY(4px) scale(0.98);
   transition:
     opacity 0.18s ease,
     transform 0.18s ease;
+  will-change: left, top, opacity, transform;
+}
+
+.destinos-tooltip.is-measuring {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: none !important;
 }
 
 .destinos-tooltip.is-visible {
   opacity: 1;
-  transform: translate(-50%, calc(-100% - 14px)) scale(1);
+  transform: translateY(0) scale(1);
   pointer-events: auto;
+}
+
+.destinos-tooltip.is-below {
+  transform: translateY(-4px) scale(0.98);
+}
+
+.destinos-tooltip.is-below.is-visible:not(.is-measuring) {
+  transform: translateY(0) scale(1);
 }
 
 .destinos-tooltip__card {
@@ -364,14 +381,7 @@
 
 @media (max-width: 767px) {
   .destinos-tooltip {
-    left: 50% !important;
-    top: auto !important;
-    bottom: 0.75rem;
-    width: calc(100% - 1.5rem);
-    transform: translate(-50%, 0) scale(0.98);
-  }
-
-  .destinos-tooltip.is-visible {
-    transform: translate(-50%, 0) scale(1);
+    /* En móvil el JS también clampa; ancho un poco más generoso */
+    width: min(20rem, calc(100% - 1.25rem));
   }
 }
