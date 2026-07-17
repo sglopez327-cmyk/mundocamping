@@ -72,6 +72,7 @@
       '<nav class="site-footer__links" aria-label="Guías prácticas">' +
       '<a class="site-footer__link" href="/blog.html">Blog / Guías</a>' +
       '<a class="site-footer__link" href="/mejores-sitios-acampar.html">Mejores sitios para acampar</a>' +
+      '<a class="site-footer__link" href="/mejor-tienda-camping-2-personas.html">Mejor tienda 2 personas</a>' +
       '<a class="site-footer__link" href="/tendencias-camping-2026.html">Tendencias 2026</a>' +
       '<a class="site-footer__link" href="/como-montar-tienda-campana.html">Montar tienda</a>' +
       '<a class="site-footer__link" href="/mochila-camping-principiantes-checklist.html">Checklist mochila</a>' +

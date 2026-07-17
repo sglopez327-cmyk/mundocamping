@@ -80,13 +80,19 @@
           '<p class="destino-card__tip">' +
           escapeHtml(d.tip) +
           '</p>' +
+          (d.page
+            ? '<p class="destino-card__tip"><a href="' +
+              escapeHtml(d.page) +
+              '" class="text-[#deff9a] hover:underline">Guía completa →</a></p>'
+            : '') +
           '</div></article>'
         );
       })
       .join('');
 
     gridEl.querySelectorAll('.destino-card').forEach(function (card) {
-      card.addEventListener('click', function () {
+      card.addEventListener('click', function (e) {
+        if (e.target && e.target.closest && e.target.closest('a')) return;
         selectDestino(card.dataset.id, true);
       });
       card.addEventListener('keydown', function (e) {

@@ -29,6 +29,26 @@ $pageMap = @{
   'mejores-sitios-acampar.html' = @{ canonical = "$site/mejores-sitios-acampar"; ogType = 'website'; image = "$site/assets/destinos/world-map-premium.jpg" }
   'como-montar-tienda-campana.html' = @{ canonical = "$site/como-montar-tienda-campana"; image = "$site/assets/blog-montar-tienda-campana.jpg" }
   'mochila-camping-principiantes-checklist.html' = @{ canonical = "$site/mochila-camping-principiantes-checklist"; image = "$site/assets/blog-mochila-checklist.jpg" }
+  'mejor-tienda-camping-2-personas.html' = @{ canonical = "$site/mejor-tienda-camping-2-personas" }
+  'como-elegir-saco-dormir-temperatura.html' = @{ canonical = "$site/como-elegir-saco-dormir-temperatura" }
+  'power-bank-vs-estacion-energia-camping.html' = @{ canonical = "$site/power-bank-vs-estacion-energia-camping" }
+  'impermeabilidad-tienda-columna-agua.html' = @{ canonical = "$site/impermeabilidad-tienda-columna-agua" }
+  'peso-mochila-camping-cuanto-llevar.html' = @{ canonical = "$site/peso-mochila-camping-cuanto-llevar" }
+  'camping-con-ninos-equipo-basico.html' = @{ canonical = "$site/camping-con-ninos-equipo-basico" }
+  'errores-comprar-tienda-amazon.html' = @{ canonical = "$site/errores-comprar-tienda-amazon" }
+  'frontal-camping-cuantos-lumenes.html' = @{ canonical = "$site/frontal-camping-cuantos-lumenes" }
+  'esterilla-inflable-vs-espuma.html' = @{ canonical = "$site/esterilla-inflable-vs-espuma" }
+  'kit-cocina-camping-principiantes.html' = @{ canonical = "$site/kit-cocina-camping-principiantes" }
+  'acampar-torres-del-paine.html' = @{ canonical = "$site/acampar-torres-del-paine" }
+  'acampar-yosemite.html' = @{ canonical = "$site/acampar-yosemite" }
+  'acampar-banff.html' = @{ canonical = "$site/acampar-banff" }
+  'acampar-lofoten.html' = @{ canonical = "$site/acampar-lofoten" }
+  'acampar-landmannalaugar.html' = @{ canonical = "$site/acampar-landmannalaugar" }
+  'acampar-picos-europa.html' = @{ canonical = "$site/acampar-picos-europa" }
+  'acampar-merzouga.html' = @{ canonical = "$site/acampar-merzouga" }
+  'acampar-wadi-rum.html' = @{ canonical = "$site/acampar-wadi-rum" }
+  'acampar-moab.html' = @{ canonical = "$site/acampar-moab" }
+  'acampar-fiordland.html' = @{ canonical = "$site/acampar-fiordland" }
   'tendencias-camping-2026.html' = @{ canonical = "$site/tendencias-camping-2026"; image = "$site/assets/blog-tendencias-camping-2026.jpg" }
   'sobre-mi.html' = @{ canonical = "$site/sobre-mi"; image = "$site/assets/sobre-mi-hero-noche.jpg" }
   'contacto.html' = @{ canonical = "$site/contacto" }

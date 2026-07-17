@@ -5,6 +5,7 @@
 window.MC_DESTINOS = [
   {
     id: 'torres-del-paine',
+    page: 'acampar-torres-del-paine.html',
     name: 'Torres del Paine',
     country: 'Chile',
     region: 'Patagonia',
@@ -27,6 +28,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'yosemite',
+    page: 'acampar-yosemite.html',
     name: 'Yosemite',
     country: 'EE. UU.',
     region: 'California',
@@ -38,6 +40,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'banff',
+    page: 'acampar-banff.html',
     name: 'Banff',
     country: 'Canadá',
     region: 'Rockies',
@@ -49,6 +52,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'landmannalaugar',
+    page: 'acampar-landmannalaugar.html',
     name: 'Landmannalaugar',
     country: 'Islandia',
     region: 'Tierras Altas',
@@ -60,6 +64,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'lofoten',
+    page: 'acampar-lofoten.html',
     name: 'Islas Lofoten',
     country: 'Noruega',
     region: 'Ártico',
@@ -104,6 +109,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'fiordland',
+    page: 'acampar-fiordland.html',
     name: 'Fiordland',
     country: 'Nueva Zelanda',
     region: 'Isla Sur',
@@ -126,6 +132,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'merzouga',
+    page: 'acampar-merzouga.html',
     name: 'Merzouga',
     country: 'Marruecos',
     region: 'Sáhara',
@@ -192,6 +199,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'moab',
+    page: 'acampar-moab.html',
     name: 'Moab',
     country: 'EE. UU.',
     region: 'Utah',
@@ -203,6 +211,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'wadi-rum',
+    page: 'acampar-wadi-rum.html',
     name: 'Wadi Rum',
     country: 'Jordania',
     region: 'Desierto',
@@ -269,6 +278,7 @@ window.MC_DESTINOS = [
   },
   {
     id: 'picos-europa',
+    page: 'acampar-picos-europa.html',
     name: 'Picos de Europa',
     country: 'España',
     region: 'Cordillera Cantábrica',

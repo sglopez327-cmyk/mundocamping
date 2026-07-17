@@ -80,8 +80,10 @@
     var canonical = getCanonical() || window.location.href;
     var description = getMeta('description');
     var image = getOg('og:image') || SITE + '/Fondo.jpg';
+    var modified = document.querySelector('meta[property="article:modified_time"]');
+    var dateModified = modified ? modified.getAttribute('content') : '';
 
-    injectSchema({
+    var articleSchema = {
       '@context': 'https://schema.org',
       '@type': 'Article',
       headline: headline,
@@ -106,7 +108,11 @@
           url: SITE + '/favicon-48.png',
         },
       },
-    });
+    };
+    if (dateModified) {
+      articleSchema.dateModified = dateModified;
+    }
+    injectSchema(articleSchema);
   }
 
   function findBreadcrumbNav() {

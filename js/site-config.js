@@ -1,24 +1,27 @@
 /**
  * Configuración global Mundo Camping.
  *
- * GA4 (obligatorio para medir visitas):
- * 1. Entra en https://analytics.google.com y crea una propiedad GA4.
- * 2. Copia el ID de medición (formato G-XXXXXXXXXX).
- * 3. Pégalo abajo en ga4MeasurementId (entre comillas).
- * 4. Publica este archivo en el servidor.
+ * ═══ OBLIGATORIO PARA MEDIR Y POSICIONAR ═══
  *
- * Search Console (obligatorio para indexación):
- * 1. https://search.google.com/search-console → añadir https://www.mundocamping.net
- * 2. Verificar propiedad (HTML o DNS).
- * 3. Enviar sitemap: https://www.mundocamping.net/sitemap.xml
- * 4. Solicitar indexación de la home y de las 4 guías nuevas.
+ * GA4:
+ * 1. https://analytics.google.com → crear propiedad GA4
+ * 2. Copia el ID (G-XXXXXXXXXX) → ga4MeasurementId abajo
+ * 3. Publica este archivo
+ *
+ * Search Console:
+ * 1. https://search.google.com/search-console → añade https://www.mundocamping.net
+ * 2. Verificación HTML: pega el código en googleSiteVerification (solo el content=...)
+ * 3. Envía sitemap: https://www.mundocamping.net/sitemap.xml
+ * 4. Solicita indexación de home, /blog y /mejores-sitios-acampar
  */
 (function (global) {
   'use strict';
 
   global.MundoCampingConfig = {
     siteUrl: 'https://www.mundocamping.net',
-    // Sustituye '' por tu ID real, ej. 'G-ABC123XYZ'
+    // Ej. 'G-ABC123XYZ'
     ga4MeasurementId: '',
+    // Ej. 'AbCdEf123456...' (valor del meta google-site-verification)
+    googleSiteVerification: '',
   };
 })(typeof window !== 'undefined' ? window : this);

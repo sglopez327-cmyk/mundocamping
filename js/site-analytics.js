@@ -1,11 +1,20 @@
 /**
- * Google Analytics 4 — solo se carga si GA4_MEASUREMENT_ID está configurado en site-config.js
+ * Google Analytics 4 + meta de verificación Search Console
+ * (solo si están configurados en site-config.js)
  */
 (function () {
   'use strict';
 
   var config = window.MundoCampingConfig || {};
   var measurementId = (config.ga4MeasurementId || '').trim();
+  var verification = (config.googleSiteVerification || '').trim();
+
+  if (verification && !document.querySelector('meta[name="google-site-verification"]')) {
+    var meta = document.createElement('meta');
+    meta.name = 'google-site-verification';
+    meta.content = verification;
+    document.head.appendChild(meta);
+  }
 
   if (!measurementId || measurementId.indexOf('G-') !== 0) {
     return;
