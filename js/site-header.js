@@ -85,14 +85,11 @@
       '<ul class="menu-categorias" aria-label="Categorías principales">' +
       NAV_ITEMS.map(renderNavLink).join('') +
       '</ul>' +
-      '<div class="site-header__mobile-actions">' +
-      '<a href="/blog.html" class="btn-premium site-header__mobile-blog">Blog</a>' +
       '<a href="' +
       HOME_HREF +
       '" class="btn-premium-solid site-header__mobile-cta">' +
       '<span class="site-header__mobile-cta-short">Guías</span>' +
-      '<span class="site-header__mobile-cta-full">Guías Destacadas</span></a>' +
-      '</div></nav>';
+      '<span class="site-header__mobile-cta-full">Guías Destacadas</span></a></nav>';
   }
 
   if (document.readyState === 'loading') {
