@@ -15,7 +15,7 @@ const GUIDES = [
   {
     file: 'mejor-tienda-camping-2-personas.html',
     slug: 'mejor-tienda-camping-2-personas',
-    image: 'blog-montar-tienda-campana.jpg',
+    image: 'guia-tienda-2-personas.jpg',
     heroClass: 'tiendas',
     cat: 'Tiendas',
     catHref: 'tiendas.html',
@@ -65,7 +65,7 @@ const GUIDES = [
   {
     file: 'como-elegir-saco-dormir-temperatura.html',
     slug: 'como-elegir-saco-dormir-temperatura',
-    image: 'blog-saco-verano-invierno.jpg',
+    image: 'guia-saco-temperatura.jpg',
     heroClass: 'sacos',
     cat: 'Sacos',
     catHref: 'sacos.html',
@@ -104,7 +104,7 @@ const GUIDES = [
   {
     file: 'power-bank-vs-estacion-energia-camping.html',
     slug: 'power-bank-vs-estacion-energia-camping',
-    image: 'blog-tendencias-camping-2026.jpg',
+    image: 'guia-powerbank-vs-estacion.jpg',
     heroClass: 'energia',
     cat: 'Energía',
     catHref: 'baterias.html',
@@ -138,7 +138,7 @@ const GUIDES = [
   {
     file: 'impermeabilidad-tienda-columna-agua.html',
     slug: 'impermeabilidad-tienda-columna-agua',
-    image: 'blog-montar-tienda-campana.jpg',
+    image: 'guia-columna-agua-tienda.jpg',
     heroClass: 'tiendas',
     cat: 'Tiendas',
     catHref: 'tiendas.html',
@@ -176,7 +176,7 @@ const GUIDES = [
   {
     file: 'peso-mochila-camping-cuanto-llevar.html',
     slug: 'peso-mochila-camping-cuanto-llevar',
-    image: 'blog-mochila-checklist.jpg',
+    image: 'guia-peso-mochila.jpg',
     heroClass: 'accesorios',
     cat: 'Accesorios',
     catHref: 'accesorios.html',
@@ -215,7 +215,7 @@ const GUIDES = [
   {
     file: 'camping-con-ninos-equipo-basico.html',
     slug: 'camping-con-ninos-equipo-basico',
-    image: 'blog-checklist-primera-acampada.jpg',
+    image: 'guia-camping-ninos.jpg',
     heroClass: 'tiendas',
     cat: 'Familia',
     catHref: 'top-5-tiendas-familia.html',
@@ -255,7 +255,7 @@ const GUIDES = [
   {
     file: 'errores-comprar-tienda-amazon.html',
     slug: 'errores-comprar-tienda-amazon',
-    image: 'blog-montar-tienda-campana.jpg',
+    image: 'guia-errores-amazon-tienda.jpg',
     heroClass: 'tiendas',
     cat: 'Tiendas',
     catHref: 'tiendas.html',
@@ -294,7 +294,7 @@ const GUIDES = [
   {
     file: 'frontal-camping-cuantos-lumenes.html',
     slug: 'frontal-camping-cuantos-lumenes',
-    image: 'blog-farol-vs-frontal.jpg',
+    image: 'guia-frontal-lumenes.jpg',
     heroClass: 'linternas',
     cat: 'Iluminación',
     catHref: 'iluminacion/',
@@ -332,7 +332,7 @@ const GUIDES = [
   {
     file: 'esterilla-inflable-vs-espuma.html',
     slug: 'esterilla-inflable-vs-espuma',
-    image: 'blog-esterilla-r-value.jpg',
+    image: 'guia-esterilla-inflable-espuma.jpg',
     heroClass: 'esterillas',
     cat: 'Esterillas',
     catHref: 'esterillas.html',
@@ -373,7 +373,7 @@ const GUIDES = [
   {
     file: 'kit-cocina-camping-principiantes.html',
     slug: 'kit-cocina-camping-principiantes',
-    image: 'blog-checklist-primera-acampada.jpg',
+    image: 'guia-kit-cocina-camping.jpg',
     heroClass: 'accesorios',
     cat: 'Cocina',
     catHref: 'cocina.html',
