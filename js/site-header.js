@@ -11,8 +11,8 @@
   var HOME_HREF = '/index.html';
 
   var NAV_ITEMS = [
-    { href: HOME_HREF, label: 'Guías Destacadas', guiasCta: true },
-    { href: '/blog.html', label: 'Blog' },
+    { href: HOME_HREF, label: 'Guías Destacadas', match: ['/', '/index.html', '/index'] },
+    { href: '/blog.html', label: 'Blog', match: ['/blog', '/blog.html'] },
     { href: '/tiendas.html', label: 'Tiendas de Campaña' },
     { href: '/sacos.html', label: 'Sacos' },
     { href: '/esterillas.html', label: 'Esterillas' },
@@ -29,15 +29,39 @@
     '<path d="M8.9 18 12 12.9 15.1 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>' +
     '</svg>';
 
+  function currentPath() {
+    var path = (window.location.pathname || '/').replace(/\/+$/, '');
+    return path === '' ? '/' : path;
+  }
+
+  function isActiveNavItem(item) {
+    var path = currentPath();
+    if (item.match && item.match.length) {
+      return item.match.some(function (m) {
+        var norm = String(m).replace(/\/+$/, '');
+        if (norm === '' || norm === '/') return path === '/';
+        return path === norm;
+      });
+    }
+    var hrefPath = String(item.href || '').split('?')[0].replace(/\/+$/, '');
+    if (!hrefPath) return false;
+    var withoutHtml = hrefPath.replace(/\.html$/, '');
+    return path === hrefPath || path === withoutHtml;
+  }
+
   function renderNavLink(item) {
-    var classes = item.guiasCta ? 'btn-premium nav-guias-cta' : 'btn-premium';
+    var active = isActiveNavItem(item);
+    var classes = active ? 'btn-premium nav-guias-cta' : 'btn-premium';
+    var ariaCurrent = active ? ' aria-current="page"' : '';
     return (
       '<li>' +
       '<a href="' +
       item.href +
       '" class="' +
       classes +
-      '">' +
+      '"' +
+      ariaCurrent +
+      '>' +
       item.label +
       '</a></li>'
     );
@@ -61,11 +85,14 @@
       '<ul class="menu-categorias" aria-label="Categorías principales">' +
       NAV_ITEMS.map(renderNavLink).join('') +
       '</ul>' +
+      '<div class="site-header__mobile-actions">' +
+      '<a href="/blog.html" class="btn-premium site-header__mobile-blog">Blog</a>' +
       '<a href="' +
       HOME_HREF +
       '" class="btn-premium-solid site-header__mobile-cta">' +
       '<span class="site-header__mobile-cta-short">Guías</span>' +
-      '<span class="site-header__mobile-cta-full">Guías Destacadas</span></a></nav>';
+      '<span class="site-header__mobile-cta-full">Guías Destacadas</span></a>' +
+      '</div></nav>';
   }
 
   if (document.readyState === 'loading') {
