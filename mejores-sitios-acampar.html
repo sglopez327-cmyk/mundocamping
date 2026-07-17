@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" data-site-root=".">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Los 25 mejores sitios del mundo para acampar: mapa interactivo con Torres del Paine, Yosemite, Lofoten, Picos de Europa y más."
+    />
+    <title>Mundo Camping | Mejores sitios del mundo para acampar</title>
+    <link rel="canonical" href="https://www.mundocamping.net/mejores-sitios-acampar" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mundo Camping" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Mundo Camping | Mejores sitios del mundo para acampar" />
+    <meta
+      property="og:description"
+      content="Mapa interactivo con 25 destinos potentes para acampar y por qué destacan."
+    />
+    <meta property="og:url" content="https://www.mundocamping.net/mejores-sitios-acampar" />
+    <meta property="og:image" content="https://www.mundocamping.net/Fondo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mundo Camping | Mejores sitios del mundo para acampar" />
+    <meta
+      name="twitter:description"
+      content="Mapa interactivo con 25 destinos potentes para acampar y por qué destacan."
+    />
+    <meta name="twitter:image" content="https://www.mundocamping.net/Fondo.jpg" />
+    <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="stylesheet" href="./css/tailwind-built.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./mundo-camping.css" />
+    <link rel="stylesheet" href="./footer-premium.css" />
+    <link rel="stylesheet" href="./site-header.css?v=7" />
+    <link rel="stylesheet" href="./css/destinos-camping.css?v=1" />
+  </head>
+  <body class="bg-[#020403] text-white antialiased">
+    <header id="site-header"></header>
+    <main>
+      <section class="destinos-page" aria-labelledby="destinos-title">
+        <div class="destinos-page__bg" aria-hidden="true"></div>
+        <div class="container-premium destinos-page__inner">
+          <header class="destinos-hero">
+            <p class="destinos-hero__kicker">Mapa · 25 destinos</p>
+            <h1 id="destinos-title" class="destinos-hero__title">
+              Los mejores sitios del mundo para acampar
+            </h1>
+            <p class="destinos-hero__lead">
+              Pasa el cursor por cada punto del mapa (o tócalo en móvil) para ver por qué ese lugar está entre los
+              grandes. Abajo tienes la ficha completa de los 25 destinos.
+            </p>
+          </header>
+
+          <div class="destinos-map-shell">
+            <div
+              id="destinos-map"
+              class="destinos-map"
+              role="application"
+              aria-label="Mapa mundial de destinos para acampar"
+            >
+              <p class="destinos-map__hint">Pasa el cursor o toca un punto</p>
+              <div id="destinos-tooltip" class="destinos-tooltip" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div class="destinos-grid-header">
+            <h2>25 destinos potentes</h2>
+            <p>Selección editorial: paisaje, experiencia de camping y valor de viaje.</p>
+          </div>
+          <div id="destinos-grid" class="destinos-grid" aria-label="Listado de destinos"></div>
+        </div>
+      </section>
+    </main>
+    <footer id="site-footer"></footer>
+    <script defer src="./js/site-header.js?v=7"></script>
+    <script defer src="./js/load-adsense.js"></script>
+    <script defer src="./js/site-footer.js"></script>
+    <script defer src="./js/destinos-camping-data.js"></script>
+    <script defer src="./js/destinos-camping.js"></script>
+  </body>
+</html>

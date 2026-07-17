@@ -13,6 +13,7 @@
   var NAV_ITEMS = [
     { href: HOME_HREF, label: 'Guías Destacadas', match: ['/', '/index.html', '/index'] },
     { href: '/blog.html', label: 'Blog', match: ['/blog', '/blog.html'] },
+    { href: '/mejores-sitios-acampar.html', label: 'Destinos', match: ['/mejores-sitios-acampar', '/mejores-sitios-acampar.html'] },
     { href: '/tiendas.html', label: 'Tiendas' },
     { href: '/sacos.html', label: 'Sacos' },
     { href: '/esterillas.html', label: 'Esterillas' },

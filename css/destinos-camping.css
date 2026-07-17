@@ -1,0 +1,377 @@
+/* Destinos camping — mapa mundial premium */
+
+.destinos-page {
+  position: relative;
+  background: #020403;
+  color: #fff;
+  overflow: hidden;
+}
+
+.destinos-page__bg {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(34, 197, 94, 0.14), transparent 34rem),
+    radial-gradient(circle at 82% 20%, rgba(56, 189, 248, 0.08), transparent 28rem),
+    linear-gradient(180deg, #030605 0%, #020403 100%);
+}
+
+.destinos-page__inner {
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .destinos-page__inner {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.destinos-hero {
+  text-align: center;
+  max-width: 46rem;
+  margin: 0 auto 1.75rem;
+  padding-inline: 0.5rem;
+}
+
+.destinos-hero__kicker {
+  display: inline-flex;
+  margin: 0 0 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(110, 231, 183, 0.35);
+  background: rgba(2, 4, 3, 0.45);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+}
+
+.destinos-hero__title {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: #f8faf9;
+}
+
+.destinos-hero__lead {
+  margin: 0.85rem auto 0;
+  max-width: 38rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(232, 240, 236, 0.75);
+}
+
+/* Mapa */
+.destinos-map-shell {
+  position: relative;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%),
+    rgba(8, 14, 12, 0.92);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(110, 231, 183, 0.08) inset;
+  overflow: hidden;
+}
+
+.destinos-map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.1 / 1;
+  min-height: 16rem;
+  background-color: #07120e;
+  background-image: url("../assets/destinos/world-map-premium.jpg");
+  background-size: cover;
+  background-position: center 42%;
+  background-repeat: no-repeat;
+}
+
+.destinos-map::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(2, 4, 3, 0.45) 100%),
+    linear-gradient(180deg, rgba(2, 4, 3, 0.15) 0%, transparent 30%, rgba(2, 4, 3, 0.35) 100%);
+}
+
+.destinos-map__pin {
+  position: absolute;
+  z-index: 2;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, #deff9a 0%, #34d399 45%, #059669 100%);
+  box-shadow:
+    0 0 0 3px rgba(16, 185, 129, 0.28),
+    0 0 18px rgba(52, 211, 153, 0.55);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.destinos-map__pin::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: inherit;
+}
+
+.destinos-map__pin:hover,
+.destinos-map__pin:focus-visible,
+.destinos-map__pin.is-active {
+  transform: translate(-50%, -50%) scale(1.35);
+  box-shadow:
+    0 0 0 4px rgba(222, 255, 154, 0.35),
+    0 0 28px rgba(52, 211, 153, 0.75);
+  outline: none;
+  z-index: 5;
+}
+
+.destinos-map__hint {
+  position: absolute;
+  z-index: 3;
+  left: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  padding: 0.4rem 0.7rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(2, 4, 3, 0.72);
+  backdrop-filter: blur(8px);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(232, 240, 236, 0.8);
+}
+
+/* Tooltip flotante */
+.destinos-tooltip {
+  position: absolute;
+  z-index: 20;
+  width: min(19rem, calc(100% - 1.5rem));
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, calc(-100% - 14px)) scale(0.96);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.destinos-tooltip.is-visible {
+  opacity: 1;
+  transform: translate(-50%, calc(-100% - 14px)) scale(1);
+  pointer-events: auto;
+}
+
+.destinos-tooltip__card {
+  overflow: hidden;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(110, 231, 183, 0.35);
+  background: rgba(8, 14, 12, 0.96);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.destinos-tooltip__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0a1612;
+}
+
+.destinos-tooltip__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destinos-tooltip__body {
+  padding: 0.75rem 0.85rem 0.9rem;
+}
+
+.destinos-tooltip__meta {
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+}
+
+.destinos-tooltip__title {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #f8faf9;
+}
+
+.destinos-tooltip__why {
+  margin: 0.4rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: rgba(232, 240, 236, 0.78);
+}
+
+/* Grid de tarjetas */
+.destinos-grid-header {
+  margin: 2.5rem 0 1.15rem;
+  text-align: left;
+}
+
+.destinos-grid-header h2 {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.destinos-grid-header p {
+  margin: 0.4rem 0 0;
+  color: rgba(232, 240, 236, 0.7);
+  font-size: 0.95rem;
+}
+
+.destinos-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .destinos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .destinos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .destinos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.destino-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%),
+    rgba(10, 16, 14, 0.9);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    border-color 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.destino-card:hover,
+.destino-card:focus-visible,
+.destino-card.is-active {
+  transform: translateY(-3px);
+  border-color: rgba(110, 231, 183, 0.42);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  outline: none;
+}
+
+.destino-card__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #07100d;
+}
+
+.destino-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.destino-card:hover .destino-card__media img,
+.destino-card.is-active .destino-card__media img {
+  transform: scale(1.04);
+}
+
+.destino-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0.85rem 0.95rem 1rem;
+}
+
+.destino-card__meta {
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+}
+
+.destino-card__title {
+  margin: 0.3rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #f8faf9;
+}
+
+.destino-card__why {
+  margin: 0.45rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: rgba(232, 240, 236, 0.75);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.destino-card__tip {
+  margin: 0.55rem 0 0;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: rgba(222, 255, 154, 0.85);
+}
+
+@media (max-width: 767px) {
+  .destinos-tooltip {
+    left: 50% !important;
+    top: auto !important;
+    bottom: 0.75rem;
+    width: calc(100% - 1.5rem);
+    transform: translate(-50%, 0) scale(0.98);
+  }
+
+  .destinos-tooltip.is-visible {
+    transform: translate(-50%, 0) scale(1);
+  }
+}

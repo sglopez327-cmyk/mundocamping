@@ -26,6 +26,7 @@ $pageMap = @{
   'farol-vs-frontal-camping.html' = @{ canonical = "$site/farol-vs-frontal-camping"; image = "$site/assets/linternas-cual-comprar-indeciso.png" }
   'checklist-primera-acampada.html' = @{ canonical = "$site/checklist-primera-acampada"; image = "$site/assets/accesorios-mochila-gps-cerillas-bosque.png" }
   'blog.html' = @{ canonical = "$site/blog"; ogType = 'website' }
+  'mejores-sitios-acampar.html' = @{ canonical = "$site/mejores-sitios-acampar"; ogType = 'website'; image = "$site/assets/destinos/world-map-premium.jpg" }
   'como-montar-tienda-campana.html' = @{ canonical = "$site/como-montar-tienda-campana"; image = "$site/assets/pareja-tienda-campana-bosque-amstaff.png" }
   'mochila-camping-principiantes-checklist.html' = @{ canonical = "$site/mochila-camping-principiantes-checklist"; image = "$site/assets/accesorios-mochila-gps-cerillas-bosque.png" }
   'tendencias-camping-2026.html' = @{ canonical = "$site/tendencias-camping-2026"; image = "$site/assets/estaciones-energia-portatiles-bosque-pinos.png" }

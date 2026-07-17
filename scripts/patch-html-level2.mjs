@@ -28,6 +28,7 @@ const PUBLIC_PAGES = [
   'farol-vs-frontal-camping.html',
   'checklist-primera-acampada.html',
   'blog.html',
+  'mejores-sitios-acampar.html',
   'como-montar-tienda-campana.html',
   'mochila-camping-principiantes-checklist.html',
   'tendencias-camping-2026.html',
