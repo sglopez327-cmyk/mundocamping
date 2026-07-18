@@ -159,20 +159,36 @@
   color: rgba(232, 240, 236, 0.8);
 }
 
-/* Tooltip flotante — left/top los calcula JS (positionTooltip) */
+/* Backdrop móvil (Tailwind helpers + fallback propio) */
+.destinos-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: opacity 0.2s ease;
+}
+
+.destinos-sheet-backdrop:not(.hidden) {
+  display: block;
+  opacity: 1;
+}
+
+body.destinos-sheet-open {
+  overflow: hidden;
+}
+
+/* Tooltip / sheet */
 .destinos-tooltip {
-  position: absolute;
-  z-index: 20;
-  width: min(19rem, calc(100% - 1.5rem));
-  max-width: calc(100% - 1.25rem);
   box-sizing: border-box;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(4px) scale(0.98);
   transition:
-    opacity 0.18s ease,
-    transform 0.18s ease;
-  will-change: left, top, opacity, transform;
+    opacity 0.2s ease,
+    transform 0.22s ease;
 }
 
 .destinos-tooltip.is-measuring {
@@ -183,16 +199,37 @@
 
 .destinos-tooltip.is-visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
   pointer-events: auto;
 }
 
-.destinos-tooltip.is-below {
-  transform: translateY(-4px) scale(0.98);
-}
+/* —— Desktop: flotante junto al pin —— */
+@media (min-width: 768px) {
+  .destinos-tooltip.is-desktop-float,
+  .destinos-tooltip:not(.is-mobile-sheet) {
+    position: absolute;
+    z-index: 20;
+    width: min(19rem, calc(100% - 1.5rem));
+    max-width: calc(100% - 1.25rem);
+    transform: translateY(4px) scale(0.98);
+    will-change: left, top, opacity, transform;
+  }
 
-.destinos-tooltip.is-below.is-visible:not(.is-measuring) {
-  transform: translateY(0) scale(1);
+  .destinos-tooltip.is-desktop-float.is-visible,
+  .destinos-tooltip:not(.is-mobile-sheet).is-visible {
+    transform: translateY(0) scale(1);
+  }
+
+  .destinos-tooltip.is-below {
+    transform: translateY(-4px) scale(0.98);
+  }
+
+  .destinos-tooltip.is-below.is-visible:not(.is-measuring) {
+    transform: translateY(0) scale(1);
+  }
+
+  .destinos-sheet-backdrop {
+    display: none !important;
+  }
 }
 
 .destinos-tooltip__card {
@@ -242,6 +279,114 @@
   font-size: 0.78rem;
   line-height: 1.45;
   color: rgba(232, 240, 236, 0.78);
+}
+
+.destinos-tooltip__tip {
+  margin: 0.65rem 0 0;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: rgba(222, 255, 154, 0.9);
+}
+
+.destinos-tooltip__actions {
+  margin-top: 1rem;
+}
+
+/* —— Móvil: panel inferior (bottom sheet) —— */
+@media (max-width: 767px) {
+  .destinos-tooltip.is-mobile-sheet,
+  .destinos-tooltip {
+    position: fixed;
+    z-index: 60;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    max-width: 100%;
+    max-height: min(78vh, 34rem);
+    margin: 0;
+    padding: 0;
+    transform: translateY(110%);
+    border-radius: 1.25rem 1.25rem 0 0;
+    overflow: hidden;
+    border: 1px solid rgba(110, 231, 183, 0.28);
+    border-bottom: none;
+    background: rgba(8, 14, 12, 0.92);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.55);
+  }
+
+  .destinos-tooltip.is-mobile-sheet.is-visible,
+  .destinos-tooltip.is-visible {
+    transform: translateY(0);
+  }
+
+  .destinos-tooltip__sheet {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: min(78vh, 34rem);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .destinos-tooltip__handle {
+    width: 2.5rem;
+    height: 0.28rem;
+    margin: 0.65rem auto 0.35rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.28);
+    flex-shrink: 0;
+  }
+
+  .destinos-tooltip__close {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.75rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 9999px;
+    background: rgba(2, 4, 3, 0.72);
+    backdrop-filter: blur(8px);
+    color: #f8faf9;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .destinos-tooltip__close:active {
+    transform: scale(0.96);
+  }
+
+  .destinos-tooltip.is-mobile-sheet .destinos-tooltip__media {
+    aspect-ratio: 16 / 9;
+    flex-shrink: 0;
+  }
+
+  .destinos-tooltip.is-mobile-sheet .destinos-tooltip__body {
+    padding: 1rem 1.15rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .destinos-tooltip.is-mobile-sheet .destinos-tooltip__title {
+    font-size: 1.25rem;
+  }
+
+  .destinos-tooltip.is-mobile-sheet .destinos-tooltip__why {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
 }
 
 /* Grid de tarjetas */
@@ -377,11 +522,4 @@
   font-size: 0.72rem;
   line-height: 1.4;
   color: rgba(222, 255, 154, 0.85);
-}
-
-@media (max-width: 767px) {
-  .destinos-tooltip {
-    /* En móvil el JS también clampa; ancho un poco más generoso */
-    width: min(20rem, calc(100% - 1.25rem));
-  }
 }

@@ -1,5 +1,7 @@
 /**
  * Mapa interactivo + grid de destinos
+ * Desktop: tooltip flotante junto al pin
+ * Móvil (<768px): panel inferior a pantalla completa de ancho
  */
 (function () {
   'use strict';
@@ -8,10 +10,16 @@
   var mapEl = document.getElementById('destinos-map');
   var gridEl = document.getElementById('destinos-grid');
   var tooltipEl = document.getElementById('destinos-tooltip');
-  if (!mapEl || !gridEl || !destinos.length) return;
+  var backdropEl = document.getElementById('destinos-sheet-backdrop');
+  if (!mapEl || !gridEl || !tooltipEl || !destinos.length) return;
 
   var activeId = null;
   var hideTimer = null;
+  var MOBILE_MQ = '(max-width: 767px)';
+
+  function isMobile() {
+    return window.matchMedia(MOBILE_MQ).matches;
+  }
 
   function xy(d) {
     if (typeof window.mcDestinoXY === 'function') return window.mcDestinoXY(d.lat, d.lng);
@@ -37,15 +45,21 @@
       btn.dataset.id = d.id;
       btn.setAttribute('aria-label', d.name + ', ' + d.country);
       btn.addEventListener('mouseenter', function () {
+        if (isMobile()) return;
         showTooltip(d, btn);
       });
       btn.addEventListener('focus', function () {
+        if (isMobile()) return;
         showTooltip(d, btn);
       });
-      btn.addEventListener('mouseleave', scheduleHide);
+      btn.addEventListener('mouseleave', function () {
+        if (isMobile()) return;
+        scheduleHide();
+      });
       btn.addEventListener('click', function (e) {
         e.preventDefault();
-        selectDestino(d.id, true);
+        e.stopPropagation();
+        selectDestino(d.id, !isMobile());
       });
       mapEl.appendChild(btn);
     });
@@ -111,40 +125,114 @@
     return null;
   }
 
+  function fillTooltipContent(d, mobile) {
+    var linkHtml = d.page
+      ? '<a href="' +
+        escapeHtml(d.page) +
+        '" class="destinos-tooltip__cta inline-flex items-center justify-center rounded-full border border-emerald-300/40 bg-emerald-500/15 px-4 py-2.5 text-sm font-bold text-[#deff9a]">Ver guía completa →</a>'
+      : '';
+
+    if (mobile) {
+      tooltipEl.innerHTML =
+        '<div class="destinos-tooltip__sheet">' +
+        '<div class="destinos-tooltip__handle" aria-hidden="true"></div>' +
+        '<button type="button" class="destinos-tooltip__close" aria-label="Cerrar">' +
+        '<span aria-hidden="true">×</span></button>' +
+        '<div class="destinos-tooltip__media"><img src="' +
+        escapeHtml(d.image) +
+        '" alt="' +
+        escapeHtml(d.name) +
+        '" width="640" height="360" decoding="async" /></div>' +
+        '<div class="destinos-tooltip__body">' +
+        '<p class="destinos-tooltip__meta">' +
+        escapeHtml(d.country + ' · ' + d.region) +
+        '</p>' +
+        '<p class="destinos-tooltip__title">' +
+        escapeHtml(d.name) +
+        '</p>' +
+        '<p class="destinos-tooltip__why">' +
+        escapeHtml(d.why) +
+        '</p>' +
+        (d.tip ? '<p class="destinos-tooltip__tip">' + escapeHtml(d.tip) + '</p>' : '') +
+        (linkHtml ? '<div class="destinos-tooltip__actions">' + linkHtml + '</div>' : '') +
+        '</div></div>';
+    } else {
+      tooltipEl.innerHTML =
+        '<div class="destinos-tooltip__card">' +
+        '<div class="destinos-tooltip__media"><img src="' +
+        escapeHtml(d.image) +
+        '" alt="" width="320" height="180" decoding="async" /></div>' +
+        '<div class="destinos-tooltip__body">' +
+        '<p class="destinos-tooltip__meta">' +
+        escapeHtml(d.country + ' · ' + d.region) +
+        '</p>' +
+        '<p class="destinos-tooltip__title">' +
+        escapeHtml(d.name) +
+        '</p>' +
+        '<p class="destinos-tooltip__why">' +
+        escapeHtml(d.why) +
+        '</p>' +
+        '</div></div>';
+    }
+  }
+
   function showTooltip(d, pinBtn) {
     clearTimeout(hideTimer);
     activeId = d.id;
 
-    tooltipEl.innerHTML =
-      '<div class="destinos-tooltip__card">' +
-      '<div class="destinos-tooltip__media"><img src="' +
-      escapeHtml(d.image) +
-      '" alt="" width="320" height="180" decoding="async" /></div>' +
-      '<div class="destinos-tooltip__body">' +
-      '<p class="destinos-tooltip__meta">' +
-      escapeHtml(d.country + ' · ' + d.region) +
-      '</p>' +
-      '<p class="destinos-tooltip__title">' +
-      escapeHtml(d.name) +
-      '</p>' +
-      '<p class="destinos-tooltip__why">' +
-      escapeHtml(d.why) +
-      '</p>' +
-      '</div></div>';
+    var mobile = isMobile();
+    fillTooltipContent(d, mobile);
 
-    positionTooltip(pinBtn);
+    tooltipEl.classList.toggle('is-mobile-sheet', mobile);
+    tooltipEl.classList.toggle('is-desktop-float', !mobile);
+
+    if (mobile) {
+      tooltipEl.style.left = '';
+      tooltipEl.style.top = '';
+      tooltipEl.style.transform = '';
+      tooltipEl.classList.remove('is-below', 'is-above', 'is-measuring');
+      tooltipEl.setAttribute('aria-modal', 'true');
+      tooltipEl.setAttribute('role', 'dialog');
+      tooltipEl.setAttribute('aria-label', d.name);
+      document.body.classList.add('destinos-sheet-open');
+
+      if (backdropEl) {
+        backdropEl.classList.remove('hidden');
+        backdropEl.setAttribute('aria-hidden', 'false');
+      }
+
+      var closeBtn = tooltipEl.querySelector('.destinos-tooltip__close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          hideTooltip(true);
+        });
+      }
+    } else {
+      tooltipEl.setAttribute('aria-modal', 'false');
+      if (backdropEl) {
+        backdropEl.classList.add('hidden');
+        backdropEl.setAttribute('aria-hidden', 'true');
+      }
+      document.body.classList.remove('destinos-sheet-open');
+      if (pinBtn) positionTooltip(pinBtn);
+    }
+
     tooltipEl.classList.add('is-visible');
     tooltipEl.setAttribute('aria-hidden', 'false');
 
-    var tipImg = tooltipEl.querySelector('img');
-    if (tipImg && !tipImg.complete) {
-      tipImg.addEventListener(
-        'load',
-        function () {
-          if (activeId === d.id) positionTooltip(pinBtn);
-        },
-        { once: true }
-      );
+    if (!mobile && pinBtn) {
+      var tipImg = tooltipEl.querySelector('img');
+      if (tipImg && !tipImg.complete) {
+        tipImg.addEventListener(
+          'load',
+          function () {
+            if (activeId === d.id) positionTooltip(pinBtn);
+          },
+          { once: true }
+        );
+      }
     }
 
     mapEl.querySelectorAll('.destinos-map__pin').forEach(function (p) {
@@ -153,12 +241,14 @@
   }
 
   /**
-   * Coloca el tooltip dentro del mapa:
+   * Coloca el tooltip dentro del mapa (solo desktop):
    * - arriba del pin si hay espacio
-   * - debajo si el pin está cerca del borde superior (o no cabe arriba)
+   * - debajo si el pin está cerca del borde superior
    * - left clamped para no salir por los lados
    */
   function positionTooltip(pinBtn) {
+    if (isMobile() || !pinBtn) return;
+
     var pad = 10;
     var gap = 12;
     var mapW = mapEl.clientWidth;
@@ -166,7 +256,10 @@
     var mapRect = mapEl.getBoundingClientRect();
     var pinRect = pinBtn.getBoundingClientRect();
 
-    // Medir sin flash: visible para layout, invisible a la vista
+    // El tooltip ya no vive dentro del mapa: coordenadas relativas al mapa + offset del shell
+    var shell = mapEl.closest('.destinos-map-shell') || mapEl;
+    var shellRect = shell.getBoundingClientRect();
+
     tooltipEl.classList.add('is-measuring');
     tooltipEl.classList.add('is-visible');
     tooltipEl.style.left = '0px';
@@ -176,12 +269,13 @@
     var tipW = tooltipEl.offsetWidth || Math.min(304, mapW - pad * 2);
     var tipH = tooltipEl.offsetHeight || 220;
 
-    var pinCenterX = pinRect.left - mapRect.left + pinRect.width / 2;
-    var pinTop = pinRect.top - mapRect.top;
-    var pinBottom = pinRect.bottom - mapRect.top;
+    var pinCenterX = pinRect.left - shellRect.left + pinRect.width / 2;
+    var pinTop = pinRect.top - shellRect.top;
+    var pinBottom = pinRect.bottom - shellRect.top;
+    var shellH = shellRect.height;
 
     var spaceAbove = pinTop - pad;
-    var spaceBelow = mapH - pinBottom - pad;
+    var spaceBelow = shellH - pinBottom - pad;
     var need = tipH + gap;
 
     var placeBelow;
@@ -196,8 +290,11 @@
     var top = placeBelow ? pinBottom + gap : pinTop - tipH - gap;
     var left = pinCenterX - tipW / 2;
 
-    left = Math.max(pad, Math.min(left, mapW - tipW - pad));
-    top = Math.max(pad, Math.min(top, mapH - tipH - pad));
+    left = Math.max(pad, Math.min(left, shellRect.width - tipW - pad));
+    top = Math.max(pad, Math.min(top, shellH - tipH - pad));
+
+    // Posicionar respecto al shell (position absolute sobre el shell)
+    ensureDesktopAnchor(shell);
 
     tooltipEl.style.left = Math.round(left) + 'px';
     tooltipEl.style.top = Math.round(top) + 'px';
@@ -206,16 +303,51 @@
     tooltipEl.classList.remove('is-measuring');
   }
 
-  function scheduleHide() {
-    hideTimer = setTimeout(function () {
-      tooltipEl.classList.remove('is-visible');
+  function ensureDesktopAnchor(shell) {
+    if (tooltipEl.parentElement === shell) return;
+    if (!isMobile()) {
+      shell.style.position = shell.style.position || 'relative';
+      shell.appendChild(tooltipEl);
+    }
+  }
+
+  function ensureMobileAnchor() {
+    var host = document.getElementById('destinos-mobile-host');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'destinos-mobile-host';
+      document.body.appendChild(host);
+    }
+    if (backdropEl && backdropEl.parentElement !== host) host.appendChild(backdropEl);
+    if (tooltipEl.parentElement !== host) host.appendChild(tooltipEl);
+  }
+
+  function hideTooltip(immediate) {
+    clearTimeout(hideTimer);
+    var doHide = function () {
+      tooltipEl.classList.remove('is-visible', 'is-mobile-sheet', 'is-desktop-float', 'is-below', 'is-above');
       tooltipEl.setAttribute('aria-hidden', 'true');
+      tooltipEl.setAttribute('aria-modal', 'false');
+      tooltipEl.style.left = '';
+      tooltipEl.style.top = '';
+      document.body.classList.remove('destinos-sheet-open');
+      if (backdropEl) {
+        backdropEl.classList.add('hidden');
+        backdropEl.setAttribute('aria-hidden', 'true');
+      }
       if (!document.querySelector('.destino-card.is-active')) {
         mapEl.querySelectorAll('.destinos-map__pin.is-active').forEach(function (p) {
           p.classList.remove('is-active');
         });
       }
-    }, 160);
+    };
+    if (immediate) doHide();
+    else hideTimer = setTimeout(doHide, 160);
+  }
+
+  function scheduleHide() {
+    if (isMobile()) return;
+    hideTooltip(false);
   }
 
   function selectDestino(id, scroll) {
@@ -228,7 +360,14 @@
     });
 
     var pin = mapEl.querySelector('.destinos-map__pin[data-id="' + id + '"]');
-    if (pin) showTooltip(d, pin);
+    if (isMobile()) {
+      ensureMobileAnchor();
+      showTooltip(d, pin);
+    } else {
+      var shell = mapEl.closest('.destinos-map-shell') || mapEl;
+      ensureDesktopAnchor(shell);
+      if (pin) showTooltip(d, pin);
+    }
 
     if (scroll) {
       var card = gridEl.querySelector('.destino-card[data-id="' + id + '"]');
@@ -237,10 +376,44 @@
   }
 
   tooltipEl.addEventListener('mouseenter', function () {
+    if (isMobile()) return;
     clearTimeout(hideTimer);
   });
   tooltipEl.addEventListener('mouseleave', scheduleHide);
 
+  if (backdropEl) {
+    backdropEl.addEventListener('click', function () {
+      hideTooltip(true);
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && tooltipEl.classList.contains('is-visible')) {
+      hideTooltip(true);
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    if (!tooltipEl.classList.contains('is-visible') || !activeId) return;
+    var d = findDestino(activeId);
+    var pin = mapEl.querySelector('.destinos-map__pin[data-id="' + activeId + '"]');
+    if (!d) return;
+    if (isMobile()) {
+      ensureMobileAnchor();
+      showTooltip(d, pin);
+    } else {
+      document.body.classList.remove('destinos-sheet-open');
+      if (backdropEl) backdropEl.classList.add('hidden');
+      var shell = mapEl.closest('.destinos-map-shell') || mapEl;
+      ensureDesktopAnchor(shell);
+      if (pin) showTooltip(d, pin);
+    }
+  });
+
   renderPins();
   renderGrid();
+
+  // Ancla inicial según viewport
+  if (isMobile()) ensureMobileAnchor();
+  else ensureDesktopAnchor(mapEl.closest('.destinos-map-shell') || mapEl);
 })();
