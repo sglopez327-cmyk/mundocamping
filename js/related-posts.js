@@ -17,7 +17,7 @@
     { href: 'mejores-sitios-acampar.html', title: 'Mejores destinos del mundo', tag: 'Destinos' },
     { href: 'top-5-sacos-dormir.html', title: 'Top 5 sacos 2026', tag: 'Ranking' },
     { href: 'top-5-tiendas-parejas.html', title: 'Top tiendas parejas', tag: 'Ranking' },
-    { href: 'guias.html', title: 'Índice de todas las guías', tag: 'Hub' },
+    { href: 'guias.html', title: 'Todas las guías', tag: 'Hub' },
     { href: 'blog.html', title: 'Blog completo', tag: 'Blog' },
   ];
 

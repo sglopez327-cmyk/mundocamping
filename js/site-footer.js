@@ -70,7 +70,7 @@
       '<div class="site-footer__nav-col">' +
       '<p class="site-footer__nav-title">Guías útiles</p>' +
       '<nav class="site-footer__links" aria-label="Guías prácticas">' +
-      '<a class="site-footer__link" href="/guias.html">Índice de guías</a>' +
+      '<a class="site-footer__link" href="/guias.html">Todas las guías</a>' +
       '<a class="site-footer__link" href="/blog.html">Blog</a>' +
       '<a class="site-footer__link" href="/mejores-sitios-acampar.html">Mejores sitios para acampar</a>' +
       '<a class="site-footer__link" href="/mejor-tienda-camping-2-personas.html">Mejor tienda 2 personas</a>' +
