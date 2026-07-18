@@ -71,13 +71,12 @@
       '<p class="site-footer__nav-title">Guías útiles</p>' +
       '<nav class="site-footer__links" aria-label="Guías prácticas">' +
       '<a class="site-footer__link" href="/guias.html">Índice de guías</a>' +
-      '<a class="site-footer__link" href="/acampar-en-espana.html">Acampar en España</a>' +
-      '<a class="site-footer__link" href="/calculadoras.html">Calculadoras</a>' +
-      '<a class="site-footer__link" href="/kits-recomendados.html">Kits recomendados</a>' +
-      '<a class="site-footer__link" href="/glosario-camping.html">Glosario</a>' +
-      '<a class="site-footer__link" href="/preguntas-frecuentes-camping.html">FAQ camping</a>' +
-      '<a class="site-footer__link" href="/mejores-sitios-acampar.html">Destinos del mundo</a>' +
-      '<a class="site-footer__link" href="/ofertas-camping-mes.html">Ofertas del mes</a>' +
+      '<a class="site-footer__link" href="/blog.html">Blog</a>' +
+      '<a class="site-footer__link" href="/mejores-sitios-acampar.html">Mejores sitios para acampar</a>' +
+      '<a class="site-footer__link" href="/mejor-tienda-camping-2-personas.html">Mejor tienda 2 personas</a>' +
+      '<a class="site-footer__link" href="/tendencias-camping-2026.html">Tendencias 2026</a>' +
+      '<a class="site-footer__link" href="/como-montar-tienda-campana.html">Montar tienda</a>' +
+      '<a class="site-footer__link" href="/mochila-camping-principiantes-checklist.html">Checklist mochila</a>' +
       '</nav>' +
       '</div>' +
       '<div class="site-footer__nav-col">' +
