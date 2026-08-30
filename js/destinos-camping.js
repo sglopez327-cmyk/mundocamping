@@ -21,6 +21,7 @@
     return window.matchMedia(MOBILE_MQ).matches;
   }
 
+  /** mapX/mapY = left/top % sobre la imagen del mapa; lat/lng = proyección para el resto */
   function xy(d) {
     if (typeof d.mapX === 'number' && typeof d.mapY === 'number') {
       return { x: d.mapX, y: d.mapY };
