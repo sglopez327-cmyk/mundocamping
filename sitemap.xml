@@ -277,6 +277,30 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://www.mundocamping.net/acampar-costa-brava</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/acampar-pirineos-aragon</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/acampar-cabo-gata</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/acampar-sierra-gredos</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://www.mundocamping.net/acampar-merzouga</loc>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>

@@ -22,6 +22,9 @@
   }
 
   function xy(d) {
+    if (typeof d.mapX === 'number' && typeof d.mapY === 'number') {
+      return { x: d.mapX, y: d.mapY };
+    }
     if (typeof window.mcDestinoXY === 'function') return window.mcDestinoXY(d.lat, d.lng);
     return { x: 50, y: 50 };
   }

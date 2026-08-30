@@ -1,6 +1,6 @@
 /**
- * 25 destinos potentes para acampar — Mundo Camping
- * x/y: posición en mapa equirectangular (porcentaje 0–100)
+ * Campings y destinos — Mundo Camping
+ * lat/lng: coordenadas reales · mapa: proyección ajustada al fondo CSS (cover + posición 42%)
  */
 window.MC_DESTINOS = [
   {
@@ -296,18 +296,69 @@ window.MC_DESTINOS = [
     page: 'acampar-picos-europa.html',
     name: 'Picos de Europa',
     country: 'España',
-    region: 'Cordillera Cantábrica',
+    region: 'Asturias / Cantabria',
     lat: 43.18,
     lng: -4.85,
     why: 'Caliza vertical, lagos de Covadonga y pueblos con sidra: el gran icono de montaña para acampar cerca de casa.',
     tip: 'Respeta zonas reguladas; hay campings excelentes en los valles.',
     image: './assets/destinos/destino-picos-europa.jpg',
   },
+  {
+    id: 'costa-brava',
+    page: 'acampar-costa-brava.html',
+    name: 'Costa Brava',
+    country: 'España',
+    region: 'Girona',
+    lat: 41.75,
+    lng: 3.02,
+    why: 'Calas escondidas, pines y camping a pocos minutos del mar: la costa mediterránea en modo acampada familiar.',
+    tip: 'Reserva en julio–agosto; combina playa por la mañana y rutas de GR-92.',
+    image: './assets/destinos/destino-costa-brava.jpg',
+  },
+  {
+    id: 'pirineos-aragon',
+    page: 'acampar-pirineos-aragon.html',
+    name: 'Pirineo aragonés',
+    country: 'España',
+    region: 'Huesca',
+    lat: 42.57,
+    lng: -0.52,
+    why: 'Ordesa, Aínsa y valles de alta montaña: camping de altitud con rutas de senderismo y noches frescas.',
+    tip: 'Lleva saco 3 estaciones; en verano hay campings junto a ríos de montaña.',
+    image: './assets/destinos/destino-pirineos-aragon.jpg',
+  },
+  {
+    id: 'cabo-gata',
+    page: 'acampar-cabo-gata.html',
+    name: 'Cabo de Gata',
+    country: 'España',
+    region: 'Almería',
+    lat: 36.78,
+    lng: -2.19,
+    why: 'Parque natural semiárido, calas volcánicas y cielos despejados: acampada junto al Mediterráneo más salvaje.',
+    tip: 'Protección solar y agua extra; respeta zonas restringidas del parque.',
+    image: './assets/destinos/destino-cabo-gata.jpg',
+  },
+  {
+    id: 'sierra-gredos',
+    page: 'acampar-sierra-gredos.html',
+    name: 'Sierra de Gredos',
+    country: 'España',
+    region: 'Ávila / Cáceres',
+    lat: 40.25,
+    lng: -5.12,
+    why: 'Circo de Gredos, gargantas y campings de montaña a poca distancia de Madrid: fin de semana perfecto.',
+    tip: 'Noches frescas en altura; campings en Hoyos del Espino o Navarredonda.',
+    image: './assets/destinos/destino-sierra-gredos.jpg',
+  },
 ];
 
-/** Convierte lat/lng a % en proyección equirectangular */
+/** Convierte lat/lng a % sobre el contenedor del mapa (ajustado a background-position: center 42%) */
 window.mcDestinoXY = function (lat, lng) {
-  var x = ((lng + 180) / 360) * 100;
-  var y = ((90 - lat) / 180) * 100;
+  var u = (lng + 180) / 360;
+  var v = (90 - lat) / 180;
+  var bgPosY = 0.42;
+  var x = u * 100;
+  var y = (0.5 + (v - bgPosY)) * 100;
   return { x: Math.min(98, Math.max(2, x)), y: Math.min(96, Math.max(4, y)) };
 };
