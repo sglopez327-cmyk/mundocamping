@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="./footer-premium.css" />
     <link rel="stylesheet" href="./site-header.css?v=11" />
     <link rel="stylesheet" href="./css/destinos-camping.css?v=7" />
-    <link rel="stylesheet" href="./css/campings-map.css?v=3" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="./css/campings-map.css?v=4" />
   </head>
   <body class="bg-[#020403] text-white antialiased">
     <header id="site-header"></header>
@@ -36,53 +37,33 @@
             <p class="destinos-hero__kicker">Directorio · Campings</p>
             <h1 id="destinos-title" class="destinos-hero__title">Campings y destinos para acampar</h1>
             <p class="destinos-hero__lead">
-              Mapa exclusivo de España con los mejores campings del país y un directorio de 29 fichas editoriales para
-              planificar tu escapada.
+              Mapa interactivo con OpenStreetMap y 10 campings destacados en España, más un directorio de 29 fichas
+              editoriales.
             </p>
           </header>
 
           <section class="mc-map-section" aria-labelledby="campings-map-title">
             <header class="mc-map-section__header">
               <h2 id="campings-map-title">Mapa de campings en España</h2>
-              <p>
-                10 campings destacados en la península ibérica y Baleares. Pasa el cursor o toca un marcador para ver la
-                ficha.
-              </p>
+              <p>10 campings con coordenadas GPS reales. Haz clic en un marcador para ver la ficha.</p>
             </header>
 
             <div class="mc-map-wrap">
-              <div id="campings-map" class="mc-map" role="application" aria-label="Mapa de campings en España">
-                <svg class="mc-map__img" viewBox="0 0 1000 1200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                  <defs>
-                    <linearGradient id="mc-sea" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#0b2a22"/>
-                      <stop offset="100%" stop-color="#04100d"/>
-                    </linearGradient>
-                    <linearGradient id="mc-land" x1="15%" y1="10%" x2="85%" y2="90%">
-                      <stop offset="0%" stop-color="#2a6b4e"/>
-                      <stop offset="55%" stop-color="#3d8b62"/>
-                      <stop offset="100%" stop-color="#1f4f3a"/>
-                    </linearGradient>
-                  </defs>
-                  <rect width="1000" height="1200" fill="url(#mc-sea)"/>
-                  <path fill="url(#mc-land)" stroke="#9ef0c8" stroke-width="2.5" stroke-opacity="0.45" d="M 360 520 C 370 430, 410 390, 460 375 C 510 365, 560 380, 600 405 C 640 435, 660 480, 655 540 C 645 610, 610 680, 560 730 C 510 770, 450 780, 400 760 C 350 735, 330 670, 340 600 C 345 560, 350 540, 360 520 Z"/>
-                  <path fill="url(#mc-land)" stroke="#9ef0c8" stroke-width="2" stroke-opacity="0.45" d="M 690 500 L 735 488 L 762 515 L 752 548 L 715 560 L 688 532 Z"/>
-                </svg>
-                <div class="mc-map__pins" aria-live="polite"></div>
-                <div id="campings-map-popover" class="mc-map-popover" hidden role="dialog" aria-modal="false"></div>
-              </div>
+              <div
+                id="campings-map"
+                class="mc-leaflet-map"
+                role="application"
+                aria-label="Mapa interactivo OpenStreetMap de campings en España"
+              ></div>
             </div>
 
             <p class="mc-map-legend">
               <span class="mc-map-legend__item">
                 <span class="mc-map-legend__dot" aria-hidden="true"></span>
-                10 campings seleccionados · clic o hover para detalles
+                OpenStreetMap · 10 campings seleccionados
               </span>
             </p>
           </section>
-
-          <div id="campings-map-backdrop" class="mc-map-backdrop" aria-hidden="true"></div>
-          <div id="campings-map-sheet" class="mc-map-sheet" role="dialog" aria-modal="true" aria-hidden="true"></div>
 
           <div class="destinos-grid-header">
             <h2>29 destinos en el directorio</h2>
@@ -107,8 +88,9 @@
     <link rel="stylesheet" href="./css/home-tourism.css" />
     <script defer src="./js/site-header.js?v=11"></script>
     <script defer src="./js/site-footer.js"></script>
-    <script defer src="./js/campings-map-data.js?v=6"></script>
-    <script defer src="./js/campings-map.js?v=3"></script>
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script defer src="./js/campings-map-data.js?v=7"></script>
+    <script defer src="./js/campings-map.js?v=4"></script>
     <script defer src="./js/campings-catalog.js?v=1"></script>
   </body>
 </html>
