@@ -1,4 +1,4 @@
-/** Catálogo Leaflet — 10 mejores campings de España (coords GPS) */
+/** Catálogo Leaflet — mejores campings de España (coords GPS) */
 window.CAMPINGS_MAP_SPAIN = [
   {
     id: 'picos-europa',
@@ -93,6 +93,15 @@ window.CAMPINGS_MAP_SPAIN = [
     coords: [41.82, 3.07],
     image: './assets/destinos/destino-costa-brava.jpg',
     page: 'acampar-costa-brava.html',
+  },
+  {
+    id: 'camping-pantano-chorro',
+    nombre: 'Camping Pantano del Chorro',
+    ubicacion: 'Ardales, Málaga · Embalse Conde de Guadalhorce',
+    descripcion:
+      'A orillas del pantano de El Chorro, junto al Caminito del Rey: parcelas en el bosque, baño en el embalse y senderismo por los Gaitanes.',
+    coords: [36.9199, -4.8042],
+    image: './assets/destinos/destino-cabo-gata.jpg',
   },
 ];
 
