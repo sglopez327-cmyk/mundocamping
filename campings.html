@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Directorio de campings: 29 destinos para acampar en España y el mundo, con fichas editoriales y consejos prácticos."
+      content="Mapa interactivo y directorio de campings: destinos en España y el mundo con fichas editoriales y consejos prácticos."
     />
     <title>Mundo Camping | Directorio de campings</title>
     <link rel="canonical" href="https://www.mundocamping.net/campings" />
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./footer-premium.css" />
     <link rel="stylesheet" href="./site-header.css?v=11" />
     <link rel="stylesheet" href="./css/destinos-camping.css?v=7" />
+    <link rel="stylesheet" href="./css/campings-map.css?v=1" />
   </head>
   <body class="bg-[#020403] text-white antialiased">
     <header id="site-header"></header>
@@ -35,10 +36,49 @@
             <p class="destinos-hero__kicker">Directorio · Campings</p>
             <h1 id="destinos-title" class="destinos-hero__title">Campings y destinos para acampar</h1>
             <p class="destinos-hero__lead">
-              29 fichas editoriales con consejos prácticos para elegir dónde pasar la noche bajo las estrellas, en
-              España y por el mundo.
+              Explora el mapa interactivo y descubre 29 fichas editoriales para acampar en España y por el mundo.
             </p>
           </header>
+
+          <section class="mc-map-section" aria-labelledby="campings-map-title">
+            <header class="mc-map-section__header">
+              <h2 id="campings-map-title">Mapa interactivo</h2>
+              <p>
+                Haz clic en un marcador para ver la ficha. Cuatro destinos clave en la península ibérica y ejemplos
+                internacionales.
+              </p>
+            </header>
+
+            <div class="mc-map-wrap">
+              <div id="campings-map" class="mc-map" role="application" aria-label="Mapa de campings del mundo">
+                <img
+                  class="mc-map__img"
+                  src="./assets/destinos/world-map-premium.jpg"
+                  width="1350"
+                  height="900"
+                  alt="Mapamundi con marcadores de campings en España y destinos internacionales"
+                  decoding="async"
+                  fetchpriority="high"
+                />
+                <div class="mc-map__pins" aria-live="polite"></div>
+                <div id="campings-map-popover" class="mc-map-popover" hidden role="dialog" aria-modal="false"></div>
+              </div>
+            </div>
+
+            <p class="mc-map-legend">
+              <span class="mc-map-legend__item">
+                <span class="mc-map-legend__dot mc-map-legend__dot--spain" aria-hidden="true"></span>
+                Destinos en España
+              </span>
+              <span class="mc-map-legend__item">
+                <span class="mc-map-legend__dot mc-map-legend__dot--world" aria-hidden="true"></span>
+                Destinos internacionales
+              </span>
+            </p>
+          </section>
+
+          <div id="campings-map-backdrop" class="mc-map-backdrop" aria-hidden="true"></div>
+          <div id="campings-map-sheet" class="mc-map-sheet" role="dialog" aria-modal="true" aria-hidden="true"></div>
 
           <div class="destinos-grid-header">
             <h2>29 destinos en el directorio</h2>
@@ -63,7 +103,8 @@
     <link rel="stylesheet" href="./css/home-tourism.css" />
     <script defer src="./js/site-header.js?v=11"></script>
     <script defer src="./js/site-footer.js"></script>
-    <script defer src="./js/campings-map-data.js?v=2"></script>
+    <script defer src="./js/campings-map-data.js?v=3"></script>
+    <script defer src="./js/campings-map.js?v=1"></script>
     <script defer src="./js/campings-catalog.js?v=1"></script>
   </body>
 </html>

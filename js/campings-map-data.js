@@ -1,4 +1,21 @@
-/** Catálogo de campings — directorio de destinos */
+/** Mapa + catálogo de campings — posiciones % calibradas sobre world-map-premium.jpg (1350×900) */
+window.CAMPINGS_MAP = {
+  image: './assets/destinos/world-map-premium.jpg',
+  width: 1350,
+  height: 900,
+  markers: [
+    /* España — coordenadas validadas sobre el mapamundi del sitio */
+    { id: 'picos-europa', left: 46.5, top: 47, region: 'spain' },
+    { id: 'costa-brava', left: 49.5, top: 48, region: 'spain' },
+    { id: 'pirineos-aragon', left: 48.5, top: 49, region: 'spain' },
+    { id: 'cabo-gata', left: 48, top: 57, region: 'spain' },
+    /* Destinos internacionales */
+    { id: 'yosemite', left: 17, top: 29, region: 'world' },
+    { id: 'swiss-alps', left: 52, top: 24, region: 'world' },
+    { id: 'torres-del-paine', left: 30, top: 78, region: 'world' },
+  ],
+};
+
 window.CAMPINGS_CATALOG = [
   {
     id: 'torres-del-paine',
