@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" role="img" aria-label="Mapa de España">
+  <defs>
+    <linearGradient id="sea" x1="0%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#0a221c"/>
+      <stop offset="100%" stop-color="#040d0b"/>
+    </linearGradient>
+    <linearGradient id="land" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#24543f"/>
+      <stop offset="50%" stop-color="#2f6b4f"/>
+      <stop offset="100%" stop-color="#1a4030"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="1200" fill="url(#sea)"/>
+  <g fill="url(#land)" stroke="#8ef0c5" stroke-width="2" stroke-opacity="0.4">
+    <!-- Península ibérica -->
+    <path d="
+      M 330 620
+      C 340 520, 380 460, 430 440
+      C 470 420, 520 430, 560 450
+      C 600 470, 630 500, 650 540
+      C 670 580, 660 640, 640 700
+      C 620 760, 580 810, 530 840
+      C 480 860, 420 850, 380 820
+      C 340 790, 320 740, 310 680
+      C 300 620, 310 560, 330 620
+      Z"/>
+    <!-- Baleares -->
+    <path d="M 690 520 L 730 510 L 755 535 L 745 565 L 710 575 L 685 550 Z"/>
+  </g>
+  <rect width="1000" height="1200" fill="url(#vignette)" pointer-events="none"/>
+</svg>

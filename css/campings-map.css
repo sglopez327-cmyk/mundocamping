@@ -1,4 +1,4 @@
-/* Mapa interactivo de campings — posicionamiento % sobre imagen fija */
+/* Mapa interactivo de campings en España — posicionamiento % sobre imagen fija */
 
 .mc-map-section {
   margin: 0 0 2.5rem;
@@ -25,17 +25,19 @@
 
 .mc-map-wrap {
   border-radius: 1.15rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(110, 231, 183, 0.22);
   background: rgba(4, 8, 7, 0.85);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(222, 255, 154, 0.06),
+    0 18px 48px rgba(0, 0, 0, 0.45);
   overflow: hidden;
 }
 
 .mc-map {
   position: relative;
   width: 100%;
-  aspect-ratio: 1350 / 900;
-  background: #07100d;
+  aspect-ratio: 1000 / 1200;
+  background: #061612;
 }
 
 .mc-map__img {
@@ -53,6 +55,7 @@
   pointer-events: none;
 }
 
+/* Pines brillantes con pulso */
 .mc-map__pin {
   --pin-x: 50%;
   --pin-y: 50%;
@@ -63,67 +66,89 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.15rem;
+  gap: 0.35rem;
   padding: 0;
   border: 0;
   background: transparent;
   cursor: pointer;
   pointer-events: auto;
   transform: translate(-50%, -100%);
-  transition: transform 0.2s ease;
   touch-action: manipulation;
 }
 
 .mc-map__pin:focus-visible {
   outline: 2px solid #deff9a;
-  outline-offset: 4px;
+  outline-offset: 6px;
   border-radius: 9999px;
 }
 
-.mc-map__pin-dot {
+.mc-map__pin-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: -1.25rem 0 0 -1.25rem;
+  border-radius: 9999px;
+  border: 2px solid rgba(222, 255, 154, 0.75);
+  background: rgba(222, 255, 154, 0.12);
+  animation: mc-pin-pulse 2s ease-out infinite;
+  pointer-events: none;
+}
+
+.mc-map__pin-core {
+  position: relative;
+  z-index: 1;
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   border-radius: 9999px;
-  border: 2px solid #fff;
-  background: #22c55e;
+  border: 3px solid #fff;
+  background: linear-gradient(145deg, #deff9a 0%, #22c55e 55%, #059669 100%);
   box-shadow:
-    0 0 0 3px rgba(34, 197, 94, 0.35),
-    0 4px 12px rgba(0, 0, 0, 0.45);
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
+    0 0 12px rgba(222, 255, 154, 0.95),
+    0 0 28px rgba(34, 197, 94, 0.55),
+    0 4px 14px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
 }
 
-.mc-map__pin--spain .mc-map__pin-dot {
-  width: 16px;
-  height: 16px;
-  background: #deff9a;
-  box-shadow:
-    0 0 0 4px rgba(222, 255, 154, 0.28),
-    0 4px 14px rgba(0, 0, 0, 0.5);
+@keyframes mc-pin-pulse {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.95;
+  }
+  70% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
 }
 
 .mc-map__pin-label {
-  max-width: 7.5rem;
-  padding: 0.2rem 0.45rem;
-  border-radius: 0.35rem;
-  background: rgba(2, 4, 3, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 1;
+  max-width: 9rem;
+  padding: 0.28rem 0.55rem;
+  border-radius: 0.4rem;
+  background: linear-gradient(135deg, rgba(222, 255, 154, 0.95) 0%, rgba(110, 231, 183, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #f8faf9;
+  color: #042210;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
   opacity: 0;
-  transform: translateY(4px);
+  transform: translateY(6px) scale(0.92);
   transition:
-    opacity 0.2s ease,
-    transform 0.2s ease;
+    opacity 0.22s ease,
+    transform 0.22s ease;
   pointer-events: none;
 }
 
@@ -131,38 +156,40 @@
   .mc-map__pin:hover .mc-map__pin-label,
   .mc-map__pin.is-active .mc-map__pin-label {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
-.mc-map__pin:hover .mc-map__pin-dot,
-.mc-map__pin.is-active .mc-map__pin-dot {
-  transform: scale(1.15);
+.mc-map__pin:hover .mc-map__pin-core,
+.mc-map__pin.is-active .mc-map__pin-core {
+  transform: scale(1.2);
 }
 
-.mc-map__pin.is-active .mc-map__pin-dot {
-  background: #6ee7b7;
+.mc-map__pin.is-active .mc-map__pin-ring {
+  animation: none;
+  transform: scale(1.1);
+  opacity: 0.85;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.mc-map__pin--spain.is-active .mc-map__pin-dot {
-  background: #fff;
-}
-
-/* Popover escritorio */
+/* Tarjeta informativa — escritorio */
 .mc-map-popover {
   position: absolute;
   z-index: 20;
-  width: min(18.5rem, calc(100% - 1.5rem));
+  width: min(19rem, calc(100% - 1.5rem));
   padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 0.85rem;
+  border: 1px solid rgba(222, 255, 154, 0.28);
+  border-radius: 0.9rem;
   background:
-    linear-gradient(165deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%),
-    rgba(8, 14, 12, 0.96);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+    linear-gradient(165deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.02) 100%),
+    rgba(6, 14, 11, 0.97);
+  box-shadow:
+    0 0 24px rgba(222, 255, 154, 0.12),
+    0 16px 40px rgba(0, 0, 0, 0.55);
   opacity: 0;
   visibility: hidden;
-  transform: translate(-50%, calc(-100% - 18px)) scale(0.96);
+  transform: translate(-50%, calc(-100% - 22px)) scale(0.96);
   transition:
     opacity 0.2s ease,
     transform 0.2s ease,
@@ -173,22 +200,22 @@
 .mc-map-popover.is-open {
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, calc(-100% - 18px)) scale(1);
+  transform: translate(-50%, calc(-100% - 22px)) scale(1);
   pointer-events: auto;
 }
 
 .mc-map-popover.is-below {
-  transform: translate(-50%, 18px) scale(0.96);
+  transform: translate(-50%, 22px) scale(0.96);
 }
 
 .mc-map-popover.is-below.is-open {
-  transform: translate(-50%, 18px) scale(1);
+  transform: translate(-50%, 22px) scale(1);
 }
 
 .mc-map-popover__media {
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: 0.85rem 0.85rem 0 0;
+  border-radius: 0.9rem 0.9rem 0 0;
   background: #07100d;
 }
 
@@ -200,43 +227,37 @@
 }
 
 .mc-map-popover__body {
-  padding: 0.75rem 0.85rem 0.85rem;
+  padding: 0.8rem 0.9rem 0.9rem;
 }
 
 .mc-map-popover__meta {
   margin: 0;
   font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #6ee7b7;
 }
 
 .mc-map-popover__title {
-  margin: 0.25rem 0 0;
-  font-size: 1rem;
-  font-weight: 800;
+  margin: 0.3rem 0 0;
+  font-size: 1.02rem;
+  font-weight: 900;
   letter-spacing: -0.02em;
   color: #f8faf9;
+  line-height: 1.25;
 }
 
-.mc-map-popover__why {
-  margin: 0.4rem 0 0;
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: rgba(232, 240, 236, 0.78);
-}
-
-.mc-map-popover__tip {
+.mc-map-popover__desc {
   margin: 0.45rem 0 0;
-  font-size: 0.72rem;
-  line-height: 1.4;
-  color: rgba(222, 255, 154, 0.9);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(232, 240, 236, 0.82);
 }
 
 .mc-map-popover__cta {
   display: inline-flex;
-  margin-top: 0.65rem;
+  margin-top: 0.7rem;
   font-size: 0.72rem;
   font-weight: 800;
   color: #deff9a;
@@ -254,31 +275,25 @@
   margin-top: 0.85rem;
   padding: 0.65rem 0.85rem;
   border-radius: 0.65rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(110, 231, 183, 0.18);
+  background: rgba(110, 231, 183, 0.05);
   font-size: 0.72rem;
-  color: rgba(232, 240, 236, 0.72);
+  color: rgba(232, 240, 236, 0.78);
 }
 
 .mc-map-legend__item {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
 .mc-map-legend__dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 9999px;
   border: 2px solid #fff;
-}
-
-.mc-map-legend__dot--spain {
-  background: #deff9a;
-}
-
-.mc-map-legend__dot--world {
-  background: #22c55e;
+  background: linear-gradient(145deg, #deff9a, #22c55e);
+  box-shadow: 0 0 8px rgba(222, 255, 154, 0.7);
 }
 
 /* Panel inferior móvil */
@@ -307,10 +322,10 @@
   bottom: 0;
   max-height: min(78vh, 32rem);
   border-radius: 1.15rem 1.15rem 0 0;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(222, 255, 154, 0.2);
   border-bottom: 0;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%),
     #0a1210;
   box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.55);
   transform: translateY(105%);
@@ -398,17 +413,6 @@
   color: rgba(232, 240, 236, 0.82);
 }
 
-.mc-map-sheet__tip {
-  margin: 0.65rem 0 0;
-  padding: 0.55rem 0.65rem;
-  border-radius: 0.55rem;
-  border: 1px solid rgba(222, 255, 154, 0.22);
-  background: rgba(222, 255, 154, 0.08);
-  font-size: 0.8rem;
-  line-height: 1.45;
-  color: rgba(222, 255, 154, 0.95);
-}
-
 .mc-map-sheet__cta {
   display: flex;
   justify-content: center;
@@ -437,5 +441,12 @@
 
   .mc-map__pin-label {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mc-map__pin-ring {
+    animation: none;
+    opacity: 0.45;
   }
 }

@@ -1,6 +1,6 @@
 /**
- * Mapa interactivo de campings
- * Imagen fija + capa de pines con top/left en % (sin proyección geográfica).
+ * Mapa interactivo de campings en España
+ * Pines con top/left en % sobre imagen fija.
  */
 (function () {
   'use strict';
@@ -36,34 +36,38 @@
     return mobileMq.matches;
   }
 
-  function getItem(marker) {
-    return catalogById[marker.id] || null;
+  function resolveMarker(marker) {
+    var catalogItem = catalogById[marker.id];
+    return {
+      id: marker.id,
+      name: marker.name || (catalogItem && catalogItem.name) || 'Camping',
+      location: marker.location || (catalogItem && catalogItem.country + ' · ' + catalogItem.region) || '',
+      description: marker.description || (catalogItem && catalogItem.why) || '',
+      image: marker.image || (catalogItem && catalogItem.image) || '',
+      page: marker.page || (catalogItem && catalogItem.page) || '',
+    };
   }
 
   function renderPins() {
     if (!pinsLayer) return;
 
     pinsLayer.innerHTML = markers
-      .map(function (marker) {
-        var item = getItem(marker);
-        if (!item) return '';
-
-        var spainClass = marker.region === 'spain' ? ' mc-map__pin--spain' : '';
+      .map(function (marker, index) {
+        var item = resolveMarker(marker);
         return (
-          '<button type="button" class="mc-map__pin' +
-          spainClass +
-          '" data-id="' +
+          '<button type="button" class="mc-map__pin" data-id="' +
           esc(marker.id) +
           '" style="--pin-x:' +
           marker.left +
           '%;--pin-y:' +
           marker.top +
           '%;" aria-label="' +
-          esc(item.name + ', ' + item.country) +
+          esc(item.name + ', ' + item.location) +
           '" aria-expanded="false">' +
-          '<span class="mc-map__pin-dot" aria-hidden="true"></span>' +
+          '<span class="mc-map__pin-ring" aria-hidden="true"></span>' +
+          '<span class="mc-map__pin-core" aria-hidden="true"></span>' +
           '<span class="mc-map__pin-label">' +
-          esc(item.name) +
+          esc(item.name.replace(/^Camping\s+/i, '')) +
           '</span>' +
           '</button>'
         );
@@ -71,29 +75,46 @@
       .join('');
   }
 
-  function cardHtml(item, linkClass) {
+  function cardHtml(item, linkClass, bodyClass) {
+    var bodyCls = bodyClass || 'mc-map-popover__body';
+    var metaCls = bodyClass ? 'mc-map-sheet__meta' : 'mc-map-popover__meta';
+    var titleCls = bodyClass ? 'mc-map-sheet__title' : 'mc-map-popover__title';
+    var descCls = bodyClass ? 'mc-map-sheet__why' : 'mc-map-popover__desc';
+    var mediaPrefix = bodyClass ? 'mc-map-sheet' : 'mc-map-popover';
+
     return (
       (item.image
-        ? '<div class="mc-map-popover__media"><img src="' +
+        ? '<div class="' +
+          mediaPrefix +
+          '__media"><img src="' +
           esc(item.image) +
           '" alt="" width="480" height="270" loading="lazy" decoding="async" /></div>'
         : '') +
-      '<div class="mc-map-popover__body">' +
-      '<p class="mc-map-popover__meta">' +
-      esc(item.country + ' · ' + item.region) +
+      '<div class="' +
+      bodyCls +
+      '">' +
+      '<p class="' +
+      metaCls +
+      '">' +
+      esc(item.location) +
       '</p>' +
-      '<h3 class="mc-map-popover__title">' +
+      '<h3 class="' +
+      titleCls +
+      '">' +
       esc(item.name) +
       '</h3>' +
-      '<p class="mc-map-popover__why">' +
-      esc(item.why) +
+      '<p class="' +
+      descCls +
+      '">' +
+      esc(item.description) +
       '</p>' +
-      (item.tip ? '<p class="mc-map-popover__tip">' + esc(item.tip) + '</p>' : '') +
-      '<a href="' +
-      esc(item.page) +
-      '" class="' +
-      linkClass +
-      '">Ver ficha completa →</a>' +
+      (item.page
+        ? '<a href="' +
+          esc(item.page) +
+          '" class="' +
+          linkClass +
+          '">Ver guía del destino →</a>'
+        : '') +
       '</div>'
     );
   }
@@ -117,6 +138,13 @@
     document.body.style.overflow = '';
   }
 
+  function findMarker(id) {
+    for (var i = 0; i < markers.length; i++) {
+      if (markers[i].id === id) return markers[i];
+    }
+    return null;
+  }
+
   function positionPopover(pin) {
     if (!popover || isMobile()) return;
 
@@ -126,8 +154,7 @@
     var pinCenterY = pinRect.top + pinRect.height / 2 - mapRect.top;
 
     var popoverHeight = popover.offsetHeight || 280;
-    var spaceAbove = pinCenterY;
-    var placeBelow = spaceAbove < popoverHeight + 24;
+    var placeBelow = pinCenterY < popoverHeight + 24;
 
     popover.style.left = pinCenterX + 'px';
     popover.style.top = pinCenterY + 'px';
@@ -135,13 +162,10 @@
   }
 
   function openPin(pin) {
-    var marker = markers.find(function (m) {
-      return m.id === pin.getAttribute('data-id');
-    });
+    var marker = findMarker(pin.getAttribute('data-id'));
     if (!marker) return;
 
-    var item = getItem(marker);
-    if (!item) return;
+    var item = resolveMarker(marker);
 
     if (activePin && activePin !== pin) {
       activePin.classList.remove('is-active');
@@ -158,26 +182,7 @@
           '<button type="button" class="mc-map-sheet__close" aria-label="Cerrar">×</button>' +
           '<div class="mc-map-sheet__handle" aria-hidden="true"><span></span></div>' +
           '<div class="mc-map-sheet__scroll">' +
-          (item.image
-            ? '<div class="mc-map-sheet__media"><img src="' +
-              esc(item.image) +
-              '" alt="' +
-              esc(item.name) +
-              '" width="640" height="360" loading="lazy" /></div>'
-            : '') +
-          '<p class="mc-map-sheet__meta">' +
-          esc(item.country + ' · ' + item.region) +
-          '</p>' +
-          '<h3 class="mc-map-sheet__title">' +
-          esc(item.name) +
-          '</h3>' +
-          '<p class="mc-map-sheet__why">' +
-          esc(item.why) +
-          '</p>' +
-          (item.tip ? '<p class="mc-map-sheet__tip">' + esc(item.tip) + '</p>' : '') +
-          '<a href="' +
-          esc(item.page) +
-          '" class="mc-map-sheet__cta">Ver ficha completa</a>' +
+          cardHtml(item, 'mc-map-sheet__cta', 'mc-map-sheet__body') +
           '</div>';
 
         sheet.querySelector('.mc-map-sheet__close').addEventListener('click', closeAll);

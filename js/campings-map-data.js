@@ -1,18 +1,113 @@
-/** Mapa + catálogo de campings — posiciones % calibradas sobre world-map-premium.jpg (1350×900) */
+/** Mapa exclusivo de España — posiciones % calibradas (top / left) */
 window.CAMPINGS_MAP = {
-  image: './assets/destinos/world-map-premium.jpg',
-  width: 1350,
-  height: 900,
+  image: './assets/destinos/spain-map.svg',
+  width: 1000,
+  height: 1200,
   markers: [
-    /* España — coordenadas validadas sobre el mapamundi del sitio */
-    { id: 'picos-europa', left: 46.5, top: 47, region: 'spain' },
-    { id: 'costa-brava', left: 49.5, top: 48, region: 'spain' },
-    { id: 'pirineos-aragon', left: 48.5, top: 49, region: 'spain' },
-    { id: 'cabo-gata', left: 48, top: 57, region: 'spain' },
-    /* Destinos internacionales */
-    { id: 'yosemite', left: 17, top: 29, region: 'world' },
-    { id: 'swiss-alps', left: 52, top: 24, region: 'world' },
-    { id: 'torres-del-paine', left: 30, top: 78, region: 'world' },
+    {
+      id: 'picos-europa',
+      left: 45,
+      top: 46,
+      name: 'Camping Picos de Europa',
+      location: 'Asturias',
+      description:
+        'Despierta entre hayedos y caliza vertical: acceso a rutas del Parque Nacional, sidra y valles verdes del Cantábrico.',
+      image: './assets/destinos/destino-picos-europa.jpg',
+      page: 'acampar-picos-europa.html',
+    },
+    {
+      id: 'sanguli-salou',
+      left: 54,
+      top: 52,
+      name: 'Camping Resort Sangulí Salou',
+      location: 'Salou, Tarragona · Costa Dorada',
+      description:
+        'Resort junto al mar con piscinas, toboganes y playa a pocos minutos: ideal para familias en la Costa Dorada.',
+      image: './assets/destinos/destino-costa-brava.jpg',
+    },
+    {
+      id: 'camping-gavina',
+      left: 55,
+      top: 48,
+      name: 'Camping Gavina',
+      location: 'Tamarit, Tarragona · Costa Brava',
+      description:
+        'Sombra de pinos sobre calas transparentes: Tamarit, la petita cala y el ambiente relajado de la Costa Daurada norte.',
+      image: './assets/destinos/destino-costa-brava.jpg',
+    },
+    {
+      id: 'camping-bolnuevo',
+      left: 52,
+      top: 62,
+      name: 'Camping Bolnuevo',
+      location: 'Bolnuevo, Murcia',
+      description:
+        'Erosiones de Bolnuevo, playas vírgenes y el encanto del litoral murciano: acampada mediterránea con sol casi todo el año.',
+      image: './assets/destinos/destino-cabo-gata.jpg',
+    },
+    {
+      id: 'camping-las-dunas',
+      left: 56,
+      top: 46,
+      name: 'Camping Las Dunas',
+      location: 'Sant Pere Pescador, Girona · Costa Brava',
+      description:
+        'Dunas, windsurf en la Bahía de Roses y acceso rápido a Cadaqués y Cap de Creus: Costa Brava en estado puro.',
+      image: './assets/destinos/destino-costa-brava.jpg',
+    },
+    {
+      id: 'camping-ordesa',
+      left: 49,
+      top: 47,
+      name: 'Camping Ordesa',
+      location: 'Torla, Huesca · Pirineo Aragonés',
+      description:
+        'A los pies de Ordesa y Monte Perdido: cañones, ibones y senderismo de alta montaña desde tu parcela pirenaica.',
+      image: './assets/destinos/destino-pirineos-aragon.jpg',
+      page: 'acampar-pirineos-aragon.html',
+    },
+    {
+      id: 'camping-kiko-park',
+      left: 54,
+      top: 57,
+      name: 'Camping Kiko Park',
+      location: 'Oliva, Valencia',
+      description:
+        'Entre naranjos y la playa de Oliva: ambiente familiar, piscinas y la Costa Blanca a un paso de Dénia y Gandía.',
+      image: './assets/destinos/destino-costa-brava.jpg',
+    },
+    {
+      id: 'camping-el-escorial',
+      left: 45,
+      top: 55,
+      name: 'Camping El Escorial',
+      location: 'San Lorenzo de El Escorial, Madrid',
+      description:
+        'Sierra de Guadarrama a tiro de piedra: escapada de montaña desde Madrid con rutas, frescor y cielos despejados.',
+      image: './assets/destinos/destino-sierra-gredos.jpg',
+      page: 'acampar-sierra-gredos.html',
+    },
+    {
+      id: 'camping-playa-joyel',
+      left: 47,
+      top: 44,
+      name: 'Camping Playa Joyel',
+      location: 'Noja, Cantabria',
+      description:
+        'Playa de Joyel y marisma de Santoña: acampada verde en el Cantábrico con paseos costeros y gastronomía marinera.',
+      image: './assets/destinos/destino-picos-europa.jpg',
+    },
+    {
+      id: 'camping-cala-gogo',
+      left: 55.5,
+      top: 47,
+      name: 'Camping Cala Gogo',
+      location: 'Platja d\'Aro, Girona · Costa Brava',
+      description:
+        'Cala Gogo y el corazón de la Costa Brava: calas escondidas, caminos de ronda y noches bajo pinos junto al Mediterráneo.',
+      image: './assets/destinos/destino-costa-brava.jpg',
+      page: 'acampar-costa-brava.html',
+    },
   ],
 };
 
