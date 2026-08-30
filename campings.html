@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./mundo-camping.css" />
     <link rel="stylesheet" href="./footer-premium.css" />
     <link rel="stylesheet" href="./site-header.css?v=11" />
-    <link rel="stylesheet" href="./css/destinos-camping.css?v=4" />
+    <link rel="stylesheet" href="./css/destinos-camping.css?v=5" />
   </head>
   <body class="bg-[#020403] text-white antialiased">
     <header id="site-header"></header>
@@ -40,23 +40,20 @@
             </p>
           </header>
 
-          <div class="destinos-map-shell">
-            <div
-              id="destinos-map"
-              class="destinos-map"
-              role="application"
-              aria-label="Mapa mundial de campings y destinos"
-            >
-              <p class="destinos-map__hint">Pasa el cursor o toca un punto</p>
+          <div id="campings-map-wrap" class="campings-map-wrap">
+            <div id="campings-map" class="campings-map" role="application" aria-label="Mapa mundial de campings">
+              <img
+                class="campings-map__image"
+                src="./assets/destinos/world-map-premium.jpg"
+                width="1350"
+                height="900"
+                alt=""
+                decoding="async"
+              />
+              <p class="campings-map__hint">Pasa el cursor o toca un punto</p>
             </div>
+            <div id="campings-map-tooltip" class="campings-map-tooltip is-hidden" aria-hidden="true"></div>
           </div>
-
-          <div
-            id="destinos-sheet-backdrop"
-            class="destinos-sheet-backdrop fixed inset-0 z-50 hidden bg-black/55 backdrop-blur-sm"
-            aria-hidden="true"
-          ></div>
-          <div id="destinos-tooltip" class="destinos-tooltip" role="dialog" aria-modal="false" aria-hidden="true"></div>
 
           <div class="destinos-grid-header">
             <h2>29 destinos en el directorio</h2>
@@ -81,7 +78,7 @@
     <link rel="stylesheet" href="./css/home-tourism.css" />
     <script defer src="./js/site-header.js?v=11"></script>
     <script defer src="./js/site-footer.js"></script>
-    <script defer src="./js/destinos-camping-data.js?v=7"></script>
-    <script defer src="./js/destinos-camping.js?v=9"></script>
+    <script defer src="./js/destinos-camping-data.js?v=1"></script>
+    <script defer src="./js/destinos-camping.js?v=1"></script>
   </body>
 </html>
