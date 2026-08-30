@@ -18,6 +18,7 @@ window.CAMPINGS_MAP_SPAIN = [
       'Resort familiar junto al mar con piscinas, toboganes y acceso rápido a las playas de la Costa Dorada.',
     coords: [41.07, 1.14],
     image: './assets/campings/camping-sanguli-salou.jpg',
+    page: 'acampar-sanguli-salou.html',
   },
   {
     id: 'camping-gavina',
@@ -27,6 +28,7 @@ window.CAMPINGS_MAP_SPAIN = [
       'Pinos, calas transparentes y ambiente tranquilo en uno de los rincones más bonitos de la Costa Daurada.',
     coords: [41.13, 1.35],
     image: './assets/campings/camping-gavina.jpg',
+    page: 'acampar-gavina-tamarit.html',
   },
   {
     id: 'camping-bolnuevo',
@@ -36,6 +38,7 @@ window.CAMPINGS_MAP_SPAIN = [
       'Erosiones de Bolnuevo y playas vírgenes: acampada mediterránea con sol casi todo el año.',
     coords: [37.55, -1.53],
     image: './assets/campings/camping-bolnuevo.jpg',
+    page: 'acampar-bolnuevo.html',
   },
   {
     id: 'camping-las-dunas',
@@ -45,6 +48,7 @@ window.CAMPINGS_MAP_SPAIN = [
       'Dunas, windsurf en la Bahía de Roses y acceso a Cadaqués y Cap de Creus.',
     coords: [42.25, 3.11],
     image: './assets/campings/camping-las-dunas.jpg',
+    page: 'acampar-las-dunas.html',
   },
   {
     id: 'camping-ordesa',
@@ -64,6 +68,7 @@ window.CAMPINGS_MAP_SPAIN = [
       'Entre naranjos y playa: ambiente familiar con piscinas y la Costa Blanca a un paso.',
     coords: [38.92, -0.24],
     image: './assets/campings/camping-kiko-park.jpg',
+    page: 'acampar-kiko-park.html',
   },
   {
     id: 'camping-el-escorial',
@@ -73,7 +78,7 @@ window.CAMPINGS_MAP_SPAIN = [
       'Sierra de Guadarrama cerca de Madrid: rutas de montaña, frescor nocturno y cielos despejados.',
     coords: [40.58, -4.11],
     image: './assets/campings/camping-el-escorial.jpg',
-    page: 'acampar-sierra-gredos.html',
+    page: 'acampar-el-escorial.html',
   },
   {
     id: 'camping-playa-joyel',
@@ -83,6 +88,7 @@ window.CAMPINGS_MAP_SPAIN = [
       'Playa de Joyel y marisma de Santoña: acampada verde en el Cantábrico con paseos costeros.',
     coords: [43.48, -3.55],
     image: './assets/campings/camping-playa-joyel.jpg',
+    page: 'acampar-playa-joyel.html',
   },
   {
     id: 'camping-cala-gogo',
@@ -92,7 +98,7 @@ window.CAMPINGS_MAP_SPAIN = [
       'Cala Gogo y caminos de ronda: calas escondidas y noches bajo pinos junto al Mediterráneo.',
     coords: [41.82, 3.07],
     image: './assets/campings/camping-cala-gogo.jpg',
-    page: 'acampar-costa-brava.html',
+    page: 'acampar-cala-gogo.html',
   },
   {
     id: 'camping-pantano-chorro',
@@ -102,6 +108,7 @@ window.CAMPINGS_MAP_SPAIN = [
       'A orillas del pantano de El Chorro, junto al Caminito del Rey: parcelas en el bosque, baño en el embalse y senderismo por los Gaitanes.',
     coords: [36.9199, -4.8042],
     image: './assets/campings/camping-pantano-chorro.jpg',
+    page: 'acampar-pantano-chorro.html',
   },
 ];
 

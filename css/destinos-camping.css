@@ -69,10 +69,16 @@
   color: rgba(232, 240, 236, 0.75);
 }
 
-.destinos-grid-header {
-  margin: 2.5rem 0 1.15rem;
-  text-align: left;
+.mc-spain-fichas {
+  margin-top: 2.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
+
+.mc-spain-fichas .destinos-grid-header {
+  margin-top: 0;
+}
+
 
 .destinos-grid-header h2 {
   margin: 0;
