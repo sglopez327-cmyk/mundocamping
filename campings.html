@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Directorio de campings con mapa interactivo: 29 destinos para acampar en España y el mundo, con fichas editoriales."
+      content="Directorio de campings: 29 destinos para acampar en España y el mundo, con fichas editoriales y consejos prácticos."
     />
-    <title>Mundo Camping | Directorio de campings — mapa interactivo</title>
+    <title>Mundo Camping | Directorio de campings</title>
     <link rel="canonical" href="https://www.mundocamping.net/campings" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Mundo Camping" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:title" content="Mundo Camping | Directorio de campings" />
-    <meta property="og:description" content="Mapa interactivo con 29 destinos para acampar y fichas completas." />
+    <meta property="og:description" content="29 destinos para acampar con fichas completas y consejos prácticos." />
     <meta property="og:url" content="https://www.mundocamping.net/campings" />
     <meta property="og:image" content="https://www.mundocamping.net/Fondo.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -23,8 +23,7 @@
     <link rel="stylesheet" href="./mundo-camping.css" />
     <link rel="stylesheet" href="./footer-premium.css" />
     <link rel="stylesheet" href="./site-header.css?v=11" />
-    <link rel="stylesheet" href="./css/destinos-camping.css?v=6" />
-    <link rel="stylesheet" href="./css/campings-map.css?v=1" />
+    <link rel="stylesheet" href="./css/destinos-camping.css?v=7" />
   </head>
   <body class="bg-[#020403] text-white antialiased">
     <header id="site-header"></header>
@@ -33,29 +32,13 @@
         <div class="destinos-page__bg" aria-hidden="true"></div>
         <div class="container-premium destinos-page__inner">
           <header class="destinos-hero">
-            <p class="destinos-hero__kicker">Directorio · Mapa interactivo</p>
+            <p class="destinos-hero__kicker">Directorio · Campings</p>
             <h1 id="destinos-title" class="destinos-hero__title">Campings y destinos para acampar</h1>
             <p class="destinos-hero__lead">
-              Toca un punto del mapa (o pasa el cursor en desktop) para descubrir por qué cada lugar merece una noche
-              bajo las estrellas. Abajo, las 29 fichas completas con consejos prácticos.
+              29 fichas editoriales con consejos prácticos para elegir dónde pasar la noche bajo las estrellas, en
+              España y por el mundo.
             </p>
           </header>
-
-          <div id="campings-map-wrap" class="campings-map-wrap">
-            <div id="campings-map-stage" class="campings-map-stage">
-              <img
-                class="campings-map__image"
-                src="./assets/destinos/world-map-premium.jpg"
-                width="1350"
-                height="900"
-                alt="Mapa mundial de campings"
-                decoding="async"
-              />
-              <div id="campings-map-pins" class="campings-map__pins" aria-live="polite"></div>
-              <p class="campings-map__hint">Pasa el cursor o toca un punto</p>
-            </div>
-            <div id="campings-map-tooltip" class="campings-map-tooltip is-hidden" hidden aria-hidden="true"></div>
-          </div>
 
           <div class="destinos-grid-header">
             <h2>29 destinos en el directorio</h2>
@@ -67,8 +50,8 @@
             <div>
               <h2 id="camp-b2b" class="tourism-b2b__title">¿Gestionas un camping?</h2>
               <p class="tourism-b2b__text">
-                Aparece destacado en el mapa, en fichas relacionadas o en rutas cercanas. Colaboraciones B2B sin
-                intermediarios de e-commerce.
+                Aparece destacado en fichas relacionadas o en rutas cercanas. Colaboraciones B2B sin intermediarios de
+                e-commerce.
               </p>
             </div>
             <a href="anunciate.html" class="tourism-btn tourism-btn--primary">Anúnciate aquí</a>
@@ -80,7 +63,7 @@
     <link rel="stylesheet" href="./css/home-tourism.css" />
     <script defer src="./js/site-header.js?v=11"></script>
     <script defer src="./js/site-footer.js"></script>
-    <script defer src="./js/campings-map-data.js?v=1"></script>
-    <script defer src="./js/campings-map.js?v=1"></script>
+    <script defer src="./js/campings-map-data.js?v=2"></script>
+    <script defer src="./js/campings-catalog.js?v=1"></script>
   </body>
 </html>
