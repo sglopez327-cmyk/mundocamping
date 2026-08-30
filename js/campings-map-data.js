@@ -7,7 +7,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'Entre hayedos y caliza del Parque Nacional: rutas de senderismo, sidra y valles verdes del Cantábrico.',
     coords: [43.15, -4.85],
-    image: './assets/destinos/destino-picos-europa.jpg',
+    image: './assets/campings/camping-picos-europa.jpg',
     page: 'acampar-picos-europa.html',
   },
   {
@@ -17,7 +17,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'Resort familiar junto al mar con piscinas, toboganes y acceso rápido a las playas de la Costa Dorada.',
     coords: [41.07, 1.14],
-    image: './assets/destinos/destino-costa-brava.jpg',
+    image: './assets/campings/camping-sanguli-salou.jpg',
   },
   {
     id: 'camping-gavina',
@@ -26,7 +26,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'Pinos, calas transparentes y ambiente tranquilo en uno de los rincones más bonitos de la Costa Daurada.',
     coords: [41.13, 1.35],
-    image: './assets/destinos/destino-costa-brava.jpg',
+    image: './assets/campings/camping-gavina.jpg',
   },
   {
     id: 'camping-bolnuevo',
@@ -35,7 +35,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'Erosiones de Bolnuevo y playas vírgenes: acampada mediterránea con sol casi todo el año.',
     coords: [37.55, -1.53],
-    image: './assets/destinos/destino-cabo-gata.jpg',
+    image: './assets/campings/camping-bolnuevo.jpg',
   },
   {
     id: 'camping-las-dunas',
@@ -44,7 +44,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'Dunas, windsurf en la Bahía de Roses y acceso a Cadaqués y Cap de Creus.',
     coords: [42.25, 3.11],
-    image: './assets/destinos/destino-costa-brava.jpg',
+    image: './assets/campings/camping-las-dunas.jpg',
   },
   {
     id: 'camping-ordesa',
@@ -53,7 +53,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'A los pies de Ordesa y Monte Perdido: cañones, ibones y senderismo de alta montaña.',
     coords: [42.63, -0.13],
-    image: './assets/destinos/destino-pirineos-aragon.jpg',
+    image: './assets/campings/camping-ordesa.jpg',
     page: 'acampar-pirineos-aragon.html',
   },
   {
@@ -63,7 +63,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'Entre naranjos y playa: ambiente familiar con piscinas y la Costa Blanca a un paso.',
     coords: [38.92, -0.24],
-    image: './assets/destinos/destino-costa-brava.jpg',
+    image: './assets/campings/camping-kiko-park.jpg',
   },
   {
     id: 'camping-el-escorial',
@@ -72,7 +72,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'Sierra de Guadarrama cerca de Madrid: rutas de montaña, frescor nocturno y cielos despejados.',
     coords: [40.58, -4.11],
-    image: './assets/destinos/destino-sierra-gredos.jpg',
+    image: './assets/campings/camping-el-escorial.jpg',
     page: 'acampar-sierra-gredos.html',
   },
   {
@@ -82,7 +82,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'Playa de Joyel y marisma de Santoña: acampada verde en el Cantábrico con paseos costeros.',
     coords: [43.48, -3.55],
-    image: './assets/destinos/destino-picos-europa.jpg',
+    image: './assets/campings/camping-playa-joyel.jpg',
   },
   {
     id: 'camping-cala-gogo',
@@ -91,7 +91,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'Cala Gogo y caminos de ronda: calas escondidas y noches bajo pinos junto al Mediterráneo.',
     coords: [41.82, 3.07],
-    image: './assets/destinos/destino-costa-brava.jpg',
+    image: './assets/campings/camping-cala-gogo.jpg',
     page: 'acampar-costa-brava.html',
   },
   {
@@ -101,7 +101,7 @@ window.CAMPINGS_MAP_SPAIN = [
     descripcion:
       'A orillas del pantano de El Chorro, junto al Caminito del Rey: parcelas en el bosque, baño en el embalse y senderismo por los Gaitanes.',
     coords: [36.9199, -4.8042],
-    image: './assets/destinos/destino-cabo-gata.jpg',
+    image: './assets/campings/camping-pantano-chorro.jpg',
   },
 ];
 
@@ -354,7 +354,7 @@ window.CAMPINGS_CATALOG = [
     why: 'Caliza vertical, lagos de Covadonga y pueblos con sidra.',
     tip: 'Respeta zonas reguladas.',
     page: 'acampar-picos-europa.html',
-    image: './assets/destinos/destino-picos-europa.jpg',
+    image: './assets/campings/camping-picos-europa.jpg',
   },
   {
     id: 'costa-brava',
