@@ -297,10 +297,8 @@ window.MC_DESTINOS = [
     name: 'Picos de Europa',
     country: 'España',
     region: 'Asturias / Cantabria',
-    lat: 43.18,
+    lat: 43.15,
     lng: -4.85,
-    mapX: 48.2,
-    mapY: 24.0,
     why: 'Caliza vertical, lagos de Covadonga y pueblos con sidra: el gran icono de montaña para acampar cerca de casa.',
     tip: 'Respeta zonas reguladas; hay campings excelentes en los valles.',
     image: './assets/destinos/destino-picos-europa.jpg',
@@ -311,10 +309,8 @@ window.MC_DESTINOS = [
     name: 'Costa Brava',
     country: 'España',
     region: 'Girona',
-    lat: 41.75,
-    lng: 3.02,
-    mapX: 49.5,
-    mapY: 25.0,
+    lat: 42.12,
+    lng: 3.15,
     why: 'Calas escondidas, pines y camping a pocos minutos del mar: la costa mediterránea en modo acampada familiar.',
     tip: 'Reserva en julio–agosto; combina playa por la mañana y rutas de GR-92.',
     image: './assets/destinos/destino-costa-brava.jpg',
@@ -325,10 +321,8 @@ window.MC_DESTINOS = [
     name: 'Pirineo aragonés',
     country: 'España',
     region: 'Huesca',
-    lat: 42.57,
-    lng: -0.52,
-    mapX: 49.0,
-    mapY: 24.5,
+    lat: 42.6,
+    lng: -0.45,
     why: 'Ordesa, Aínsa y valles de alta montaña: camping de altitud con rutas de senderismo y noches frescas.',
     tip: 'Lleva saco 3 estaciones; en verano hay campings junto a ríos de montaña.',
     image: './assets/destinos/destino-pirineos-aragon.jpg',
@@ -339,10 +333,8 @@ window.MC_DESTINOS = [
     name: 'Cabo de Gata',
     country: 'España',
     region: 'Almería',
-    lat: 36.78,
-    lng: -2.19,
-    mapX: 48.5,
-    mapY: 27.8,
+    lat: 36.8,
+    lng: -2.2,
     why: 'Parque natural semiárido, calas volcánicas y cielos despejados: acampada junto al Mediterráneo más salvaje.',
     tip: 'Protección solar y agua extra; respeta zonas restringidas del parque.',
     image: './assets/destinos/destino-cabo-gata.jpg',
@@ -355,8 +347,6 @@ window.MC_DESTINOS = [
     region: 'Ávila / Cáceres',
     lat: 40.25,
     lng: -5.12,
-    mapX: 47.8,
-    mapY: 25.8,
     why: 'Circo de Gredos, gargantas y campings de montaña a poca distancia de Madrid: fin de semana perfecto.',
     tip: 'Noches frescas en altura; campings en Hoyos del Espino o Navarredonda.',
     image: './assets/destinos/destino-sierra-gredos.jpg',
@@ -394,6 +384,16 @@ window.mcDestinoXY = function (lat, lng, containerW, containerH) {
   var py = bg.y * containerH + (v - bg.y) * scaledH;
   var x = (px / containerW) * 100;
   var y = (py / containerH) * 100;
+
+  /*
+   * Calibración península ibérica (world-map-premium.jpg):
+   * la proyección pura cae demasiado al norte (Francia). Compensación gradual
+   * de 0 % en el sur (lat ~36°) a ~8 % en el norte (lat ~43°), solo en el bbox ibérico.
+   */
+  if (lng >= -9.5 && lng <= 4.5 && lat >= 36 && lat <= 44.5) {
+    var t = Math.max(0, Math.min(1, (lat - 36) / 7));
+    y += 4 + 4 * t;
+  }
 
   return { x: Math.min(98, Math.max(2, x)), y: Math.min(96, Math.max(4, y)) };
 };
