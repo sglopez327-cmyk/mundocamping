@@ -1,6 +1,6 @@
 /** Mapa exclusivo de España — posiciones % calibradas (top / left) */
 window.CAMPINGS_MAP = {
-  image: './assets/destinos/spain-map.svg',
+  image: 'inline',
   width: 1000,
   height: 1200,
   markers: [

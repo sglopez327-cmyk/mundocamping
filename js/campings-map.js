@@ -57,9 +57,9 @@
         return (
           '<button type="button" class="mc-map__pin" data-id="' +
           esc(marker.id) +
-          '" style="--pin-x:' +
+          '" style="left:' +
           marker.left +
-          '%;--pin-y:' +
+          '%;top:' +
           marker.top +
           '%;" aria-label="' +
           esc(item.name + ', ' + item.location) +
