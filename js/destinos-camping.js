@@ -433,11 +433,17 @@
 
   renderPins();
   renderGrid();
-  updatePinPositions();
+
+  function syncPinLayout() {
+    updatePinPositions();
+  }
+
+  syncPinLayout();
+  requestAnimationFrame(syncPinLayout);
+  window.addEventListener('load', syncPinLayout, { once: true });
+
   if (typeof ResizeObserver !== 'undefined') {
-    new ResizeObserver(function () {
-      updatePinPositions();
-    }).observe(mapEl);
+    new ResizeObserver(syncPinLayout).observe(mapEl);
   }
 
   // Ancla inicial según viewport

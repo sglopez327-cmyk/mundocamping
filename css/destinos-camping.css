@@ -99,6 +99,7 @@
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
   background:
     radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(2, 4, 3, 0.45) 100%),
