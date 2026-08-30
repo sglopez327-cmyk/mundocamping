@@ -1,17 +1,8 @@
 /**
- * Footer global Mundo Camping — aviso de afiliación Amazon obligatorio.
- * Uso: <footer id="site-footer"></footer> + <script src="RUTA/js/site-footer.js">
- * Estilos: footer-premium.css
- *
- * Schema.org Organization: añadir JSON-LD en index.html (dentro de <head>).
- * Ver plantilla en footer-premium.html (comentario al inicio del archivo).
+ * Footer global Mundo Camping — directorio de turismo de acampada.
  */
 (function () {
   'use strict';
-
-  var AFFILIATE_NOTICE =
-    'Como asociado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. ' +
-    'Gracias por confiar en mis recomendaciones.';
 
   var LOGO_SVG =
     '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">' +
@@ -21,9 +12,7 @@
 
   function renderSiteFooter() {
     var footer = document.getElementById('site-footer');
-    if (!footer) {
-      return;
-    }
+    if (!footer) return;
 
     footer.className = 'site-footer';
     footer.innerHTML =
@@ -37,67 +26,60 @@
       '<p class="site-footer__title">Mundo Camping</p>' +
       '</div>' +
       '<p class="site-footer__tagline">' +
-      'Guías, comparativas y selección de equipo para acampar, hacer senderismo y aventuras al aire libre.' +
+      'Directorio de campings, rutas de senderismo y rincones de naturaleza para planificar tu próxima escapada al aire libre.' +
       '</p>' +
       '<p class="site-footer__credential">' +
-      'Sitio independiente de guías de acampada con reseñas basadas en experiencia real.' +
+      'Guías editoriales independientes. Campings y marcas pueden aparecer destacados mediante colaboración B2B.' +
       '</p>' +
       '<div class="site-footer__trust">' +
-      '<span class="site-footer__pill"><span class="site-footer__pill-dot"></span> Guías prácticas</span>' +
-      '<span class="site-footer__pill"><span class="site-footer__pill-dot"></span> Equipo contrastado</span>' +
+      '<span class="site-footer__pill"><span class="site-footer__pill-dot"></span> Mapas interactivos</span>' +
+      '<span class="site-footer__pill"><span class="site-footer__pill-dot"></span> Rutas y naturaleza</span>' +
       '</div>' +
       '</div>' +
       '<div class="site-footer__nav-columns">' +
       '<div class="site-footer__nav-col">' +
-      '<p class="site-footer__nav-title">Categorías</p>' +
-      '<nav class="site-footer__links" aria-label="Categorías de producto">' +
-      '<a class="site-footer__link" href="/index.html">Guías Destacadas</a>' +
-      '<a class="site-footer__link" href="/tiendas.html">Tiendas de Campaña</a>' +
-      '<a class="site-footer__link" href="/sacos.html">Sacos</a>' +
-      '<a class="site-footer__link" href="/esterillas.html">Esterillas</a>' +
+      '<p class="site-footer__nav-title">Explorar</p>' +
+      '<nav class="site-footer__links" aria-label="Secciones del sitio">' +
+      '<a class="site-footer__link" href="/index.html">Inicio</a>' +
+      '<a class="site-footer__link" href="/campings.html">Campings</a>' +
+      '<a class="site-footer__link" href="/naturaleza.html">Naturaleza</a>' +
+      '<a class="site-footer__link" href="/rutas.html">Rutas</a>' +
       '</nav>' +
       '</div>' +
       '<div class="site-footer__nav-col">' +
-      '<p class="site-footer__nav-title">Más equipo</p>' +
-      '<nav class="site-footer__links" aria-label="Más categorías de equipo">' +
-      '<a class="site-footer__link" href="/baterias.html">Baterías y Energía</a>' +
-      '<a class="site-footer__link" href="/iluminacion/">Iluminación</a>' +
-      '<a class="site-footer__link" href="/herramientas.html">Herramientas</a>' +
-      '<a class="site-footer__link" href="/accesorios.html">Accesorios</a>' +
-      '<a class="site-footer__link" href="/cocina.html">Cocina</a>' +
+      '<p class="site-footer__nav-title">Destacados</p>' +
+      '<nav class="site-footer__links" aria-label="Contenido destacado">' +
+      '<a class="site-footer__link" href="/acampar-picos-europa.html">Picos de Europa</a>' +
+      '<a class="site-footer__link" href="/acampar-lofoten.html">Lofoten</a>' +
+      '<a class="site-footer__link" href="/naturaleza.html#pozas">Pozas y ríos</a>' +
+      '<a class="site-footer__link" href="/rutas.html#senderismo">Rutas de senderismo</a>' +
       '</nav>' +
       '</div>' +
       '<div class="site-footer__nav-col">' +
-      '<p class="site-footer__nav-title">Guías útiles</p>' +
-      '<nav class="site-footer__links" aria-label="Guías prácticas">' +
-      '<a class="site-footer__link" href="/guias.html">Todas las guías</a>' +
-      '<a class="site-footer__link" href="/blog.html">Blog</a>' +
-      '<a class="site-footer__link" href="/mejores-sitios-acampar.html">Mejores sitios para acampar</a>' +
-      '<a class="site-footer__link" href="/mejor-tienda-camping-2-personas.html">Mejor tienda 2 personas</a>' +
-      '<a class="site-footer__link" href="/tendencias-camping-2026.html">Tendencias 2026</a>' +
-      '<a class="site-footer__link" href="/como-montar-tienda-campana.html">Montar tienda</a>' +
-      '<a class="site-footer__link" href="/mochila-camping-principiantes-checklist.html">Checklist mochila</a>' +
+      '<p class="site-footer__nav-title">Profesionales</p>' +
+      '<nav class="site-footer__links" aria-label="Colaboraciones">' +
+      '<a class="site-footer__link" href="/anunciate.html">Anúnciate / Colabora</a>' +
+      '<a class="site-footer__link" href="/contacto.html">Contacto</a>' +
+      '<a class="site-footer__link" href="/sobre-mi.html">Sobre Mundo Camping</a>' +
       '</nav>' +
       '</div>' +
       '<div class="site-footer__nav-col">' +
-      '<p class="site-footer__nav-title">Información</p>' +
-      '<nav class="site-footer__links" aria-label="Información y legal">' +
-      '<a class="site-footer__link" href="/sobre-mi.html">Sobre mí</a>' +
+      '<p class="site-footer__nav-title">Legal</p>' +
+      '<nav class="site-footer__links" aria-label="Información legal">' +
       '<a class="site-footer__link" href="/privacidad.html">Política de Privacidad</a>' +
       '<a class="site-footer__link" href="/aviso-legal.html">Aviso Legal</a>' +
-      '<a class="site-footer__link" href="/contacto.html">Contacto</a>' +
       '</nav>' +
       '</div>' +
       '</div>' +
       '<div class="site-footer__scene-wrap">' +
-      '<img class="footer-scene" src="/assets/tienda-2-personas-interior-lujo-vip-compacta-v2.png" ' +
-      'alt="Interior de tienda de campaña para dos personas con equipamiento en bosque de pinos" ' +
+      '<img class="footer-scene" src="/assets/destinos/destino-picos-europa.jpg" ' +
+      'alt="Campamento junto a montañas verdes al amanecer" ' +
       'width="360" height="225" loading="lazy" decoding="async" />' +
       '</div>' +
       '</div>' +
       '<div class="site-footer__bottom">' +
-      '<p id="aviso-afiliacion-amazon" class="site-footer__legal">' +
-      AFFILIATE_NOTICE +
+      '<p class="site-footer__legal">' +
+      '© Mundo Camping · Directorio de turismo de acampada. Los contenidos destacados pueden incluir colaboraciones comerciales claramente identificadas.' +
       '</p>' +
       '<p class="site-footer__copy">© Mundo Camping</p>' +
       '</div>' +
@@ -108,7 +90,7 @@
     var queue = ['/js/site-config.js', '/js/site-analytics.js', '/js/structured-data.js'];
     function next(index) {
       if (index >= queue.length) {
-        loadRelatedPosts();
+        loadCrossRecommendations();
         return;
       }
       var script = document.createElement('script');
@@ -122,20 +104,17 @@
     next(0);
   }
 
-  function loadRelatedPosts() {
-    if (!document.querySelector('main article')) return;
-    var path = (window.location.pathname || '').replace(/\/+$/, '');
-    if (path === '' || path === '/' || /\/(index|blog|guias|mejores-sitios-acampar)(\.html)?$/i.test(path)) {
-      return;
-    }
-    if (document.querySelector('link[data-related-posts]')) return;
+  function loadCrossRecommendations() {
+    var article = document.querySelector('main article[data-cross-type]');
+    if (!article) return;
+    if (document.querySelector('link[data-cross-rec]')) return;
     var css = document.createElement('link');
     css.rel = 'stylesheet';
-    css.href = '/css/related-posts.css?v=1';
-    css.setAttribute('data-related-posts', '1');
+    css.href = '/css/cross-recommendations.css?v=1';
+    css.setAttribute('data-cross-rec', '1');
     document.head.appendChild(css);
     var script = document.createElement('script');
-    script.src = '/js/related-posts.js?v=1';
+    script.src = '/js/cross-recommendations.js?v=1';
     script.defer = true;
     document.body.appendChild(script);
   }

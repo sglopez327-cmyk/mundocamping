@@ -12,7 +12,7 @@
  * 1. https://search.google.com/search-console → añade https://www.mundocamping.net
  * 2. Verificación HTML: pega el código en googleSiteVerification (solo el content=...)
  * 3. Envía sitemap: https://www.mundocamping.net/sitemap.xml
- * 4. Solicita indexación de home, /blog y /mejores-sitios-acampar
+ * 4. Solicita indexación de home, /campings, /naturaleza y /rutas
  */
 (function (global) {
   'use strict';

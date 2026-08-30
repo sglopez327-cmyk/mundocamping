@@ -1,9 +1,6 @@
 /**
- * Header global Mundo Camping — menú con rutas absolutas desde la raíz del sitio.
- * Uso: <header id="site-header"></header> + <script src="RUTA/js/site-header.js">
- * Estilos: site-header.css
- *
- * Todos los href empiezan por /. Editar solo NAV_ITEMS para cambiar destinos.
+ * Header global Mundo Camping — directorio de turismo de acampada.
+ * Uso: <header id="site-header"></header> + site-header.css
  */
 (function () {
   'use strict';
@@ -11,18 +8,11 @@
   var HOME_HREF = '/index.html';
 
   var NAV_ITEMS = [
-    { href: HOME_HREF, label: 'Guías Destacadas', match: ['/', '/index.html', '/index'] },
-    { href: '/guias.html', label: 'Explorar', match: ['/guias', '/guias.html'] },
-    { href: '/blog.html', label: 'Blog', match: ['/blog', '/blog.html'] },
-    { href: '/mejores-sitios-acampar.html', label: 'Destinos', match: ['/mejores-sitios-acampar', '/mejores-sitios-acampar.html'] },
-    { href: '/tiendas.html', label: 'Tiendas' },
-    { href: '/sacos.html', label: 'Sacos' },
-    { href: '/esterillas.html', label: 'Esterillas' },
-    { href: '/baterias.html', label: 'Baterías' },
-    { href: '/iluminacion/', label: 'Iluminación' },
-    { href: '/herramientas.html', label: 'Herramientas' },
-    { href: '/accesorios.html', label: 'Accesorios' },
-    { href: '/cocina.html', label: 'Cocina' },
+    { href: HOME_HREF, label: 'Inicio', match: ['/', '/index.html', '/index'] },
+    { href: '/campings.html', label: 'Campings', match: ['/campings', '/campings.html', '/mejores-sitios-acampar', '/mejores-sitios-acampar.html'] },
+    { href: '/naturaleza.html', label: 'Naturaleza', match: ['/naturaleza', '/naturaleza.html'] },
+    { href: '/rutas.html', label: 'Rutas', match: ['/rutas', '/rutas.html'] },
+    { href: '/anunciate.html', label: 'Anúnciate', match: ['/anunciate', '/anunciate.html', '/colabora', '/colabora.html'] },
   ];
 
   var LOGO_SVG =
@@ -84,14 +74,12 @@
       '<span class="site-header__logo-text text-readable-soft">Mundo Camping</span>' +
       '</a>' +
       '<p class="site-header__mobile-title" aria-hidden="true">Mundo Camping</p>' +
-      '<ul class="menu-categorias" aria-label="Categorías principales">' +
+      '<ul class="menu-categorias" aria-label="Secciones principales">' +
       NAV_ITEMS.map(renderNavLink).join('') +
       '</ul>' +
-      '<a href="' +
-      HOME_HREF +
-      '" class="btn-premium-solid site-header__mobile-cta">' +
-      '<span class="site-header__mobile-cta-short">Guías</span>' +
-      '<span class="site-header__mobile-cta-full">Guías Destacadas</span></a></nav>';
+      '<a href="/campings.html" class="btn-premium-solid site-header__mobile-cta">' +
+      '<span class="site-header__mobile-cta-short">Mapa</span>' +
+      '<span class="site-header__mobile-cta-full">Ver campings</span></a></nav>';
   }
 
   if (document.readyState === 'loading') {

@@ -13,9 +13,9 @@
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.mundocamping.net/mejores-sitios-acampar</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.mundocamping.net/campings</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
@@ -395,5 +395,23 @@
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/naturaleza</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/rutas</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.mundocamping.net/anunciate</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 </urlset>

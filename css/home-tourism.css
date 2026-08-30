@@ -1,0 +1,321 @@
+/* Mundo Camping — Home turismo de acampada */
+
+.tourism-home {
+  position: relative;
+  background: #020403;
+  color: #fff;
+  overflow: hidden;
+}
+
+.tourism-home__bg {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(34, 197, 94, 0.16), transparent 34rem),
+    radial-gradient(circle at 88% 18%, rgba(56, 189, 248, 0.1), transparent 28rem),
+    linear-gradient(180deg, #030605 0%, #020403 100%);
+}
+
+.tourism-hero {
+  position: relative;
+  isolation: isolate;
+  margin-top: 0.5rem;
+  border-radius: 1.35rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: clamp(22rem, 52vh, 32rem);
+  display: flex;
+  align-items: flex-end;
+  background:
+    linear-gradient(180deg, rgba(2, 4, 3, 0.15) 0%, rgba(2, 4, 3, 0.55) 45%, rgba(2, 4, 3, 0.97) 100%),
+    url('../Fondo.jpg') center / cover no-repeat;
+}
+
+.tourism-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 2rem 1.25rem 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .tourism-hero__inner {
+    padding: 3rem 2.5rem 2.75rem;
+  }
+}
+
+.tourism-hero__kicker {
+  display: inline-flex;
+  margin: 0 0 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(110, 231, 183, 0.35);
+  background: rgba(2, 4, 3, 0.55);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+}
+
+.tourism-hero__title {
+  margin: 0;
+  max-width: 14ch;
+  font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #f8faf9;
+}
+
+.tourism-hero__lead {
+  margin: 1rem 0 0;
+  max-width: 36rem;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.65;
+  color: rgba(232, 240, 236, 0.82);
+}
+
+.tourism-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.tourism-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.85rem 1.35rem;
+  border-radius: 9999px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.tourism-btn--primary {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: #020403;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+}
+
+.tourism-btn--primary:hover {
+  transform: translateY(-1px);
+}
+
+.tourism-btn--ghost {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8faf9;
+  backdrop-filter: blur(8px);
+}
+
+.tourism-btn--ghost:hover {
+  border-color: rgba(110, 231, 183, 0.45);
+  color: #deff9a;
+}
+
+.tourism-section {
+  position: relative;
+  padding: 2.5rem 0 0;
+}
+
+.tourism-section__header {
+  margin-bottom: 1.25rem;
+}
+
+.tourism-section__kicker {
+  margin: 0 0 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+}
+
+.tourism-section__title {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", Inter, ui-sans-serif, sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.tourism-section__lead {
+  margin: 0.5rem 0 0;
+  max-width: 40rem;
+  color: rgba(232, 240, 236, 0.72);
+  line-height: 1.6;
+}
+
+.tourism-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .tourism-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tourism-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, border-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.tourism-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(110, 231, 183, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.tourism-card__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #07100d;
+}
+
+.tourism-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.tourism-card:hover .tourism-card__media img {
+  transform: scale(1.05);
+}
+
+.tourism-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.tourism-card__tag {
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6ee7b7;
+}
+
+.tourism-card__title {
+  margin: 0.35rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tourism-card__desc {
+  margin: 0.45rem 0 0;
+  flex: 1;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(232, 240, 236, 0.72);
+}
+
+.tourism-card__cta {
+  margin-top: 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #deff9a;
+}
+
+.tourism-b2b {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  padding: 1.5rem 1.25rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(110, 231, 183, 0.28);
+  background:
+    linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(2, 4, 3, 0.4)),
+    rgba(255, 255, 255, 0.03);
+}
+
+@media (min-width: 768px) {
+  .tourism-b2b {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.75rem 2rem;
+  }
+}
+
+.tourism-b2b__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.tourism-b2b__text {
+  margin: 0.5rem 0 0;
+  max-width: 36rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(232, 240, 236, 0.78);
+}
+
+.tourism-featured-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .tourism-featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tourism-featured-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.tourism-mini {
+  display: block;
+  padding: 0.85rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.tourism-mini:hover {
+  border-color: rgba(110, 231, 183, 0.4);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.tourism-mini strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.tourism-mini span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+  color: rgba(232, 240, 236, 0.65);
+}
