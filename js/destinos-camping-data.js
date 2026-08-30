@@ -353,12 +353,37 @@ window.MC_DESTINOS = [
   },
 ];
 
-/** Convierte lat/lng a % sobre el contenedor del mapa (ajustado a background-position: center 42%) */
-window.mcDestinoXY = function (lat, lng) {
+/** Imagen de fondo del mapa (world-map-premium.jpg) */
+window.MC_MAP_IMAGE = { w: 1350, h: 900 };
+/** Debe coincidir con .destinos-map { background-position: center 42% } */
+window.MC_MAP_BG_POS = { x: 0.5, y: 0.42 };
+
+/**
+ * Convierte lat/lng a % sobre el contenedor del mapa.
+ * Tiene en cuenta background-size: cover y background-position del CSS.
+ * @param {number} lat
+ * @param {number} lng
+ * @param {number} [containerW] — ancho del .destinos-map en px
+ * @param {number} [containerH] — alto del .destinos-map en px
+ */
+window.mcDestinoXY = function (lat, lng, containerW, containerH) {
+  var img = window.MC_MAP_IMAGE;
+  var bg = window.MC_MAP_BG_POS;
   var u = (lng + 180) / 360;
   var v = (90 - lat) / 180;
-  var bgPosY = 0.42;
-  var x = u * 100;
-  var y = (0.5 + (v - bgPosY)) * 100;
+
+  if (!containerW || !containerH) {
+    containerW = 210;
+    containerH = 100;
+  }
+
+  var scale = Math.max(containerW / img.w, containerH / img.h);
+  var scaledW = img.w * scale;
+  var scaledH = img.h * scale;
+  var px = bg.x * containerW + (u - bg.x) * scaledW;
+  var py = bg.y * containerH + (v - bg.y) * scaledH;
+  var x = (px / containerW) * 100;
+  var y = (py / containerH) * 100;
+
   return { x: Math.min(98, Math.max(2, x)), y: Math.min(96, Math.max(4, y)) };
 };

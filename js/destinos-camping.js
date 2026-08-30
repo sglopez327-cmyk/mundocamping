@@ -25,8 +25,25 @@
     if (typeof d.mapX === 'number' && typeof d.mapY === 'number') {
       return { x: d.mapX, y: d.mapY };
     }
-    if (typeof window.mcDestinoXY === 'function') return window.mcDestinoXY(d.lat, d.lng);
+    if (typeof window.mcDestinoXY === 'function') {
+      var w = mapEl.clientWidth || mapEl.offsetWidth;
+      var h = mapEl.clientHeight || mapEl.offsetHeight;
+      return window.mcDestinoXY(d.lat, d.lng, w, h);
+    }
     return { x: 50, y: 50 };
+  }
+
+  function updatePinPositions() {
+    var w = mapEl.clientWidth || mapEl.offsetWidth;
+    var h = mapEl.clientHeight || mapEl.offsetHeight;
+    if (!w || !h) return;
+    mapEl.querySelectorAll('.destinos-map__pin').forEach(function (btn) {
+      var d = findDestino(btn.dataset.id);
+      if (!d) return;
+      var pos = xy(d);
+      btn.style.left = pos.x + '%';
+      btn.style.top = pos.y + '%';
+    });
   }
 
   function escapeHtml(s) {
@@ -397,6 +414,7 @@
   });
 
   window.addEventListener('resize', function () {
+    updatePinPositions();
     if (!tooltipEl.classList.contains('is-visible') || !activeId) return;
     var d = findDestino(activeId);
     var pin = mapEl.querySelector('.destinos-map__pin[data-id="' + activeId + '"]');
@@ -415,6 +433,12 @@
 
   renderPins();
   renderGrid();
+  updatePinPositions();
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(function () {
+      updatePinPositions();
+    }).observe(mapEl);
+  }
 
   // Ancla inicial según viewport
   if (isMobile()) ensureMobileAnchor();
